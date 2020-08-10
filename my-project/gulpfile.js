@@ -1,12 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2020-07-31 17:06:02
- * @LastEditTime: 2020-08-10 11:15:14
+ * @LastEditTime: 2020-08-10 11:20:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /mini-alipay-new/Users/zhangjian/gulp-test/my-project/gulpfile.js
  */ 
-const { series, src, dest } = require('gulp');
+// const { series, src, dest } = require('gulp');
 const  { EventEmitter } = require('events');
 const { exec } = require('child_process');
 const fs = require('fs');
