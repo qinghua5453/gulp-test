@@ -1,0 +1,43 @@
+Arguments: 
+  /usr/local/Cellar/node/14.4.0/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  14.4.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/zhangjian/Library/Caches/Yarn/v6/npm-kind-of-5.1.0-729c91e2d857b7a419a1f9aa65685c4c33f5845d-integrity/node_modules/kind-of/README.md' -> '/Users/zhangjian/gulp-test/my-project/node_modules/define-property/node_modules/kind-of/README.md'
+
+npm manifest: 
+  {
+    "name": "qi-e-test-gulp",
+    "version": "1.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bin": {
+      "z-cli": "./gulpfile.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "commander": "^6.0.0",
+      "gulp": "^4.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-31 17:06:02
- * @LastEditTime: 2020-08-10 10:27:05
+ * @LastEditTime: 2020-08-10 11:15:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /mini-alipay-new/Users/zhangjian/gulp-test/my-project/gulpfile.js
@@ -62,7 +62,7 @@ function streamTask(cb) {
    // console.log(__filename)
    // let str = path.resolve('test/j', 'com')
    // console.log(str)
-   program.version('1.1.0', '-v, --version');
+   // program.version('1.1.0', '-v, --version');
    console.log('------')
 }
   
