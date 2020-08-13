@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-08-11 11:30:00
- * @LastEditTime: 2020-08-11 19:33:23
+ * @LastEditTime: 2020-08-13 17:15:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /mini_tool/Users/zhangjian/gulp-test/my-project/libs/imagemin.js
@@ -18,7 +18,6 @@ let imgArray = [
   '!./node_modules/**/*.+(png|jpg|jpeg|gif)',
 ];
 
-// png 无法压缩????
 const imagemin = (calc) => {
     src(imgArray, { base: currentDir })
       .pipe(
@@ -36,12 +35,12 @@ const imagemin = (calc) => {
           concurrent: 2,
         })
       )
-      .pipe(dest(currentDir))
+      .pipe(dest('new-images'))
       .on('end', () => {
         console.log('images min finished!');
         calc && calc();
       });
 };
-
+imagemin()
 exports.imagemin = imagemin;
   
