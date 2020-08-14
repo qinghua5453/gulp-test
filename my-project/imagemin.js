@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-08-13 10:17:12
- * @LastEditTime: 2020-08-13 20:22:16
+ * @LastEditTime: 2020-08-14 09:58:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /mini_tool/Users/zhangjian/gulp-test/my-project/test.js
@@ -12,12 +12,12 @@ var pngquant = require('imagemin-pngquant');
 var image = require('gulp-image');
 var fs = require('fs');
 var jsonFormat = require('json-format');
-const { resolve } = require('path');
-const { exec } = require('child_process');
+var { resolve } = require('path');
+var { exec } = require('child_process');
+var del = require('del');
 
 
  function minImage () {
-     console.log('asda')
      return gulp.src('./images/**/*.+(jpg|png)')
          .pipe(imagemin({
              progressive: true,
@@ -28,9 +28,6 @@ const { exec } = require('child_process');
 
  function minImage2 () {
     return gulp.src('./images/**/*.+(jpg|png)')
-        // exec('rm -rf ./dist', (err, stdout, stderr) => {
-        //   console.log('dist del')
-        // })
         .pipe(
           image({
             concurrent: 2,
@@ -39,11 +36,9 @@ const { exec } = require('child_process');
         .on('end', async () => {
            let data = await readdir()
            let json = {}
-           console.log('data', data)
             for (let i = 0; i < data.length; i++) {
               json[data[i]] = data[i]
             }
-            console.log('json', json)
             fs.writeFile('./dist/mini_file.json', jsonFormat(json), (err) => {
               if (err) {
                 console.log('err', err)

@@ -16,12 +16,15 @@
   },
   "devDependencies": {
     "commander": "^2.20.3",
+    "del": "^5.1.0",
+    "event-stream": "^4.0.1",
     "gulp": "^4.0.2",
     "gulp-image": "^6.2.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "imagemin-pngquant": "^9.0.0",
-    "json-format": "^1.0.1"
+    "json-format": "^1.0.1",
+    "webp-converter": "^2.3.0"
   }
 }
