@@ -1,0 +1,8 @@
+<import src="./templates/tpl-machine.wxml"/>
+<view class="pge-shop-detail">
+  <template is="tpl-machine" data="{{list, type}}"/>
+  <view class="pge-error" wx:if="{{!listLen && listSuccessFlag}}">
+    <image src="https://static.qiekj.com/h5/miniApp/no_error.png" mode="widthFix" />
+    <view class="error-msg">暂无机器信息</view>
+  </view>
+</view>

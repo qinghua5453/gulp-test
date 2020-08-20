@@ -1,0 +1,52 @@
+<wxs src="../../../../sjs/filter.wxs" module="cash"></wxs>
+<template name="tpl-shop-vip">
+    <view class="bottom-wrapper" wx:if="{{list.length>0}}">
+      <view class="use-immediate-box">
+        <view class="price-box">
+          <view class="price-con-wrapper">
+            <view class="footer-price">
+              <text class="currency">¥</text>{{cash.toFixed(choosePrice,2)}}
+              <text class="currency-small">¥{{cash.toFixed(originPrice,2)}}</text>
+            </view>
+            <view class="footer-mode-type">{{chooseFunction}}</view>
+          </view>
+        </view>
+        <view class="footer-btn">
+          <block wx:if="{{isShowBtn}}">
+            <!--  店铺未开通会员 -->
+            <block wx:if="{{!shop.vipCard}}">
+              <!--  店铺没有限时特惠 -->
+              <view wx:if="{{!shop.timeMarket}}" class="btn-one-use" bindtap="handleUse">
+                选好了 <text class="iconfont icon-nextx"></text> 
+              </view>
+              <!--  店铺有限时特惠 -->
+              <view wx:if="{{isTimeMarketStr}}" class="btn-two-use" bindtap="handleUse">
+                <view class="text">选好了 <text class="iconfont icon-nextx"></text></view>
+                <view class="desc">{{saveText}}特惠，已省{{cash.toFixed(savePrice,2)}}元</view>
+              </view>
+            </block>
+            <!--  店铺开通会员 -->
+            <block wx:else>
+                <!--  顾客不是会员 -->
+                <view class="footer-btn-group" wx:if="{{shop.vipCreate}}">
+                  <view class="btn-left" bindtap="handleUse">原价购买</view>
+                  <view class="btn-right" bindtap="toCreateVip">会员购买</view>
+                </view>
+                <!--  顾客是会员 -->
+                <block wx:else>
+                  <!--  店铺有限时特惠或会员价 -->
+                  <view wx:if="{{isTimeMarketStr}}" class="btn-two-use" bindtap="handleUse">
+                    <view class="text">选好了 <text class="iconfont icon-nextx"></text></view>
+                    <view class="desc">{{saveText}}特惠，已省{{cash.toFixed(savePrice,2)}}元</view>
+                  </view>
+                  <view wx:else class="btn-one-use" bindtap="handleUse">
+                    选好了 <text class="iconfont icon-nextx"></text> 
+                  </view>
+                </block>
+            </block>
+            
+          </block>
+        </view>
+      </view>
+    </view>
+</template>

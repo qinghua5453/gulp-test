@@ -1,0 +1,32 @@
+<import src="./templates/tpl-shop-vip.wxml"/>
+
+<view class="pge-chose_matchines {{isWarmMachine ? 'warm' : '' }} {{isAddScroll ? 'noScroll' : ''}}">
+  <block wx:if="{{machine}}">
+    <view class="pge-mode-content-y">
+
+    <block wx:if="{{list.length > 0}}">
+     <view class="pge-content-list">
+      <act-banner adKey="ad_choose_machine_top"></act-banner>
+      <view class="machineName">{{machineName}}</view>
+      <machinemode-content shop="{{shop}}" list="{{list}}" 
+        machineType="{{machineType}}"
+        idx="{{id}}"
+        machineId="{{machine_id}}"
+        bindhandleselect="chooseMachine"
+        bindgetchoosetotalprice="getChooseTotalPrice"
+        timeMarketDiscount="{{timeMarketDiscount}}"
+        vipDiscount="{{vipDiscount}}"
+        ></machinemode-content>
+      </view>
+    </block>
+    </view>
+    <template is="tpl-shop-vip" data="{{shop,list,task,isTask,originPrice,choosePrice,chooseFunction,isTimeMarketStr,savePrice,saveText,isShowBtn}}"></template>
+  </block>
+  <machinestatus wx:if="{{isMachineStatus}}" statusContent="{{statusContent}}" statusCode="{{statusCode}}"/>
+  <marketing-activity
+    wx:if="{{machine}}"
+    machine="{{machine}}" 
+    machineId="{{machine_id}}"
+    bindscrollshow="onScrollShow"
+    noticeType="{{noticeType}}"/>
+</view>

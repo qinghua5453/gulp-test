@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "卡包",
+    "usingComponents": {
+        "secret-payment": "/components/pagePopup/secretPayment/secretPayment"
+    },
+    "enablePullDownRefresh": false
+}

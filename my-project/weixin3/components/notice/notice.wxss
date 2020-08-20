@@ -1,0 +1,37 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.notice-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3000;
+}
+.notice-body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding-top: 109rpx;
+  padding-bottom: 80rpx;
+  left: 0;
+  top: 0;
+  overflow: auto;
+}
+.notice {
+  width: 650rpx;
+  height: 900rpx;
+  margin: 0 auto;
+}
+.notice .image {
+  width: 650rpx;
+  height: 900rpx;
+}
+.icon-wrapper {
+  width: 64rpx;
+  height: 64rpx;
+  margin: 53rpx auto 0;
+  text-align: center;
+}

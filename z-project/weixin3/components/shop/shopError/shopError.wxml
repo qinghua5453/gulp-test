@@ -1,0 +1,9 @@
+<view class="cmp-error">
+  <view class="cmp-error-con" wx:if="{{shopState == 2 && list.length === 0}}">
+    <image src="https://static.qiekj.com/h5/miniApp/no_error.png" mode="widthFix" />
+    <view class="error-msg">{{title}}</view>
+  </view>
+  <view class="cmp-stop-shop" wx:if="{{shopState != 2}}">
+    <image src="https://static.qiekj.com/h5/stop_shop.png" mode="widthFix" class="offer"/>
+  </view>
+</view>

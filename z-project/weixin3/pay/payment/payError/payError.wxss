@@ -1,0 +1,50 @@
+.pge-payerror-wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+}
+.pge-payerror-wrapper .pge-error-pic{
+    width: 388rpx;
+    height: 388rpx;
+    margin: 104rpx auto 0;
+}
+.pge-payerror-wrapper .pge-error-text{
+    text-align: center;
+    font-size: 28rpx;
+    color: #999;
+    margin-top: 8rpx;
+    line-height: 44rpx;
+    margin: 0 120rpx;
+}
+.pge-payerror-wrapper .tips{
+    position: absolute;
+    bottom: 42rpx;
+    height: 34rpx;
+    text-align: center;
+    line-height: 34rpx;
+    width: 100%;
+    color: #CCCCCC;
+}
+.pge-payerror-wrapper .pge-btn-retry{
+    width: 224rpx;
+    height: 80rpx;
+    background: #2088FF;
+    color: #fff;
+    margin: 36rpx auto 0;
+}
+.pge-footer-desc-text {
+    position: fixed;
+    width: 550rpx;
+    bottom: 30rpx;
+    left: 100rpx;
+    height: 34rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(204, 204, 204, 1);
+    line-height: 34rpx;
+}
+.pge-call{
+    margin-left: 10rpx;
+}

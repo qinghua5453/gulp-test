@@ -1,0 +1,84 @@
+@import './acss/tpl-equity.wxss';
+@import './acss/tpl-card.wxss';
+.pge-createVip-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+}
+.pge-createVip-wrapper .pge-vipcard-header-bg{
+  width: 100%;
+  height: 176rpx;
+  background:url(https://static.qiekj.com/alipay/vip/create-vip-bg.png) no-repeat;
+  background-size: 100%;
+}
+.pge-createVip-wrapper .pge-vipcard-content-y{
+  width: 100%;
+  padding: 0 24rpx 104rpx;
+  margin-top: -144rpx;
+}
+.pge-vipcard-content-y .pge-vipcard-con{
+  width: 100%;
+  height: 228rpx;
+  background-image: url(https://static.qiekj.com/h5/userVip/vip_bg.png);
+	background-size: cover;
+  border-radius: 32rpx;
+  padding-left: 54rpx;
+  padding-top: 38rpx;
+  color: #FFD26B;
+}
+.pge-vipcard-con .pge-discount{
+  font-size: 72rpx;
+  line-height: 100rpx;
+}
+.pge-vipcard-con .unit{
+  font-size: 28rpx;
+}
+.pge-vip-card{
+  position: absolute;
+  top: 187rpx;
+  left: 50%;
+  transform: translate(-50%);
+  width: 630rpx;
+  height: 286rpx;
+  background-image: url(https://static.qiekj.com/h5/miniApp/vip/vip_bg.png);
+	background-size: cover;
+  z-index: 1002;
+  padding-left: 53rpx;
+  padding-top: 59rpx;
+}
+.pge-vip-card .pge-discount{
+  color: #966929;
+  font-size: 78rpx;
+  line-height: 94rpx;
+}
+.pge-vip-card .pge-desc{
+  color: #966929;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  margin-top: 23rpx;
+}
+.pge-pay-type{
+    padding-left: 30rpx;
+    margin-top: 20rpx;
+}
+.pge-pay-type .pge-pay-head{
+    color: #43496a;
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #f9f8ff;
+}
+.pge-btn-confirm{
+  position: fixed;
+  bottom: 40rpx;
+  left: 30rpx;
+  width: 702rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 0 auto;
+  background:linear-gradient(239deg,rgba(255,226,158,1) 0%,rgba(255,210,107,1) 100%);
+  border-radius:62rpx;
+  text-align: center;
+}
+.pge-btn-confirm .pge-price{
+  font-size: 36rpx;
+  font-weight: bold;
+}

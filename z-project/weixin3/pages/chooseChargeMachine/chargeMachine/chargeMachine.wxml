@@ -1,0 +1,73 @@
+<wxs src="../../../sjs/filter.wxs" module="cash"></wxs>
+<!-- 连接中 -->
+<connect-status wx:if="{{isTransitionShow}}" statusText="{{statusText}}" marginTop="160"/>
+<block wx:else>
+   <connect-failed wx:if="{{connectFailedShow}}"
+    phoneText="{{phoneText}}" hasPhone="{{hasPhone}}" 
+    title="{{title}}" bindretry="retry"/>
+   <view class="pge_charge_bg" wx:else>
+      <view class="pge-charge-content">
+      <act-banner adKey="ad_choose_machine_top"></act-banner>
+      <view class="machineName">{{machineName}}</view>
+      <view class="chargeText {{showSwipper ? 'add-chargeText' : ''}}">
+         <view class="chargeImg"><image src="https://static.qiekj.com/alipay/electricbike.png" mode="widthFix"/></view>
+         <view class="leftGrid">
+            <view class="title">充电时间</view>
+            <view class="info">{{chargTime}}<text class="unit">小时</text></view>
+         </view>
+         <view class="centerGrid"></view>
+         <view class="rightGrid">
+            <view class="title">订单金额</view>
+            <view class="info">{{cash.toFixed(choosePrice,2)}}<text class="unit">元</text></view>
+         </view>
+      </view>
+      <view class="pge-title">选择充电时间</view>
+      <charge-slider
+         wx:if="{{chargTime}}"
+         min="{{quantity.minValue}}"
+         max="{{quantity.maxValue}}"
+         step="{{quantity.stepValue}}"
+         quantity="{{quantity}}"
+         value="{{chargTime}}"
+         valueUnit="{{valueUnit}}"
+         bindchange="sliderchange" />
+      </view>
+         <view wx:if="{{!choosedFunctionName}}" class="choosePortBtn" bindtap="showPortsPopup">
+            请选择充电口<text class="iconfont icon-backx rotate90"></text>
+         </view>
+         <view wx:else class="choosedBar">
+            <view  class="leftText" bindtap="showPortsPopup">
+               <text class="choosedText">已选：</text> {{choosedFunctionName}}号充电口<text class="iconfont icon-backx rotate90"></text>
+            </view>
+            <view class="choosedBar-btn" bindtap="useOk">
+               <view class="btnText">
+                  <view class="top">选好了</view>
+                  <view class="bottom">¥{{cash.toFixed(choosePrice,2)}}</view>
+               </view>
+               <view class="arrow"><text class="iconfont icon-nextx" /></view>
+            </view>
+         </view>
+         <popup zIndex="10" show="{{isShowPortsPopup}}"  bindclose="closePortsPopup">
+            <view class="popup-content">
+               <view class="popup-top-bar"></view>
+               <view class="popup-content-title">请选择充电口</view>
+               <view class="list-wrap">
+                  <view  wx:for="{{newList}}" wx:key="index" 
+                  class="item {{choosedIndex === index && isAddActive ? 'active':''}} {{item.state === 0 && item.isBelong === 0 ?'disabled':''}}" 
+                  data-index="{{index}}" bindtap="onClickItem" data-used="{{item.state === 0 && item.isBelong === 0 ? true : false}}">
+                     {{item.channel}}
+                  </view>
+               </view>
+               <view class="popup-bottom-bar"></view>
+            </view>
+         </popup>
+         <!-- 机器故障弹窗 -->
+        <machinestatus wx:if="{{isMachineStatus}}" statusContent="{{statusContent}}" statusCode="{{statusCode}}"/>
+         <marketing-activity
+            wx:if="{{machine}}"
+            machine="{{machine}}" 
+            machineId="{{machineId}}"  
+            noticeType="{{noticeType}}" />
+   </view>
+   
+</block>

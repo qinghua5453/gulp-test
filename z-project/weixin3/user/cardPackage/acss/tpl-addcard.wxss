@@ -1,0 +1,31 @@
+.tpl-add-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 182rpx;
+  background-color: #F7F7F7;
+  border-radius: 20rpx;
+  border: 2rpx dashed #CCCCCC;
+  text-align: center;
+}
+.tpl-add-card-con{
+  display: flex;
+  align-items: center;
+}
+.tpl-add-card-con .tpl-add-icon{
+  color: #2088FF;
+  font-size: 32rpx;
+}
+.tpl-add-card-con text{
+  font-size: 28rpx;
+  color: #2088FF;
+  font-weight: 400;
+  margin-left: 8rpx;
+}
+.tpl-add-card .tpl-secret-payment-text{
+  font-size: 24rpx;
+  color: #666666;
+  margin-top: 24rpx;
+}

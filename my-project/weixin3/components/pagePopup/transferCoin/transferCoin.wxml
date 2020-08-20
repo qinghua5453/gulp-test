@@ -1,0 +1,19 @@
+<view class="transfer-coin-wrapper" wx:if="{{showTransferCoin}}">
+  <view class="secret-payment-content">
+    <view class="payment-pop">
+        <view class="payment-title">
+          <text>余额转换</text>
+          <image class="title-bg" mode="widthFix" src="https://static.qiekj.com/h5/pay/gold_transfer.png"/>
+        </view>
+        <view class="payment_body">
+            <view class="secret-payment-text">原账户余额：{{totalBanlance}}可转换成企鹅金币{{changeCoin}}，适用于{{shopName}}，是否转换成金币？</view>
+            <view class="transfer-desc">
+              <view>1.可通过“企鹅共享”小程序-我的-我的钱包-金币查看转换的金币；</view>
+              <view>2.转换后原账户余额为0 ，不可使用。</view>
+            </view>
+            <view class="btn payment-open" bindtap="handleTransferCoin">确认转换</view>
+            <view class="btn payment-cancel" bindtap="closeOpen">再想想</view>
+        </view>
+    </view>
+  </view>
+</view>

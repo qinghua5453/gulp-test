@@ -1,0 +1,26 @@
+.pge-about-wrapper{
+    padding: 160rpx 0;
+    text-align: center;
+    width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+}
+.pge-about-wrapper image{
+    width: 221rpx;
+    height: auto;
+    margin: 0 auto;
+}
+.pge-about-detail{
+    width:574rpx;       
+    font-size:28rpx;
+    color:#8A8FAB;
+    line-height:45rpx;
+    text-indent: 2em;
+    text-align: justify;
+    margin: 104rpx auto 0;
+}
+.pge-info{
+    margin-top: 30rpx;
+    font-size: 36rpx;
+    line-height: 50rpx;
+}

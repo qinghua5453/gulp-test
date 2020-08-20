@@ -1,0 +1,22 @@
+  
+<!-- 用户vip活动 -->
+<view class="user-vip-activity" wx:if="{{isShowPopup}}">
+  <view class="novice-meet-box" wx:if="{{userProperty === 1}}">
+    <view class="novice-meet-content">
+      <view class="new-user-vip" bindtap="goVip" data-type="2" wx:if="{{type === 1 || type === 2}}">
+        <image wx:if="{{type === 1}}" src="https://static.qiekj.com/h5/newUser_vip.png" mode="widthFix"/>
+        <image wx:if="{{type === 2}}" src="https://static.qiekj.com/h5/newUser_type2.png" mode="widthFix"/>
+      </view>
+      <view class="btn-delete" bindtap="closeVip"></view>
+    </view>
+  </view>
+  <view class="novice-meet-box" wx:if="{{userProperty === 2}}">
+    <view class="novice-meet-content">
+      <view class="old-user-vip" bindtap="goVip" data-type="1" wx:if="{{type === 1 || type === 2}}">
+        <image wx:if="{{type === 1}}" src="https://static.qiekj.com/h5/oldUser_vip.png" mode="widthFix"/>
+        <image wx:if="{{type === 2}}" src="https://static.qiekj.com/h5/oldUser_type2.png" mode="widthFix"/>
+      </view>
+      <view class="btn-delete" bindtap="closeVip"></view>
+    </view>
+  </view>
+</view>

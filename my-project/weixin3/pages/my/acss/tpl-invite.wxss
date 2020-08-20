@@ -1,0 +1,28 @@
+.tpl-invite-friends-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 32rpx 0rpx 32rpx 40rpx;
+  background:linear-gradient(227deg,rgba(255,246,206,1) 0%,rgba(255,251,238,1) 100%);
+  margin-top: 28rpx;
+  border-radius: 16rpx;
+}
+.tpl-invite-friends-content .tpl-invite-friend-desc{
+  line-height: 40rpx;
+  color: #333333;
+  font-size: 28rpx;
+}
+.tpl-invite-friend-desc text{
+  color: #FF6F6F;
+  margin-left: 6rpx;
+}
+.tpl-invite-friend-intro{
+  font-size: 24rpx;
+}
+.tpl-invite-friends-content .tpl-invite-friend-img{
+  width: 204rpx;
+  height: 92rpx;
+  background-image: url(https://static.qiekj.com/h5/friend/user_index_img.png);
+  background-size: cover;
+}

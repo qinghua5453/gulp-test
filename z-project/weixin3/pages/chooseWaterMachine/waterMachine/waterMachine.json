@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText": "企鹅共享",
+    "usingComponents": {
+        "blue-tooth": "/components/pagePopup/blueTooth/blueTooth",
+        "unlocked": "./components/machineUnlocked/machineUnlocked",
+        "machineerror": "./components/machineError/machineError",
+        "connect-status": "/components/machine/connectStatus/connectStatus",
+        "marketing-activity": "/components/marketingActivity/marketingActivity",
+        "act-banner": "/components/adPage/actBanner/actBanner"
+    },
+    "enablePullDownRefresh": false
+}

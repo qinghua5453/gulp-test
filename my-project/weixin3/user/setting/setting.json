@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "设置",
+    "usingComponents": {
+        "usermenu": "/components/userMenu/userMenu"
+    },
+    "enablePullDownRefresh": false
+}

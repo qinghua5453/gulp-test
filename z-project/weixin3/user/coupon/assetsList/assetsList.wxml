@@ -1,0 +1,28 @@
+<view class="pge-assets-coupon-wrapper">
+  <view class="pge-body-warp">
+  <view class="pge-tab-common">
+    <view class="{{state == 1 ? 'pge-tab-item pge-active':'pge-tab-item'}}" bindtap="titlClickEvent" data-id='1'>
+      <text>可用优惠券</text>     
+      <view class="pge-border-active"></view>
+    </view>
+    <view class="{{state == 39 ? 'pge-tab-item pge-active':'pge-tab-item'}}" bindtap="titlClickEvent" data-id='39'>
+      <text>不可用优惠券</text>
+      <view class="pge-border-active"></view>
+    </view>    
+  </view>
+    <view class="pge-coupon-list">
+      <scroll-view scroll-y="{{true}}" lower-threshold="50" bindscrolltolower="lower">
+        <view class="coupon-scroll-list">
+          <block wx:for='{{couponList}}' wx:key='index' wx:if="{{couponList&&couponList.length > 0}}">
+            <coupon-item couponitem="{{item}}" isoverdue="true"/>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="pge-no-more" wx:if="{{couponList.length>0&&allLoaded}}">没有更多优惠券了~</view>
+    <view class="pge-no-list" wx:if="{{isNoCouponShow}}">
+      <image src="https://static.qiekj.com/h5/alipay/coupon/no-data.png" mode="widthFix" />
+      <text>您还没有获得优惠券哦~</text>
+    </view>
+  </view>
+</view>

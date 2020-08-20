@@ -1,0 +1,47 @@
+@import './acss/tpl-userinfo.wxss';
+@import './acss/tpl-usermenu.wxss';
+.pge-user-wrapper{
+  width: 100vw;
+  height: 100vh;
+}
+.pge-menu-wrapper{
+  position: absolute;
+  left: 24rpx;
+  top: 232rpx;
+  z-index: 100;
+  width: 702rpx;
+}
+.pic-wrapper{
+	height:168rpx;
+	margin-bottom: 30rpx;
+}
+.pge-user-list{
+  width: 702rpx;
+  background-color: #fff;
+  margin: 28rpx auto 0;
+  border-radius: 28rpx;
+}
+.pge-user-list .cmp-menu-item{
+  padding: 0 32rpx;
+  height: 107rpx;
+  border: none;
+  color: #333;
+}
+.pge-user-list .cmp-iconfont{
+  margin-right: 30rpx;
+}
+.pge-user-list .cmp-menu-item text{
+  color: #333;
+}
+.pge-user-list .cmp-menu-item .iconfont{
+  color: #999CB0;
+}
+.scroll-H{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  padding:0 0 1.5rem;
+  overflow-y:auto;
+}

@@ -1,0 +1,69 @@
+.wallet-detail{
+   background: #FFFFFF; 
+   width: 100%;
+   height: 100%;
+}
+.header{
+    text-align: center;
+    padding: 60rpx;
+}
+.header .shop{
+    font-size: 36rpx;
+    line-height: .50rpx;
+    color: #333333;
+}
+.header .price{
+    font-size: 64rpx;
+    font-weight: bold;
+    line-height: 90rpx;
+    margin: 14rpx 0;
+    color: #2088FF;
+}
+.header .status{
+    color: #666666;
+    font-size: 28rpx;
+}
+.list-wrapper{
+    padding: 0 30rpx;
+}
+.detail-list{
+    width: 100%;
+    padding: 30rpx 0;
+    border-bottom: 2rpx solid #F9F8FF;
+}
+.detail-list .item{
+    width: 100%;
+    height: 40rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666666;
+    margin-bottom: 24rpx;
+}
+.detail-list .item:last-child{
+    margin-bottom: 0;
+}
+.detail-list .skus-list{
+    width: 100%;
+    height: 50rpx;
+    margin-top: 24rpx;
+}
+.detail-list .skus-list .sku-item{
+    width: 100%;
+    height: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24rpx;
+    font-size: 28rpx;
+    color: #666666;
+}
+.detail-list .skus-list .sku-item:last-child{
+    margin-bottom: 0;
+}
+.discounts text{
+    color: #FF5F5F;
+}
+.discounts .gold-num{
+  margin-right: 8rpx;
+}

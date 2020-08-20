@@ -1,0 +1,15 @@
+<template name="tpl-editcard">
+  <!-- 修改卡片 -->
+  <view class="tpl-editCardName-wrapper" wx:if='{{isEditCardName}}'> 
+		 <view class="tpl-editUserName">
+			 <view class="tpl-title">修改卡片名称</view>
+			 <view class="tpl-card-name-input">
+         <input type="text" bindinput='bindEdit' placeholder-class='placeholderClass' value="{{editCardName}}" enableNative="{{false}}" maxlength="10"/>
+       </view>
+			 <view class="tpl-btn-wrapper">
+				 <text bindtap="closeEditUserName">取消</text>
+				 <text bindtap="UdpateUserName">确认</text>
+			 </view>
+		 </view>
+	 </view>
+</template>

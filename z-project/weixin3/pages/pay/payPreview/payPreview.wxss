@@ -1,0 +1,110 @@
+@import './acss/tpl-machine.wxss';
+.pge-preview-wrapper{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #F7F7F7;
+}
+.pge-preview-content-y{
+  width: 100%;
+  padding: 0 24rpx 250rpx;
+}
+.pge-preview-content-y .pge-preview-payment-method{
+  margin-top: 12rpx;
+}
+.pge-preview-content-y .pge-charge-instruction{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #999;
+  margin: 12rpx 0 12rpx 24rpx;
+}
+.pge-charge-instruction .iconfont{
+  font-size: 28rpx;
+  color: #206DFF;
+  margin-left: 10rpx;
+}
+.pge-charge-content-y{
+  width: 100%;
+  padding: 0 24rpx 250rpx;
+  margin-top: -270rpx;
+}
+.pge-preview-wrapper .pge-charge-box{
+  display: flex;
+  width: 100%;
+  height: 500rpx;
+  background:linear-gradient(360deg,rgba(247,247,247,1) 0%,rgba(22,119,255,1) 37%,rgba(22,119,255,1) 100%);
+}
+.pge-charge-box .pge-charg-info{
+  display: inline-block;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #fff;
+  margin: 108rpx 0 0 96rpx;
+}
+.pge-charg-info .number{
+  font-size: 80rpx;
+  font-weight: bold;
+  line-height: 112rpx;
+  margin: 0 20rpx;
+}
+.pge-charge-box .charge-icon{
+  width: 182rpx;
+  height: 132rpx;
+  margin-left:48rpx;
+  margin-top: 96rpx;
+  background: url(https://static.qiekj.com/h5/charge/electric_car.png) no-repeat;
+  background-size: 100%;
+}
+.pge-preview-machine-box{
+  background: #fff;
+  border-radius: 28rpx;
+  margin-top: 12rpx;
+  padding: 0 24rpx 0;
+}
+.pge-preview-machine-box .pge-payprice-box{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 46rpx 0;
+  font-size: 28rpx;
+}
+.pge-payprice-box .title{
+  color: #666666;
+  margin-right: 12rpx;
+}
+.pge-payprice-box .discount-price{
+  color: #F04864;
+  margin-right: 16rpx;
+}
+.pge-payprice-box .total-title{
+  font-size: 32rpx;
+}
+.pge-payprice-box .payprice{
+  font-size: 40rpx;
+  color: #F04864;
+}
+.pge-payprice-box .unit{
+  font-size: 28rpx;
+}
+.pge-preview-wrapper .pge-unimakt-gold-popup{
+    position: absolute;
+    top: 272rpx;
+    left:50%;
+    transform:translate(-50%,0);
+    width: 360rpx;
+    height: 340rpx;
+    background:rgba(0,0,0,0.5);
+    border-radius: 28rpx;
+    color: #fff;
+    font-size: 28rpx;
+    line-height: 44rpx;
+    text-align: center;
+}
+.pge-unimakt-gold-popup .gold-pic{
+    width: 146rpx;
+    height: 118rpx;
+    margin: 50rpx 86rpx 28rpx 128rpx;
+    background: url('https://static.qiekj.com/h5/yunma/gold_pic.png');
+    background-size: 100% 100%;
+}

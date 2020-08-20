@@ -1,0 +1,86 @@
+.pge-vip-result-wrapper{
+  width: 100vw;
+  height: 100vh;
+}
+.pge-vip-discount-box{
+  width: 100%;
+  background: #ffffff;
+  padding: 46rpx 45rpx 42rpx;
+}
+.pge-vip-discount-box .pge-vip-card{
+  position: relative;
+  width: 660rpx;
+  height: 385rpx;
+  background: #2088FF;
+  border-radius: 20rpx;
+  padding-top: 75rpx;
+  color: #ffffff;
+  text-align: center;
+}
+.pge-vip-discount-box .pge-vip-card .pge-disocunt{
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+.pge-vip-discount-box .pge-vip-card .pge-price{
+  font-size: 80rpx;
+  line-height: 112rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 17rpx;
+}
+.pge-vip-discount-box .pge-vip-card .pge-price .pge-small{
+  font-size: 40rpx;
+}
+.pge-vip-discount-box .pge-vip-card .pge-bg-icon{
+  width: 134rpx;
+  height: 170rpx;
+  background-image: url(https://static.qiekj.com/h5/miniApp/pay/pay_penguin.png);
+	background-size: cover;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.pge-vip-discount-box .pge-vip-card .pge-count-down{
+  display: inline-block;
+  height: 48rpx;
+  line-height: 48rpx;
+  background:rgba(255,255,255,0.1);
+  border-radius:27rpx;
+  color: #fff;
+  padding: 0 32rpx;
+  margin-top: 15rpx;
+}
+.pge-pay-type{
+  width: 710rpx;
+  background: #ffffff;
+  margin: 30rpx auto 0;
+  border-radius: 20rpx;
+  padding: 0 30rpx;
+}
+.pge-pay-type .pge-pay-head{
+    color: #43496a;
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #f9f8ff;
+}
+.pge-vip-result-wrapper .pge-btn-pay{
+  position: fixed;
+  left: 30rpx;
+  bottom: 30rpx;
+  width: 690rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #2088FF;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 20rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.pge-vip-result-wrapper .pge-btn-pay .pge-price{
+  font-size: 48rpx;
+  margin-left: 10rpx;
+}
+.pge-vip-result-wrapper .pge-btn-pay .pge-price .pge-small{
+  font-size: 32rpx;
+}

@@ -1,0 +1,62 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-gold-item{
+  padding: 30rpx 32rpx 28rpx;
+  background: url(https://static.qiekj.com/h5/alipay/goldList/gold-bg3.png) no-repeat;
+  background-size: 100%; 
+  border-radius: 16rpx;
+  margin-bottom: 26rpx;
+  color: #ffffff;
+}
+.cmp-gold-item:nth-child(2n){
+  background: url(https://static.qiekj.com/h5/alipay/goldList/gold-bg2.png) no-repeat;
+  background-size: 100%;  
+}
+.cmp-gold-item:nth-child(4n+1){
+  background: url(https://static.qiekj.com/h5/alipay/goldList/golg-bg1.png) no-repeat;
+  background-size: 100%;  
+}
+.cmp-gold-item:nth-child(4n){
+  background: url(https://static.qiekj.com/h5/alipay/goldList/gold-bg4.png) no-repeat;
+  background-size: 100%; 
+}
+.cmp-gold-item .cmp-gold-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rpx;
+}
+.cmp-gold-item .cmp-total_gold{
+  font-size: 36rpx;
+  font-weight: 600;
+  line-height: 50rpx;
+}
+.cmp-left .cmp-gold-info{
+  margin-top: 12rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  line-height: 40rpx;
+}
+.cmp-gold-info .cmp-gift{
+  margin-left: 20rpx;
+}
+.cmp-gold-info .desc{
+  margin-left: 8rpx;
+}
+.cmp-gold-item .cmp-shop-name{
+  font-size: 24rpx;
+  font-weight: 400;
+  line-height: 34rpx;
+  margin-top: 12rpx;
+}
+.cmp-gold-item .cmp-btn-buy{
+  width: 176rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  background: #ffffff;
+  border-radius:36rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #EF5657;
+}

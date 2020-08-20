@@ -1,0 +1,42 @@
+.tpl-detail-item{
+  padding: 50rpx 20rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+.tpl-detail-item .tpl-detail-price-con{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tpl-detail-price-con .tpl-balance-text{
+  display: flex;
+  align-items: center;
+}
+.tpl-detail-price-con .tpl-balance-text image{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.tpl-detail-price-con .tpl-balance-text text{
+  color: #333333;
+  font-size: 32rpx;
+}
+.tpl-detail-price-con .tpl-price{
+  color: #333333;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.tpl-detail-item .tpl-applicable-shop{
+  color: #999999;
+  font-size: 24rpx;
+  margin-top: 30rpx;
+  text-align: justify;
+}
+.tpl-applicable-shop text{
+  line-height: 33rpx;
+}
+.tpl-applicable-shop .tpl-machine-names{
+  margin-left: 20rpx;
+}

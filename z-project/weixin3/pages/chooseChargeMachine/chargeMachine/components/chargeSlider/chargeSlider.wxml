@@ -1,0 +1,39 @@
+ <wxs src="../../../../../sjs/filter.wxs" module="cash"></wxs>
+ <view class="chargpile-time-wrapper">
+      <view class="time-content">
+         <view class="scale-box">
+            <view class="scale-wrapper">
+               <view class="line-wrapper">
+                  <view catchtap="lineTap" 
+                     data-index="{{index}}"  
+                     wx:for="{{maxList}}" 
+                     wx:key="index" 
+                     class="line-item {{(item % 2 === 0 || index===0) ? 'long':'' }}">
+                  </view>
+                  <view class="line-pointer"
+                     style="{{offsetx}}"
+                     catchtouchmove="movePointer"
+                     catchtouchend="touchPointerEnd"
+                     >
+                  </view>
+               </view>
+            </view>
+            <view class="charg-scale-value">
+               <view class="left">
+                  <text class="value">{{min}}</text>
+                  <text class="interval-value">{{valueUnit}}</text>
+               </view>
+               <view class="minusBtn" bindtap="minus">-</view>
+               <view class="current">
+                  {{curValue}}
+                   <view class="unit">{{valueUnit}}</view> 
+               </view>
+               <view class="plusBtn" bindtap="plus">+</view>
+               <view class="right">
+                  <text class="value">{{max}}</text>
+                  <text class="interval-value">{{valueUnit}}</text>
+               </view>
+            </view>
+         </view>
+      </view>
+   </view>

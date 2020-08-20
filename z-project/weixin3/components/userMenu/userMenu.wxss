@@ -1,0 +1,28 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-menu-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120rpx;
+  border-bottom: 2rpx solid #F9F8FF;
+  font-size: 32rpx;
+  padding: 0 20rpx;
+  margin: 0 10rpx;
+}
+.cmp-menu-icon .cmp-iconfont{
+  display: inline-block;
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+.cmp-menu-icon .cmp-iconfont image{
+  width: 100%;
+}
+.cmp-menu-item .cmp-iconfont{
+  color: #D1D1D6;
+}
+.cmp-menu-item .icon-lujing{
+  color: #999CB0;
+  font-size: 24rpx;
+}

@@ -1,0 +1,68 @@
+<wxs src="../../../../../sjs/orderDetail.wxs" module="filter"></wxs>
+  <view class="cmp-order-header">
+    <block wx:if="{{orderDetail.orderType === 1}}">
+      <block wx:if="{{orderDetail.orderStatus === 2&&orderDetail.charge&&orderDetail.isSTATCharge === 1}}">
+        <view class="cmp-charge-detail-header {{orderDetail.charge.state*1 === 2 ? 'cmp-charge-interrupt-header' : ''}}">
+          <view class="cmp-charge-order-left">
+            <view class="charge_status">{{filter.chargeState(orderDetail.charge.state)}}</view>
+            <block wx:if="{{orderDetail.charge.state*1 === 1}}">
+              <view class="cmp-charge-content">
+                <text class="channel">{{orderDetail.charge.channel}}号</text>充电口
+                <block wx:if="{{chargTime > 0}}">
+                  <text class="charge-work-time"><time type="3" time="{{chargTime}}" bindfinish="hanldeChargeTime" /></text>后完成
+                </block>
+              </view>
+            </block>
+            <block wx:if="{{orderDetail.charge.state*1 === 2}}">
+              <view class="cmp-charge-content">
+                请到<text class="channel">{{orderDetail.charge.channel}}号</text>充电口查看您的设备
+              </view>
+            </block>
+            <block wx:if="{{orderDetail.charge.state*1 === 3}}">
+              <view class="cmp-charge-content">
+                请到<text class="channel">{{orderDetail.charge.channel}}号</text>充电口收好您的充电器
+              </view>
+            </block>
+          </view>
+          <view class="cmp-charge-order-right">
+            <block wx:if="{{orderDetail.charge.state*1 === 1}}">
+              <image mode="widthFix" src="https://static.qiekj.com/h5/charge/charging_icon.png"/>
+            </block>
+            <block wx:if="{{orderDetail.charge.state*1 === 2}}">
+              <image mode="widthFix" src="https://static.qiekj.com/h5/charge/interrupt_icon.png"/>
+            </block>
+            <block wx:if="{{orderDetail.charge.state*1 === 3}}">
+              <image mode="widthFix" src="https://static.qiekj.com/h5/charge/finished_charg_icon.png"/>
+            </block>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="order-detail-header">
+          <view class="cmp-order-status-box">
+            <text class="order-detail-status" wx:if='{{orderDetail.orderStatus == 0 && payTime <= 0}}'>支付超时</text>
+            <text class="order-detail-status" wx:else>{{filter.orderStatus(orderDetail.orderStatus)}}</text>
+            <view class="count-down-time" wx:if='{{orderDetail.orderStatus === 2 && completeTime > 0}}'><time type="2" time="{{completeTime}}" bindfinish="hanldeComplete" /><text class="time-desc">后完成</text></view>
+          </view>
+        </view>
+      </block>
+    </block>
+    <block wx:if="{{orderDetail.orderType === 5}}">
+      <view class="order-detail-header">
+        <view class="cmp-order-status-box">
+          <text class="order-detail-status" wx:if='{{orderDetail.orderStatus == 0 && payTime <= 0}}'>支付超时</text>
+          <text class="order-detail-status" wx:else>{{filter.orderStatus(orderDetail.orderStatus)}}</text>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{orderDetail.orderType === 3}}">
+      <view class="order-detail-header">
+        <view class="cmp-order-status-box">
+          <text class="order-detail-status">{{filter.orderStatus(orderDetail.orderStatus)}}</text>
+        </view>
+      </view>
+    </block>
+    <view class="countdown-hide">
+      <time type="2" time="{{payTime}}" bindfinish="hanldeCountDown" />
+    </view>
+  </view>

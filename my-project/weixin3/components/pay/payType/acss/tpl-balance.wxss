@@ -1,0 +1,87 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.tpl-balance-wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 9999;
+}
+.tpl-balance-wrapper .tpl-pay-pop{
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    height: 880rpx;
+}
+.tpl-pay-pop .tpl-pay-header{
+    position: relative;
+    height: 88rpx;
+}
+.tpl-pay-header .iconfont{
+    position: absolute;
+    left: 30rpx;
+    top: 30rpx;
+    color: #8a8fab;
+    font-size: 28rpx;
+    line-height: 1;
+}
+.tpl-pay-header .title{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+}
+.tpl-pay-header image{
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 20rpx;
+    border-radius: 5rpx;
+}
+.tpl-pay-header text{
+    line-height: 1;
+}
+.tpl-pay-pop .tpl-pay-wrap{
+    padding: 0 30rpx;
+}
+.tpl-pay-wrap .price{
+    font-size: 70rpx;
+    font-weight: bold;
+    margin-top: 83rpx;
+    margin-bottom: 69rpx;
+    text-align: center;
+    color: #333333;
+}
+.tpl-pay-wrap .pay-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 104rpx;
+    padding-right: 30rpx;
+    border-bottom: 2rpx solid #f9f8ff;
+}
+.tpl-pay-wrap .pay-t{
+    color: #666666;
+}
+.tpl-pay-wrap .pay-desc{
+    color: #333333;
+}
+.tpl-pay-pop .btn-balance-pay{
+    position: absolute;
+    width: 690rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    color: #fff;
+    border-radius: 20rpx;
+    bottom: 30rpx;
+    left: 30rpx;
+    font-size: 36rpx;
+    background-color: #2088FF;
+}

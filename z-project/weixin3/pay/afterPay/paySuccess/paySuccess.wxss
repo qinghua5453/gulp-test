@@ -1,0 +1,79 @@
+.pge-after-paysuccess-wrapper{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: #fff;
+}
+.pge-after-paysuccess-wrapper .pge-after-paysuccess-header{
+	height: 362rpx;
+	background: #1677FF;
+	text-align: center;
+	font-size: 32rpx;
+	color: #fff;
+}
+.pge-after-paysuccess-header .pay-price{
+	display: inline-block;
+	font-size: 72rpx;
+	font-weight: bold;
+	line-height: 100rpx;
+	margin-top: 48rpx;
+}
+.pge-after-paysuccess-wrapper .pge-after-paysuccess-y{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 304rpx;
+	border-radius: 48rpx 48rpx 0 0;
+	background: #fff;
+	text-align: center;
+}
+.pge-after-paysuccess-y .paysuccess-pic{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 140rpx;
+	height: 140rpx;
+	border: 8rpx solid #fff;
+	margin: -70rpx auto 80rpx;
+	border-radius: 50%;
+	z-index: 999;
+	background: #fff;
+}
+.pge-after-paysuccess-y .iconfont{
+	font-size: 120rpx;
+	color: #1677FF;
+}
+.pge-after-paysuccess-y .paysuccess-title{
+	font-size: 42rpx;
+	font-weight: bold;
+}
+.pge-after-paysuccess-y .paysuccess-tip{
+	color: #999;
+	font-size: 32rpx;
+	margin-top: 20rpx;
+}
+.pge-after-paysuccess-wrapper .btn-stop{
+	position: absolute;
+  left: 50%;
+	transform: translate(-50%,0);
+  bottom: 202rpx;
+  width: 360rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	border-radius: 62rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx; 
+	font-weight: bold;
+	background: #1677FF;
+}
+.pge-after-paysuccess-wrapper .footer-tip{
+	position: fixed;
+  left: 0;
+  bottom: 30rpx;
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+  font-size: 28rpx; 
+}

@@ -1,0 +1,44 @@
+<view class="cmp-payment-popup-wrapper">
+  <popup show="{{isShowPaymentPopup}}" bindclose="closePaymentPopup" zIndex="9999">
+      <view class="cmp-popup-content">
+         <view class="popup-content-title">请在<view class="pay-time"><time type="2" time="{{payTime}}" bindfinish="handlePayTime" /></view>内支付</view>
+         <view class="popup-title-bar iconfont icon-yuezhifu_quxiaox" bindtap="closePaymentPopup"></view>
+         <view class="popup-content-payment">
+          <view class="cmp-payment-item" bindtap="selectPayType" data-item="{{itemWx}}">
+            <view class="cmp-payment-left">
+              <image src="https://static.qiekj.com/wechat/wechat.png" mode="widthFix" />
+              <text>微信支付</text>
+            </view>
+            <text class="iconfont {{payType === 3 ? 'icon-xuanzhongx':'icon-norx1'}}"></text>
+          </view>
+          <block wx:if="{{isShowBalance&&isSupport}}">
+            <view class="cmp-payment-item" bindtap="selectPayType" data-item="2">
+              <view class="cmp-payment-left">
+                <image src="https://static.qiekj.com/h5/miniApp/pay/icon_ye.png" mode="widthFix" />
+                <text>余额</text>
+              </view>
+              <text class="iconfont {{payType === 2 ? 'icon-xuanzhongx':'icon-norx1'}}"></text>
+            </view>
+          </block>
+          <block wx:if="{{isShowBalance&&!isSupport}}">
+            <view class="cmp-payment-item cmp-balance-without">
+              <view class="cmp-payment-left">
+                <image src="https://static.qiekj.com/h5/miniApp/pay/icon_ye.png" mode="widthFix" />
+                <text>余额</text>
+                <text class="info">余额不足</text>
+              </view>
+              <text class="iconfont icon-_bukexuan"></text>
+            </view>
+          </block>
+         </view>
+         <button class="cmp-btn-pay" bindtap="handlePayment">
+          <text class="btn-price">继续支付 ¥{{orderDetail.payPrice}}</text>
+          <view wx:if="{{isLoading}}" class="pay_loading"></view>
+         </button>
+      </view>
+   </popup>
+   <!-- 余额支付弹窗 -->
+  <block wx:if="{{orderDetail.id&&balancePayShow}}">
+    <balance-pay balanceType="{{balanceType}}" orderId="{{orderDetail.id}}" payPrice="{{orderDetail.payPrice}}" totalBalance="{{totalBalance}}" bindbalancepaysuccess="balanceSuccessPay" bindbalancepayerror="balanceErrorPay" bindbalancepayclose="balancePayClose"></balance-pay>
+  </block>
+</view>

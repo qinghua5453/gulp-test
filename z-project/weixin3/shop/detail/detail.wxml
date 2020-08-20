@@ -1,0 +1,22 @@
+<import src="./templates/tpl-vip.wxml" />
+
+<view class="pge-shop-detail" wx:if="{{shop}}">
+    <view class="pge-detail-top-bg" wx:if="{{shop.shopState == 2}}"></view>
+    <view class="pge-shop-infor-box" wx:if="{{shop.shopState == 2}}">
+      <shop-infor shop="{{shop}}" machineType="{{machineType}}"></shop-infor>
+    </view>
+    <!-- 营销活动 -->
+    <template is="tpl-vip" data="{{headerNavs, navActiveIndex, tipList, shop}}"/>
+    <view class="pge-body-wrap">
+      <machine-list shop="{{shop}}" shopId="{{shopId}}" positionId="{{positionId}}" machineType="{{machineType}}" machineType="{{machineType}}" reserveLists="{{reserveLists}}"></machine-list>
+      <!-- 暂无机器 -->
+      <view class="pge-error" wx:if="{{shop.shopState == 2 && !reserveListsLen && reserveListsApiFlag}}">
+        <image src="https://static.qiekj.com/h5/miniApp/no_error.png" mode="widthFix" />
+        <view class="error-msg">暂无机器信息</view>
+      </view>
+    </view>
+  <!-- 店铺暂停营业 -->
+  <view class="pge-stop-shop" wx:if="{{shop.shopState != 2}}">
+    <image src="https://static.qiekj.com/h5/stop_shop.png" mode="widthFix" class="offer"/>
+  </view>
+</view>

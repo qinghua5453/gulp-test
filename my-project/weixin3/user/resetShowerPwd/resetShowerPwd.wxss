@@ -1,0 +1,57 @@
+.pge-setting-wrapper{
+    width: 100%;
+}
+.pge-user-con{
+  background-color: #fff;
+  width: 710rpx;
+  margin: 20rpx auto 30rpx;
+  border-radius: 20rpx;
+  padding: 0 10rpx;
+}
+.pge-user-con .pge-content-item{
+  height: 120rpx;
+  border-bottom: 2rpx solid #F9F8FF;
+  display: flex;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.pge-user-con .pge-content-item:last-child{
+    border-bottom: none;
+}
+.pge-input-password{
+  text-align: right;
+}
+.pge-word-left{
+  font-size: 32rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color: #666666;
+}
+.iconfont{
+    color: #D1D1D6;
+    font-size: 28rpx;
+}
+.pge-tip{
+  text-align: center;
+  font-size:24rpx;
+  font-weight:400;
+  color:#999;
+  line-height:34rpx;
+}
+.pge-btn{
+    width: 710rpx;
+    height: 88rpx;
+    margin: 40rpx auto 0;
+    background-color: #2088FF;
+    color: #fff;
+    font-size: 36rpx;
+    line-height: 88rpx;
+    text-align: center;
+    border-radius: 10rpx;
+}
+
+.pge-placeholderClass{
+    color: #999999;
+    font-size: 28rpx;
+}

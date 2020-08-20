@@ -1,0 +1,12 @@
+<template name="tpl-header">
+    <view class="tpl-my-wallet_header">
+        <view class="tpl-user-balance">{{total_balance}}</view>
+        <view class="tpl-price-info" bindtap="goAstrictList">
+            总余额(元)<view class="iconfont icon-nextx"></view>
+        </view>
+        <!-- <view class="tpl-total-price_con" bindtap="openBalance">
+            <text>总余额(元)</text>
+            <text class="tpl-price-detail">明细</text>
+        </view>-->
+    </view>
+</template>

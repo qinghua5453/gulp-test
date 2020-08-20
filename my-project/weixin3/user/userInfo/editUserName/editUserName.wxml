@@ -1,0 +1,7 @@
+<view class="pge-edit-username-wrapper">
+  <view class="pge-nick-name">
+    <text>昵称</text>
+    <input bindinput='updateNickName' type="text" value='{{userName}}' maxlength="8" placeholder='昵称长度小于8个字符' placeholder-class="default-nick-name" />
+  </view>
+  <button class="pge-btn-save" bindtap="UdpateUserName">保存</button>
+</view>

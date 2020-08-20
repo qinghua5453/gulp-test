@@ -1,0 +1,39 @@
+.pge-coupon-wrapper{
+    width: 100%;
+    min-height: 100vh;
+	position: relative;
+    padding-bottom: 130rpx;
+}
+.pge-coupon-list{
+    width: 100%;
+    height: 100%;
+	padding: 0 30rpx;
+}
+.pge-no-more{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: #8A8FAB;
+    font-size: 22rpx;
+    padding: 50rpx 0;
+    text-align: center;
+}
+.pge-abate-coupon .cmp-price{
+    color: #CCCCCC !important;
+}
+.pge-no-list{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+.pge-no-list image{
+    width: 110rpx;
+    height: 84rpx;
+    margin: 0 auto 32rpx;
+    display: block;
+}
+.pge-no-list text{
+    color: #999;
+    font-size: 28rpx;
+}

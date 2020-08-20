@@ -1,0 +1,26 @@
+<view class="pge-shower-wrapper" wx:if="{{mainShow}}">
+    <view class="pge-shower">
+        <view class="machineName">{{machineName}}</view>
+        <view class="pge-shower-bg">
+            <image src="https://static.qiekj.com/gif/shower_new_bg.png" mode="widthFix"/>
+        </view>
+    </view>
+    <view class="corporation-logo">
+        <image src="https://static.qiekj.com/gif/corporation.png" mode="widthFix"/>
+    </view>
+    <view class="pge-useBtn" wx:if="{{skuId}}" bindtap="useOk">立即使用 <text class="iconfont icon-nextx"></text></view>
+    <view class="pge-water-banner" wx:if="{{showSwipper&&skuId}}">
+      <act-banner adKey="ad_water_machine_top"></act-banner>
+    </view>
+    <machineerror wx:if="{{isMachineStatus}}"  errorCode="{{statusCode}}"/>
+</view>
+<view class="transition" wx:if="{{showLoading}}">
+   <view class="transition-con"></view>
+   <view class="info">请稍等，正在解锁中</view>
+</view>
+
+<connect-failed wx:if="{{connectFailed}}"
+    bindretry="retry" title="{{failedTitle}}"/>
+
+<unlocked wx:if="{{unlockedShow}}"
+    unlockedId="{{skuId}}"/>

@@ -1,0 +1,47 @@
+<import src="./templates/tpl-machine.wxml"/>
+<view class="pge-preview-wrapper" wx:if="{{machine}}">
+  <block wx:if="{{machine.isSATACharge == 1}}">
+    <view class="pge-charge-box">
+      <text class="pge-charg-info">请到<text class="number">{{machine.channel}}</text>号充电口</text>
+      <view class="charge-icon"></view>
+    </view>
+  </block>
+  <view class="pge-preview-content-y {{machine.isSATACharge == 1 ? 'pge-charge-content-y' : ''}}">
+    <view class="pge-preview-machine-box">
+      <!-- 机器信息 -->
+      <block wx:if="{{machine&&machine.machineId}}">
+        <template is="tpl-machine" data="{{machine,skus,isSkuId}}" />
+      </block>
+      <!-- 折扣信息 -->
+      <order-discount wx:if="{{machine}}" bindupdatepaypreview="updatePayPreview" orderDetail="{{machine}}" id="discountRef"></order-discount>
+      <!-- 合计 -->
+      <view class="pge-payprice-box">
+        <!-- <text class="title">已优惠</text>
+        <text class="discount-price">-2.50</text> -->
+        <text class="total-title">合计：</text>
+        <text class="payprice"><text class="unit">￥</text>{{machine.payPrice}}</text>
+      </view>
+    </view>
+    <!--充电时间说明-->
+    <block wx:if="{{machine.isSATACharge == 1}}">
+      <view class="pge-charge-instruction" bindtap="openChargPower">
+        充电时间说明<text class="iconfont icon-chongdianshijianshuomingx"></text>
+      </view>
+    </block>
+    <!-- 支付方式 -->
+    <block wx:if="{{machine.machineId&&balanceData}}">
+      <view class="pge-preview-payment-method">
+        <payment-method payPrice="{{machine.payPrice}}" balanceData="{{balanceData}}" bindsetpaytype="selectPayType"></payment-method>
+      </view>
+    </block>
+    <actbanner adKey="ad_pre_order_bottom" actPage="other"/>
+  </view>
+  <!-- 提交订单并支付 -->
+  <block wx:if="{{machine}}">
+    <payment orderDetail="{{machine}}" paymentData="{{paymentData}}" payType="{{payType}}"></payment>
+  </block>
+  <!-- 充电时间说明弹窗 -->
+  <block wx:if="{{isShowChargPower&&quantity}}">
+    <charg-power powerList="{{quantity.powerList}}" timevalue="{{machine.markMinutes}}" timeunit="{{quantity.valueUnit}}" bindfinish="onCloseCharPower"></charg-power>
+  </block>
+</view>

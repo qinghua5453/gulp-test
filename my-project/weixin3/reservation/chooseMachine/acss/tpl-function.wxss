@@ -1,0 +1,175 @@
+.tpl-machine-item{
+  width:90%;
+  height:auto;
+  background:#ffffff;
+  padding: 53rpx 30rpx 50rpx;
+  margin: 0 5% 20rpx;
+  border-radius:20rpx;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+.tpl-mode-left{
+  display:fixed;
+  flex-direction:column;
+  width: 430rpx;
+}
+.tpl-mode-left .mode-name {
+  font-size: 28rpx;
+  font-weight:500;
+  font-weight: bold;
+}
+.tpl-type-content {
+  font-size: 24rpx;
+  margin-top: 11rpx;
+}
+.tpl-wash-cloth{
+  font-size: 24rpx;
+  color: #2088FF;
+  padding-right: 12rpx;
+}
+
+.tpl-wash-cloth.dry {
+  color:#FF8B36;
+}
+
+.tpl-wash-cloth .time-icon{
+  display: inline-block;
+  margin-right: 7rpx;
+  font-size: 26rpx;
+}
+.tpl-wash-cloth .mode-type{
+  line-height: 33rpx;
+  color: #666666;
+}
+.tpl-mode-right{
+  display:fixed;
+  flex-direction:column;
+}
+.tpl-price-box{
+  position: relative;
+}
+.tpl-price-box .time-market-icon{
+  /* border:1px solid #FF6F6F;
+  text-align:center;
+  color:#FF6F6F;
+  background-color:#ffffff;
+  border-radius:15rpx;
+  font-size:24rpx;
+  padding: 1rpx 13rpx;
+  vertical-align: bottom; */
+  vertical-align: bottom;
+  font-size:24rpx;
+  font-size:24rpx;
+}
+.tpl-price-box .origin-price{
+  font-size:24rpx;
+  font-weight:400;
+  color: #666666;
+  line-height:33rpx;
+  margin-top:10rpx;
+}
+.tpl-price-box .icon-gray{
+  /* border-color: #CCCCCC;
+  color: #999999;
+  background-color: #ffffff; */
+}
+.tpl-price-box .vip-icon{
+  /* border:1px solid #E29000; */
+  /* text-align:center; */
+  /* color:#E29000; */
+  /* background-color:#ffffff; */
+  color: #333333;
+  /* border-radius:15rpx; */
+  font-size:24rpx;
+  /* padding: 1rpx 13rpx; */
+  vertical-align: bottom;
+}
+/* .tpl-price-box .time-market-icon{
+  border:1px solid #FF6F6F;
+  text-align:center;
+  color:#FF6F6F;
+  background-color:#ffffff;
+  border-radius:15rpx;
+  font-size:24rpx;
+  padding: 1rpx 13rpx;
+  vertical-align: bottom;
+} */
+.vip-top{
+  position: absolute;
+  left: -60rpx;
+  top: 4rpx;
+}
+.vip-bottom{
+  position: absolute;
+  left: -60rpx;
+  top: 44rpx;
+}
+.tpl-price-box .tpl-price {
+  color: #F04864;
+  font-size: 40rpx;
+  line-height: 30rpx;
+  font-weight:bold;
+}
+.tpl-price .price-uint{
+  font-size: 28rpx;
+}
+
+.tpl-active{
+  width: 94%;
+  margin: 0 3% 20rpx;
+  /* background-image: url(https://static.qiekj.com/h5/miniApp/machine/no_vip.png);
+  background-size: cover; */
+  background: #1677FF;
+  box-shadow:0px 6rpx 16rpx 0px rgba(39,140,255,0.6);
+  color: #ffffff;
+}
+
+.tpl-active-dry {
+  background: #FF8B36;
+  box-shadow:0px 8rpx 12rpx 0px rgba(255,139,54,0.5);
+  width: 94%;
+  margin: 0 3% 20rpx;
+  color: #ffffff;
+}
+
+.tpl-active-dry .mode-name,
+.tpl-active .mode-name{
+  color: #ffffff;
+  font-size: 32rpx;
+}
+
+.tpl-active-dry .tpl-price,
+.tpl-active .tpl-price{
+  color: #ffffff;
+  font-size: 40rpx;
+}
+
+.tpl-active-dry .mode-type,
+.tpl-active .mode-type{
+  color: #ffffff;
+}
+
+.tpl-active-dry .vip-icon,
+.tpl-active .vip-icon{
+  color:#FFFFFF;
+  /* border-color:#FFFFFF; */
+  /* background-color:#3C9AFF; */
+}
+
+.tpl-active-dry .time-market-icon,
+.tpl-active .time-market-icon{
+  color:#FFFFFF;
+  /* border-color:#FFFFFF; */
+  /* background-color:#3C9AFF; */
+}
+
+.tpl-active-dry .origin-price,
+.tpl-active .origin-price{
+  color: #ffffff;
+}
+
+.tpl-active-dry .tpl-wash-cloth,
+.tpl-active .tpl-wash-cloth{
+  color: #ffffff;
+}

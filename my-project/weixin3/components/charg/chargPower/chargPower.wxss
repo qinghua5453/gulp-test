@@ -1,0 +1,69 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.charg-power-pop{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background:rgba(0,0,0,0.1);
+}
+.charg-power-pop .power-wrapper{
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 542rpx;
+  height: 634rpx;
+  border-radius: 10rpx;
+}
+.power-wrapper .power-icon{
+  width: 388rpx;
+  height: 174rpx;
+  background-image: url(https://static.qiekj.com/h5/charg/electric_car.png);
+  background-size: cover;
+  margin: 14rpx auto 24rpx;
+  position: relative;
+}
+.power-wrapper .power-list{
+   padding: 0 42rpx;
+}
+.power-wrapper .power-list .item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 66rpx;
+}
+.power-list .item .power-desc{
+  color: #333333;
+  font-size: 28rpx;
+}
+.power-list .item .power-desc .power-value{
+  color: #666666;
+  font-size:24rpx; 
+}
+.power-list .item .charg-time{
+  color: #2088FF;
+  font-size: 36rpx;
+  margin-left: 22rpx;
+}
+.power-list .item .charg-time text{
+  color: #333333;
+  font-size: 28rpx; 
+  margin-left: 10rpx;
+}
+.power-wrapper .btn-ok{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 94rpx;
+  line-height: 94rpx;
+  color: #2088FF;
+  font-size: 36rpx;
+  text-align: center;
+  border-top: 1px solid #F9F8FF;
+}

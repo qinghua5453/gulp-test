@@ -1,0 +1,70 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.unlock-failed-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #fff;
+}
+
+.infoImg {
+    margin-top: 214rpx;
+    width: 388rpx;
+    height: 388rpx;
+    margin-left: 181rpx;
+}
+
+.infoImg image {
+    width: 100%;
+    height: 100%;
+}
+
+.statusText {
+    width: 750rpx;
+    text-align: center;
+    height: 44rpx;
+    font-size: 32rpx;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    line-height: 44rpx;
+}
+
+.retryBtn {
+    width: 224rpx;
+    height: 72rpx;
+    margin-top: 24rpx;
+    margin-left: 263rpx;
+    line-height: 72rpx;
+    border-radius: 36rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: rgba(32, 136, 255, 1);
+    border: 2rpx solid rgba(32, 136, 255, 1);
+}
+
+.pge-footer-desc-text {
+    position: fixed;
+    width: 550rpx;
+    bottom: 30rpx;
+    left: 100rpx;
+    height: 34rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    font-size: 24rpx;
+    text-align: center;
+    color: rgba(204, 204, 204, 1);
+    line-height: 34rpx;
+}
+
+.pge-use-bluetooth {
+    position: fixed;
+    width: 750rpx;
+    height: 40rpx;
+    text-align: center;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: rgba(22, 119, 255, 1);
+    line-height: 40rpx;
+    bottom: 80rpx;
+}

@@ -1,0 +1,274 @@
+.chargeText {
+  width: 676rpx;
+  height: 212rpx;
+  margin-top: 134rpx;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 16rpx;
+  position: relative;
+  display: flex;
+  border: 2rpx solid rgba(209, 231, 255, 1);
+  margin-left: 37rpx;
+}
+
+.add-chargeText {
+  margin-top: 94rpx;
+}
+
+.machineName {
+  padding-left: 52rpx;
+  font-size: 36rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+  color: #333333;
+}
+
+.pge_charge_bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+
+.pge-charge-content {
+  overflow-y: auto;
+  padding-bottom: 324rpx;
+  background-color: #FFFFFF;
+}
+
+.chargeText .leftGrid,
+.chargeText .rightGrid {
+  width: 174rpx;
+}
+
+.chargeText .title,
+.chargeText .info {
+  width: 100%;
+  height: 105rpx;
+  line-height: 105rpx;
+  text-align: center;
+}
+
+.chargeText .title {
+  font-size: 28rpx;
+  color: rgba(22, 119, 255, 1);
+  border-bottom: 2rpx solid #D1E7FF;
+}
+
+.chargeText .info {
+  font-size: 36rpx;
+  color: #333333;
+}
+
+.chargeText .unit {
+  margin-left: 6rpx;
+  font-size: 22rpx;
+}
+
+.chargeText .centerGrid {
+  width: 328rpx;
+  text-align: center;
+}
+
+.chargeImg {
+  width: 328rpx;
+  height: 328rpx;
+  border-radius: 164rpx;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  border: 2rpx solid #D1E7FF;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chargeImg image {
+  margin-top: 54rpx;
+  width: 264rpx;
+  height: 192rpx;
+}
+
+.pge-title {
+  margin-top: 124rpx;
+  width: 100%;
+  text-align: center;
+  height: 50rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 24rpx;
+  color: rgba(22, 119, 255, 1);
+  line-height: 50rpx;
+}
+
+.btn-set {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32rpx;
+  margin-bottom: 48rpx;
+}
+
+.btn-set .btn-cancel {
+  color: #333333;
+}
+
+.btn-set .btn-ok {
+  color: #2088FF;
+}
+
+.choosePortBtn {
+  width: 446rpx;
+  height: 124rpx;
+  line-height: 124rpx;
+  background-color: rgba(32, 136, 255, 1);
+  box-shadow: 0 4rpx 18rpx 0 rgba(100, 146, 252, 0.5);
+  border-radius: 62rpx;
+  position: fixed;
+  bottom: 56rpx;
+  left: 152rpx;
+  font-size: 36rpx;
+  text-align: center;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.rotate90 {
+  display: inline-block;
+  margin-left: 6rpx;
+  transform: rotate(90deg);
+}
+
+.popup-content {
+  height: 844rpx;
+  padding-top: 36rpx;
+  border-radius: 44rpx 44rpx 0px 0px;
+  background-color: #FFFFFF;
+}
+
+.popup-top-bar {
+  width: 136rpx;
+  height: 14rpx;
+  margin: 0 auto;
+
+  background-color: rgba(238, 240, 244, 1);
+  border-radius: 7px;
+}
+
+.popup-content-title {
+  margin-top: 48rpx;
+  margin-left: 32rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  line-height: 44px;
+}
+
+.list-wrap {
+  width: 718rpx;
+  display: flex;
+  padding-top: 20rpx;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list-wrap .item {
+  width: 118rpx;
+  margin-left: 32rpx;
+  margin-top: 40rpx;
+  height: 118rpx;
+  line-height: 118rpx;
+  text-align: center;
+  background-color: rgba(240, 246, 255, 1);
+  border-radius: 59rpx;
+  color: rgba(51, 51, 51, 1);
+  font-size: 40rpx;
+}
+
+.list-wrap .item.disabled {
+  background-color: rgba(249, 249, 249, 1);
+  color: rgba(204, 204, 204, 1);
+}
+
+.list-wrap .item.active {
+  background-color: rgba(22, 119, 255, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.popup-bottom-bar {
+  width: 266rpx;
+  height: 10rpx;
+  background-color: rgba(3, 4, 5, 1);
+  border-radius: 5rpx;
+  position: fixed;
+  bottom: 16rpx;
+  left: 242rpx;
+}
+
+.choosedBar {
+  position: fixed;
+  bottom: 56rpx;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 124rpx;
+  z-index: 9999;
+  background-color: #FFFFFF;
+}
+
+.choosedBar .leftText {
+  width: 446rpx;
+  height: 124rpx;
+  line-height: 124rpx;
+  text-align: center;
+  margin-left: 32rpx;
+  font-weight: bold;
+  color: rgba(22, 119, 255, 1);
+  font-size: 40rpx;
+  box-shadow:0px 4rpx 18rpx 0px rgba(223,238,255,1);
+  border-radius: 62rpx;
+}
+
+.choosedBar .choosedText {
+  font-size: 32rpx;
+  font-weight: 400;
+  margin-right: 10rpx;
+}
+
+.choosedBar-btn {
+  width: 212rpx;
+  height: 124rpx;
+  color: #FFFFFF;
+  background: rgba(22, 119, 255, 1);
+  box-shadow: 0 4rpx 18rpx 0 rgba(100, 146, 252, 0.5);
+  border-radius: 62rpx;
+  display: flex;
+}
+
+.choosedBar-btn .btnText {
+  width: 146rpx;
+  padding-left: 30rpx;
+  height: 124rpx;
+}
+
+.choosedBar-btn .arrow {
+  height: 124rpx;
+  width: 50rpx;
+  line-height: 124rpx;
+}
+
+.choosedBar-btn .btnText .bottom,
+.choosedBar-btn .btnText .top {
+  width: 100%;
+  text-align: center
+}
+
+.choosedBar-btn .btnText .bottom {
+  height: 52rpx;
+  font-size: 28rpx;
+}
+
+.choosedBar-btn .btnText .top {
+  line-height: 96rpx;
+  height: 72rpx;
+}

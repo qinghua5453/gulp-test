@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "设备故障",
+    "usingComponents": {
+        "service": "/components/service/service",
+        "time": "/components/countDown/countDown",
+        "blue-tooth": "/components/pagePopup/blueTooth/blueTooth"
+    },
+    "enablePullDownRefresh": false
+}

@@ -1,0 +1,32 @@
+var getMsg = function (val){
+   val = val?val.toString():'';
+  var map = {
+      '201':'预约成功',
+      '202':'已使用',
+      '203':'已完成',
+      '301':'预约失败',
+      '302':'已取消',
+      '303':'已过期',
+      '501': '未支付',
+      '502': '已预约',
+      '503': '支付超时'
+    }
+  return val?map[val]:''
+};
+
+var shopStatus = function (val='5'){
+  val = val?val.toString():'5';
+  var map = {
+    '1': '未开放', 
+    '2': '营业中', 
+    '3': '关店', 
+    '4': '删除',
+    '5': '暂停营业',
+  }
+  return map[val]
+};
+
+module.exports = {
+  "getMsg":getMsg,
+  "shopStatus":shopStatus
+};

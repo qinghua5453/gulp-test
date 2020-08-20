@@ -1,0 +1,27 @@
+{
+  "rules": [
+    {
+      "action": "allow",
+      "page": "pages/home/home",
+      "matching": "inclusive"
+    },
+    {
+      "action": "allow",
+      "page": "pages/chooseWashMachine/chooseMachine/chooseMachine",
+      "params": ["machineId"],
+      "matching": "exact"
+    },
+    {
+      "action": "allow",
+      "page": "pages/chooseWaterMachine/waterMachine/waterMachine",
+      "params": ["machineId"],
+      "matching": "exact"
+    },
+    {
+      "action": "allow",
+      "page": "pages/chooseChargeMachine/chargeMachine/chargeMachine",
+      "params": ["machineId"],
+      "matching": "exact"
+    }
+  ]
+}

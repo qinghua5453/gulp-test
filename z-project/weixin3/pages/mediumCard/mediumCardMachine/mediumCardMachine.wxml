@@ -1,0 +1,46 @@
+<view>
+  <view class="{{shop.vipCreate?'water-wrapper':'water-wrapper vip-wrapper'}}"  wx:if="{{!showLoading&&!openUnlockResult}}">
+    <view class="water-content">
+      <view class="logo-label" wx:if="{{machine&&machine.brandLogo}}">
+        <image src="{{machine.brandLogo}}" mode="widthFix"/>
+      </view>
+      <goldwindow wx:if="{{machine && machine.shopId}}" shopId="{{machine.shopId}}"/>
+      <view class="water-icon">
+        <image wx:if="{{machine.aliDeviceStatus != 2&&machine.status != 8}}" src="https://static.qiekj.com/h5/pay/contact-success.png" mode="widthFix" />
+        <image wx:else src="https://static.qiekj.com/h5/pay/contact-fail.png" mode="widthFix" />
+      </view>
+      <view class="water-con">
+        <view class="machine-infomation">
+          <view class="shop-name" wx:if="{{machine}}">{{machine.name}}</view>
+        </view>
+        <view class="shop-address" wx:if="{{machine}}">{{machine.shopName}}</view>
+        <view class="schematic_pic-box">
+          <image class="schematic_pic" src="https://static.qiekj.com/h5/water/schematic_pic.png" mode="widthFix" />
+        </view>
+      </view>
+      <view class="footer-btn-wrapper">
+        <view class="btn-wrapper">
+          <view class="choose-btn">
+            <view class="choose-water">1号出水口</view>
+            <!-- 选中不可用出水口按钮加上class: btn-gray -->
+            <view class="use-btn" bindtap="useOk">立即解锁</view>
+          </view>
+        </view>
+      </view>
+      <!-- 机器故障弹窗 -->
+      <machinestatus wx:if="{{isMachineStatus}}" statusCode="{{statusCode}}"/>
+      <!--余额转换-->
+      <transfer-coin wx:if="{{isShowTransferCoin&&machine&&balanceData}}" imei="{{machine.imei}}" balanceData="{{balanceData}}" shopName="{{machine.shopName}}" bindfinish="openShowTransferCoin"/>
+    </view>
+    <marketing-activity
+      wx:if="{{machine}}"
+      chooseType="2"
+      machine="{{machine}}" 
+      machineId="{{machineId}}"  
+      noticeType="{{noticeType}}"/>
+    <blue-tooth wx:if="{{openBluetoothShow}}" bindfinish="openShowBlueTooth"/>
+  </view>
+  <!-- 解锁中 -->
+  <connect-status wx:if="{{showLoading}}" statusText="{{statusText}}" marginTop="160"/>
+  <unlock-result wx:if="{{openUnlockResult}}" isLockFailed="{{isLockFailed}}" unlockError="{{unlockError}}" machine="{{machine}}" choosedFunctionName="1" bindhandletap="handleTap" />
+</view>

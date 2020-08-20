@@ -1,0 +1,16 @@
+  
+<!-- 新用户首次消费 -->
+<view class="novice-meet-box" wx:if="{{isShowNoviceMeet}}">
+  <view class="novice-meet-content">
+    <view class="novice-meet-bg">
+      <view class="novice-content">
+        <view class="meet-title">
+          <text class="meet-discount">{{couponData.faceValue}}</text>
+          <text class="meet-discount-unit">折券</text>
+        </view>
+        <view class="meet-date">有效期： {{couponData.startDate + '-' + couponData.endDate}}</view>
+      </view>
+    </view>
+    <view class="btn-delete" wx:if="{{isShowNoviceMeet}}" bindtap="closeCouponDialog"></view>
+  </view>
+</view>

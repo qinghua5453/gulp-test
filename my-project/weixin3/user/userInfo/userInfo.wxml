@@ -1,0 +1,4 @@
+<import src="./templates/tpl-pickers.wxml"/>
+<view class="pge-userInfo-wrapper">
+  <template is="tpl-pickers" data="{{userPhone,headImageId,userName,date,endDate,sex,index}}"/> 
+</view>

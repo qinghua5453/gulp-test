@@ -1,0 +1,11 @@
+.tpl-prompt-con{
+  color: #999999;
+  font-size: 24rpx;
+  margin: 40rpx 0 0 40rpx;
+}
+.tpl-prompt-con .tpl-title{
+    margin-bottom: 16rpx;
+} 
+.tpl-prompt-con .tpl-text{
+  line-height: 36rpx;
+}

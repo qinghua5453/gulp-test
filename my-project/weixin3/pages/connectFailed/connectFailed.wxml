@@ -1,0 +1,14 @@
+<wxs src="../../sjs/filter.wxs" module="phone"></wxs>
+<view class="unlock-failed-wrapper">
+    <view class="infoImg">
+        <image src="https://static.qiekj.com/alipay/timeout.png" mode="widthFix"/>
+    </view>
+    <view class="statusText">{{statusText}}</view>
+    <view class="retryBtn" bindtap="retry">重试</view>
+    <view class="pge-use-bluetooth" bindtap="useBlueTooth" wx:if="{{!isBle}}">如何开启蓝牙？</view>
+    <!-- <view class="pge-footer-desc-text">
+        如有疑问请联系{{ !hasPhone ? '企鹅' : ""}}客服
+        <text class="pge-call" bindtap="makeCall">{{phone.formatPhonenumber(phoneText)}}</text>
+    </view> -->
+    <blue-tooth wx:if="{{openBluetoothShow}}" bindfinish="closeBluetoothShow"/>
+</view>

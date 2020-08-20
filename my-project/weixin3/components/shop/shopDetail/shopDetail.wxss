@@ -1,0 +1,110 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-shop-info-box{
+  width: 702rpx;
+  margin: 0 auto;
+  padding: 44rpx 42rpx 54rpx;
+  background: #FFFFFF;
+  border-radius: 28rpx;
+}
+.cmp-shop-info-box .cmp-shop-address-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cmp-address-sub .sub-name{
+  max-width: 360rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 36rpx;
+  font-weight: 600;
+  line-height: 50rpx;
+  margin-top: 2rpx;
+}
+.cmp-address-sub .sub-address{
+  max-width: 392rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 34rpx;
+  margin-bottom: 14rpx;
+  margin-top: 6rpx;
+}
+.cmp-shop-address-box .cmp-distance-box{
+  padding-left: 26rpx;
+  border-left: 1px solid #EEEEEE;
+  font-size: 24rpx;
+}
+.cmp-distance-box .shop-navigation{
+  width: 120rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  background: #D1E5FF;
+  border-radius: 24rpx;
+  color: #187DFF;
+}
+.cmp-distance-box .shop-distance{
+  text-align: center;
+  line-height: 34rpx;
+  margin-top: 6rpx;
+}
+.cmp-business-box{
+  margin-top: 18rpx;
+}
+.cmp-business-box .business-txt{
+  color: #999999;
+  font-size: 24rpx;
+}
+.cmp-business-box .business-time{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  margin-top: 4rpx;
+}
+.cmp-sale-box{
+  margin-top: 30rpx;
+}
+.cmp-sale-box .sale-txt{
+  font-size: 24rpx;
+  color: #999999;
+}
+.cmp-sale-label{
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.cmp-sale-label .vip-sale{
+  /* width: 138rpx; */
+  height: 44rpx;
+  line-height: 44rpx;
+  background: #FFD26B;
+  font-size: 24rpx;
+  padding: 0 10rpx 0 0rpx;
+  font-weight: 500;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  margin-right: 16rpx;
+}
+
+.cmp-sale-label .vip-sale .vip-sale-image {
+  width: 38rpx;
+  height: 44rpx;
+  margin-right: 4rpx;
+}
+
+.cmp-sale-label .timemarket-sale{
+  width: 128rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  border: 1px solid #FF567C;
+  border-radius: 10rpx;
+  color: #FF567C;
+  font-size: 24rpx;
+  font-weight: 500;
+  text-align: center;
+}

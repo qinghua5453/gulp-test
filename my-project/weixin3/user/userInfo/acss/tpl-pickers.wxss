@@ -1,0 +1,82 @@
+.tpl-user-list{
+  width: 100%;
+  margin: 24rpx auto 0;
+  background-color: #fff;
+  padding: 0 0 0 24rpx;
+}
+.tpl-user-list .tpl-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 104rpx;
+  border-bottom: 1px solid #EEEEEE;
+  font-size: 34rpx; 
+  padding: 0 36rpx 0 0;
+}
+.tpl-user-list .tpl-item:last-child{
+	border: none;
+}
+.tpl-item .tpl-item-extra{
+  font-size: 30rpx;
+  color: #999999;
+  display: flex;
+  align-items: center;
+}
+.tpl-item-extra image{
+	width: 72rpx;
+	height: 72rpx;
+	border-radius: 50%;
+}
+.tpl-item .tpl-item-extra .iconfont{
+  color: #D1D1D6;
+}
+.tpl-editUserName-wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+}
+.tpl-editUserName{
+	position: absolute;
+	left: 103rpx;
+	top: 20%;
+	width: 544rpx;
+	border-radius: 10rpx;
+	background-color: #fff;
+}
+.tpl-editUserName .tpl-title{
+	padding: 40rpx 0;
+	text-align: center;
+	font-size: 32rpx;
+	line-height: 45rpx;
+}
+.tpl-editUserName input{
+	margin:0 30rpx 65rpx;
+	height: 68rpx;
+	border: 1rpx solid #2088FF;
+	border-radius: 4rpx;	
+}
+.tpl-editUserName .tpl-btn-wrapper{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 92rpx;
+	border-top: 1rpx solid #DFE6FF;
+}
+.tpl-editUserName .tpl-btn-wrapper text{
+	text-align: center;
+	width: 50%;
+	height: 100%;
+	line-height: 92rpx;
+}
+.tpl-placeholderClass{
+	font-size: 30rpx;
+	color: #BAC0D2;
+}
+.tpl-editUserName .tpl-btn-wrapper text:first-child{
+	border-right: 1rpx solid #DFE6FF;
+}

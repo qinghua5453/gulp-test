@@ -1,0 +1,51 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-payment-method-wrapper{
+  background: #fff;
+  border-radius: 28rpx;
+  padding: 0 24rpx;
+}
+.cmp-payment-method-wrapper .pge-after-pay-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 104rpx;
+  border-bottom: 1px solid #F6F6F6;
+}
+.pge-after-pay-item .pge-after-left{
+  display: flex;
+  align-items: center;
+}
+.cmp-payment-method-wrapper .title{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.pge-after-pay-item image{
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.pge-after-pay-item .iconfont{
+  font-size: 44rpx;
+  color: #EAEAEA;
+}
+.pge-active-item .iconfont{
+  color: #206DFF;
+}
+.pge-balance-without{
+  color: #8A8FAB;
+}
+.pge-balance-without image{
+  opacity: 0.6;
+}
+.pge-balance-without .info{
+    display: inline-block;
+    color: #F04864;
+    font-size: 24rpx;
+    margin-left: 20rpx;
+}
+.pge-after-pay-item:last-child{
+  border: none;
+}

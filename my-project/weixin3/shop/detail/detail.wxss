@@ -1,0 +1,52 @@
+@import './acss/tpl-vip.wxss';
+
+.pge-shop-detail{
+  width:100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.pge-shop-detail .pge-detail-top-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  height: 236rpx;
+  background: #1677FF;
+  z-index: 1;
+}
+
+.pge-shop-detail .pge-shop-infor-box {
+  margin-top: 44rpx;
+  z-index: 10;
+}
+
+.pge-shop-detail .pge-error{
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  background-color: #fff;
+}
+.pge-error image{
+  width: 750rpx;
+  background-color: #fff;
+}
+.pge-error .error-msg{
+  font-size: 28rpx;
+  color: #333333;
+  text-align: center;
+}
+.pge-stop-shop{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.pge-stop-shop image{
+  width: 100%;
+  height: 100%;
+  transform: scale(2);
+}

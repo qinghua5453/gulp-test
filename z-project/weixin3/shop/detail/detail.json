@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "店铺详情",
+    "usingComponents": {
+        "shop-infor": "/components/shop/shopDetail/shopDetail",
+        "machine-list": "./components/machine/machine"
+    },
+    "enablePullDownRefresh": false
+}

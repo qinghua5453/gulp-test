@@ -1,0 +1,42 @@
+
+<!-- 单个 -->
+<wxs module="DataUtils" src="../../../../../sjs/dataUtils.wxs"/>
+<view class="{{type*1 === 1 ? 'pge-card-wrapper' : 'pge-dated-card pge-card-wrapper'}}">
+  <view class="cmp-vip-card" bindtap="letDatedDetailShow">
+    <view class="cmp-vip-face {{isVipDetailShow ? 'cmp-vip-face-active' : ''}}">
+      <view class="cmp-discount">{{DataUtils.toDiscountFixed(vipitem.discount,1)}}<text> 折 会员折扣卡</text></view>
+      <view class="cmp-vip-operation">
+        <view class="cmp-time">{{type*1 === 1 ? '有效期' : '已过期'}} {{vipitem.availableTime}}</view>
+        <button class="cmp-vip-btn" catchtap="toCreateVip" data-id="{{vipitem.shopId}}">立即续费</button>
+      </view>
+    </view>
+    <block wx:if="{{isVipDetailShow}}">
+      <view class="cmp-vip-notice">
+        <text class="cmp-detail-title">会员权益</text>
+        <view class="cmp-left-con"> 
+          <text class="iconfont icon-laba"></text>
+          <text class="cmp-notice">VIP卡为店铺折扣卡，不可储值，不可退换。</text>
+        </view>
+      </view>
+      <view class="cmp-vip-detail">
+        <view class="cmp-list" wx:for="{{vipitem.memberVipCardList}}" wx:for-item="list">
+          <view class="cmp-time">{{list.activeTime}}-{{list.availableTime}}享以下权益</view>
+          <view class="cmp-font">1.支付享{{DataUtils.toDiscountFixed(list.discount,1)}}折优惠。</view>
+          <view class="cmp-font" wx:if="{{list.limitTime == 0}}">
+            2.
+            <text wx:if="{{list.limitType == 1}}">每日</text>
+            <text wx:if="{{list.limitType == 2}}">每周</text>
+            使用次数无限制
+          </view>
+          <view class="cmp-font" wx:else>
+            2.
+            <text wx:if="{{list.limitType == 1}}">每日</text>
+            <text wx:if="{{list.limitType == 2}}">每周</text>
+            仅限使用{{list.limitTime}}次
+          </view>
+          <view class="cmp-font">3.适用店铺：{{list.shopNames}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

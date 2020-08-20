@@ -1,0 +1,20 @@
+<view class="charg-power-pop">
+  <view class="power-wrapper">
+    <view class="power-icon"></view>
+    <view class="power-list">
+      <view class="item">
+        <view class="power-desc"><text>低功率</text><text class="power-value">（{{powerList[0].power}}W及以下）</text></view>
+        <view class="charg-time">{{oneTime}}<text>{{timeUnit}}</text></view>
+      </view>
+      <view class="item">
+        <view class="power-desc"><text>中功率</text><text class="power-value">（{{powerList[0].power}}W-{{powerList[1].power}}W）</text></view>
+        <view class="charg-time">{{twoTime}}<text>{{timeUnit}}</text></view>
+      </view>
+      <view class="item">
+        <view class="power-desc"><text>高功率</text><text class="power-value">（{{powerList[1].power}}W-{{powerList[2].power}}W）</text></view>
+        <view class="charg-time">{{threeTime}}<text>{{timeUnit}}</text></view>
+      </view>
+    </view>
+     <view class="btn-ok" bindtap="closePop">知道了</view>
+  </view>
+</view>

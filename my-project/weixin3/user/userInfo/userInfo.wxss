@@ -1,0 +1,6 @@
+@import './acss/tpl-username.wxss';
+@import './acss/tpl-pickers.wxss';
+.pge-userInfo-wrapper{
+    width: 100%;
+}
+

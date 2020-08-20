@@ -1,0 +1,62 @@
+<view>
+  <view class="cmp-order-operation-wrapper">
+    <block wx:if="{{orderDetail.appointmentOrder.appointType === 'SERVER_ONLY'}}">
+      <block wx:if="{{orderDetail.appointmentOrder.status === 501&&_payTime>0}}">
+        <view class="cmp-order-operation-item">
+          <view class="cmp-order-status-text">逾期未支付订单将自动取消</view>
+          <view class="cmp-btn-order-operation">
+            <button class="btn-order-cancel" bindtap="handleCancelOrder">取消订单</button>
+            <button class="cmp-btn-order-pay" bindtap="handlePay">
+              <text>去支付</text>
+              <text><time type="2" time="{{_payTime}}" bindfinish="handleCountDown" /></text>
+            </button>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{orderDetail.appointmentOrder.status === 501&&_payTime<=0||orderDetail.appointmentOrder.status === 202||orderDetail.appointmentOrder.status === 302||orderDetail.appointmentOrder.status === 303||orderDetail.appointmentOrder.status === 503}}">
+        <view class="cmp-order-operation-item">
+          <block wx:if="{{orderDetail.appointmentOrder.status === 501&&_payTime<=0 || orderDetail.appointmentOrder.status === 503}}">
+            <view class="cmp-order-status-text">订单已超时，已自动取消</view>
+          </block>
+          <block wx:if="{{orderDetail.appointmentOrder.status === 202 || orderDetail.appointmentOrder.status === 302 || orderDetail.appointmentOrder.status === 303}}">
+            <view class="cmp-order-status-text">感谢您的信任，祝您生活🐟块～</view>
+          </block>
+          <view class="cmp-btn-order-operation">
+            <button class="btn-order-cancel" data-id="{{orderDetail.appointmentOrder.id}}" bindtap="delPreviewOrder">删除订单</button>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{orderDetail.appointmentOrder.status === 502}}">
+        <view class="cmp-order-operation-item">
+          <view class="cmp-order-status-text">您已成功预约，记得{{startTime}}前使用哦</view>
+          <block wx:if="{{cancelTime>3600}}">
+            <view class="cmp-btn-order-operation">
+              <button class="btn-order-reserved" bindtap="handleCancelOrder">取消预约</button>
+            </view>
+          </block>
+        </view>
+      </block>
+    </block>
+    <block wx:else>
+      <block wx:if="{{orderDetail.appointmentOrder.status === 201}}">
+        <view class="cmp-order-operation-item">
+          <view class="cmp-order-status-text">您已成功预约，记得{{startTime}}前使用哦</view>
+          <view class="cmp-btn-order-operation">
+            <button class="btn-order-cancel" data-id='{{orderDetail.appointmentOrder.id}}' bindtap="cancelPreviewOrder">取消预约</button>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="cmp-order-operation-item">
+          <view class="cmp-order-status-text">感谢您的信任，祝您生活🐟块～</view>
+          <view class="cmp-btn-order-operation">
+            <block wx:if="{{orderDetail.appointmentOrder.status === 202&&stop}}">
+              <button class="btn-order-cancel" data-id='{{orderDetail.appointmentOrder.id}}' bindtap="stopShowerOrder">结束订单</button>
+            </block>
+            <button class="btn-order-cancel" data-id="{{orderDetail.appointmentOrder.id}}" bindtap="delPreviewOrder">删除订单</button>
+          </view>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>

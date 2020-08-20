@@ -1,0 +1,8 @@
+@import './acss/tpl-addcard.wxss';
+@import './acss/tpl-cards.wxss';
+@import './acss/tpl-editcard.wxss';
+.pge-card-package-wrapper{
+  width: 100vw;
+  height: 100vh;
+  padding: 24rpx 20rpx 0;
+}

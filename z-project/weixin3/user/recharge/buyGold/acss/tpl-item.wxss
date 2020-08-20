@@ -1,0 +1,41 @@
+.tpl-gold-one{
+  background-color: #ffffff;
+  padding: 130rpx 42rpx 98rpx;
+}
+.tpl-gold-one .tpl-headPic-box{
+  width: 200rpx;
+  height: 124rpx;
+  margin: 0 auto 84rpx;
+}
+.tpl-gold-one .tpl-headerPic{
+  width: 200rpx;
+  height: 124rpx;
+  margin: 0 auto 84rpx;
+}
+.tpl-gold-one .tpl-gold-item{
+  width: 664rpx;
+  height: 154rpx;
+  padding: 0 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 36rpx;
+  border:1px solid #E6F1FF;
+  border-radius: 10rpx;
+}
+.tpl-gold-one .tpl-active{
+  border:1px solid #2088FF;
+}
+.tpl-gold-one .tpl-gold-principal{
+  display: flex;
+  align-items: center;
+  color: #666666;
+}
+.tpl-gold-one .tpl-icon-gold{
+  width: 34rpx;
+  height: 24rpx;
+  margin-right: 12rpx;
+}
+.tpl-gold-one .tpl-gold-deduction{
+  color: #333333;
+}

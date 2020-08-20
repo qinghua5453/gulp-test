@@ -1,0 +1,93 @@
+
+.tpl-preview-machine-box{
+  border-bottom: 1px solid #f8f8f8;
+  padding-bottom: 40rpx;
+}
+.tpl-preview-machine-box .tpl-preview-machine-item{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 40rpx 0 0;
+}
+.tpl-preview-machine-item .preview-left{
+  display: flex;
+  align-items: center;
+}
+.preview-left .tpl-machine-icon-bg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96rpx;
+  height: 96rpx;
+  background-color: #F5FAFF;
+  border: 1px solid #F2F2F2;
+  margin-right: 20rpx;
+  border-radius: 16rpx;
+}
+.preview-left .washIcon{
+  display: inline-block;
+  vertical-align: middle;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}
+.washliquid {
+  background-image: url(https://static.qiekj.com/alipay/washliquid.png);
+  background-size: 100%;
+}
+.cleargerm {
+  background-image: url(https://static.qiekj.com/alipay/cleargerm.png);
+  background-size: 100%;
+}
+.combinIcon{
+  background-image: url(https://static.qiekj.com/h5/machineIcon/machine_6_icon.png);
+  background-size: 100%;
+}
+.preview-left .charge-time{
+  margin-left: 10rpx;
+  font-size: 32rpx;
+}
+.preview-left .tpl-machine-functionname{
+  font-size: 32rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 350rpx;
+}
+.tpl-machine-icon-bg image{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 18rpx;
+}
+.tpl-preview-machine-item .preview-right{
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+}
+.preview-right .unit{
+  font-size: 28rpx;
+}
+.preview-right .tpl-preview-price{
+  margin-right: 16rpx;
+}
+.preview-right .iconfont{
+  color: #EAEAEA;
+  font-size: 44rpx;
+}
+.preview-left .washIcon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 68rpx;
+  height: 68rpx;
+  background-size: cover;
+  margin-right: 0;
+}
+.mergeIcon{
+  background-image: url(https://static.qiekj.com/alipay/xiyichujun.png);
+}
+.washLiquid {
+  background-image: url(https://static.qiekj.com/alipay/washliquid.png);
+}
+.cleargerm {
+  background-image: url(https://static.qiekj.com/alipay/cleargerm.png);
+}

@@ -1,0 +1,115 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.time-content {
+    width: 100vw;
+    padding: 48rpx;
+    background: #FFFFFF;
+    padding-top: 24rpx;
+}
+
+.scale-box .current {
+    position: relative;
+    width: 160rpx;
+    font-size: 80rpx;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.current .unit {
+    color: #333;
+    position: absolute;
+    width: 70rpx;
+    left: 45rpx;
+    font-size: 28rpx;
+}
+
+.scale-box .current text {
+    color: #2088FF;
+    font-size: 28rpx;
+    margin-left: 18rpx;
+    font-weight: normal;
+}
+
+.scale-wrapper {
+    width: 630rpx;
+    height: 120rpx;
+    border-radius: 10rpx 10rpx 0 0;
+    /* background: linear-gradient(270deg, rgba(210, 237, 255, 0.2) 0%, rgba(210, 237, 255, 1) 100%); */
+    margin: 0 auto;
+}
+
+.line-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.line-pointer {
+    position: absolute;
+    top: 0rpx;
+    left: -8rpx;
+    width: 30rpx;
+    height: 120rpx;
+    z-index: 4;
+    transform: translateX(0rpx);
+    background-image: url(https://static.qiekj.com/alipay/point.png);
+    background-size: cover;
+}
+
+.plusBtn,
+.minusBtn {
+    width: 68rpx;
+    height: 68rpx;
+    border: 4rpx solid rgba(134, 184, 255, 0.5);
+    border-radius: 34rpx;
+    text-align: center;
+    line-height: 54rpx;
+    font-size: 40rpx;
+    color: #1677FF;
+}
+
+.line-wrapper .line-item {
+    width: 10rpx;
+    margin-left: -2rpx;
+    border-radius: 8rpx;
+    height: 32rpx;
+    background-color: rgba(150, 158, 170, 1);
+    opacity: 0.4;
+}
+
+.line-wrapper .line-item.long {
+    height: 48rpx;
+}
+
+.charg-scale-value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #666666;
+    font-size: 28rpx;
+    margin-top: 12rpx;
+}
+
+.charg-scale-value .left {
+    margin-left: -20rpx;
+}
+
+.charg-scale-value .right {
+    margin-right: -20rpx;
+}
+
+.charg-scale-value .interval-value {
+    font-size: 24rpx;
+    color: rgba(0, 0, 0, 0.85);
+    margin-top: 16rpx;
+}
+
+.charg-scale-value .value {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.85);
+}

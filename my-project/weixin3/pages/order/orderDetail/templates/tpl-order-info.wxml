@@ -1,0 +1,40 @@
+<wxs src="../../../../sjs/orderDetail.wxs" module="filter"></wxs>
+<template name="tpl-order-info">
+    <view class="tpl-order-info">
+        <block wx:if="{{orderDetail.charge}}">
+          <view class="item">
+            <text>充电时间：</text>
+            <text>{{orderDetail.markMinutes}}{{filter.timeUnit(orderDetail.markUnit)}}</text>
+          </view>
+          <view class="item">
+            <text>开始时间：</text>
+            <text>{{orderDetail.charge.startTime}}</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="item">
+            <text>设备名称：</text>
+            <view class="tpl-copy-operation">
+              <text class="tpl-order-machine-name">{{orderDetail.machineName}}</text>
+              <button class="copy-text" bindtap="handleCopy">复制</button>
+            </view>
+          </view>
+        </block>
+        <view class="item">
+          <text>订单编号：</text>
+          <text>{{orderDetail.orderNo}}</text>
+        </view>
+        <view class="item" wx:if="{{orderDetail.appointmentOrder}}">
+          <text>预约编号：</text>
+          <text>{{orderDetail.appointmentOrder.id}}</text>
+        </view>
+        <view class="item" wx:if="{{orderDetail.appointmentOrder}}">
+          <text>预约时间：</text>
+          <text>{{orderDetail.appointmentOrder.startTime}}</text>
+        </view>
+        <view class="item">
+          <text>{{orderDetail.orderType === 3 ? '解锁时间：' : '下单时间：'}}</text>
+          <text>{{orderDetail.orderType === 3 ? orderDetail.unlockTime : orderDetail.createTime}}</text>
+        </view>
+    </view>
+</template>

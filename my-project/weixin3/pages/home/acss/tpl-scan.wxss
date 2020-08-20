@@ -1,0 +1,70 @@
+.tpl-scan-box {
+   height: 152rpx;
+   background: #fff;
+   padding:32rpx 30rpx;
+   display: flex;
+   align-items: center;
+}
+
+.tpl-scan-box .tpl-scan-l {
+   flex:1;
+   display: flex;
+}
+.tpl-scan-box .tpl-scan-l.center {
+   align-items: center;
+}
+
+.tpl-scan-l .icon-dingwei {
+   width: 26rpx;
+   height: 30rpx;
+   margin-right: 16rpx;
+   /* margin-top: 4rpx; */
+}
+
+.tpl-scan-l .shop-box {
+  width:372rpx;
+  height:34rpx;
+  font-size:24rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:34rpx;
+  display: flex;
+}
+
+.tpl-scan-l .shop-name {
+  max-width: 308rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.tpl-scan-l .shop-more {
+  font-size:24rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(22,119,255,1);
+  line-height:34rpx;
+  margin-top: 10rpx;
+}
+
+.tpl-scan-box .tpl-scan-r {
+   width: 248rpx;
+   height: 88rpx;
+   background:linear-gradient(180deg,rgba(22,119,255,1) 0%,rgba(22,119,255,1) 100%);
+   border-radius:60rpx;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size:32rpx;
+   font-family:PingFangSC-Semibold,PingFang SC;
+   font-weight:600;
+   color:rgba(255,255,255,1);
+}
+
+.tpl-scan-r .icon-saoyisao {
+   margin-right: 16rpx;
+   width: 32rpx;
+   height: 32rpx;
+}

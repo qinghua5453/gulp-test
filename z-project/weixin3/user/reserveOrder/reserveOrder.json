@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "我的预约单",
+    "usingComponents": {
+        "time": "/components/countDown/countDown",
+        "order-item": "./components/orderItem/orderItem"
+    },
+    "enablePullDownRefresh": false
+}

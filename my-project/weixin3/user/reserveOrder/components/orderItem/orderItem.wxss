@@ -1,0 +1,119 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-order-list{
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 0 0 32rpx 30rpx;
+}
+.cmp-order-list .head{
+  height: 92rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F4F4F4;
+}
+.cmp-order-list .head .time{
+    color: #999;
+    font-size: 26rpx;
+}
+.cmp-order-list .head .order-status{
+  color: #999;
+  font-size: 26rpx;
+}
+.cmp-order-list .cmp-order-right{
+    display: flex;
+    align-items: center;
+    padding-right: 30rpx;
+}
+.cmp-order-right .cmp-delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46rpx;
+    height: 46rpx;
+    background: #F1F1F1;
+    border-radius: 50%;
+    margin-left: 16rpx;
+}
+.cmp-delete .iconfont{
+  font-size: 24rpx;
+  color: #666;
+}
+.cmp-reser-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30rpx 30rpx 0 0;
+}
+.cmp-reser-wrapper .cmp-order-info{
+    display: flex;
+    align-items: center;
+}
+.cmp-order-info .cmp-function-box{
+    display: flex;
+    flex-direction: column;
+}
+.cmp-function-box .machine-name{
+    font-size: 28rpx;
+    font-weight: 500;
+    line-height: 40rpx;
+}
+.cmp-function-box .machine-function-name{
+    display: inline-block;
+    font-size: 26rpx;
+    color: #666;
+    margin-top: 6rpx;
+}
+.cmp-order-info .cmp-machine-function-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 16rpx;
+    border: 1px solid #F2F2F2;
+    background: #F5FAFF;
+    margin-right: 16rpx;
+}
+.cmp-machine-function-icon image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.cmp-reser-wrapper .cmp-order-price{
+    font-size: 28rpx;
+    color: #F04864;
+}
+.cmp-reser-wrapper .cmp-order-price text{
+    font-size: 36rpx;
+    font-weight: 600;
+}
+.footer-btn-box{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 32rpx;
+}
+.cmp-order-list .footer-btn-box .btn{
+  width: 224rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  border-radius: 36rpx;
+  font-size: 32rpx;
+  text-align: center;
+  margin-left: 32rpx;
+  margin-top: 30rpx;
+}
+.cmp-order-list .footer-btn-box .btn-cancle{
+  color: #333333;
+  border: 1px solid #999999;
+  background-color: #fff;
+}
+.footer-btn-box .btn-pay{
+  color: #fff;
+  border: 1px soild #2088FF;
+  background: #2088FF;
+}
+.footer-btn-box .cancel{
+  opacity: 0.6;
+}

@@ -1,0 +1,40 @@
+<import src="./templates/tpl-order-detail.wxml"/>
+<view class="pge-orderDetail-wrapper">
+  <!-- 订单状态 -->
+  <block wx:if="{{orderDetail&&orderDetail.appointmentOrder}}">
+    <order-header orderDetail="{{orderDetail.appointmentOrder}}"></order-header>
+  </block>
+  <view class="pge-order-detail-y">
+      <!-- 订单操作 -->
+      <block wx:if="{{orderDetail&&orderDetail.appointmentOrder}}">
+        <order-operation orderDetail="{{orderDetail}}" bindpayment="handelPayment"></order-operation>
+      </block>
+      <!-- 订单优惠 -->
+      <block wx:if="{{orderDetail}}">
+        <view class="pge-order-machine-discount">
+          <order-discount orderDetail="{{orderDetail}}"></order-discount>
+          <view class="pge-order-show-more" bindtap="showMore" wx:if="{{!isShowMore}}">
+            查看更多详情<text class="iconfont icon-backx transf90"></text>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{isShowMore}}">
+        <!-- 订单信息 -->
+        <template is="tpl-order-detail" data="{{orderDetail}}"></template>
+        <!-- 联系平台 -->
+        <block>
+          <view class="pge-order-service">
+            <service/>
+          </view>
+        </block>
+      </block>
+  </view>
+  <!-- 猜你喜欢 -->
+  <view>
+    
+  </view>
+  <!--继续支付-->
+  <block wx:if="{{orderDetail&&showPaymentPopup}}">
+    <payment-popup orderDetail="{{orderDetail.order}}" appointmentOrder="{{orderDetail.appointmentOrder}}" showPopup="{{showPaymentPopup}}" bindclosepaypopup="closePayment"></payment-popup>
+  </block>
+</view>

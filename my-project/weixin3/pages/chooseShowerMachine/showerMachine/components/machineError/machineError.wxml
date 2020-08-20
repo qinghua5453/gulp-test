@@ -1,0 +1,7 @@
+<view class="cmp-machine-error-wrapper">
+    <view class="cmp-machine-error">
+        <image src="https://static.qiekj.com/h5/payError/machine_error.png" mode="widthFix" />
+        <view class="info" wx:if="{{errorCode}}">设备无法使用，故障码：【{{errorCode}}】</view>
+        <view class="info" wx:else>设备无法使用</view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "优惠券",
+    "usingComponents": {
+        "coupon-newitem": "/components/coupon/couponNewitem/couponNewitem"
+    },
+    "enablePullDownRefresh": false
+}

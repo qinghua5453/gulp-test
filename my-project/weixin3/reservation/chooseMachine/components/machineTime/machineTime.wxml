@@ -1,0 +1,21 @@
+<view class="cmp-machine-time-box">
+   <view class="cmp-machine-header">
+      <text class="header-cancel" bindtap="closeReserTime">取消</text>
+      <text class="header-tit">选择预约时间</text>
+      <text class="header-comfirm" bindtap="handleConfirmTime">确认</text>
+   </view>
+   <view class="cmp-machine-body">
+        <picker-view class="cmp-my-picker" value="{{pickerValue}}" 
+        bindchange="pickerOnChange">
+            <picker-view-column>
+                <view wx:for="{{machineTimeData.days}}" wx:key="index">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view wx:for="{{machineTimeData.hourList}}" wx:key="index">{{item.value}}点</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view wx:for="{{machineTimeData.minuteList}}" wx:key="index">{{item.value}}分</view>
+            </picker-view-column>
+      </picker-view>
+   </view>
+</view>

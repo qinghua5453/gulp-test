@@ -1,0 +1,36 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-machine-error-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 100;
+}
+
+.cmp-machine-error {
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 543rpx;
+    height: 580rpx;
+    border-radius: 5rpx;
+    text-align: center;
+}
+
+.cmp-machine-error image {
+    width: 388rpx;
+    height: 388rpx;
+    margin: 0 auto;
+}
+
+.cmp-machine-error .info {
+    font-size: 28rpx;
+    line-height: 38rpx;
+    color: #333;
+}

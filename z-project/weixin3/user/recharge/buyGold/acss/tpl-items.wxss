@@ -1,0 +1,46 @@
+.tpl-buy-gold-wrapper{
+  max-height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  padding-bottom: 10rpx;
+}
+.tpl-buy-gold-wrapper .tpl-gold-item{
+  width: 100%;
+  height: 146rpx;
+  padding: 0 32rpx;
+  border-bottom:1px solid #EEEEEE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tpl-buy-gold-wrapper .tpl-active{
+  border:1px solid #EF5657;
+  border-radius: 27rpx;
+  box-shadow:0 4rpx 16rpx 0 rgba(255,255,255,1);
+}
+.tpl-buy-gold-wrapper .tpl-gold-item .tpl-total-price{
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+}
+.tpl-buy-gold-wrapper .tpl-gold-item .tpl-deduction-price{
+  font-size: 36rpx;
+  color: #333333;
+  height: 50rpx;
+  margin-bottom: 4rpx;
+}
+.tpl-deduction-price .reward-number{
+  color: #EF5657;
+}
+.tpl-buy-gold-wrapper .tpl-gold-item .tpl-gold-number{
+  font-size: 36rpx;
+}
+.tpl-buy-gold-wrapper .tpl-gold-item .tpl-total-price  .tpl-icon-gold{
+  width: 34rpx;
+  height: 24rpx;
+  margin-right: 4rpx;
+}

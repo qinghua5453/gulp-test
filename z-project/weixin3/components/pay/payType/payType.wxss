@@ -1,0 +1,58 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+@import './acss/tpl-balance.wxss';
+.cmp-pay-type-wrapper{
+  width: 710rpx;
+  margin: 30rpx auto 0;
+  border-radius: 20rpx;
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+.cmp-pay-type-wrapper .cmp-pay-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 104rpx;
+  padding-right: 30rpx;
+  border-bottom: 2rpx solid #f9f8ff;
+}
+.cmp-pay-item .title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 32rpx;
+}
+.cmp-pay-item  image{
+  width: 44rpx;
+  margin-right: 32rpx;
+  border-radius: 6rpx;
+}
+.cmp-pay-item .iconfont{
+  font-size: 44rpx;
+  color: #D2DDFF;
+}
+.cmp-pay-item .info{
+  display: none;
+}
+.cmp-pay-item .icon-xuanzhongx{
+    color: #F04864;
+}
+.cmp-pay-item .icon-norx1{
+  color: #CCCCCC;
+}
+.cmp-balance-without image{
+    opacity: .6;
+}
+.cmp-balance-without .title{
+    color: #8A8FAB;
+}
+.cmp-balance-without .info{
+    display: inline-block;
+    color: #F04864;
+    font-size: 24rpx;
+    margin-left: 20rpx;
+}
+.cmp-balance-without .icon-_bukexuan{
+  color: #E8E8E8;
+}

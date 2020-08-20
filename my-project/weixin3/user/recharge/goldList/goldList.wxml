@@ -1,0 +1,14 @@
+<import src="./templates/tpl-pop.wxml"/>
+<view class="pge-gold-list">
+    <view class="pge-rule-desc" bindtap="openRule">规则说明</view>
+    <view class="pge-gold-list_body">
+      <scroll-view style="height: 100vh;" class="pge-gold-list-con" lower-threshold="50" scroll-y="{{true}}" bindscrolltolower="lower">
+          <golditem list="{{list}}"/>
+          <view class="pge-no-more" wx:if='{{allLoaded}}'>没有更多数据了~</view>
+      </scroll-view>
+    </view>
+    <view class="pge-rule-desc-pop" wx:if="{{isShowRule}}">
+        <template is="tpl-pop"/>
+    </view>
+    <view class="pge-list-none" wx:if="{{!list || list.length <= 0}}">暂无记录</view>
+</view>

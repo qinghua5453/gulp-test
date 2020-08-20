@@ -1,0 +1,18 @@
+<template name="tpl-feedtype">
+	<view>
+		<view class="tpl-head">
+			<text class="tpl-type">反馈类型</text>
+			<view class="tpl-head-extra" bindtap="letFeedBackShow">
+				<text wx:if="{{feedBackTitle === null}}">请选择</text>
+				<text wx:else class="tpl-active">{{feedBackTitle}}</text>
+				<text class="iconfont icon-nextx"></text>
+			</view>
+		</view>
+		<view class="tpl-feedback-radio-list" wx:if="{{isFeedBackShow}}">
+			<view class="tpl-list" wx:for="{{feedBackTypes}}" wx:key='index' bindtap="chooseFeedBackType" data-type='{{item.type}}' data-title='{{item.title}}'>
+				<text class="tpl-list-title">{{item.title}}</text>
+				<text class="{{type === item.type?'iconfont icon-xuanzhongx':'iconfont icon-norx1'}}"></text>
+			</view>
+		</view>
+	</view>
+</template>

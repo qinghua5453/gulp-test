@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "企鹅共享",
+    "usingComponents": {
+        "time": "/components/countDown/countDown"
+    },
+    "enablePullDownRefresh": false
+}

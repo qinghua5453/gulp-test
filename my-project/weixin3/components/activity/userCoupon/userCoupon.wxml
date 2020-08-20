@@ -1,0 +1,32 @@
+
+<!-- 用户优惠券 -->
+<view class="cmp-novice-meet-box" wx:if="{{isShowNoviceMeet}}">
+  <view class="cmp-user-coupon-box">
+    <view class="cmp-discount-coupon-bg">
+      <view class="content">
+        <view class="cmp-coupon" wx:for="{{discouponList}}" wx:key="index">
+          <view class="cmp-user-coupon-price">
+              <view class="price-wrapper" wx:if="{{item.type === 1}}">
+                  <view class="user-coupon-price"><text class="symbol">￥</text>{{item.sweepstakes.faceValue}}</view>
+                  <view class="price-limit">满{{item.sweepstakes.minGcoins*1}}元可用</view>
+              </view>
+              <view class="free" wx:if="{{item.type === 2}}">
+                  <image class="free-img" src="https://static.qiekj.com/h5/activity0409/coupon_free.png" mode="widthFix" />
+              </view>
+              <view class="price-wrapper" wx:if="{{item.type === 3}}">
+                  <view class="user-coupon-price">{{item.sweepstakes.faceValue}}<text class="user-coupon-symbol">折</text></view>
+                  <view class="price-limit">最高抵扣{{item.sweepstakes.minGcoins*1}}元</view>
+              </view>
+          </view>
+          <view class="cmp-coupon-content">
+                <view class="user-coupon-name" wx:if="{{item.type === 1}}">满减券</view>
+                <view class="user-coupon-name" wx:if="{{item.type === 2}}">免费体验券</view>
+                <view class="user-coupon-name" wx:if="{{item.type === 3}}">折扣券</view>
+               <view class="user-coupon-time">{{item.sweepstakes.startDate}}-{{item.sweepstakes.endDate}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="btn-delete" bindtap="closeCouponDialog"></view>
+  </view>
+</view>

@@ -1,0 +1,102 @@
+.tpl-vip-hidden {
+  visibility:hidden;
+  height: 0;
+  width: 0;
+}
+
+.tpl-vip-box-all {
+  margin-top: 26rpx;
+  width: 702rpx;
+  height: 226rpx;
+  background: linear-gradient(239deg, rgba(255, 226, 158, 1) 0%, rgba(255, 210, 107, 1) 100%);
+  border-radius: 32rpx;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 28rpx 38rpx 34rpx 42rpx;
+  position: relative;
+  /* background-image: url('https://static.qiekj.com/VIP.png'); */
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.tpl-vip-box-all .tpl-vip-tit {
+  font-size: 28rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: rgba(51, 51, 51, 1);
+  line-height: 40rpx;
+  margin-bottom: 52rpx;
+}
+
+.tpl-vip-box-all .tpl-vip-infor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tpl-vip-infor .vip-discount {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(239, 100, 18, 1);
+}
+
+.tpl-vip-infor .vip-btn {
+  width: 224rpx;
+  height: 72rpx;
+  background: linear-gradient(228deg, rgba(0, 9, 19, 1) 0%, rgba(35, 14, 7, 1) 100%);
+  border-radius: 36rpx;
+  line-height: 72rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 210, 107, 1);
+}
+
+/* half */
+
+.tpl-vip-box-half {
+  margin-top: 26rpx;
+  width: 702rpx;
+  height: 230rpx;
+  background: linear-gradient(239deg, rgba(255, 226, 158, 1) 0%, rgba(255, 210, 107, 1) 100%);
+  border-radius: 32rpx;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #fff;
+}
+
+/* .tpl-vip-box-half.active-1 {
+  background-image: url('https://static.qiekj.com/vip-tab-1.png');
+}
+
+.tpl-vip-box-half.active-2 {
+  background-image: url('https://static.qiekj.com/vip-tab-2.png');
+} */
+
+.tpl-vip-box-half .vip-header {
+  display: flex;
+  padding: 28rpx 106rpx 0 84rpx;
+  margin-bottom: 58rpx;
+  justify-content: space-between;
+}
+
+.tpl-vip-box-half .vip-header .tpl-universe-tit {
+  height: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: rgba(51, 51, 51, 1);
+  line-height: 40rpx;
+}
+
+.tpl-vip-box-half .tpl-vip-infor {
+  display: flex;
+  padding-left: 76rpx;
+  padding-right: 28rpx;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,6 @@
+<view class="pge-setting-wrapper">
+  <view class="pge-user-con">
+    <usermenu menuitem="{{item}}" wx:for="{{menulist}}" key="{{index}}"/>
+  </view>
+  <view class="pge-btn" bindtap="loginOut">解除绑定</view>
+</view>

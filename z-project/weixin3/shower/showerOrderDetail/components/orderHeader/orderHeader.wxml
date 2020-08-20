@@ -1,0 +1,18 @@
+<wxs module="filter" src="../../../../sjs/reserveOrder.wxs"/>
+  <block wx:if="{{orderDetail}}">
+    <view class="cmp-order-header">
+      <view class="order-detail-header">
+        <view class="cmp-order-status-box">
+          <block wx:if="{{orderDetail.status === 501&&payTime<=0}}">
+            <text class="order-detail-status">支付超时</text>
+          </block>
+          <block wx:else>
+            <text class="order-detail-status">{{filter.getMsg(orderDetail.status)}}</text>
+          </block>
+        </view>
+      </view>
+      <view class="countdown-hide">
+        <time type="2" time="{{payTime}}" bindfinish="hanldeCountDown" />
+      </view>
+    </view>
+  </block>

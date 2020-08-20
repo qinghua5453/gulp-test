@@ -1,0 +1,69 @@
+.pge-wallet-list-wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: #F5F5F5;
+    padding-top: 108rpx;
+}
+.pge-add-margin{
+  margin-bottom: 10rpx;
+}
+.pge-list-wrap{
+  height: 100%;
+  overflow: hidden;
+  transform: rotate(0deg);
+  border-radius: 20rpx;
+}
+.pge-wallet-list{
+    width: 710rpx;
+    margin: 0 auto 0;
+    border-radius: 20rpx;
+    height: 100%;
+    background-color: #fff;
+    padding: 0 30rpx;
+}
+.pge-list-none{
+    position: fixed;
+    top: 600rpx;
+    left: 290rpx;
+    color: #C2C6DA;
+}
+.pge-no-more{
+    text-align: center;
+    color: #C2C6DA;
+    padding:40rpx 0;
+}
+/* tab切换style */
+
+.pge-tab-common{
+	border-top:1rpx solid #f5f5f5;
+	width: 100%;
+	height: 88rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #333333;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #F9F8FF;
+	background-color: #fff;
+}
+.pge-tab-item{
+    width: 50%;
+    text-align: center;
+}
+.pge-tab-item text{
+    line-height: 80rpx;
+}
+.pge-tab-item.pge-active{
+    font-size: 34rpx;
+    color: #2088FF;
+
+}
+.pge-tab-item.pge-active .pge-border-active{
+    width: 55rpx;
+    height: 6rpx;
+    background-color: #2088FF;
+    border-radius: 3rpx;
+    margin: 0 auto;
+}

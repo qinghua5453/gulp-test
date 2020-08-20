@@ -1,0 +1,7 @@
+<view class="pge-add-card-wrapper">
+  <view class="pge-card-bind-pic">
+  <image src="https://static.qiekj.com/h5/miniApp/user/flow-4.png" mode="widthFix"/>
+  </view>
+  <view class="pge-card-bind-text">扫描卡片上的二维码进行绑卡</view>
+  <button type="primary" class="pge-btn-add-confirm" bindtap="goscan">扫一扫</button>
+</view>

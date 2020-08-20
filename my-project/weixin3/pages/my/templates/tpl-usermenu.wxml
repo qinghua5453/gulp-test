@@ -1,0 +1,14 @@
+<template name="tpl-usermenu">
+  <!-- 个人信息 -->
+  <view class="tpl-menu-content-box">
+    <block wx:for="{{menus}}" wx:key="index">
+      <view class="tpl-menu-item" bindtap="toMenuPage" data-item="{{item}}">
+        <view class="tpl-menu-icon">
+          <image src="{{item.iconUrl}}" mode="widthFix" />
+        </view>
+        <view class="tpl-menu-title">{{item.name}}</view>
+      </view>
+      <view wx:if="{{index === 0}}" class="tpl-menu-line"></view>
+    </block>
+  </view>
+</template>

@@ -1,0 +1,56 @@
+<view class="reser-wrapper">
+  <!-- 自己设置的使用预约单的时候把type为3 -->
+  <!-- <view class="address">{{machine.shopName}}</view>
+  <view class="reser-content">
+    <image binderror='imageError' src="{{image}}" mode="aspectFill" />
+    <view class="reser-info">
+      <view class="reser">
+        <view class="name">{{machine.machineName}}</view>   
+        <view wx:if='{{machine.orderType == 2 || machine.orderType == 3}}' class="tag">预约</view>    
+      </view>
+      <view class="mode-desc">
+        <text>{{machine.machineFunctionName}}</text>
+        <text class="line" wx:if='{{!machine.drink}}'>|</text>
+        <text wx:if='{{!machine.drink}}'>时长{{machine.markMinutes}}分钟</text>
+      </view>
+      <view class="price-bd" wx:if='{{machine.orderType != 2}}'>
+        <text>¥{{machine.markPrice}}</text>
+      </view>
+    </view>
+  </view> -->
+  <view class="reser-machine-con">
+    <view class="machine-con-wrapper">
+      <view class="machine-name-box">
+        <view class="line"></view>
+        <view class="line"></view>
+      </view>
+      <view class="machine-name"><view>{{machine.machineName}}</view></view>
+    </view>
+    <view class="machine-function-box">
+      <text class="function-name">{{machine.machineFunctionName}}</text>
+      <text class="function-price" wx:if='{{machine.orderType == 1 || isShowPrice}}'>
+        <text class="unit">￥</text>{{machine.markPrice}}
+      </text>
+    </view>
+    <view class="machine-status-box">
+      <view class="machine-time" wx:if="{{machine.machineType == 5 && machine.isSATACharge == 1}}">
+        <view class="iconfont icon-moshishijianx"></view>
+        <text class="time">{{machine.markMinutes}}{{machine.markUnit}}</text>
+      </view>
+      <view class="machine-time" wx:else>
+        <view class="iconfont icon-moshishijianx"  wx:if="{{machine.machineType != 6 && machine.machineType != 5}}"></view>
+        <text class="time" wx:if="{{machine.machineType != 6 && machine.machineType != 5}}">{{machine.markMinutes}}分钟·</text>
+        <text>{{machine.machineFunctionDescribe}}</text>
+      </view>
+      <view class="reser-btn" wx:if='{{machine.orderType == 2 || machine.orderType == 3}}'>预约</view>
+    </view>
+  </view>
+  <view class="skus-list" wx:if="{{machine.skus&&machine.skus.length>0}}">
+    <block wx:for="{{machine.skus}}" wx:key="index">
+      <view class="sku-item">
+        <text class="sku-name">{{item.skuName}}</text>
+        <view class="price"><text>￥</text>{{item.price}}</view>
+      </view>
+    </block>
+	</view>
+</view>

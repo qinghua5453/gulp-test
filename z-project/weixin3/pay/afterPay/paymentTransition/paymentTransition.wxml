@@ -1,0 +1,8 @@
+<view class="after-payment-transition" wx:if="{{transition}}">
+  <view class="pic-wrapper">
+		<image src="{{image}}" mode="widthFix" />
+	</view>
+	<view class="info" style="{{'color:' + color}}">{{text}}
+		<text class="loading-transition">...</text>
+	</view>
+</view>

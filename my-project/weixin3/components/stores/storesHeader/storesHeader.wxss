@@ -1,0 +1,52 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-classify-box {
+  height: 180rpx;
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.cmp-classify-box  .cmp-pre-loading {
+  visibility:hidden;
+  height: 0;
+  width: 0;
+}
+
+.cmp-classify-box .classify-scroll-view_H {
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+}
+
+.cmp-classify-box .classify-scroll-view-item_H {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink:0;
+  flex-grow:0;
+}
+
+.cmp-classify-box .image {
+  width: 68rpx;
+  height: 68rpx;
+}
+
+.cmp-classify-box .classify-scroll-view-item_H {
+  margin-right: 58rpx;
+  width: 72rpx;
+}
+
+.cmp-classify-box .text {
+  font-size:24rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  line-height:34rpx;
+  margin-top: 6rpx;
+  color:#333333;
+}
+
+.cmp-classify-box .text.active {
+  color:rgba(22,119,255,1);
+}

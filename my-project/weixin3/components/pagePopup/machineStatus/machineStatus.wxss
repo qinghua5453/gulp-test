@@ -1,0 +1,58 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-machine-status-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 1003;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.cmp-machine-status {
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 543rpx;
+    height: 580rpx;
+    border-radius: 5rpx;
+    text-align: center;
+}
+
+.cmp-machine-status .image {
+    width: 388rpx;
+    height: 388rpx;
+    margin: 0 auto;
+}
+
+.cmp-machine-status .info {
+    font-size: 28rpx;
+    line-height: 38rpx;
+    color: #333;
+}
+
+.cmp-machine-status-btn-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 96rpx;
+    display: flex;
+    border-top: 1rpx solid #e5e5e5;
+}
+
+.cmp-machine-status-btn-status {
+    width: 100%;
+    text-align: center;
+    line-height: 96rpx;
+    font-size: 36rpx;
+    color: #333;
+}
+
+.cmp-machine-status-btn-status.goHome {
+    color: #2088FF;
+    border-right: 1rpx solid #e5e5e5;
+}

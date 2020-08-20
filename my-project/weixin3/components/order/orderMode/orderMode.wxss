@@ -1,0 +1,109 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.reser-wrapper{
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 20rpx;
+}
+.reser-machine-con{
+  padding: 50rpx 30rpx 30rpx;
+}
+.machine-con-wrapper{
+  position: relative;
+}
+.machine-name-box .line{
+  width: 100%;
+  height: 5rpx;
+  background: #EFEFEF;
+}
+.machine-name-box .line:last-child{
+  margin-top: 5rpx;
+}
+.machine-con-wrapper .machine-name{
+  background-color: transparent;
+  width: 514rpx;
+  margin: -26rpx auto 0;
+  text-align: center;
+}
+.machine-con-wrapper .machine-name view{
+  font-size: 32rpx;
+  color: #333333;
+  background: #FFFFFF;
+  padding: 0 16rpx;
+  display: inline-block;
+}
+.machine-function-box{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 38rpx;
+}
+.machine-function-box .function-name{
+  font-size:32rpx;
+  line-height: 45rpx;
+  color: #333333;
+  font-weight: bold;
+}
+.machine-function-box .function-price{
+  font-size: 36rpx;
+  color: #F04864;
+  font-weight: bold;
+}
+.machine-function-box .function-price .unit{
+  font-size: 24rpx;
+}
+.machine-status-box{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rpx;
+}
+.machine-status-box .machine-time{
+  width: 480rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #666666;
+}
+.machine-status-box .machine-time .iconfont{
+  display: inline-block;
+  color: #2088FF;
+  font-size: 26rpx;
+  margin-right: 9rpx;
+}
+.machine-status-box .machine-time .time{
+  font-size: 28rpx;
+  color: #2088FF;
+}
+.machine-status-box .reser-btn{
+  width: 40px;
+  height: 18px;
+  background: #DEEEFF;
+  font-size: 12px;
+  color: #3F9EFF;
+  text-align: center;
+  border-radius: 4px;
+  vertical-align: bottom;
+  padding-top: 3px;
+}
+.reser-wrapper .skus-list{
+  height: 104rpx;
+  line-height: 104rpx;
+  margin: 0 30rpx;
+  border-top: 2rpx solid #F9F8FF;
+}
+.reser-wrapper .skus-list .sku-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reser-wrapper .skus-list .sku-item .sku-name{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.reser-wrapper .skus-list .sku-item .price{
+  font-size: 36rpx;
+  color: #F04864;
+  font-weight: bold;
+}
+.reser-wrapper .skus-list .price text{
+  font-size: 22rpx;
+}

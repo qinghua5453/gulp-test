@@ -1,0 +1,19 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.charg-time{
+  display: inline-block;
+}
+.min-time{
+  font-size: 24rpx;
+  margin: 0 5rpx;
+}
+.count-down-number{
+  font-size: 72rpx;
+  font-weight: bold;
+  margin: 0 10rpx;
+}
+.cmp-charge-time{
+  display: flex;
+  align-items: center;
+}

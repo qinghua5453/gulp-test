@@ -1,0 +1,19 @@
+<view class="pge-consumption-detail">
+  <view class="pge-order-list" wx:for="{{list}}" wx:key="index">
+    <view class="pge-header" bindtap="goShowerDetail" data-id="{{item.orderId}}" data-type="{{item.orderType}}">
+      <view class="pge-machine-type">
+        <image mode="widthFix" src="https://static.qiekj.com/h5/shower/shower_icon.png"/>
+        <text>{{item.serviceName}}服务</text>
+      </view>
+      <view class="pge-see-details">
+        <text>查看详情</text>
+        <view class="iconfont icon-nextx"></view>
+      </view>
+    </view>
+    <view class="pge-shower-info">
+      <view class="bathroom-name">{{item.showerName}}</view>
+      <view class="bathroom-number">{{item.showerNo}}</view>
+    </view>
+    <view class="reser-label" wx:if="{{item.orderType === 1}}">预约</view>
+  </view>
+</view>

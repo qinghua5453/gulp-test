@@ -1,0 +1,10 @@
+<wxs module="reserve" src="../../sjs/reserveOrder.wxs"/>
+<view class="pge-reserve-order-wrapper">
+  <block wx:for='{{orderList}}' wx:key='index'>
+    <order-item item="{{item}}"></order-item>
+  </block>
+  <view class="listNone-info" wx:if='{{listNoneShow}}'>
+    <view>您当前暂无订单~</view>
+  </view>
+  <view class="no-more" wx:if="{{allLoaded}}">没有更多数据了~</view>
+</view>

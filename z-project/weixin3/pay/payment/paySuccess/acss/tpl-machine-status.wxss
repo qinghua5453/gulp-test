@@ -1,0 +1,41 @@
+.tpl-machineStatus-bg{
+    height: 94rpx;
+    background: #1677FF;
+}
+.tpl-machineStatus-charge-bg{
+    height: 182rpx;
+}
+.tpl-machineStatus-bg-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 84rpx;
+    background: url(https://static.qiekj.com/alipay/curved.png) no-repeat;
+    background-size: 100%;
+    color: #fff;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+.tpl-machineStatus-bg-bottom .charge-working{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 170rpx;
+    height: 202rpx;
+    background: url(https://static.qiekj.com/h5/charge/charging.png) no-repeat;
+    background-size: 100%;
+}
+.charge-working .charge-status{
+    margin-bottom: 24rpx;
+}
+.tpl-machineStatus-bg-bottom .charge-not-start{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.charge-not-start image{
+    width: 72rpx;
+    height: 184rpx;
+    margin: 22rpx auto 0;
+}

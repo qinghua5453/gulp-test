@@ -1,0 +1,55 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.tpl-preview-disocunt-item{
+  display: flex;
+  align-items:  center;
+  justify-content: space-between;
+  height: 122rpx;
+  border-bottom: 1px solid #f8f8f8;
+}
+.preview-left{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+.preview-left .info{
+	font-size: 24rpx;
+	margin-left: 10rpx;
+	color: #FF5F5F;
+}
+.tpl-preview-disocunt-item .preview-right{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+.preview-right .vip-icon{
+  width: 108rpx;
+  height: 34rpx;
+  margin-right: 22rpx;
+  background: url(https://static.qiekj.com/alipay/vip/vip_icon.png) no-repeat;
+  background-size: 100%;
+}
+.preview-right .iconfont{
+  font-size: 44rpx;
+}
+.preview-right .btn-buy{
+  color: #EF5657;
+}
+.preview-right .user-discount-tips{
+  font-size: 28rpx;
+  color: #666;
+  margin-right: 36rpx;
+}
+.preview-right .tpl-preview-price{
+  margin-right: 16rpx;
+}
+.preview-right .iconfont{
+  color: #EAEAEA;
+}
+.preview-right .icon-backx{
+  transform: rotate(180deg);
+}
+.preview-right .icon-xuanzhongx{
+  color: #1677FF !important;
+}

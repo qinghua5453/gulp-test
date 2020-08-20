@@ -1,0 +1,51 @@
+.tpl-editCardName-wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+}
+.tpl-editCardName-wrapper .tpl-editUserName{
+	position: absolute;
+	left: 103rpx;
+	top: 20%;
+	width: 544rpx;
+	border-radius: 10rpx;
+	background-color: #fff;
+  z-index: 9999;
+}
+.tpl-editCardName-wrapper .tpl-editUserName .tpl-title{
+	padding: 40rpx 0;
+	text-align: center;
+	font-size: 32rpx;
+	line-height: 45rpx;
+}
+.tpl-editCardName-wrapper .tpl-editUserName .tpl-card-name-input{
+  width: 452rpx;
+  height: 64rpx;
+  margin: 0 auto 65rpx;
+	border-radius: 4rpx;
+  border: 2rpx solid #DFE6FF;
+}
+.tpl-editCardName-wrapper .tpl-editUserName .tpl-btn-wrapper{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 92rpx;
+	border-top: 1rpx solid #DFE6FF;
+}
+.tpl-editCardName-wrapper .tpl-editUserName .tpl-btn-wrapper text{
+	text-align: center;
+	width: 50%;
+	height: 100%;
+	line-height: 92rpx;
+}
+.tpl-editCardName-wrapper .tpl-placeholderClass{
+	font-size: 30rpx;
+	color: #BAC0D2;
+}
+.tpl-editCardName-wrapper .tpl-editUserName .tpl-btn-wrapper text:first-child{
+	border-right: 1rpx solid #DFE6FF;
+}

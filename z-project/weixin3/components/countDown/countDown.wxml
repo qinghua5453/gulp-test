@@ -1,0 +1,21 @@
+<block wx:if="{{type == 1 || type == 2 || type == 5}}">
+ <text>{{str}}</text>
+</block>
+<block wx:if="{{type == 3}}">
+ <text>
+   <block wx:if="{{hour > 0}}">
+    <text >{{hour}}</text>小时
+   </block>
+   <text>{{minutes}}</text>分
+ </text>
+</block>
+<block wx:if="{{type == 4}}">
+  <view class="cmp-charge-time">
+    <block wx:if="{{hour > 0}}">
+        <text class="count-down-number">{{hour}}</text>小时
+    </block>
+    <block wx:if="{{minutes > 0}}">
+        <text class="count-down-number">{{minutes}}</text>分钟
+    </block>
+  </view>
+</block>

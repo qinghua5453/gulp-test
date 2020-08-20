@@ -1,0 +1,24 @@
+<import src="./templates/tpl-balance.wxml"/>
+<view>
+  <view class="cmp-pay-type-wrapper">
+    <view class="cmp-pay-item" bindtap="selectPayType" data-item="1">
+      <view class="title">
+        <image src="https://static.qiekj.com/wechat/wechat.png" mode="widthFix" />
+        <text>微信支付</text>
+      </view>
+      <text class="{{type === 1 ? 'iconfont icon-xuanzhongx':'iconfont icon-norx1'}}"></text>
+    </view>
+    <view class="{{!isSupport ? 'cmp-pay-item cmp-balance-without':'cmp-pay-item' }}" wx:if="{{isShowBalance}}" bindtap="selectPayType" data-item="2">
+      <view class="title">
+        <image src="https://static.qiekj.com/h5/miniApp/pay/icon_ye.png" mode="widthFix" />
+        <text>余额支付</text>
+        <text class="info">余额不足</text>
+      </view>
+      <view>
+        <text class="iconfont {{type === 2 ? 'icon-xuanzhongx':' icon-norx1'}} {{!isSupport ? 'icon-_bukexuan' : ''}}"></text>
+      </view>
+    </view>
+  </view>
+  <!-- 余额支付弹窗 -->
+  <template is="tpl-balance" data="{{balanceShow,orderDetail,totalBalance}}"/>
+</view>

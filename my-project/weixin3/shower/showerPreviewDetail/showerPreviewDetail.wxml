@@ -1,0 +1,35 @@
+<view class="pge-payPreview-wrapper">
+  <view class="pge-payPreview-header-box">
+    <view class="pge-reser-shop-con">
+      <view class="iconfont icon-dianpumingchengx"></view>
+      <text class="reser-shop-name">{{reserveData.orgName}}</text>
+      <view class="reser-shop-address">{{reserveData.address}}</view>
+    </view>
+  </view>
+  <view class="pge-payPreview-wrapper-y">
+    <view class="reser-wrapper">
+      <view class="pge-reser-machine-con">
+        <view class="pge-machine-con-wrapper">
+          <view class="pge-machine-name-box"> 
+            <view class="line"></view>
+            <view class="line"></view>
+          </view>
+          <view class="pge-machine-name"><view class="name">{{reserveData.positionName}}</view></view>
+        </view>
+        <view class="pge-machine-function-box">
+          <text class="function-name">{{goodsName}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="pge-reserve-tip">
+      <view class="reserve-explain">预约说明</view>
+      <view>1、预约后超时未使用则为违约(除取消预约外)；</view>
+      <view>2、违约次数达到{{reserveData.reserveAllowCount}}次，则限制使用预约功能；</view>
+      <view>3、您还剩{{reserveData.surplusRenegeNumber}}次违约机会，请妥善使用预约。</view>
+    </view>
+  </view>
+  <view class="pge-footer-bg-box">
+    <view class="btn btn-by loading-btn" wx:if="{{showLoading}}"><image mode="scaleToFill" src="https://static.qiekj.com/gif/pay_loading.gif"/><text>预约中...</text></view>
+    <button class="btn btn-by" wx:else bindtap="handleConfirmReserve">确认预约</button>
+  </view>
+</view>

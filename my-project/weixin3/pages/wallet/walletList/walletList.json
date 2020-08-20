@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "明细",
+    "usingComponents": {
+        "walletitem": "./components/walletItem/walletItem"
+    },
+    "enablePullDownRefresh": false
+}

@@ -1,0 +1,75 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.novice-meet-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 1002;
+}
+.novice-meet-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1005;
+}
+.novice-meet-bg{
+  position: relative;
+  width: 641rpx;
+  height: 820rpx;
+  margin: 134rpx auto 0;
+  background: url('https://static.qiekj.com/h5/newUser_order.png');
+	background-size: cover;
+}
+.novice-content{
+  position: absolute;
+  top: 385rpx;
+  left: 50%;
+  transform: translate(-50%);
+  width: 530rpx;
+  height: 357rpx;
+  background: url('https://static.qiekj.com/h5/newUser_order2.png');
+	background-size: cover;
+}
+.meet-box{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.meet-title{
+  text-align: center;
+  margin-top: 130rpx;
+  height: 112rpx;
+  line-height: 112rpx;
+  font-weight: bold;
+}
+.meet-discount{
+  font-size: 80rpx;
+  color: #F44A32;
+}
+.meet-discount-unit{
+  font-size: 64rpx;
+  color: #F44A32;
+}
+.meet-date{
+  text-align: center;
+  color: #C75D2D;
+  font-size: 22rpx;
+  font-weight: bold;
+  height: 32rpx;
+  line-height: 32rpx;
+  margin-top: 35rpx;
+}
+.btn-delete{
+  width: 64rpx;
+  height: 64rpx;
+  margin: 62rpx auto 0;
+  background: url('https://static.qiekj.com/h5/modalDel.png');
+  background-size: cover;
+}

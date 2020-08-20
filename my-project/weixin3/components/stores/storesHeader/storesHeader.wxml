@@ -1,0 +1,25 @@
+<view class="cmp-classify-box">
+  <scroll-view  scroll-x="{{true}}" scroll-left="{{scrollLeft}}">
+    <view class="classify-scroll-view_H" style="width:100%">
+      <view class="classify-scroll-view-item_H" wx:for="{{nearby}}" wx:key="index" bindtap="chooseTab" data-index="{{index}}" bindtap='chooseTab' data-type='{{item.type}}'>
+        <view wx:if="{{currentTab != item.type}}">
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 7}}" src="../../../assets/images/home/xiyiji-3x.png"/>
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 1}}" src="../../../assets/images/home/hongganji-3x.png"/>
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 10}}" src="../../../assets/images/home/linyu-3x.png"/>
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 2}}" src="../../../assets/images/home/chuifenji-3x.png"/>
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 3}}" src="../../../assets/images/home/chongdian-3x.png"/>
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 5}}" src="../../../assets/images/home/yinshuiji-3x.png"/>
+        </view>
+        <view wx:else>
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 7}}" src="../../../assets/images/home/xiyiji-3x-a.png"/>
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 1}}" src="../../../assets/images/home/hongganji-3x-a.png"/>
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 10}}" src="../../../assets/images/home/linyu-3x-a.png"/>
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 2}}" src="../../../assets/images/home/chuifenji-3x-a.png"/>
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 3}}" src="../../../assets/images/home/chongdian-3x-a.png"/>
+          <image mode="scaleToFill" class="image" wx:if="{{item.type == 5}}" src="../../../assets/images/home/yinshuiji-3x-a.png"/>
+        </view>
+        <view class="text {{currentTab == item.type ? 'active' : ''}}">{{item.name}}</view>
+      </view>
+    </view>  
+  </scroll-view>
+</view>

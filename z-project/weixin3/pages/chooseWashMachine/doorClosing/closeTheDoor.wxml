@@ -1,0 +1,35 @@
+<view class="pge-wash-tips">
+   <view class="tipText">请放入衣物，关好机门</view>
+   <view class="ImgPosition">
+      <!-- 动画第一帧 -->
+     <image class="washImg1" src="https://static.qiekj.com/gif/washMx1.jpg" mode="scaleToFill" /> 
+      <!-- 动画图片 --> 
+      <image class="washImg" src="https://static.qiekj.com/gif/washMXbg1597635043329.gif" mode="scaleToFill" /> 
+      <!-- 圆角背景 -->
+      <image class="wash_bg" src="https://static.qiekj.com/gif/wash_bg.png" mode="scaleToFill" />
+   </view>
+   <view class="icon_tips">
+      <view class="iconTip">
+         <image src="https://static.qiekj.com/alipay/shoes.png" class="iconImg" mode="scaleToFill"/>
+         <view class="iconText">勿洗</view><view class="iconText">鞋类</view>
+      </view>
+      <view class="iconTip">
+         <image src="https://static.qiekj.com/alipay/dog.png" class="iconImg" mode="scaleToFill"/>
+         <view class="iconText">勿洗</view>
+         <view class="iconText">宠物物品</view>
+      </view>
+      <view class="iconTip">
+         <image src="https://static.qiekj.com/alipay/water.png" class="iconImg" mode="scaleToFill"/>
+         <view class="iconText">勿洗</view>
+         <view class="iconText">不可水洗衣物</view>
+      </view>
+      <view class="iconTip">
+         <image src="https://static.qiekj.com/alipay/clothes.png" class="iconImg" mode="scaleToFill"/>
+         <view class="iconText">勿洗</view>
+         <view class="iconText">贵重衣物</view>
+      </view>
+   </view>
+
+   <view class="pge-closeDoor-btn" catchtap="closeTheDoor">已关门<text class="iconfont icon-nextx"></text></view>
+   <view class="desc">支付成功后，将自动开始洗涤</view>
+</view>

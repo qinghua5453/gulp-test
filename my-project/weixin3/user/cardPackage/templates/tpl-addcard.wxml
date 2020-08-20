@@ -1,0 +1,10 @@
+<template name="tpl-addcard">
+  <!-- 添加卡 -->
+  <view class="tpl-add-card" bindtap="addCard" wx:if="{{!cardList || cardList.length < 5}}">
+    <view class="tpl-add-card-con">
+      <view class="tpl-add-icon iconfont icon-tianjiax"></view>
+      <text>添加卡</text>
+    </view>
+    <text class="tpl-secret-payment-text" wx:if="{{!isFreeSecret}}">请先开通免密支付</text>
+  </view>
+</template>

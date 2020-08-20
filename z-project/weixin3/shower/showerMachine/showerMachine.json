@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "企鹅共享",
+    "usingComponents": {
+        "popup": "/components/popup/index",
+        "secret-payment": "/components/pagePopup/secretPayment/secretPayment"
+    },
+    "enablePullDownRefresh": false
+}

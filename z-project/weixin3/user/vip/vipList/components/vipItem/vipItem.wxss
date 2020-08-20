@@ -1,0 +1,142 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.pge-card-wrapper{
+  width: 100%;
+  padding: 0 24rpx;
+  margin-bottom: 20rpx;
+}
+.cmp-vip-card{
+    position: relative;
+    margin-top: 32rpx;
+    width: 100%;		
+    background: #FFF6E3;background-color: #FFF6E3;
+	border-radius: 32rpx;
+}
+.cmp-vip-detail{
+    position: relative;
+}
+.cmp-detail-bg{
+    position: absolute;
+    bottom: -2rpx;
+    left: 0;
+    width: 100%;
+    height: 17rpx;
+    background-image: url(https://static.qiekj.com/h5/miniApp/vip/detail_bg.png);
+	background-size:cover;
+    z-index: 2;
+}
+.cmp-vip-face{
+	width: 100%;
+	height: 228rpx;
+	background-image: url(https://static.qiekj.com/h5/alipay/vipList/vip-bg.png);
+	background-size:cover;
+	border-radius: 32rpx;
+	position: relative;
+	padding: 32rpx;
+	color: #333;
+}
+.cmp-vip-face .cmp-discount{
+	font-size: 56rpx;
+	line-height: 69rpx;	
+	font-weight: bold;
+	margin-bottom: 10rpx;	
+}
+.cmp-vip-face .cmp-vip-operation{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.cmp-discount text{
+	font-size: 24rpx;
+	margin-left: 10rpx;
+}
+.cmp-vip-face .cmp-title{
+	font-size: 28rpx;
+	line-height: 40rpx;
+}
+.cmp-vip-face .cmp-time{
+	font-size: 24rpx;
+	line-height: 30rpx;
+	margin-top: 22rpx;
+}
+.cmp-vip-face .cmp-vip-btn{
+	width: 224rpx;
+	height: 72rpx;
+	line-height: 72rpx;
+	border-radius: 36rpx;
+	background:linear-gradient(228deg,rgba(0,9,19,1) 0%,rgba(47,19,9,1) 100%);
+	text-align: center;
+	color: #FFD26B;
+	font-size: 32rpx;
+}
+.cmp-vip-notice{
+    position: relative;
+	padding: 32rpx 32rpx 16rpx;
+	font-size: 24rpx;
+	display: flex;
+	align-items: center;
+}
+.cmp-vip-notice .cmp-detail-title{
+	color: #000;
+}
+.cmp-vip-notice .cmp-left-con{
+    color: #FF8B36;
+	font-size: 24rpx;
+}
+.cmp-vip-notice view{
+	display: flex;
+	align-items: center;
+}
+.cmp-left-con .icon-laba{
+	margin-left: 24rpx;
+	margin-right: 10rpx;
+}
+.icon-nextx{
+	font-size: 14rpx;	
+	display: inline-block;
+	transform: rotate(90deg);
+	position: relative;
+	top: -4rpx;
+}
+.icon-nextx.cmp-active{
+	transform: rotate(-90deg);
+	top: -2rpx;
+}
+.cmp-vip-detail .cmp-list{
+	padding: 0 32rpx 32rpx;
+	border-radius: 0 0 32rpx 32rpx;
+}
+.cmp-list .cmp-time{
+	font-size: 24rpx;
+	line-height: 33rpx;
+	color: #232628;
+	padding-bottom: 8rpx;
+	font-weight: 400;
+}
+.cmp-list .cmp-font{
+	font-size: 24rpx;
+	color: #666;
+	line-height: 33rpx;
+	margin-top: 10rpx;
+}
+.cmp-vip-face-active{
+	background: url(https://static.qiekj.com/h5/alipay/vipList/vip-bg-active.png) no-repeat;
+	background-size: 100%;
+	color: #FFD26B;
+}
+.cmp-vip-face-active .cmp-vip-btn{
+	background:linear-gradient(239deg,rgba(255,226,158,1) 0%,rgba(255,210,107,1) 100%) !important;
+	color: #333333 !important; 
+}
+.pge-dated-card .cmp-vip-card{
+    background-color: #F9F9F9;
+}
+.pge-dated-card .cmp-vip-face-active,.pge-dated-card .cmp-vip-face{
+	background: url(https://static.qiekj.com/h5/alipay/vipList/vip-bg-dated.png) no-repeat;
+	background-size: 100%;
+	color:#333333;
+}
+.pge-dated-card .cmp-vip-btn{
+	color: #fff;
+}

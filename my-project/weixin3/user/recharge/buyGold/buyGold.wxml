@@ -1,0 +1,22 @@
+<!-- <import src="./templates/tpl-item.wxml"/> -->
+<import src="./templates/tpl-items.wxml"/>
+<view class='pge-byu-gold'>
+  <block wx:if="{{shopTokenCoinRewards && shopTokenCoinRewards.length > 0}}">
+    <view class="pge-tokencoin-bg"></view>
+    <view class="pge-tokencoin-content" wx:if="{{shopTokenCoinRewards && shopTokenCoinRewards.length > 0}}">
+      <!-- <template is="tpl-item" data="{{shopTokenCoinRewards,chooseIndex}}"/> -->
+      <template is="tpl-items" data="{{shopTokenCoinRewards,chooseIndex}}"/>
+      <view class="pge-bottom-wrapper">
+          <view class="pge-tokencoin-tips">本次购买小票只适用于该店铺</view>
+          <button class="pge-btn-buy-gold {{!isCanUse ? 'pge-btn-gray' : ''}}" disabled="{{isDisable}}" bindtap="buyCoin">立即购买</button>
+          <view class="pge-gold-protocol"><text>点击购买，即表示同意</text><text class="pge-active" bindtap="openAgreement">购买通用小票协议</text></view>
+      </view>
+    </view>
+  </block>
+  <view class="pge-activity-fail-wrapper" wx:if="{{isShowError}}">
+    <view class="pge-activity-fail">
+      <image mode="widthFix" src="https://static.qiekj.com/h5/activity/activityScan_stop.png"/>
+      <view class="pge-info">{{errorText}}</view>
+    </view>
+  </view>
+</view>

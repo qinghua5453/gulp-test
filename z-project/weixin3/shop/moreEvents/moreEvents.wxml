@@ -1,0 +1,20 @@
+<view class="more-events">
+    <view class="shop_body">
+        <view class="shop-address">{{shop.shopName}}</view>
+        <view class="business-info">
+            <view class="iconfont icon-dianpumingchengx" />
+            <view class="working-status">{{shopState}}</view>
+            <view class="line"></view>
+            <view class="working-time">周一至周日 {{shop.openTime[0]}}</view>
+        </view>
+        <view class="business-info distance-info">
+            <view class="iconfont icon-mapx"></view>
+            <view class="address">{{shop.address}}</view>
+        </view>
+    </view>
+    <view wx:for="{{tipList}}" wx:key="index" class="{{item.promotionType*1 === 1 ? 'shop-vip' : 'shop-gold'}} item">
+      <image wx:if="{{item.promotionType*1 === 1 && !item.promotionInfoOfUserInShop}}" class="vipPic" mode="widthFix" src="{{item.promotionInfoOfShop.banner}}" bindtap="toCreateVip" data-type='2'/>
+      <image wx:if="{{item.promotionType*1 === 1 && item.promotionInfoOfUserInShop}}" class="vipPic" mode="widthFix" src="https://static.qiekj.com/h5/recharge/shop_vip_xf.png" bindtap="toCreateVip" data-type='1'/>
+      <image wx:if="{{item.promotionType*1 === 4}}" mode="widthFix" class="vipPic" src="{{item.promotionInfoOfShop.banner}}" bindtap="goTokenCoin"/>
+    </view>
+</view>

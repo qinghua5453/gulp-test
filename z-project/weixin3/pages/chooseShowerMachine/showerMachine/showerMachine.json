@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "企鹅共享",
+    "usingComponents": {
+        "unlocked": "./components/machineUnlocked/machineUnlocked",
+        "machineerror": "./components/machineError/machineError",
+        "connect-failed": "./components/connectFailed/connectFailed",
+        "act-banner": "/components/adPage/actBanner/actBanner"
+    },
+    "enablePullDownRefresh": false
+}

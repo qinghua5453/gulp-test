@@ -1,0 +1,33 @@
+@import './acss/tpl-list.wxss';
+.pge-banlance-detail-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background: #F5F5F5;
+  padding-top: 338rpx;
+  position: relative;
+}
+.pge-banlance-detail-wrapper .pge-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 710rpx;
+  margin: 0 20rpx 30rpx;
+  background-color: #ffffff;
+  border-radius: 0 0 20rpx 20rpx;
+  padding: 70rpx 0;
+  text-align: center;
+  color: #333333;
+}
+.pge-header .pge-total-price{
+  font-size: 80rpx;
+  line-height: 112rpx;
+}
+.pge-header .pge-total-text{
+  font-size: 32rpx;
+  margin-top: 11rpx;
+}
+.pge-balance-detail-list{
+  width: 710rpx;
+  margin: 0 auto;
+  height: 100%;
+}

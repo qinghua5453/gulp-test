@@ -1,0 +1,44 @@
+<view class="pge-shower-wrapper">
+  <view class="pge-shower">
+    <view class="pge-shower-bg">
+        <image src="https://static.qiekj.com/gif/shower_bg.png" mode="widthFix"/>
+    </view>
+  </view>
+  <view class="corporation-logo">
+      <image src="https://static.qiekj.com/gif/corporation.png" mode="widthFix"/>
+  </view>
+  <block wx:if="{{!goodsName}}">
+    <view class="pge-useBtn" bindtap="showPortsPopup">立即预约 <text class="iconfont icon-nextx"></text></view> 
+  </block>
+  <block wx:else>
+    <view class="choosedBar">
+      <view  class="leftText" bindtap="showPortsPopup">
+          <text class="choosedText">已选：</text>{{goodsName}}号浴位<text class="iconfont icon-backx rotate90"></text>
+      </view>
+      <view class="choosedBar-btn" bindtap="toReserve">
+          <view class="choosedBar-text">
+            <view class="top">选好了</view>
+            <view class="arrow"><text class="iconfont icon-nextx" /></view>
+          </view>
+          <view wx:if="{{showLoading}}" class="loading-btn"></view>
+      </view>
+    </view>
+  </block>
+  <!-- 浴位列表 -->
+  <popup zIndex="10" show="{{isShowPortsPopup}}" disableScroll="{{false}}" bindclose="closePortsPopup">
+    <view class="shower-popup-content">
+        <view class="popup-top-bar"></view>
+        <view class="popup-content-title">请选择具体浴位</view>
+        <view class="list-wrap">
+          <block wx:for="{{list}}" wx:key="index">
+            <view class="item {{item.busy === 1?'disabled':currentIndex === index?'active':''}}" data-index='{{index}}' bindtap="goChooseReserve">
+              {{item.name}}
+            </view>
+          </block>
+        </view>
+    </view>
+  </popup>
+  <!-- 免密支付 -->
+  <secret-payment wx:if="{{isSign}}" bindfinish="onSecretPayment"></secret-payment>
+</view>
+

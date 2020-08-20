@@ -1,0 +1,18 @@
+<view class="pge-pay-result-wrapper">
+  <block wx:if="{{title}}">
+    <view class="pge-vip-pic-wrapper">
+      <image src="https://static.qiekj.com/h5/pay/start-success.png" mode="widthFix"/>
+    </view>
+    <view class="title">{{title}}</view>
+  </block>
+  <view class="pge-pay-success-ft">
+		<view class="btn-cancel" bindtap="goHome">返回首页</view>
+		<view class="btn-pay" bindtap="goUserVip">确认</view>
+  </view>
+  <!-- 用户优惠券活动 -->
+  <user-coupon wx:if="{{newCouponStatus === 1 && actResult}}" actResult="{{actResult}}"></user-coupon>
+  <ad unit-id="ad_tiny_2018072460764274_248"/>
+  <block>
+    <actbanner adKey="ad_pay_success_pop" actType="popup"/>
+  </block>
+</view>

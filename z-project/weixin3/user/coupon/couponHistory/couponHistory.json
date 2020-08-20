@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "失效的优惠券",
+    "usingComponents": {
+        "coupon-item": "/components/coupon/couponItem/couponItem"
+    },
+    "enablePullDownRefresh": false
+}

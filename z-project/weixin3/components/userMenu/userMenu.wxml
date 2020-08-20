@@ -1,0 +1,11 @@
+
+<!-- 单个菜单 -->
+<view bindtap="tolink" class="cmp-menu-item" data-item="{{menuitem}}">
+  <view class="cmp-menu-icon">
+    <block wx:if="{{menuitem.iconUrl}}">
+      <text class="cmp-iconfont iconfont {{menuitem.iconUrl}}"></text>
+    </block>
+    <text>{{menuitem.name}}</text>
+  </view>
+  <text class="iconfont icon-lujing"></text>
+</view>

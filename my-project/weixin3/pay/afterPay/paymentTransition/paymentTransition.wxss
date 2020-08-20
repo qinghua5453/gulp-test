@@ -1,0 +1,22 @@
+.after-payment-transition{
+	width: 100%;
+	height: 100%;
+	padding: 168rpx 144rpx 0;
+	text-align: center;
+}
+.after-payment-transition .pic-wrapper{
+	width: 463rpx;
+	height: auto;
+}
+.after-payment-transition image{
+	width: 100%;
+	height: 100%;
+}
+.info{
+	font-size: 36rpx;
+	line-height: 50rpx;
+	font-weight: bold;
+	position: relative;
+	display: inline-block;
+  margin: 60rpx auto 70rpx;
+}

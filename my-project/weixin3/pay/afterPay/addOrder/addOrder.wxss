@@ -1,0 +1,24 @@
+.addOrder-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  padding-top: 212rpx;
+}
+image{
+  width: 396rpx;
+  height: auto;
+  margin-left: 178rpx;
+}
+.info{
+  font-size: 36rpx;
+  line-height: 50rpx;
+  color: #333;
+  font-weight: bold;       
+  margin-bottom: 100rpx;
+  position: relative;
+  padding-left: 258rpx;
+  
+}
+.loading-transition{
+  top: -20%;
+}

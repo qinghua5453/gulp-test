@@ -1,0 +1,15 @@
+
+<import src="./templates/tpl-feedtype.wxml"/>
+<view class="pge-feedback-wrapper">
+	<!-- 反馈类型 -->
+	<template is="tpl-feedtype" data="{{feedBackTitle,isFeedBackShow,feedBackTypes}}"/> 
+	<view class="pge-feedback-detail" wx:if="{{!isFeedBackShow}}">
+		<view class="pge-feedback-title">建议和意见</view>
+		<view class="{{isActive?'tpl-input-wrapper active':'tpl-input-wrapper'}}" bindtap="isActiveShow">
+			<textarea class="feedback-content" bindconfirm='finished' auto-height bindfocus="isActiveShow" bindinput="descInput" placeholder-class="tpl-placeholderClass" placeholder="请填写在使用中遇到的问题或意见，您的意见对我们持续改善产品体验非常重要！" show-count='{{false}}' focus="{{focus}}" />
+		</view>
+	</view>
+	<view class="tpl-btn-wrapper">
+		<button bindtap="saveFeedback">提交</button>
+	</view>
+</view>

@@ -1,0 +1,11 @@
+<view class="cmp-service">
+  <view class="merchant cmp-service-item" wx:if="{{operatorPhone}}" bindtap="callMerchant">
+    <text class="iconfont icon-lianxishangjiax"></text>
+    <text>联系商家</text>
+  </view>
+  
+  <view class="customerService cmp-service-item" wx:if="{{machineId}}" bindtap="openReport">
+    <text class="iconfont icon-guzhangx1"></text>
+    <text>故障上报</text>
+  </view>
+</view>

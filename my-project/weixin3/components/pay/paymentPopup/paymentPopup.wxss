@@ -1,0 +1,92 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-payment-popup-wrapper .cmp-popup-content{
+    background: #fff;
+    border-radius: 32rpx 32rpx 0 0;
+    padding: 32rpx 0 70rpx;
+    position: relative;
+}
+.cmp-popup-content .popup-content-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+    padding-bottom:32rpx;
+    text-align: center;
+}
+.popup-content-title .pay-time{
+    color: #1677FF;
+    padding: 0 10rpx;
+}
+.cmp-payment-popup-wrapper .popup-content-payment{
+    padding: 0 32rpx;
+}
+.cmp-payment-popup-wrapper .cmp-payment-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 112rpx;
+    border-bottom: 1px solid #f8f8f8;
+    font-size: 32rpx;
+}
+.cmp-payment-item .iconfont{
+    font-size: 44rpx;
+}
+.cmp-payment-item:last-child{
+    border: none;
+}
+.cmp-payment-item .cmp-payment-left{
+    display: flex;
+    align-items: center;
+}
+.cmp-payment-left image{
+    width: 48rpx;
+    height: 48rpx;
+    margin-right: 12rpx;
+}
+.cmp-popup-content .cmp-btn-pay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 702rpx;
+    height: 96rpx;
+    margin: 32rpx auto 0;
+    line-height: 96rpx;
+    background: #1677FF;
+    border-radius: 48rpx;
+    color: #fff;
+    font-size: 36rpx;
+}
+.pay_loading{
+  width: 60rpx;
+  height: 60rpx;
+  background-image: url(https://static.qiekj.com/gif/pay_loading.gif);
+  background-size: cover;
+  margin-left: 30rpx;
+}
+.cmp-payment-popup-wrapper .iconfont{
+    color: #D9E9FF;
+}
+.cmp-payment-popup-wrapper .icon-xuanzhongx{
+    color: #1677FF;
+}
+.cmp-balance-without{
+  color: #8A8FAB;
+}
+.cmp-balance-without image{
+  opacity: 0.6;
+}
+.cmp-balance-without .info{
+    display: inline-block;
+    color: #F04864;
+    font-size: 24rpx;
+    margin-left: 20rpx;
+}
+.cmp-payment-popup-wrapper .popup-title-bar{
+    position: absolute;
+    top: 42rpx;
+    right: 38rpx;
+    color: #999;
+    font-size: 26rpx;
+}

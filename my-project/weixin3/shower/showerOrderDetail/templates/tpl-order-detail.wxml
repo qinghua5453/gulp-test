@@ -1,0 +1,21 @@
+<template name="tpl-order-detail">
+    <view class="tpl-order-info">
+        <block>
+          <view class="item">
+            <text>{{orderDetail.appointmentOrder.appointType === 'SERVER_ONLY' ? '设备名称' : '浴室名称' }}</text>
+            <view class="tpl-copy-operation">
+              <text class="tpl-order-machine-name">{{orderDetail.appointmentOrder.appointType === 'SERVER_ONLY' ? orderDetail.appointmentOrder.goodsName : orderDetail.bathRoom.orgName }}</text>
+              <button class="copy-text" bindtap="handleCopy">复制</button>
+            </view>
+          </view>
+        </block>
+        <view class="item">
+          <text>订单编号：</text>
+          <text>{{orderDetail.appointmentOrder.id}}</text>
+        </view>
+        <view class="item">
+          <text>下单时间：</text>
+          <text>{{orderDetail.appointmentOrder.createTime}}</text>
+        </view>
+    </view>
+</template>

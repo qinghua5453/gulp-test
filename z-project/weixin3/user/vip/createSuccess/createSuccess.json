@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "支付成功",
+    "usingComponents": {
+        "user-coupon": "/components/activity/userCoupon/userCoupon",
+        "actbanner": "/components/adPage/actBanner/actBanner"
+    },
+    "enablePullDownRefresh": false
+}

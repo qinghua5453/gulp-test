@@ -1,0 +1,90 @@
+@import './acss/tpl-machine-status.wxss';
+.pge-wash-paysuccess-wrapper{
+    width: 100vw;
+    height: 100vh;
+    background: #F7F7F7;
+}
+.pge-wash-paysuccess-wrapper .pge-success-status-bg{
+    width: 268rpx;
+    height: 268rpx;
+    border-radius: 50%;
+    margin: -144rpx auto 0;
+    color: #fff;
+    background: url(https://static.qiekj.com/alipay/payError/pay_bg.png) no-repeat;
+    background-size: 100%;
+    text-align: center;
+    font-size: 42rpx;
+    font-weight: bold;
+}
+.pge-wash-paysuccess-wrapper .pge-success-status-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pge-wash-paysuccess-wrapper .pge-success-count-down-secode{
+    display: flex;
+    flex-direction: column;
+    padding: 90rpx 0 56rpx;
+}
+.pge-success-status-bg .unimark-time{
+    margin-top: 6rpx;
+    line-height: 58rpx;
+}
+.pge-wash-paysuccess-wrapper .pge-wash-work-time{
+    font-size: 32rpx;
+    font-weight: bold;
+    text-align: center;
+    margin: 20rpx 0 20rpx;
+}
+.pge-wash-paysuccess-wrapper .pge-charge-work-time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24rpx;
+}
+.pge-wash-paysuccess-wrapper .pge-count-down-number{
+    font-size: 72rpx;
+    font-weight: bold;
+    margin: 0 10rpx;
+}
+.pge-wash-paysuccess-wrapper .pge-machine-malfunction{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999999;
+    font-size: 32rpx;
+    margin-top: 32rpx;
+}
+.pge-machine-malfunction .iconfont{
+    font-size: 26rpx;
+    color: #1677FF;
+    margin-left: 8rpx;
+}
+.pge-wash-paysuccess-wrapper .charge-paysuccess-header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 266rpx;
+}
+.pge-wash-paysuccess-wrapper .pge-charge-status-icon{
+    width: 170rpx;
+    height: 202rpx;
+    background: url(https://static.qiekj.com/h5/charge/charging.png) no-repeat;
+    background-size: 100%;
+}
+.pge-wash-paysuccess-wrapper .pge-btn-order-operation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rpx;
+}
+.pge-btn-order-operation .btn-order{
+    width: 224rpx;
+    margin-right: 48rpx;
+}
+.pge-btn-order-operation .btn-order:last-child{
+    margin-right: 0;
+}
+.pge-wash-paysuccess-wrapper .pge-paysuccess-banner-ad{
+    margin-top: 22rpx;
+}

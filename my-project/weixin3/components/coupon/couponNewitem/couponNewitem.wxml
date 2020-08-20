@@ -1,0 +1,40 @@
+
+<!-- 单个优惠券 -->
+<view class="cmp-item-view" wx:if="{{couponitem.promotion}}">
+  <view class="cmp-coupon-detail" bindtap="chooseCoupon">
+    <view class="cmp-coupon-price">
+      <view class="cmp-price-wrapper" wx:if="{{couponitem.couponType === 1}}">
+        <view class="cmp-price"><text class="cmp-small">￥</text><text>{{couponitem.reduce}}</text><text class="cmp-priceDecimal"></text></view>
+        <text class="cmp-price-limit">满{{couponitem.orderReachPrice}}元可用</text>
+      </view>
+      <view class="cmp-price-wrapper" wx:if="{{couponitem.couponType === 4}}">
+        <view class="cmp-price"><text class="cmp-small">￥</text><text>{{couponitem.specifiedPrice}}</text></view>
+      </view>
+      <view class="cmp-price-wrapper" wx:if="{{couponitem.couponType === 3}}"> 
+        <view class="cmp-price"><text>{{couponitem.percentage}}</text><text class="cmp-small">折</text></view>
+        <text class="cmp-price-limit">最高抵扣{{couponitem.maxDiscountPrice}}元</text>
+      </view>
+    </view>
+    <view class="cmp-coupon-content">
+      <view class="cmp-name" wx:if="{{couponitem.couponType === 1}}">满减券</view>
+      <view class="cmp-name" wx:if="{{couponitem.couponType === 4}}">体验券</view>
+      <view class="cmp-name" wx:if="{{couponitem.couponType === 3}}">折扣券</view>
+      <view class="cmp-mode-limit">{{couponitem.machineParentTypeNames ? couponitem.machineParentTypeNames : '不限设备'}}</view>
+      <view class="cmp-time">{{couponitem.startAt}}~{{couponitem.endAt}}</view>
+    </view>
+  </view>
+  <view bindtap="chooseCoupon" class="cmp-choose-coupon {{couponId == couponitem.couponActivationAssetId?'iconfont icon-xuanzhongx cmp-active':'iconfont icon-norx1'}}"></view>
+  <view class="cmp-limit" bindtap="letShowMore" data-id='{{index}}'>
+    <text class="{{showMore ?'iconfont icon-nextx cmp-active':'iconfont icon-nextx'}}"></text>
+    <view class="cmp-hide" wx:if="{{!showMore}}">
+      <view>1.可用时段：{{couponitem.hourMinuteStartTime}}-{{couponitem.hourMinuteEndTime}}, 2.可用于{{couponitem.shopNames}}店铺</view>
+    </view>
+    <view class="cmp-show-more" wx:if="{{showMore}}">
+      <view>1.可用时段：{{couponitem.hourMinuteStartTime}}-{{couponitem.hourMinuteEndTime}}</view>
+      <view>2.可用于{{couponitem.shopNames}}店铺</view>
+      <view>3.可用于{{couponitem.machineParentTypeNames ? couponitem.machineParentTypeNames : '不限设备'}}</view>
+    </view>
+  </view>			
+  <view class="cmp-radius-bg"></view>
+  <view class="cmp-radius-bg cmp-right"></view>
+</view>

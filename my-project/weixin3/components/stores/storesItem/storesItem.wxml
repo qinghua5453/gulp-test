@@ -1,0 +1,34 @@
+<wxs src="../../../sjs/filter.wxs" module="shopsjs"></wxs>
+<wxs module="DataUtils" src="../../../sjs/dataUtils.wxs"/>
+<view class="cmp-address-box" bindtap="goDetail">
+  <view class="cmp-address-item">
+    <view class="address-tit" wx:if="{{currentTab == 10}}">
+      <text class="gender iconfont {{item.sexAllow===0?'icon-nanx male':item.sexAllow===1?'icon-nvx female':'icon-buxianx secret-gender'}}"></text><text class="address">{{item.positionName}}</text>
+    </view>
+    <view class="address-tit" wx:else>{{item.name}}</view>
+    <view class="address-sub">
+      <text class="sub-tit" wx:if="{{currentTab == 10}}">{{item.address}}</text>
+      <text class="sub-tit" wx:else>{{item.organization}}</text>
+      <text class="sub-dis">{{shopsjs.formatDistance(item.distance)}}</text>
+    </view>
+    <view class="discount-used-btn-box">
+      <view>
+        <view class="used-status">
+          <text class="used-num" wx:if="{{item.freeMachine}}">{{item.freeMachine}}台可用</text>
+          <text class="used-num" wx:else>无可用</text>
+          <!-- <text class="can-use" wx:if="{{item.freeMachine}}">可预约</text>
+          <text class="can-use disabled" wx:else>预约已满</text> -->
+        </view>
+        <view class="discount-box">
+          <text class="time-sale" wx:if="{{item.hasTimeMarket && item.timeMarketDiscount}}">限时{{DataUtils.toDiscountFixed(item.timeMarketDiscount,1)}}折</text>
+          <text class="mem-sale" wx:if="{{item.hasVipCard && item.vipDiscount}}">会员{{DataUtils.toDiscountFixed(item.vipDiscount,1)}}折</text>
+        </view>
+      </view>
+      <!-- "isReserve": 1, //是否可预约 0-可预约 1-不可预约 -->
+      <!-- 吹风机，充电桩，饮水机是没有预约功能 -->
+      <button class="can-use-btn" wx:if="{{item.isReserve == 0 && (currentTab == 7 || currentTab == 1 || currentTab == 10)}}"
+      catchtap="goToReserve"
+      >预约</button>
+    </view>
+  </view>
+</view>

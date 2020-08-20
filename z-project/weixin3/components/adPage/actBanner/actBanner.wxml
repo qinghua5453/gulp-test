@@ -1,0 +1,103 @@
+<block wx:if="{{actType === 'banner'&&bannerList && bannerList.length > 0}}">
+  <block wx:if="{{showType*1 === 2}}">
+    <block wx:if="{{adKey === 'ad_choose_machine_top'|| adKey === 'ad_water_machine_top'}}">
+      <view class="cmp-ad-swipper-banner">
+        <swiper class="swiper" current="{{swiperCurrent}}" autoplay="{{true}}" bindchange="swiperChange">
+          <block wx:for="{{bannerList}}" wx:key="index">
+            <swiper-item class="item">
+              <image class="cmp-banner-img" mode="widthFix" src="{{item.imageUrl}}" bindtap="goBannerDetail" data-index="{{index}}"/>
+            </swiper-item>
+          </block>
+        </swiper> 
+        <view class="swiper-dots" wx:if="{{bannerList&&bannerList.length > 1}}">
+          <block wx:for="{{bannerList}}" wx:key="index">
+            <view class="dot {{index == swiperCurrent ? ' active' : ''}}"></view>
+          </block>
+        </view> 
+      </view>
+    </block>
+    <!-- 首页捡漏 轮播--> 
+    <block wx:elif="{{adKey === 'ad_home_daily_discount_1' || adKey === 'ad_home_daily_discount_2'}}">
+       <view class="home-daily-swiper-box">
+        <swiper current="{{swiperCurrent}}" autoplay="{{true}}" circular="{{true}}" bindanimationfinish="swiperChange">
+           <block wx:for="{{bannerList}}" wx:key="index">
+            <swiper-item>
+              <image class="image-swiper-daily" mode="scaleToFill" src="{{item.imageUrl}}" bindtap="goBannerDetail" data-index="{{index}}"/>
+            </swiper-item>
+           </block>
+        </swiper>
+        <view class="swiper-dots" wx:if="{{bannerList&&bannerList.length > 1}}">
+          <block wx:for="{{bannerList}}" wx:key="index">
+            <view class="dot {{index == swiperCurrent ? ' active' : ''}}"></view>
+          </block>
+        </view> 
+      </view>
+    </block>
+     <!-- 首页超级秒杀轮播--> 
+    <block wx:elif="{{adKey === 'ad_home_seckill'}}">
+       <view class="home-seckill-swiper-box">
+        <swiper current="{{swiperCurrent}}" autoplay="{{true}}" circular="{{true}}" bindanimationfinish="swiperChange">
+           <block wx:for="{{bannerList}}" wx:key="index">
+            <swiper-item>
+              <image class="image-swiper-seckill" mode="scaleToFill" src="{{item.imageUrl}}" bindtap="goBannerDetail" data-index="{{index}}"/>
+            </swiper-item>
+           </block>
+        </swiper>
+        <view class="swiper-dots" wx:if="{{bannerList&&bannerList.length > 1}}">
+          <block wx:for="{{bannerList}}" wx:key="index">
+            <view class="dot {{index == swiperCurrent ? ' active' : ''}}"></view>
+          </block>
+        </view> 
+      </view>
+    </block>
+    <block wx:else>
+      <view class="banner-ad" style="{{bannerStyle}}">
+        <swiper class="swiper-banner-ad" autoplay="{{true}}" current="{{swiperCurrent}}" bindchange="swiperChange">
+          <block wx:for="{{bannerList}}" wx:key="index">
+            <swiper-item class="item">
+              <image style="{{bannerStyle}}" mode="widthFix" src="{{item.imageUrl}}" bindtap="goBannerDetail" data-index="{{index}}"/>
+            </swiper-item>
+          </block>
+        </swiper> 
+        <view class="swiper-dots" wx:if="{{bannerList&&bannerList.length > 1}}">
+          <block wx:for="{{bannerList}}" wx:key="index">
+            <view class="dot {{index == swiperCurrent ? ' active' : ''}}"></view>
+          </block>
+        </view> 
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+      <block wx:for='{{bannerList}}' wx:key='index' >
+        <block wx:if="{{adKey === 'ad_home_daily_discount_1' || adKey === 'ad_home_daily_discount_2'}}">
+           <image class="home-daily-image" src="{{item.imageUrl}}" data-index="{{index}}" mode="scaleToFill" bindtap="goActivity"/>
+        </block>
+        <block wx:elif="{{adKey === 'ad_home_seckill'}}">
+           <image class="home-seckill-image" src="{{item.imageUrl}}" data-index="{{index}}" mode="scaleToFill" bindtap="goActivity"/>
+        </block>
+        <view wx:else class="banner-ad" style="{{bannerStyle}}" data-index="{{index}}" bindtap="goActivity">
+          <image style="{{bannerStyle}}" src="{{item.imageUrl}}" mode="widthFix" />
+        </view>
+      </block>
+  </block>
+</block>
+<block wx:if="{{actType === 'popup'}}">
+  <block wx:if="{{bannerList && bannerList.length > 0}}">
+    <view class="cmp-pop-activity-wrapper" wx:if="{{isShowPopup}}">
+        <view class="cmp-pop-activity-content">
+          <view class="cmp-pop-act-box">
+            <view class="cmp-pop-activity-bg" data-index="0" bindtap="goActivity" style="{{bannerStyle}}">
+              <image src="{{bannerList[0].imageUrl}}"  mode="widthFix" />
+            </view>
+            <view class="cmp-pop-activity-delete" bindtap="closePop"></view>
+          </view>
+        </view>
+    </view>
+  </block>
+</block>
+ <!-- 首页浮动icon-->
+<block wx:if="{{actType === 'float'}}">
+  <view wx:if="{{bannerList && bannerList.length > 0}}" class="cmp-fixed-icon-box" bindtap="goActivity" data-index="0">
+    <image mode="scaleToFill" src="{{bannerList[0].imageUrl}}"/>
+  </view>
+</block>

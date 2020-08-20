@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "提交订单",
+    "usingComponents": {
+        "charg-power": "/components/charg/chargPower/chargPower",
+        "payment-method": "/components/pay/paymentMethod/paymentMethod",
+        "actbanner": "/components/adPage/actBanner/actBanner",
+        "order-discount": "./components/orderDiscount/orderDiscount",
+        "payment": "./components/payment/payment"
+    },
+    "enablePullDownRefresh": false
+}

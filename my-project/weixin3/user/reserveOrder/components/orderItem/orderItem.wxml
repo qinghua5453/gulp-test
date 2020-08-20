@@ -1,0 +1,82 @@
+<wxs module="reserve" src="../../../../sjs/reserveOrder.wxs"/>
+<wxs src="../../../../sjs/orderDetail.wxs" module="filter"></wxs>
+<view>
+  <view class="cmp-order-list">
+    <view class="head" data-id="{{item.appointmentOrder.id}}" bindtap="goShowerOrderDetail">
+      <view class="time">{{item.appointmentOrder.appointType === 'BASE_MACHINE' ? item.appointmentOrder.createTime : item.appointmentOrder.startTime}}</view>
+      <view class="cmp-order-right">
+        <view class="order-status">
+          <block wx:if="{{item.appointmentOrder.status === 501&&item.reserTime<=0}}">
+            <text>支付超时</text>
+          </block>
+          <block wx:else>
+            <text>{{reserve.getMsg(item.appointmentOrder.status)}}</text>
+          </block>
+        </view>
+        <block wx:if="{{item.appointmentOrder.appointType === 'SERVER_ONLY'}}">
+          <block wx:if="{{item.appointmentOrder.status === 501&&payTime<=0||item.appointmentOrder.status === 202||item.appointmentOrder.status === 302||item.appointmentOrder.status === 303||item.appointmentOrder.status === 503}}">
+            <view class="cmp-delete" data-id="{{item.appointmentOrder.id}}" catchtap="delPreviewOrder">
+              <text class="iconfont icon-xingzhuang"></text>
+            </view>
+          </block>
+        </block>
+        <block wx:else>
+          <block wx:if="{{item.appointmentOrder.status != 202&&item.appointmentOrder.status != 201}}">
+            <view class="cmp-delete" data-id="{{item.appointmentOrder.id}}" catchtap="delPreviewOrder">
+              <text class="iconfont icon-xingzhuang"></text>
+            </view>
+          </block>
+        </block>
+      </view>
+    </view>
+    <view class="cmp-reser-wrapper" data-id="{{item.appointmentOrder.id}}" bindtap="goShowerOrderDetail">
+      <view class="cmp-order-info">
+        <view class="cmp-machine-function-icon">
+          <block wx:if="{{item.appointmentOrder.appointType === 'SERVER_ONLY'}}">
+            <image mode="widthFix" src="{{'https://static.qiekj.com/h5/machineIcon/machine_'+ filter.MachineType(item.machine.parentTypeId) + '_icon.png'}}"/>
+          </block>
+          <block wx:else>
+            <image mode="widthFix" src="{{'https://static.qiekj.com/h5/machineIcon/machine_'+ 7 + '_icon.png'}}"/>
+          </block>
+        </view>
+        <view class="cmp-function-box">
+          <block wx:if="{{item.appointmentOrder.appointType === 'BASE_MACHINE'}}">
+            <text class="machine-name">{{item.appointmentOrder.goodsName}}</text>
+            <text class="machine-function-name">{{item.bathRoom.orgName}}</text>
+          </block>
+          <block wx:else>
+            <text class="machine-name">{{item.order.machineName}}</text>
+            <text class="machine-function-name">{{item.order.machineFunctionName}}</text>
+          </block>
+        </view>
+      </view>
+      <view wx:if="{{item.order}}" class="cmp-order-price">￥<text>{{item.order.payPrice}}</text></view>
+    </view>
+    <view class="footer-btn-box">
+      <block wx:if="{{item.appointmentOrder.appointType === 'SERVER_ONLY'}}">
+        <block wx:if="{{item.appointmentOrder.status===501&&reserTime>0}}">
+          <button class="btn btn-cancle" data-id="{{item.order.id}}" bindtap="handleCancelOrder">取消订单</button>
+          <button class="btn btn-pay" bindtap="handlePay">立即支付</button>
+        </block>
+        <block wx:if="{{item.appointmentOrder.status===502&&cancelTime>3600}}">
+          <button class="btn btn-cancle" data-id="{{item.order.id}}" bindtap="handleCancelOrder">取消预约</button>
+        </block>
+      </block>
+      <block wx:else>
+        <block wx:if="{{item.appointmentOrder.status===201&&payTime>0}}">
+          <button class="btn btn-cancle" data-id="{{item.appointmentOrder.id}}" bindtap="cancelPreviewOrder">取消预约</button>
+        </block>
+      </block>
+      <view class="countdown-hide">
+        <time type="2" time="{{reserTime}}" bindfinish="handleReserTime" />
+        <time type="2" time="{{payTime}}" bindfinish="hanldePayTime" />
+      </view>
+    </view>
+  </view>
+  <!--继续支付-->
+  <block wx:if="{{item&&item.order&&item.appointmentOrder&&showPaymentPopup}}">
+    <view class="cmp-orderlist-payment-popup">
+      <payment-popup orderDetail="{{item.order}}" appointmentOrder="{{item.appointmentOrder}}" showPopup="{{showPaymentPopup}}" bindclosepaypopup="closePayment"></payment-popup>
+    </view>
+  </block>
+</view>

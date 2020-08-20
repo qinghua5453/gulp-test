@@ -1,0 +1,16 @@
+<view class="pge-fault-report-wrapper">
+  <view class="report-body">
+    <view class="desc">
+      <text>*</text>请描述您遇到的问题
+    </view>
+    <view class="pge-malfunction-type-list">
+      <block wx:for="{{malfunctionList}}" wx:key="index">
+        <text class="malfunction-item {{currentTab === index ? 'active' : ''}}" bindtap="chooseType" data-index="{{index}}">{{item.name}}</text>
+      </block>
+    </view>
+    <view class="pge-fault-report-content">
+      <textarea placeholder-class="placeholder-text" auto-height="true" placeholder="描述您的问题" maxlength="100" enableNative="{{false}}" value="{{reportContent}}" bindinput="descInput"/>
+    </view>
+  </view>
+  <button bindtap="reportFailure" class="{{isChooseType ? 'btn-radius' : 'btn-radius btn-disable'}}" disabled="{{isChooseType ? false : true}}">提交</button>
+</view>

@@ -1,0 +1,61 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-order-header .order-detail-header{
+  width: 100%;
+  height: auto;
+  background: #1677FF;
+}
+.order-detail-header .cmp-order-status-box{
+  padding: 26rpx 24rpx 22rpx 48rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.cmp-order-status-box .order-detail-status{
+  font-size: 44rpx;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.cmp-order-status-box .count-down-time{
+  color: #fff;
+  font-size: 44rpx;
+}
+.cmp-order-status-box .time-desc{
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}
+.cmp-charge-detail-header{
+  padding: 48rpx 54rpx 46rpx 46rpx; 
+  display: flex;
+  justify-content: space-between;
+  background: #1677FF;
+  color: #fff;
+}
+.cmp-charge-detail-header .cmp-charge-order-left{
+  display: flex;
+  flex-direction: column;
+}
+.cmp-charge-order-left .charge_status{
+  font-size: 44rpx;
+  font-weight: bold;
+}
+.cmp-charge-content{
+  margin-top: 24rpx;
+}
+.cmp-charge-content .channel{
+  font-size: 44rpx;
+  font-weight: bold;
+  margin: 0 10rpx 0 6rpx;
+}
+.cmp-charge-content .charge-work-time{
+  font-size: 44rpx;
+  font-weight: bold;
+  margin: 0 10rpx;
+}
+.cmp-charge-order-right image{
+  width: 102rpx;
+  height: 158rpx;
+}
+.cmp-charge-interrupt-header{
+  background: #FF8B36;
+}

@@ -1,0 +1,56 @@
+.tpl-menu-content-box{
+  width: 100%;
+  height: 138rpx;
+  display: flex;
+  border-radius:28rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tpl-menu-content-box .tpl-menu-line{
+  width: 1px;
+  height: 94rpx;
+  background: #EEEEEE;
+}
+.tpl-menu-content-box .tpl-menu-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.tpl-menu-content-box .tpl-menu-item .tpl-content-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tpl-menu-content-box .tpl-line{
+  width: 2rpx;
+  height: 60rpx;
+  background-color: #f1f1f1;
+}
+.tpl-menu-item .tpl-info{
+  position: absolute;
+  right: 17rpx;
+  top: -12rpx;
+  width: 82rpx;
+  height: 32rpx;
+  background-image: url(https://static.qiekj.com/h5/miniApp/user/vip_date.png);
+  background-size: cover;
+}
+.tpl-menu-item .tpl-menu-icon{
+  display: flex;
+  align-items: center;
+  width: 52rpx;
+  height: 60rpx;
+  margin: 0 28rpx 0 0; 
+}
+.tpl-menu-item .tpl-menu-icon image{
+  width: 52rpx;
+  height: 60rpx;
+}
+.tpl-menu-item .tpl-menu-title{
+  font-size: 30rpx;
+  font-weight:500;
+  line-height: 42rpx;
+}

@@ -1,0 +1,13 @@
+<wxs src="../../../sjs/filter.wxs" module="phone"></wxs>
+<view class="pge-payerror-wrapper" wx:if="{{errorType}}">
+ <view class="pge-error-pic" wx:if="{{errorImg}}">
+    <image mode="widthFix" src="{{'https://static.qiekj.com/alipay/payError/'+ errorImg + '.png'}}"/>
+ </view>
+ <view class="pge-error-text">{{errorDesc}}</view>
+ <block wx:if="{{errorType === 1}}">
+    <view class="btn-order pge-btn-retry" bindtap="goBack">重试</view>
+ </block>
+ <block wx:if="{{errorType === 3}}">
+    <view class="btn-order pge-btn-retry" bindtap="goMyOrder">好的</view>
+ </block>
+</view>

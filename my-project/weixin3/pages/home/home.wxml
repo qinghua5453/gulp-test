@@ -1,0 +1,54 @@
+<import src="./templates/tpl-scan.wxml"/>
+<view class="pge-home-wrapper">
+  <view class="pge-home-body">
+    <!-- 扫 -->
+    <template is="tpl-scan" data="{{washMachineLists, iconSaoyisao, iconDingwei}}"/>
+    <!-- 捡漏 -->
+    <view class="pge-pick-up-box" wx:if="{{pickUpbannerList1.length || pickUpbannerList2.length}}">
+      <view class="title">天天捡漏</view>
+      <view class="adver-box">
+        <view class="adver-box-in">
+           <act-banner adKey="ad_home_daily_discount_1" isReloadAd="{{adverReload}}" bindbannerlist="renderBannerList"></act-banner>
+        </view>
+        <view class="adver-box-in">
+           <act-banner adKey="ad_home_daily_discount_2" isReloadAd="{{adverReload}}" bindbannerlist="renderBannerList"></act-banner>
+        </view>
+      </view>
+    </view>
+    <!-- 秒杀 -->
+    <view class="pge-seckill-box" wx:if="{{seckillBannerList.length}}">
+      <view class="title">超值秒杀</view>
+      <view class="swiper-box">
+        <act-banner adKey="ad_home_seckill" isReloadAd="{{adverReload}}" bindbannerlist="renderBannerList"></act-banner>
+      </view>
+    </view>
+    <!-- 分类 -->
+    <stores-header nearby="{{nearby}}" shopType="reverse" currentTab="{{currentTab}}" bindchoosetab="chooseTab"></stores-header>
+    <!-- 店铺 -->
+    <view class="pge-store-box">
+      <view class="nearbylist-box" wx:if="{{reservelists && reservelists.length>0}}">
+        <block wx:for="{{reservelists}}" wx:key="index">
+          <stores-item currentTab="{{currentTab}}" item="{{item}}" shopType="reverse"></stores-item>
+        </block>
+        <!--没加载更多 -->
+        <view class='nomore' wx:if='{{allLoaded}}'>
+        没有更多了
+        </view>
+      </view>
+      <view class="pge-store-null" wx:if="{{!reservelistsLen && apiReserverListsFlag}}">
+        <image src="https://static.qiekj.com/near-no-shop.png" mode="widthFix" />
+        <view class="null-msg">附近暂无可用店铺</view>
+      </view>
+    </view>
+    <!-- 拒绝定位弹窗提示 -->
+    <modal
+      show="{{modalOpened}}"
+      bindbuttonclickcomfirm="onModalLocationRefuse"
+      buttonComfirmText="去开启"
+    >
+        <view class="pge-location-tit">定位服务未开启</view>
+        <view class="pge-location-content">企鹅共享知道您的位置才能提供更好的服务哦~</view>
+    </modal>
+    <act-banner adKey="ad_home_suspension" actType="float" isReloadAd="{{adverReload}}"></act-banner>
+  </view>
+</view>

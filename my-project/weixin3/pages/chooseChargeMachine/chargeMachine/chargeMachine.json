@@ -1,0 +1,13 @@
+{
+    "navigationBarTitleText": "连接中...",
+    "usingComponents": {
+        "popup": "/components/popup/index",
+        "charge-slider": "./components/chargeSlider/chargeSlider",
+        "connect-failed": "/components/machine/connectFailed/connectFailed",
+        "machinestatus": "/components/pagePopup/machineStatus/machineStatus",
+        "connect-status": "/components/machine/connectStatus/connectStatus",
+        "marketing-activity": "/components/marketingActivity/marketingActivity",
+        "act-banner": "/components/adPage/actBanner/actBanner"
+    },
+    "enablePullDownRefresh": false
+}

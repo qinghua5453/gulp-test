@@ -1,0 +1,41 @@
+.pge-coupon-wrapper{
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 130rpx;
+		position:relative;
+}
+.pge-coupon-list{
+	padding: 0 30rpx;
+}
+.pge-no-more{
+    width: 100%;
+    color: #999999;
+    font-size: 28rpx;
+    padding: 50rpx 0;
+    text-align: center;
+}
+.pge-no-more .iconfont{
+    color: #D1D1D6;
+    font-size: 22rpx;
+    line-height: 1;
+}
+.pge-no-more .line{
+    margin: 0 14rpx;
+    color: #8A8FAB;
+}
+.pge-no-list{
+    position: absolute;
+    top: 386rpx;
+    text-align: center;
+    width: 100%;   
+}
+.pge-no-list image{
+    width: 110rpx;
+    height: auto;
+    margin: 0 auto 32rpx;
+    display: block;
+}
+.pge-no-list text{
+    color: #999999;
+    font-size: 28rpx;
+}

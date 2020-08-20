@@ -1,0 +1,7 @@
+<view class="unlock-failed-wrapper">
+    <view class="infoImg">
+        <image src="https://static.qiekj.com/alipay/timeout.png" mode="widthFix"/>
+    </view>
+    <view class="statusText">{{statusText}}</view>
+    <view class="retryBtn" bindtap="retry">重试</view>
+</view>

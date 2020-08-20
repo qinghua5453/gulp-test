@@ -1,0 +1,45 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.user-vip-activity .novice-meet-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 1002;
+}
+.user-vip-activity .novice-meet-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1005;
+}
+.user-vip-activity .novice-meet-content .new-user-vip{
+  width: 615rpx;
+  height: 680rpx;
+  margin: 100rpx auto 0;
+}
+
+.user-vip-activity .novice-meet-content .user-icon{
+  width: 620rpx;
+  height: 680rpx;
+  margin: 100rpx auto 0;
+}
+
+.user-vip-activity .novice-meet-content .old-user-vip{
+  width: 615rpx;
+  height: 680rpx;
+  margin: 100rpx auto 0;
+}
+.user-vip-activity .btn-delete{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 38rpx auto 0;
+  background: url('https://static.qiekj.com/h5/modalDel.png');
+  background-size: cover;
+}

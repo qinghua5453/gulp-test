@@ -1,0 +1,54 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.gold-pop{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+  background-color: rgba(0,0,0,.5);
+}
+
+.gold-pop .gold-pop_mainPic{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 642rpx;
+  height: 682rpx;
+  background-image: url(https://static.qiekj.com/h5/recharge/gold_pop.png);
+  background-size: cover;
+  z-index: 1003;
+}
+.gold-pop .gold-pop_mainPic .shop-name{
+  display: flex;
+  justify-content: center;
+  color: #2088FF;
+  padding-top: 48rpx;
+  font-size: 28rpx;
+  font-weight:500;
+}
+.gold-pop .btn-buy{
+  position: absolute;
+  left: 150rpx;
+  bottom: 40rpx;
+  width: 340rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 50rpx;
+  background:linear-gradient(180deg,rgba(255,146,33,1) 0%,rgba(255,192,94,1) 100%);
+  color: #ffffff;
+  font-size: 40rpx;
+  text-align: center;
+}
+.gold-pop .close{
+  width: 50rpx;
+  height: 50rpx;
+}
+.gold-pop .close-box{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 38rpx auto 0;
+}

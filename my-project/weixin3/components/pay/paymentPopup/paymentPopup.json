@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "popup": "/components/popup/index",
+    "time": "/components/countDown/countDown",
+    "balance-pay": "/components/pay/balancePay/balancePay"
+  }
+}

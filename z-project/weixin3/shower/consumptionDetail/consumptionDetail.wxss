@@ -1,0 +1,67 @@
+.pge-consumption-detail{
+    width: 100vw;
+    height: 100vh;
+}
+.pge-consumption-detail .pge-order-list{
+    width: 710rpx;
+    margin: 20rpx auto 0;
+    background-color: #fff;
+    border-radius:20rpx;
+    padding: 0 32rpx 32rpx;
+}
+.pge-order-list .pge-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rpx;
+  padding: 32rpx 0 34rpx;
+  border-bottom: 2rpx solid #F9F8FF;
+}
+.pge-header .pge-machine-type{
+  display: flex;
+  align-items: center;
+}
+.pge-machine-type image{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+.pge-machine-type text{
+  margin-left: 18rpx;
+  font-weight: bold;
+}
+.pge-header .pge-see-details{
+  display: flex;
+  align-items: center;
+}
+.pge-see-details text{
+  color: #999999;
+  margin-right: 14rpx;
+}
+.pge-see-details .iconfont{
+  color: #CCCCCC;
+}
+.pge-order-list .pge-shower-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30rpx;
+}
+.pge-shower-info .bathroom-name{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.pge-shower-info .bathroom-number{
+  font-size: 28rpx;
+}
+.pge-order-list .reser-label{
+  width: 80rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  background:rgba(32,136,255,0.1);
+  border-radius:3rpx 15rpx 3rpx 15rpx;
+  text-align: center;
+  color: #2088FF;
+  font-size: 24rpx;
+  margin-top: 32rpx;
+}

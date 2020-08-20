@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "time": "/components/countDown/countDown",
+    "payment-popup": "/components/pay/paymentPopup/paymentPopup"
+  }
+}

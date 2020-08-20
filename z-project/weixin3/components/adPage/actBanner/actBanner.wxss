@@ -1,0 +1,172 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.activity_banner{
+  position: absolute; 
+  top: 137rpx;
+  left: 45rpx;
+  z-index: 1;
+}
+.banner-ad{
+  margin: 10rpx auto 0; 
+  position: relative;
+}
+
+.cmp-ad-swipper-banner{
+  width: 710rpx;
+  height: 240rpx;
+  margin: 18rpx auto;
+  border-radius: 28rpx;
+  position: relative;
+}
+.cmp-ad-swipper-banner .swiper {
+  width: 100% !important;
+  height: 240rpx !important;
+}
+.cmp-ad-swipper-banner .cmp-banner-img{
+  width: 100%;
+  height: 100%;
+  border-radius: 28rpx;
+}
+
+/* .cmp-ad-swipper-banner .cmp-dots,.cmp-water-swipper-banner .cmp-dots{
+  position: relative;
+  width: auto;
+  height: 6rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -16rpx auto 0;
+  z-index: 8;
+}
+.cmp-dots .cmp-box-dot{
+  width: 20rpx;
+  height: 6rpx;
+  background: #516683;
+  border-radius: 5rpx;
+  margin-right: 12rpx;
+}
+.cmp-dots .cmp-box-dot:last-child{
+  margin-right: 0;
+}
+.cmp-dots .active {
+  background-color: #FFFFFF;
+} */
+
+.cmp-water-swipper-banner{
+  width: 100%;
+  height: 608rpx;
+}
+.cmp-water-swipper-banner .swiper {
+  width: 100% !important;
+  height: 608rpx !important;
+}
+.cmp-water-swipper-banner .cmp-water-banner-img{
+  width: 100%;
+  height: 100%;
+}
+.cmp-pop-activity-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.6);
+  z-index: 1002;
+}
+.cmp-pop-activity-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1005;
+}
+.cmp-pop-act-box{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.cmp-pop-activity-bg{
+  margin: 0 auto;
+}
+.cmp-pop-activity-bg image{
+  width: 100%;
+  height: 100%;
+}
+.cmp-pop-activity-delete{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 44rpx auto 0;
+  background: url('https://static.qiekj.com/h5/modalDel.png');
+  background-size: cover;
+}
+.banner-ad .swiper-banner-ad {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* 首页轮播 和单图 */
+.home-daily-image {
+  width: 240rpx;
+  height: 130rpx;
+}
+
+.image-swiper-daily {
+  width: 240rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+}
+
+.home-seckill-swiper-box {
+  width: 686rpx;
+  height: 190rpx;
+  position: relative;
+}
+
+.home-daily-swiper-box {
+  width: 240rpx;
+  height: 130rpx;
+  position: relative;
+}
+
+.image-swiper-seckill,
+.home-seckill-image {
+  width: 686rpx;
+  height: 190rpx;
+  border-radius: 20rpx;
+}
+
+.swiper-dots {
+  position: absolute;
+  z-index: 100;
+  bottom: 10rpx;
+  left:50%;
+  transform: translate(-50%);
+  height:6rpx;
+  width: auto;
+  display: flex;
+}
+
+.swiper-dots  .dot {
+  width:20rpx;
+  height:6rpx;
+  background:rgba(0,0,0,0.4);
+  border-radius:25%;
+  margin-right: 12rpx;
+}
+
+.swiper-dots .dot.active {
+  background:rgba(255,255,255,1);
+}
+/* 首页浮动icon */
+.cmp-fixed-icon-box {
+  width:120rpx;
+  height:120rpx;
+  background:linear-gradient(270deg,rgba(223,75,36,1) 0%,rgba(243,51,42,1) 100%);
+  position: fixed;
+  z-index: 10;
+  right: 22rpx;
+  bottom: 164rpx;
+}

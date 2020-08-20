@@ -1,0 +1,136 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": [
+			{
+				"type": "folder",
+				"value": ".git"
+			},
+			{
+				"type": "file",
+				"value": ".editorconfig"
+			},
+			{
+				"type": "file",
+				"value": ".prettierrc.json"
+			}
+		]
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": false,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"bundle": true,
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.3",
+	"appid": "wx52cfa5fc8d32a43d",
+	"projectname": "weixin_new",
+	"cloudfunctionTemplateRoot": "",
+	"watchOptions": {
+		"ignore": []
+	},
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "test扫码洗衣",
+					"pathName": "pages/chooseWashMachine/washMachine/washMachine",
+					"query": "machineId=201906241708486010000023324932774",
+					"scene": 1011
+				},
+				{
+					"id": 1,
+					"name": "预发充电桩扫码",
+					"pathName": "pages/chooseChargeMachine/chargeMachine/chargeMachine",
+					"query": "machineId=202006302113339980000082977035891",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "预发扫码接水",
+					"pathName": "pages/chooseWaterMachine/waterMachine/waterMachine",
+					"query": "machineId=202006121612118440000056110535415",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "预发扫码淋浴",
+					"pathName": "pages/chooseWaterMachine/waterMachine/waterMachine",
+					"query": "machineId=202006101619096000000011052415455",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "洗衣机_放入衣物再关门",
+					"pathName": "pages/chooseWashMachine/doorClosing/closeTheDoor",
+					"query": "machineId=201906241708486010000023324932774",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "有投放器的洗衣机",
+					"pathName": "pages/chooseWashMachine/washMachine/washMachine",
+					"query": "machineId=202008121508429530000020782933348",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "微信端蓝牙调试",
+					"pathName": "pages/chooseWaterMachine/waterMachine/waterMachine",
+					"query": "machineId=202008131652105870000013977459886",
+					"scene": null
+				}
+			]
+		}
+	}
+}

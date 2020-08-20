@@ -1,0 +1,76 @@
+.tpl-machine-box {
+  margin-top: 24rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.tpl-machine-box .tpl-machine-li {
+  margin-bottom: 24rpx;
+  width:710rpx;
+  /* height:232rpx; */
+  background:rgba(255,255,255,1);
+  border-radius:20rpx;
+  border:2rpx solid rgba(238,238,238,1);
+  padding: 32rpx 30rpx 32rpx 30rpx;
+}
+
+.tpl-machine-box .tpl-machine-li .machine-tit {
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:40rpx;
+  margin-bottom: 16rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.tpl-machine-box .tpl-machine-li .machine-reserve-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tpl-machine-box .machine-reserve-content .machine-number {
+  font-size:28rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(22,119,255,1);
+  line-height:40rpx;
+}
+
+.tpl-machine-box .machine-reserve-content .machine-number.dry {
+  color: #FF8B36;
+}
+
+.tpl-machine-box .machine-reserve-content .reserve-btn {
+  width:146rpx;
+  height:72rpx;
+  background:rgba(24,125,255,1);
+  box-shadow:0px 4rpx 8rpx 0px rgba(24,125,255,0.3);
+  border-radius:36rpx;
+  text-align: center;
+  line-height: 72rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  margin-right: 4rpx;
+}
+
+.tpl-machine-box .machine-reserve-content .reserve-btn.btn-dry {
+  background: #FF8B36;
+  box-shadow:0px 4rpx 8rpx 0px rgba(255,139,54,0.3);
+}
+
+
+
+
+
+
+

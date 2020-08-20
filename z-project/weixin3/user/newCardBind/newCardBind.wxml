@@ -1,0 +1,20 @@
+<view class="new-addcard-wrapper">
+  <view class="card-bind-process-con">
+    <view class="card-item">
+      <text class="process-text distance-left">1、扫描设备上的二维码</text>
+      <image mode="widthFix" src="https://static.qiekj.com/h5/miniApp/user/flow-1.png" class="process-img"/>
+    </view>
+    <view class="card-item">
+      <image mode="widthFix" src="https://static.qiekj.com/h5/miniApp/user/flow-2.png" class="process-img"/>
+      <text class="process-text distance-right text-middle">2、根据设备提示，把卡放在设备上识别</text>
+    </view>
+    <view class="card-item">
+      <text class="process-text text-width distance-left">3、识别成功后，在手机页面确认，即可完成绑卡操作。</text>
+      <image mode="widthFix" src="https://static.qiekj.com/h5/miniApp/user/flow-3.png" class="process-img"/>
+    </view>
+  </view>
+  <view class="footer-wrapper">
+    <button class="btn-scan" bindtap="goscan">扫一扫</button>
+    <view class="other-methods" bindtap="goOtherAddCard">其他方式绑卡</view>
+  </view>
+</view>

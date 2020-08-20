@@ -1,0 +1,19 @@
+<import src="./templates/tpl-machine.wxml"/>
+<view class="pge-book-order-wrapper">
+  <view class="pge-book-order-bg"></view>
+  <view class="pge-book-order-content">
+    <!--店铺-->
+    <block wx:if="{{shop}}">
+      <shop-detail shop="{{shop}}"></shop-detail>
+    </block>
+    <!--预约设备-->
+    <view class="pge-reserve-machine-list" wx:if="{{reserList&&reserList.length>0}}">
+      <block wx:for="{{reserList}}" wx:key="index">
+        <template is="tpl-machine" data="{{item}}"></template>
+      </block>
+    </view>
+    <view class="btn-not-use-reser" bindtap="handleNotUseReser">
+      不使用预约单<text class="iconfont icon-nextx"></text>
+    </view>
+  </view>
+</view>

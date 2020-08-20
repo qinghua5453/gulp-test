@@ -1,0 +1,14 @@
+<template name="tpl-items">
+  <view class="tpl-buy-gold-wrapper" wx:if="{{shopTokenCoinRewards && shopTokenCoinRewards.length > 0}}">
+        <view class="tpl-gold-item {{chooseIndex === index ? 'tpl-active' : ''}}" bindtap="ckGoidItem" data-index='{{index}}' wx:for="{{shopTokenCoinRewards}}" wx:key="index">
+            <view class="tpl-deduction-price">
+                <text>买{{item.cashValue}}</text>
+                <text class="reward-number">送{{item.rewardCoin}}</text>
+            </view>
+            <view class="tpl-total-price">
+                <image class="tpl-icon-gold" src="https://static.qiekj.com/h5/recharge/buy_gold_icon.png" mode="widthFix"/>
+                <view class="tpl-gold-number">{{item.totalCoin}}</view>
+            </view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,21 @@
+.pge-setting-wrapper{
+    width: 100%;
+}
+.pge-user-con{
+  background-color: #fff;
+  width: 710rpx;
+  margin: 20rpx auto 30rpx;
+  border-radius: 20rpx;
+  padding: 0 10rpx;
+}
+.pge-btn{
+    width: 710rpx;
+    height: 88rpx;
+    margin: 40rpx auto 0;
+    background-color: #2088FF;
+    color: #fff;
+    font-size: 36rpx;
+    line-height: 88rpx;
+    text-align: center;
+    border-radius: 10rpx;
+}

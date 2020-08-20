@@ -1,0 +1,63 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-machine-time-box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 750rpx;
+  height: 600rpx;
+  background: rgba(255, 255, 255, 1);
+  border-top-left-radius: 28rpx;
+  border-top-right-radius: 28rpx;
+  border-bottom: 2rpx solid #EEEEEE;
+  box-shadow:4rpx -8rpx 8rpx #BABABA;
+}
+
+.cmp-machine-time-box .cmp-machine-header {
+  height: 132rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36rpx;
+}
+
+.cmp-machine-time-box .cmp-machine-header .header-cancel {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.cmp-machine-time-box .cmp-machine-header .header-tit {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+}
+
+.cmp-machine-time-box .cmp-machine-header .header-comfirm {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(22, 119, 255, 1);
+}
+
+.cmp-machine-time-box .cmp-machine-body {
+  display: flex;
+}
+
+.cmp-machine-time-box .cmp-machine-body .cmp-my-picker {
+  width: 750rpx;
+}
+
+.cmp-machine-time-box picker-view-column {
+  height:476rpx;
+}
+
+.cmp-machine-time-box picker-view-column view {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}

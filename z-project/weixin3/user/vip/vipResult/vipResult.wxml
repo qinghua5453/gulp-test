@@ -1,0 +1,18 @@
+<view class="pge-vip-result-wrapper">
+  <view class="pge-vip-discount-box">
+    <view class="pge-vip-card">
+      <view class="pge-disocunt" wx:if="{{isTokenCoin*1 != 1}}">{{orderDetail.discount}}折VIP会员折扣卡</view>
+      <view class="pge-disocunt" wx:if="{{isTokenCoin*1 === 1}}">{{orderDetail.shopName}}</view>
+      <view class="pge-price"><text class="pge-small">￥</text>{{orderDetail.payPrice}}</view>
+      <view class="pge-bg-icon"></view>
+    </view>
+  </view>
+  <!-- 支付方式 -->
+  <pay-type wx:if="{{orderDetail&&orderDetail.id}}" balancePayShow="{{balancePayShow}}" orderDetail="{{orderDetail}}" bindpaytype="setPayType" bindbalancepaysuccess="balancePaySuccess" bindclosebalancepay="closeBalancePay"></pay-type>
+  <button class="pge-btn-pay" bindtap="handlePay">
+    <text>立即支付</text>
+    <text class="pge-price">
+      <text class="pge-small">￥</text>{{orderDetail.payPrice}}
+    </text>
+  </button>
+</view>

@@ -1,0 +1,81 @@
+.pge-reser-nearstores .pge-map-wrap {
+  width:750rpx;
+  height:584rpx;
+  position: relative;
+}
+
+.pge-reser-nearstores .pge-map-wrap.largerHeight {
+  height: 988rpx;
+}
+
+.pge-map-wrap map {
+  width: 100%;
+  height: 100%;
+}
+
+.pge-map-wrap cover-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -21rpx;
+  margin-top: -36rpx;
+  height: 72rpx;
+  width: 42rpx;
+  /* border:2rpx solid red; */
+}
+
+.pge-reser-nearstores .pge-stores-wrap {
+  width:750rpx;
+  /* height:800rpx; */
+  background:rgba(246,246,246,1);
+  border-radius:28rpx 28rpx 0 0;
+}
+
+.pge-stores-wrap .pge-title {
+  font-size:24rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  line-height:34rpx;
+  margin: 32rpx 0 32rpx 50rpx;
+}
+
+.pge-stores-wrap .pge-title.main-color {
+  color:#1677FF;
+}
+
+.pge-store-box {
+  margin-top: 32rpx;
+  padding-bottom: 60rpx;
+}
+
+.pge-store-box .nearbylist-box .nomore {
+  display: flex;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: rgb(186, 186, 189);
+  justify-content: center;
+  margin-top: 49rpx;
+  margin-bottom: 49rpx;
+}
+
+.pge-store-box .pge-store-null {
+  text-align: center;
+  width: 100%;
+  margin-top: 132rpx;
+}
+
+.pge-store-null image{
+  vertical-align: top;
+  margin-bottom: 16rpx;
+  width: 68rpx;
+  height: 64rpx;
+}
+.pge-store-null .null-msg{
+  font-size:28rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(204,204,204,1);
+  line-height:40rpx;
+  text-align: center;
+}

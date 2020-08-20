@@ -1,0 +1,90 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-machine-discount-wrapper{
+  background: #fff;
+  border-radius: 28rpx;
+  padding: 40rpx 24rpx 40rpx;
+}
+.pge-after-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 44rpx;
+}
+.pge-after-left{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+.pge-after-left .pge-machine-function-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96rpx;
+  height: 96rpx;
+  background:#F5FAFF;
+  border-radius: 16rpx;
+  border:1px solid #F2F2F2;
+}
+.pge-machine-function-icon image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.pge-after-left .name{
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+.pge-after-right{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+.pge-after-right .pge-mark-price{
+  font-size: 36rpx;
+}
+.pge-mark-price .unit{
+  font-size: 28rpx;
+}
+.pge-after-total-box{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #333333;
+  font-size: 32rpx;
+}
+.pge-after-total-box .pge-after-price{
+  color: #F04864;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.pge-after-price .unit{
+  font-size: 28rpx;
+}
+.pge-after-left .charge-time{
+  margin-left: 10rpx;
+}
+.cmp-sku-list-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32rpx;
+  margin-bottom: 40rpx;
+}
+.cmp-sku-list-item .washIcon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 68rpx;
+  height: 68rpx;
+  background-size: cover;
+  margin-right: 0;
+}
+.mergeIcon{
+  background-image: url(https://static.qiekj.com/alipay/xiyichujun.png);
+}
+.washLiquid {
+  background-image: url(https://static.qiekj.com/alipay/washliquid.png);
+}
+.cleargerm {
+  background-image: url(https://static.qiekj.com/alipay/cleargerm.png);
+}

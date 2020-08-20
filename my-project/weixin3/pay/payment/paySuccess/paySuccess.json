@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "支付成功",
+    "usingComponents": {
+        "time": "/components/countDown/countDown",
+        "novicecoupon": "/components/activity/noviceCoupon/noviceCoupon",
+        "oldcoupon": "/components/activity/oldCoupon/oldCoupon",
+        "actbanner": "/components/adPage/actBanner/actBanner"
+    },
+    "enablePullDownRefresh": false
+}

@@ -1,0 +1,73 @@
+.more-events{
+  width: 100%;
+  height: 100vh;
+  color: #FFFFFF;
+}
+.more-events .shop_body{
+  width: 100%;
+  height: 216rpx;
+  background-image: url(https://static.qiekj.com/h5/recharge/bg-more-events.png);
+  background-size: cover;
+  padding: 20rpx 32rpx 30rpx;
+  margin-bottom: 32rpx;
+}
+.more-events .shop-address{
+  font-size: 36rpx;
+  color: #666666;
+  margin-bottom: 20rpx;
+}
+.more-events .business-info{
+  display: flex;
+  align-items: center;
+  color: #666666;
+  margin-bottom: 20rpx;
+}
+.more-events .business-info .iconfont{
+      color: #CCCCCC; 
+      margin-right: 16rpx;
+      font-size: 24rpx;
+  }
+.more-events .business-info .line{
+      display: inline-block;
+      width: 2rpx;
+      height: 20rpx;
+      background:#999999;
+      margin: 0 16rpx;
+  }
+.more-events .business-info .working-status{
+      font-size: 28rpx;
+  }
+.more-events .business-info .working-time{
+      font-size: 24rpx;
+  }
+.more-events .business-info .distance-info{
+      font-size: 28rpx;
+  }
+  .more-events .business-info .distance{
+      margin-right: 20rpx;
+  }
+  .more-events .business-info .address{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+  .more-events .item{
+        width: 686rpx;
+        height: 146rpx;
+        margin: 0 auto 20rpx;
+        border-radius: 8rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .more-events .vipPic{
+        width: 620rpx;
+        height: 96rpx;
+    }
+    .more-events .shop-vip{
+        background-color: #FFFBF0;
+    }
+    .more-events .shop-gold{
+        background-color: #FFF9F5;
+        margin-top: 20rpx;
+    }

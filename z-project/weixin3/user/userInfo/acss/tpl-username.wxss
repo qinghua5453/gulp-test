@@ -1,0 +1,24 @@
+.tpl-header{
+  background-color: rgb(255, 255, 255);
+  height: 180rpx;
+  width: 710rpx;
+  margin: 0 auto;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0px 30rpx;
+  font-size: 36rpx;
+  margin-bottom: 30rpx;
+  border-radius:0px 0px 20rpx 20rpx;
+}
+.tpl-header .tpl-phone{
+  color: #25265E;
+  font-size: 36rpx;
+}
+.tpl-header image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}

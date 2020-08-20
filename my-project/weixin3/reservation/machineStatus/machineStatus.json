@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "企鹅洗衣",
+    "usingComponents": {
+        "actbanner": "/components/adPage/actBanner/actBanner"
+    },
+    "enablePullDownRefresh": false
+}

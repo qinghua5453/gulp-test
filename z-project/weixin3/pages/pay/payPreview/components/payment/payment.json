@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+        "time": "/components/countDown/countDown",
+        "machinestatus": "/components/pagePopup/machineStatus/machineStatus",
+        "blue-tooth":"/components/pagePopup/blueTooth/blueTooth",
+        "balance-pay": "/components/pay/balancePay/balancePay"
+    }
+}

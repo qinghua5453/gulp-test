@@ -1,0 +1,134 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/wallet/myWallet/myWallet",
+    "pages/my/my",
+    "pages/oneLogin/oneLogin",
+    "pages/skip/skip",
+    "pages/error/error",
+    "pages/connectFailed/connectFailed",
+    "pages/chooseWashMachine/washMachine/washMachine",
+    "pages/chooseWashMachine/doorClosing/closeTheDoor",
+    "pages/chooseWaterMachine/waterMachine/waterMachine",
+    "pages/chooseChargeMachine/chargeMachine/chargeMachine",
+    "pages/mediumCard/mediumCardMachine/mediumCardMachine",
+    "pages/chooseShowerMachine/showerMachine/showerMachine",
+    "pages/vip/createVip/createVip",
+    "pages/adWebview/adWebview",
+    "pages/order/orderList/orderList",
+    "pages/order/orderDetail/orderDetail",
+    "pages/scanResult/scanResult",
+    "pages/wallet/balanceDetail/balanceDetail",
+    "pages/wallet/walletList/walletList",
+    "pages/wallet/walletDetail/walletDetail",
+    "pages/pay/payPreview/payPreview",
+    "pages/pay/chooseCoupon/chooseCoupon",
+    "pages/pay/newChooseCoupon/newChooseCoupon"
+  ],
+  "subPackages": [
+    {
+      "root": "shop",
+      "pages": [
+        "detail/detail",
+        "moreEvents/moreEvents"
+      ]
+    },
+    {
+      "root": "reservation",
+      "pages": [
+        "detail/detail",
+        "chooseMachine/chooseMachine",
+        "result/result",
+        "nearStores/nearStores",
+        "machineStatus/machineStatus"
+      ]
+    },
+    {
+      "root": "shower",
+      "pages": [
+        "showerPreviewDetail/showerPreviewDetail",
+        "previewSuccess/previewSuccess",
+        "showerOrderDetail/showerOrderDetail",
+        "consumptionDetail/consumptionDetail",
+        "detail/detail",
+        "showerPassword/showerPassword",
+        "showerMachine/showerMachine"
+      ]
+    },
+    {
+      "root": "pay",
+      "pages": [
+        "afterPay/paymentOrder/paymentOrder",
+        "afterPay/addOrder/addOrder",
+        "afterPay/paymentTransition/paymentTransition",
+        "afterPay/paySuccess/paySuccess",
+        "payment/machineError/machineError",
+        "payment/payError/payError",
+        "payment/paySuccess/paySuccess",
+        "payment/pageError/pageError"
+      ]
+    },
+    {
+      "root": "user",
+      "pages": [
+        "UserAgreement/UserAgreement",
+        "feedback/feedback",
+        "setting/setting",
+        "userInfo/userInfo",
+        "resetShowerPwd/resetShowerPwd",
+        "about/about",
+        "cardPackage/cardPackage",
+        "addCard/addCard",
+        "newCardBind/newCardBind",
+        "recharge/buyGold/buyGold",
+        "recharge/goldList/goldList",
+        "recharge/goldDetail/goldDetail",
+        "recharge/goldAgreement/goldAgreement",
+        "coupon/couponList/couponList",
+        "coupon/couponHistory/couponHistory",
+        "coupon/assetsList/assetsList",
+        "vip/vipResult/vipResult",
+        "vip/createSuccess/createSuccess",
+        "vip/vipList/vipList",
+        "reserveOrder/reserveOrder",
+        "faultReport/faultReport",
+        "userInfo/editUserName/editUserName"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTitleText": "企鹅共享",
+    "onReachBottomDistance": 100,
+    "backgroundColorTop": "#F7F7F7"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要获取你的定位获取附近的设备"
+    }
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#1677FF",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "assets/images/home-home.png",
+        "selectedIconPath": "assets/images/home-home-a.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/wallet/myWallet/myWallet",
+        "iconPath": "assets/images/home-wallet.png",
+        "selectedIconPath": "assets/images/home-wallet-a.png",
+        "text": "钱包"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "assets/images/home-my.png",
+        "selectedIconPath": "assets/images/home-my-a.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

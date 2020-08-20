@@ -1,0 +1,63 @@
+<view>
+  <view class="cmp-preview-payment-wrapper">
+    <view class="cmp-payment-price">
+        <text>待支付：</text>
+        <text class="price">¥ {{payPrice}}</text>
+    </view>
+    <block wx:if="{{yunmaData}}">
+        <block wx:if="{{yunmaData.task}}">
+            <view class="cmp-btn-preview-payment">
+                <button class="cmp-btn-pay" bindtap="submitOrder">
+                    <text>原价支付</text>
+                    <view wx:if="{{isLoading}}" class="pay_loading"></view>
+                </button>
+                <view class="cmp-btn-yunma" bindtap="goTask">
+                    <view class="title">赢免单</view>
+                    <view class="discount-price">关注赢好礼</view>
+                </view>
+            </view>
+        </block>
+        <block wx:if="{{!yunmaData.task}}">
+            <button class="cmp-no-btn-preview-payment" bindtap="submitOrder"> 
+                <view class="btn-left">
+                    <view class="cmp-pay-title">
+                        <view>去支付 <block wx:if="{{reserTime}}"><time type="1" time="{{reserTime}}" bindfinish="handleReserCountDown"/>s</block></view>
+                        <view class="iconfont icon-nextx"></view>
+                    </view>
+                    <block wx:if="{{canUserCoupon&&canUserCoupon.length===1&&promotion > 0}}">
+                        <view class="discount-text">奖励金最多减{{promotion}}元</view>
+                    </block>
+                </view>
+                <view class="pay_loading" wx:if="{{isLoading}}"></view>
+            </button>
+        </block>
+        <block wx:if="{{yunmaData.repeat}}">
+            <view class="cmp-unimkt-tips">
+                <view class="cmp-tips-text-box">
+                    限时领取
+                    <view class="unimkt-time"><time type="1" time="{{unimktTime}}" bindfinish="handleUnimktCountDown"/>秒</view>
+                </view>
+                <view class="cmp-triangle"></view>
+            </view>
+        </block>
+    </block>
+  </view>
+ <!-- 云码奖励金 --> 
+  <block wx:if="{{promotion > 0}}">
+    <view class="pge-unimakt-gold-popup">
+      <view class="gold-pic"></view>
+      <view>恭喜你获得奖励金</view>
+      <view>本单最多减{{promotion}}元</view>
+    </view>
+  </block>
+  <!-- 机器故障弹窗 -->
+  <block wx:if="{{isMachineStatus}}">
+    <machinestatus statusCode="{{statusCode}}" />
+  </block>
+  <!-- 提示用户开蓝牙 -->
+  <blue-tooth wx:if="{{openBluetoothShow}}" bindfinish="openShowBlueTooth"/>
+  <!-- 余额支付弹窗 -->
+  <block wx:if="{{balancePayShow&&paymentData}}">
+    <balance-pay balanceType="{{balanceType}}" orderId="{{orderId}}" payPrice="{{payPrice}}" totalBalance="{{paymentData.totalBalance}}" bindbalancepaysuccess="balancePaySuccess" bindbalancepayerror="balancePayError" bindbalancepayclose="balancePayClose"></balance-pay>
+  </block>
+</view>

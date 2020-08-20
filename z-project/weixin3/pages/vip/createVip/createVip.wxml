@@ -1,0 +1,17 @@
+<import src="./templates/tpl-equity.wxml"/>
+<import src="./templates/tpl-card.wxml"/>
+<view class="pge-createVip-wrapper">
+  <view class="pge-vipcard-header-bg"></view>
+  <view class="pge-vipcard-content-y">
+    <view class="pge-vipcard-con">
+      <view class="pge-discount">{{shopDiscount}}<text class="unit">折</text></view>
+    </view>
+    <view class="pge-vip-wrapper">
+      <template is="tpl-equity" data="{{shopVipDetail,isMoreShopShow,shopNameList}}"/>
+      <template is="tpl-card" data="{{saleDescVOList,chooseIndex}}"/>
+    </view>
+  </view>
+	<view class="pge-btn-confirm" bindtap="createVip"> 
+    <view class="pge-price">确认</view>
+  </view>
+</view>

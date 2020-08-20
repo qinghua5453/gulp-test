@@ -1,0 +1,44 @@
+<wxs module="DataUtils" src="../../../sjs/dataUtils.wxs"/>
+<template name="tpl-vip">
+  <view>
+    <view class="tpl-vip-hidden">
+      <image mode="scaleToFill" src="https://static.qiekj.com/VIP.png"/>
+      <image mode="scaleToFill" src="https://static.qiekj.com/Vip-tab-0.png"/>
+      <image mode="scaleToFill" src="https://static.qiekj.com/Vip-tab-1.png"/>
+    </view>
+    <view  class="tpl-vip-box-all" bindtap="goToPurchase" wx:if="{{tipList && tipList.length === 1}}" style="{{tipList[0].promotionInfoOfShop.banner ? 'background-image: url(https://static.qiekj.com/VIP.png)' : 'background-image: url(https://static.qiekj.com/VIP.png)'}}">
+        <view class="tpl-vip-tit">{{tipList[0].promotionType == 1 ? '店铺VIP会员' : '通用小票'}}</view>
+        <view class="tpl-vip-infor">
+          <!-- <view class="vip-discount" wx:if="{{shop.vipDiscount && shop.vipCard}}">{{tipList[0].promotionType == 1 ? '加入尽享'+(shop.vipDiscount * 10).toFixed(1)+'折优惠' : '买小票，享优惠'}}</view> -->
+          <view wx:if="{{tipList[0].promotionType == 1}}">
+            <view class="vip-discount" wx:if="{{shop.vipDiscount && shop.vipCard}}">
+              {{'加入尽享'+DataUtils.toDiscountFixed(shop.vipDiscount,1)+'折优惠'}}
+            </view>
+            <view class="vip-discount" wx:else>加入VIP尽享优惠</view>
+          </view>
+          <view class="vip-discount" wx:if="{{tipList[0].promotionType == 4}}">买小票，享优惠</view>
+          <button class="vip-btn">立即购买</button>
+        </view>
+    </view>
+    
+    <view  class="tpl-vip-box-half"
+    wx:if="{{tipList && tipList.length === 2}}"
+     style="{{tipList[navActiveIndex].promotionInfoOfShop.banner ? 'background-image: url(https://static.qiekj.com/Vip-tab-'+ navActiveIndex + '.png)' : 'background-image:url(https://static.qiekj.com/Vip-tab-'+ navActiveIndex + '.png)'}}">
+      <!-- 保证 vip 在数组的index=0的位置 -->
+      <view class="vip-header">
+        <view wx:for="{{headerNavs}}" class="tpl-universe-tit" wx:key="index" data-index="{{index}}" bindtap="changeNav">{{item}}</view>
+      </view>
+      <view class="tpl-vip-infor">
+        <!-- <view class="vip-discount" wx:if="{{shop.vipDiscount}}">{{navActiveIndex == 0 ? '加入尽享'+(shop.vipDiscount * 10).toFixed(1)+'折优惠' : '买小票，享优惠'}}</view> -->
+          <view wx:if="{{navActiveIndex == 0}}">
+            <view class="vip-discount" wx:if="{{shop.vipDiscount && shop.vipCard}}">
+            {{'加入尽享'+DataUtils.toDiscountFixed(shop.vipDiscount,1)+'折优惠'}}
+            </view>
+            <view class="vip-discount" wx:else>加入VIP尽享优惠</view>
+          </view>
+          <view class="vip-discount" wx:if="{{navActiveIndex == 1}}">买小票，享优惠</view>
+        <button class="vip-btn" bindtap="goToPurchase">立即购买</button>
+      </view>
+    </view>
+  </view>
+</template>

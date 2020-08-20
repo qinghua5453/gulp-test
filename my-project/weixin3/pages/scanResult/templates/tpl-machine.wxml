@@ -1,0 +1,17 @@
+<template name="tpl-machine">
+  <view class="tpl-reserve-machine-item">
+    <view class="machine-function-name">{{item.functionName}}</view>
+    <view class="machine-detail-box">
+      <text class="iconfont icon-moshishijianx"></text>
+      <text class="detail-time">约{{item.needMinutes}}分钟</text>
+      <text class="detail-desc">·{{item.functionDescribe}}</text>
+    </view>
+    <view class="machine-price">
+      ￥<text class="price">{{item.price}}</text>
+    </view>
+    <view class="machine-use-box">
+      <text>请在<text class="machine-reserve-time">{{item.startTime}}前</text>使用</text>
+      <button class="btn-use" data-item="{{item}}" bindtap="handleStartMachine">立即使用</button>
+    </view>
+  </view>
+</template>

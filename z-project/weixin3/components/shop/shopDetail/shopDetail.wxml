@@ -1,0 +1,36 @@
+<wxs src="../../../sjs/filter.wxs" module="filter"></wxs>
+<wxs module="DataUtils" src="../../../sjs/dataUtils.wxs"/>
+<block wx:if="{{shop}}">
+  <view class="cmp-shop-info-box">
+    <view class="cmp-shop-address-box">
+      <view class="cmp-address-sub">
+        <!-- shower -->
+        <view class="sub-name" wx:if="{{machineType == 10}}">{{shop.positionName}}</view>
+        <view class="sub-name" wx:else>{{shop.shopName}}</view>
+        <view class="sub-address">{{shop.address}}</view>
+      </view>
+      <view class="cmp-distance-box">
+        <view class="shop-navigation" bindtap="goToMap">去导航</view>
+        <view class="shop-distance">{{filter.formatDistance(shop.distance)}}</view>
+      </view>
+    </view>
+    <block wx:if="{{shop.openTime || shop.workTime}}">
+      <view class="cmp-business-box">
+        <view class="business-txt">营业时间</view>
+        <view class="business-time">{{shop.openTime[0] || shop.workTime}}</view>
+      </view>
+    </block>
+    <block wx:if="{{(shop.timeMarketDiscount && shop.timeMarket)||(shop.vipDiscount && shop.vipCard)}}">
+      <view class="cmp-sale-box">
+          <view class="sale-txt">折扣优惠</view>
+          <view class="cmp-sale-label"> 
+            <view class="vip-sale" wx:if="{{shop.vipDiscount && shop.vipCard}}">
+              <image class="vip-sale-image" mode="scaleToFill" src="https://static.qiekj.com/huangguan-3x.png"/>
+              会员{{DataUtils.toDiscountFixed(shop.vipDiscount,1)}}折
+            </view>
+            <text class="timemarket-sale" wx:if="{{shop.timeMarketDiscount && shop.timeMarket}}">限时{{DataUtils.toDiscountFixed(shop.timeMarketDiscount,1)}}折</text>
+          </view>
+      </view>
+    </block>
+  </view>
+</block>

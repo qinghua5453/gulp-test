@@ -1,0 +1,18 @@
+<template name="tpl-userinfo">
+  <!-- 个人信息 -->
+  <view class="tpl-header-box">
+    <view class="tpl-user-info-box">
+      <view class="tpl-user-info-content" wx:if="{{phone&&userInfo}}">
+        <text class="tpl-user-name">{{userInfo.userName}}</text>
+        <text class="tpl-user-phone">{{phone}}</text>
+      </view>
+      <view class="tpl-user-info-content" wx:else>
+        <text class="tpl-user-phone">未登录</text>
+      </view>
+      <view class="tpl-user-header-box">
+        <view class="tpl-user-vip-icon" wx:if="{{hasVip}}"></view>
+        <image class="tpl-user-picture" src="{{headImageId}}" mode="widthFix" bindtap="toLogin"/>
+      </view>
+    </view>
+  </view>
+</template>

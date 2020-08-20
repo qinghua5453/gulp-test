@@ -1,0 +1,71 @@
+<view class="wallet-detail">
+  <view class="header">
+    <text class="shop">{{walletDetail.shopName}}</text>
+    <view class="price">
+      <text wx:if='{{walletDetail.direction === 1 || walletDetail.direction === 3}}'>-</text>
+      <text wx:else>+</text>
+      <text>{{walletDetail.payPrice}}</text>
+    </view>
+    <text class="status">{{orderStatus}}</text>
+  </view>
+  <view class="list-wrapper">
+    <view class="detail-list">
+      <view class="item">
+        <text>订单金额</text>
+        <text>{{walletDetail.originPrice}}</text>
+      </view>
+      <view class="skus-list" wx:if="{{walletDetail.skus&&walletDetail.skus.length>0}}">
+        <view class="sku-item" wx:for="{{walletDetail.skus}}" wx:key="index">
+          <text>{{item.skuName}}</text>
+          <text>{{item.payPrice}}</text>
+        </view>
+      </view>
+      <view class="item" wx:if="{{walletDetail.detergentPrice}}">
+        <text>洗衣液金额</text>
+        <text>{{walletDetail.detergentPrice}}</text>
+      </view>
+      <view class="item" wx:if="{{walletDetail.disinfectantPayPrice}}">
+        <text>除菌液金额</text>
+        <text>{{walletDetail.disinfectantPayPrice}}</text>
+      </view>
+      <view class="item discounts" wx:if='{{walletDetail.discountPrice>0}}'>
+        <text wx:if='{{walletDetail.discountType === 1}}'>VIP</text>
+        <text wx:if='{{walletDetail.discountType === 2}}'>限时特惠</text>
+        <text>-{{walletDetail.discountPrice}}</text>
+      </view>
+      <view class="item discounts" wx:if='{{walletDetail.voucherPrice}}'> 
+				<text wx:if="{{walletDetail.voucherType === 2}}">免费体验券</text>      
+        <text wx:else>优惠券</text>
+        <text>-{{walletDetail.voucherPrice}}</text>
+      </view>
+      <view class="item discounts" wx:if="{{walletDetail.tokenCoinDiscount && walletDetail.tokenCoinDiscount*1 > 0}}">
+        <text>通用小票抵扣</text>
+        <view>
+          <text class="gold-num">({{tokenCoinNumber}}通用小票)</text>
+          <text>-{{walletDetail.tokenCoinDiscount}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="detail-list">
+      <view class="item" wx:if="{{walletDetail.createTime}}}">
+        <text>创建时间</text>
+        <text>{{walletDetail.createTime}}</text>
+      </view>
+      <view class="item" wx:if="{{walletDetail.orderNo}}">
+        <text>订单号</text>
+        <text>{{walletDetail.orderNo}}</text>
+      </view>
+    </view>
+    <view class="detail-list" wx:if='{{walletDetail.machineName || walletDetail.machineFunctionName}}'>
+      <view class="item" wx:if='{{walletDetail.machineName}}'>
+        <text>{{walletDetail.orderNo.startsWith('10')?'浴室名称':'机器名称'}}</text>
+        <text>{{walletDetail.machineName}}</text>
+      </view>
+      <view class="item" wx:if='{{walletDetail.machineFunctionName}}'>
+        <text wx:if="{{walletDetail.orderNo.startsWith('10')}}">浴位</text>
+        <text wx:else>{{machineType == 5 && walletDetail.communicationType == 1 ? '充电口' : '模式'}}</text>
+        <text>{{walletDetail.machineFunctionName}}</text>
+      </view>
+    </view>
+  </view>
+</view>

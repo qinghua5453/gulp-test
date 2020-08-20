@@ -1,0 +1,26 @@
+<view class="machine-wrapper">
+  <view class="machine-name" wx:if="{{machineName}}">{{machineName}}</view>
+	<view class="machine-pic {{ machineName ? 'machine-pic-name' : '' }}">
+		<image wx:if="{{image != ''}}" src="https://static.qiekj.com/h5/skip/machine_{{image}}.png" mode="widthFix" />
+	</view>
+	<view class="machine-con">
+		<view class="status">{{status}}</view>
+		<view class="msg">{{text}}</view>
+		<view wx:if="{{isShowTime}}" class="remainTime">剩余时间 <time type="2" time="{{remainTime}}"/></view>
+	</view>
+	<view wx:if="{{isShowBtn}}" class="btn-wrapper skip-body">
+		<view class="btn" bindtap="goHome">返回首页</view>
+		<view class="btn btn-service" bindtap="openCustomerService">联系平台</view>
+    <view class="btn btn-service" wx:if="{{!isShowcustomerService}}" bindtap="openReport">故障上报</view>
+	</view>
+	<!-- 打开联系平台 -->
+	<view class="customerServiceShow-wrapper" wx:if="{{showCustomerService}}">
+		<view class="customerServiceShow">
+			<view class="item-wrapper">
+				<view class="item" bindtap="phoneCall" data-phone='400-668-9966'>400-668-9966</view>
+				<navigator class="item" url="/pages/user/customerService/customerService" navigate>在线客服</navigator>
+			</view>
+			<view class="closeCustomerServiceShow" bindtap="closeCustomerServiceShow">取消</view>
+		</view>
+	</view>
+</view>

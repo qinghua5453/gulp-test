@@ -1,0 +1,78 @@
+ 
+<!-- 非首次消费 -->
+<view>
+  <!-- 领券页 -->
+  <view class="coupon-box" wx:if="{{isShowCoupon}}">
+    <view class="coupon-title">到店洗衣有优惠【 {{actList.length}}选1 】</view>
+    <view class="coupon-list">
+      <block wx:for="{{actList}}" wx:key="index">
+        <view class="coupon-item" bindtap="selectCoupon" data-id="{{item.id}}">
+          <!-- 满减券 -->
+          <view wx:if="{{item.type === 1}}">
+            <view class="coupon-price">
+              <text class="price-big">{{item.sweepstakes.bigFaceValue}}</text>
+              <text class="price-small">.{{item.sweepstakes.smallFaceValue}}</text>
+              <text class="coupon-price-unit">元</text>
+            </view>
+            <view class="coupon-desc">满{{item.sweepstakes.minGcoins}}元可用</view>
+          </view>
+          <!-- 折扣券 -->
+          <view wx:if="{{item.type === 5}}">
+            <view class="coupon-price">
+              <text class="price-big">{{item.sweepstakes.bigFaceValue}}</text>
+              <text class="price-small" wx:if="{{item.sweepstakes.smallFaceValue != 0}}">.{{item.sweepstakes.smallFaceValue}}</text>
+              <text class="coupon-price-unit">折</text>
+            </view>
+            <view class="coupon-desc">最高抵扣{{item.sweepstakes.minGcoins}}元</view>
+          </view>
+          <!-- 免费体验券 -->
+          <view wx:if="{{item.type === 6}}" class="coupon-image">
+            <image src="https://static.qiekj.com/h5/free-coupon.png" class="free-coupon" mode="widthFix"></image>
+          </view>
+          <!-- 券类型 -->
+          <image wx:if="{{item.type === 1}}" src="https://static.qiekj.com/h5/full-text.png" class="coupon-img" mode="aspectFit"></image>
+          <image wx:if="{{item.type === 6}}" src="https://static.qiekj.com/h5/free-text.png" class="coupon-img" mode="aspectFit"></image>
+          <image wx:if="{{item.type === 5}}" src="https://static.qiekj.com/h5/discount-text.png" class="coupon-img" mode="aspectFit"></image>
+          <view class="btn-coupon-select">
+            <view class="btn-select">选我</view>
+            <view class="btn-shaw"></view>
+          </view>
+          <view class="shade"></view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 领券结果页 -->
+  <view class="coupon-box" wx:if="{{isShowResult}}">
+    <view class="title-success">恭喜恭喜，领取成功！</view>
+    <view class="coupon-result-wrapper">
+      <view class="coupon-result-box">
+        <view class="coupon-result">
+          <view wx:if="{{couponData.type === 1}}">
+            <view class="result-price-box">
+              <text class="result-price">{{couponData.sweepstakes.faceValue}}</text>
+              <text class="result-price-unit">元</text>
+            </view>
+            <view class="condition">满{{couponData.sweepstakes.minGcoins * 1}}元可用</view>
+          </view>
+          <view wx:if="{{couponData.type === 5}}">
+            <view class="result-price-box">
+              <text class="result-price">{{couponData.sweepstakes.faceValue}}</text>
+              <text class="result-price-unit">折</text>
+            </view>
+            <view class="condition">最高抵扣{{couponData.sweepstakes.minGcoins * 1}}元</view>
+          </view>
+          <image wx:if="{{couponData.type === 6}}" src="https://static.qiekj.com/h5/freecoupon.png" class="free-middle-coupon" mode="aspectFit"></image>
+          <view class="date-box">
+            <text class="date">有效期：</text>
+            <text class="date-time">{{couponData.sweepstakes.startDate + '-' + couponData.sweepstakes.endDate}}</text>
+          </view>
+          <view class="useScope">指定店铺可用</view>
+        </view>
+        <image wx:if="{{couponData.type === 1}}" src="https://static.qiekj.com/h5/fullt_lable.png" class="coupon-type-label" mode="aspectFit"></image>
+        <image wx:if="{{couponData.type === 5}}" src="https://static.qiekj.com/h5/discountt_lable.png" class="coupon-type-label" mode="aspectFit"></image>
+        <image wx:if="{{couponData.type === 6}}" src="https://static.qiekj.com/h5/freet_lable.png" class="coupon-type-label" mode="aspectFit"></image>
+      </view>
+    </view>
+  </view>
+</view>

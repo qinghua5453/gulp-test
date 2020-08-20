@@ -1,0 +1,13 @@
+<view class="pge-gold-detail">
+    <view class="pge-gold-detail-con">
+        <scroll-view scroll-y="{{true}}" bindscrolltolower="getTokenCoinLogs">
+          <view class="pge-gold-detail-list">
+            <block wx:for='{{list}}' wx:key='index'>
+              <detailitem detailitem="{{item}}"/>
+            </block>
+            <view class="pge-no-more" wx:if='{{allLoaded && list && list.length > 0}}'>没有更多了</view>
+          </view>
+        </scroll-view>
+    </view>
+    <view class="pge-list-none" wx:if='{{listNoneShow}}'>暂无消费记录</view>
+</view>

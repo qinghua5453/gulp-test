@@ -1,0 +1,138 @@
+.tpl-reserve-order-list{
+    width: 710rpx;
+    margin: 20rpx auto 0;
+    background-color: #fff;
+    border-radius:20rpx;
+    padding: 0 30rpx 30rpx;
+}
+.tpl-reserve-order-list .tpl-head{
+    height: 90rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tpl-head .time{
+    color: #666666;
+    font-size: 28rpx;
+}
+.tpl-head .tpl-order-status{
+  color: #666666;
+  font-size: 28rpx;
+}
+.tpl-order-status .reserve-status{
+  color:#2088FF;
+}
+.tpl-reser-wrapper{
+  background-color: #fff;
+  width: 100%;
+}
+.tpl-reser-wrapper .tpl-address{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20rpx 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 32rpx;
+    position: relative;
+    border-top: 2rpx solid #f9f8ff;
+    line-height: 45rpx;
+}
+.tpl-address .machine-name{
+  display: inline-block;
+  width: 100%;
+  padding-right: 100rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.tpl-reser-content .machine-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.machine-name .line, .tpl-machine-function-content .line{
+  display: inline-block;
+  width: 1px;
+  height: 18rpx;
+  background-color: #979797;
+  margin: 0 20rpx;
+}
+.tpl-reserve-order-list .tpl-reser-time-box{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  background: #ECF5FF;
+  margin-top: 20rpx;
+  border-radius:10rpx;
+}
+.tpl-reser-time-box .tpl-reser-countdown-time{
+  color: #2088FF;
+  font-size: 28rpx;
+}
+.tpl-reserve-order-list .tpl-footer-btn-box{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 32rpx;
+}
+.tpl-footer-btn-box .btn-cancle{
+  width: 190rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  border-radius: 33rpx;
+  border:1px solid #CCCCCC;
+  text-align: center;
+  font-size: 28rpx;
+}
+.tpl-footer-btn-box .btn-pay{
+  width: 190rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  border-radius: 33rpx;
+  background: #0077FF;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  margin: 0 0 0 20rpx;
+}
+.tpl-reserve-order-list .tpl-other-reser-wrapper{
+  width: 100%;
+  background-color: #fff;
+}
+.tpl-other-reser-wrapper .tpl-machine-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tpl-machine-info .name{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.tpl-machine-info .price{
+  font-size: .36rem;
+  color: #FF5F5F;
+}
+.tpl-other-reser-wrapper .tpl-machine-function-content{
+  display: flex;
+  align-items: center;
+  color: #666666;
+  font-size: 28rpx;
+  margin-top: 32rpx;
+}
+.tpl-machine-function-content .iconfont{
+  display: inline-block;
+  font-size: 26rpx;
+  margin-right: 8rpx;
+  color: #666666;
+}

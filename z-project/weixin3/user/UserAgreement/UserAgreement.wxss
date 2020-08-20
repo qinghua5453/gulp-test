@@ -1,0 +1,18 @@
+.pge-agree-wrapper{
+    padding: 0 30rpx 30rpx;
+    background: #FFFFFF;
+}
+.pge-agree-title{
+    font-size: 28rpx;
+    color: #5872FF;
+    padding: 30rpx 0 20rpx 0;
+    line-height: 42rpx;
+}
+.pge-bigTitle{
+    font-size: 32rpx;
+}
+.pge-agree-text{
+    font-size: 28rpx;
+    line-height: 42rpx;
+    color: #8A8FAB;
+}

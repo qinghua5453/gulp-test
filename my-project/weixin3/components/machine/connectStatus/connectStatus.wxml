@@ -1,0 +1,5 @@
+<view class="transition">
+   <view class="transition-con {{offset}}">
+   </view>
+   <view class="info">{{statusText}}</view>
+</view> 

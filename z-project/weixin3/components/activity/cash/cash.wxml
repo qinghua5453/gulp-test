@@ -1,0 +1,45 @@
+
+<wxs src="../../../sjs/filter.wxs" module="cash"></wxs>
+<view class="cash-envelope-wrapper" wx:if="{{isShowCash && actItem}}">
+  <view class="cash-body">
+    <!-- 领现金弹窗 -->
+    <view class="cash-use" wx:if="{{actItem.active === 0}}" bindtap="handleActive">
+      <image mode="widthFix" src="https://static.qiekj.com/h5/activity/scan_popup.png"/>
+    </view>
+    <!-- 再来一单弹窗 任务未完成 -->
+    <view class="cash-use-again red-envelope-bg" bindtap="handleTryAgain" wx:if="{{actItem.active === 1 && actItem.state === 0 && actItem.eventState != 3}}">
+      <view class="remainFund">{{cash.toThousands(cash.formatZero(remainFund))}}<text class="unit">元</text></view>
+      <view class="progress-box">
+        <view animation="{{animationProgress}}" class="run {{ actItem.completeNum >= 1 ? 'add-border' : ''}} {{actItem.completeNum === 10 ? 'border-node' : ''}}"></view>
+      </view>
+      <view class="order-information">
+        <view class="complete-orders orders-item">
+          <text>已完成</text><view class="order-icon">{{actItem.completeNum}}</view><text>单,</text>
+        </view>
+        <view class="remain-orders orders-item">
+          <text>还差</text><view class="order-icon">{{diffOrderNumber}}</view><text>单</text>
+        </view>
+      </view>
+    </view>
+    <!-- 拆红包弹窗 任务已完成-->
+    <view class="cash-use-again" animation="{{animationReceive}}" wx:if="{{actItem.active === 1 && actItem.state === 1 && !isShowReward}}" bindtap="handleReceive">
+      <image mode="widthFix" src="https://static.qiekj.com/h5/activity/red_envelope_popup.png"/>
+    </view>
+    <!-- 获得奖励弹窗 -->
+    <view class="cash-use-again" animation="{{animationEnvelop}}" wx:if="{{isShowReward}}">
+      <image mode="widthFix" src="https://static.qiekj.com/h5/activity/received_envelope_popup.png"/>
+    </view>
+    <!-- 活动提前结束 -->
+    <view class="activity-ends-box" wx:if="{{actItem.active === 1 && actItem.eventState === 3 && actItem.state === 0 && activityData != 1 }}" bindtap="handleEnds">
+      <view class="ends-pic">
+        <image mode="widthFix" src="https://static.qiekj.com/h5/activity/activity_ends.png"/>
+      </view>
+      <view class="ends-content">
+        <view class="desc">活动已结束</view>
+        <view class="text">很抱歉，奖金已经瓜分完了</view>
+        <view class="btn-end">好吧</view>
+      </view>
+    </view>
+    <view class="btn-delete" wx:if="{{isShowDelete}}" bindtap="handleClose"></view>
+  </view>
+</view>

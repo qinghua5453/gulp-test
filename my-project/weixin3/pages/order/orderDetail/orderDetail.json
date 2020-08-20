@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText": "订单详情",
+    "usingComponents": {
+        "service": "/components/service/service",
+        "actbanner": "/components/adPage/actBanner/actBanner",
+        "order-header": "./components/orderHeader/orderHeader",
+        "order-operation": "./components/orderOperation/orderOperation",
+        "machine-discount": "/components/pay/machineDiscount/machineDiscount",
+        "payment-popup": "/components/pay/paymentPopup/paymentPopup"
+    },
+    "enablePullDownRefresh": false
+}

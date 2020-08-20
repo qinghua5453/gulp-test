@@ -1,0 +1,93 @@
+.pge-assets-coupon-wrapper{
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 50rpx;
+    position: relative;
+}
+.pge-assets-coupon-wrapper .pge-tabs{
+    position: absolute;
+    top:0;
+    left: 0;
+    border-top:1rpx solid #f5f5f5;
+	width: 100%;
+	height: 88rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #333333;
+	border-bottom: 1px solid #F9F8FF;
+	background-color: #fff;
+    z-index: 2;
+}
+/* tab切换style */
+
+.pge-tab-common{
+	border-top:1rpx solid #f5f5f5;
+	width: 100%;
+	height: 88rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #333333;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #F9F8FF;
+	background-color: #fff;
+}
+.pge-tab-item{
+    width: 50%;
+    text-align: center;
+}
+.pge-tab-item text{
+    line-height: 80rpx;
+}
+.pge-tab-item.pge-active{
+    font-size: 32rpx;
+    color: #2088FF;
+
+}
+.pge-tab-item.active .pge-border-active{
+    width: 55rpx;
+    height: 6rpx;
+    background-color: #2088FF;
+    border-radius: 3rpx;
+    margin: 0 auto;
+}
+.pge-assets-coupon-wrapper .pge-body-warp{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 100rpx 30rpx 50rpx;
+}
+.pge-assets-coupon-wrapper .pge-coupon-list{
+    width: 100%;
+    height: 100%
+}
+.pge-assets-coupon-wrapper .pge-no-more{
+    text-align: center;
+    color: #C2C6DA;
+    padding:40rpx 0;
+}
+.pge-assets-coupon-wrapper .pge-no-list{
+    position: absolute;
+    top: 386rpx;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);  
+}
+.pge-assets-coupon-wrapper .pge-no-list image{
+    width: 110rpx;
+    height: auto;
+    margin: 0 auto 32rpx;
+    display: block;
+}
+.pge-assets-coupon-wrapper .pge-no-list text{
+    color: #8a8fab;
+    font-size: 28rpx;
+}
+.pge-assets-coupon-wrapper .coupon-scroll-list{
+    max-height: 100%;
+}

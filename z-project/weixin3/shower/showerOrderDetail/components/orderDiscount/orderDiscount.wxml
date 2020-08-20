@@ -1,0 +1,73 @@
+<wxs src="../../../../sjs/orderDetail.wxs" module="filter"></wxs>
+<block wx:if="{{orderDetail}}">
+  <view class="cmp-order-discount-wrapper">
+    <view class="shop-name">{{orderDetail.appointmentOrder.appointType === 'BASE_MACHINE' ? orderDetail.shop.shopName : orderDetail.order.shopName}}</view>
+    <view class="cmp-order-discount-content">
+      <view class="cmp-machine-box">
+        <view class="cmp-machine">
+          <block wx:if="{{orderDetail.appointmentOrder.appointType === 'SERVER_ONLY'}}">
+            <view class="cmp-machine-function-icon">
+              <image mode="widthFix" src="{{'https://static.qiekj.com/h5/machineIcon/machine_'+ filter.MachineType(orderDetail.order.parentTypeId) + '_icon.png'}}"/>
+            </view>
+          </block>
+          <block wx:else>
+            <view class="cmp-machine-function-icon">
+              <image mode="widthFix" src="{{'https://static.qiekj.com/h5/machineIcon/machine_'+ 7 + '_icon.png'}}"/>
+            </view>
+          </block>
+          <text>{{orderDetail.appointmentOrder.appointType === 'BASE_MACHINE' ? orderDetail.appointmentOrder.goodsName : orderDetail.order.machineFunctionName}}</text>
+        </view>
+        <view class="cmp-markprice" wx:if="{{orderDetail.order}}">
+          ￥<text>{{orderDetail.order.markPrice}}</text>
+        </view>
+      </view>
+      <block wx:if="{{orderDetail.order}}">
+        <block wx:if="{{orderDetail.order.discountPrice != null && orderDetail.order.discountType === 2}}">
+          <view class="cmp-order-discount-item">
+            <view class="cmp-discount-left">
+                限时特惠
+            </view>
+            <view class="cmp-discount-right">
+              -¥ {{orderDetail.order.discountPrice}}
+            </view>
+          </view>
+        </block>
+        <block wx:if="{{orderDetail.order.discountPrice != null && orderDetail.order.discountType === 1}}">
+          <view class="cmp-order-discount-item">
+            <view class="cmp-discount-left">
+                VIP会员卡
+            </view>
+            <view class="cmp-discount-right">
+              -¥ {{orderDetail.order.discountPrice}}
+            </view>
+          </view>
+        </block>
+        <block wx:if="{{orderDetail.order.voucherPrice != null}}">
+          <view class="cmp-order-discount-item">
+            <view class="cmp-discount-left">
+                优惠券
+            </view>
+            <view class="cmp-discount-right">
+              -¥ {{orderDetail.order.voucherPrice}}
+            </view>
+          </view>
+        </block>
+        <block wx:if="{{orderDetail.order.tokenCoinDiscount && orderDetail.order.tokenCoinDiscount*1 > 0}}">
+          <view class="cmp-order-discount-item">
+            <view class="cmp-discount-left">
+                通用小票
+            </view>
+            <view class="cmp-discount-right">
+              -¥ {{orderDetail.order.tokenCoinDiscount}}
+            </view>
+          </view>
+        </block>
+        <view class="cmp-order-total-box">合计：
+          <text class="order-total">
+              <text class="unit">￥</text>{{orderDetail.order.payPrice}}
+          </text>
+        </view>
+      </block>
+    </view>
+  </view>
+</block>

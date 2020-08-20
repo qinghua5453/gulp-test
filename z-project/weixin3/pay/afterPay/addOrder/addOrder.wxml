@@ -1,0 +1,4 @@
+<view class="addOrder-wrapper">
+  <image src="https://static.qiekj.com/h5/pay/start.gif" mode="widthFix" />
+  <view class="info">订单生成中<text class="loading-transition">...</text></view>
+</view>

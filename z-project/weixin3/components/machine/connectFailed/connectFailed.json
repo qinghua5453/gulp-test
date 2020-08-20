@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "blue-tooth":"/components/pagePopup/blueTooth/blueTooth"
+    }
+}

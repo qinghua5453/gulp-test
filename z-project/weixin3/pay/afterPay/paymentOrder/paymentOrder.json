@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "支付订单",
+    "usingComponents": {
+        "actbanner": "/components/adPage/actBanner/actBanner",
+        "balance-pay": "/components/pay/balancePay/balancePay",
+        "payment-method": "/components/pay/paymentMethod/paymentMethod",
+        "machine-discount": "/components/pay/machineDiscount/machineDiscount"
+    },
+    "enablePullDownRefresh": false
+}

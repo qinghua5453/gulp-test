@@ -1,0 +1,15 @@
+<view class="cmp-machineUnlocked-wrapper">
+    <view class="cmp-machineUnlocked">
+        <view class="cmp-machineUnlocked-bg"></view>
+        <image src="https://static.qiekj.com/alipay/curved.png" mode="widthFix"/>
+        <view class="cmp-machineUnlocked-text">请在出水口处点按开始接水</view>
+        <view class="cmp-waterPort-groupOut">
+            <view class="cmp-waterPort-groupInner">
+                <view class="cmp-waterPort-btn">{{choosedFunctionName}}号</view>
+            </view>
+        </view>
+    </view>
+    <view class="cmp-waterPort-text">结束后将自动为您计费</view>
+    <actbanner adKey="ad_pay_success_bottom" actPage="other" machineId="{{machineId}}"/>
+</view>
+

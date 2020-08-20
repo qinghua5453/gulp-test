@@ -1,0 +1,27 @@
+<view class="cmp-shop-reserve-list" wx:if="{{reserveLists.length}}">
+     <view class="cmp-reserve-tit">设备类型</view>
+    <view class="cmp-reserve-ul">
+    <view class="cmp-reserve-li" wx:for="{{reserveLists}}" wx:key="index">
+        <view class="li-lef-part">
+            <image class="image-icon" mode="scaleToFill" src="{{item.imageUrl}}"/>
+            <view class="lef-tit-infor">
+            <text class="lef-tit">{{item.machineTypeName}}</text>
+            <text class="lef-num">{{item.idleCount}}台可用</text>
+            </view>
+        </view>
+        <!-- 除淋浴 -->
+        <view wx:if="{{machineType != 10}}">
+            <!-- isReserve //预约标记 0可预约，1不可预约 -->
+            <button  class="li-rig-btn" data-type="{{item.parentTypeId}}" bindtap="goToReserve"
+                wx:if="{{shop.isReserve == 0 && item.isReserve == 0}}"
+                style="{{'background-color:' + item.bgColor + ';box-shadow:' + item.boxShadow}}">预约</button>
+        </view>
+        <!-- 淋浴 -->
+        <view wx:else>
+           <button  class="li-rig-btn" bindtap="goToReserveShower"
+                wx:if="{{shop.isReserve == 0 && item.isReserve == 0}}"
+                style="{{'background-color:' + item.bgColor + ';box-shadow:' + item.boxShadow}}">预约</button>
+        </view>
+    </view>
+    </view>
+</view>

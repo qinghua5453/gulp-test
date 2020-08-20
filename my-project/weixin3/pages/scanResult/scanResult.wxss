@@ -1,0 +1,55 @@
+@import './acss/tpl-machine.wxss';
+.pge-book-order-wrapper{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.pge-book-order-wrapper .pge-book-order-bg{
+  height: 222rpx;
+  background: #1677FF;
+}
+.pge-book-order-wrapper .pge-book-order-content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 30rpx 24rpx 124rpx;
+  overflow-y: auto;
+}
+.pge-reserve-machine-list{
+  margin-top: 28rpx;
+}
+.machine-use-box text{
+  font-size: 32rpx;
+  font-weight: 400;
+}
+.machine-use-box .machine-reserve-time{
+  color: #1677FF;
+}
+.machine-use-box .btn-use{
+  width: 168rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  background: #1677FF;
+  border-radius: 32rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+.btn-not-use-reser{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 446rpx;
+  height: 124rpx;
+  margin: 124rpx auto 0;
+  background: #1677FF;
+  border-radius: 62rpx; 
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: 500;
+}
+.btn-not-use-reser .iconfont{
+  font-size: 24rpx;
+}

@@ -1,0 +1,6 @@
+<view class="gold-pop" wx:if="{{isShowPop}}">
+  <view class="gold-pop_mainPic">
+    <view class="shop-name">{{shopName}}</view>
+    <view class="btn-buy" bindtap="buyGold">去购买</view>
+  </view>
+</view>

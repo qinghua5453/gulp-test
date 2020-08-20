@@ -1,0 +1,44 @@
+<view class="pge-new-shower-detail">
+  <view class="shower-bg"></view>
+  <view class="pge-shower-body">
+    <view class="shower-info" wx:if="{{showerData}}">
+      <view class="pge-shower-item">
+        <view class="machine-info">
+          <text>浴室编号：</text>
+          <text>{{showerData.showerNo}}</text>
+        </view>
+      </view>
+      <view class="pge-shower-item">
+        <view class="machine-info">
+          <text>浴室名称：</text>
+          <text>{{showerData.showerName}}</text>
+        </view>
+      </view>
+      <view class="pge-shower-item">
+        <view class="machine-info">
+          <text>店铺名称：</text>
+          <text>{{showerData.shopName}}</text>
+        </view>
+      </view>
+      <view class="pge-shower-item">
+        <view class="machine-info">
+          <text>店铺地址：</text>
+          <text>{{showerData.shopAddress}}</text>
+        </view>
+      </view>
+      <view class="pge-shower-item">
+        <view class="machine-info">
+          <text>订单编号：</text>
+          <text>{{showerData.orderNo}}</text>
+        </view>
+      </view>
+      <view class="pge-shower-item">
+        <view class="machine-info">
+          <text>开始时间：</text>
+          <text>{{showerData.startTime}}</text>
+        </view>
+      </view>
+      <view class="forced-end" bindtap="stopOrder" wx:if="{{isStop}}">强制结束</view>
+    </view>
+  </view>
+</view>

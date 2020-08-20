@@ -1,0 +1,20 @@
+
+<!-- 单个 -->
+<view class="{{walletitem.type === 1 || walletitem.type === 3? 'cmp-list':'cmp-list cmp-add'}}" bindtap="goWalletDetail">
+  <view class="cmp-left">
+    <text class="cmp-name">{{walletitem.machineFunctionName}}</text>
+    <text class="cmp-time">{{walletitem.createTime}}</text>
+  </view>
+  <view class="cmp-price" wx:if='{{type*1 === 1}}'>
+    <!-- 1：消费，2：充值，3：提现，4：退款 5：补偿 -->
+    <text wx:if='{{walletitem.type === 1 || walletitem.type === 3}}'>-</text>
+    <text wx:else>+</text>
+    <text>{{walletitem.sum}}</text>
+  </view>
+  <view class="cmp-price" wx:else>
+    <!-- 1：消费，2：充值，3：提现，4：退款 5：补偿 -->
+    <text wx:if='{{walletitem.type === 1}}'>-</text>
+    <text wx:else>+</text>
+    <text>{{walletitem.coin}}</text>
+  </view>
+</view>

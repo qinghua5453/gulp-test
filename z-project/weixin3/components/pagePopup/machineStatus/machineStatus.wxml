@@ -1,0 +1,15 @@
+<view class="cmp-machine-status-wrapper">
+    <view class="cmp-machine-status">
+        <image class="image" src="https://static.qiekj.com/h5/payError/machine_error.png" mode="widthFix" />
+        <block wx:if="{{statusCode}}">
+            <view class="info">设备故障，请更换设备使用</view>
+            <view class="info">【故障码：{{statusCode}}】</view>
+        </block>
+        <block wx:else>
+            <view class="info">{{statusContent}}</view>
+        </block>
+        <view class="cmp-machine-status-btn-wrapper">
+            <view class="cmp-machine-status-btn-status goHome" bindtap="goHome">重新扫码</view>
+        </view>
+    </view>
+</view>

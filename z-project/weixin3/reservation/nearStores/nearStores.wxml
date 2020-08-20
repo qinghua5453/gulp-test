@@ -1,0 +1,52 @@
+<view class="pge-reser-nearstores">
+  <!-- map -->
+  <view class="pge-map-wrap {{largerHeight ? 'largerHeight' : ''}}">
+    <map id="map" 
+    longitude="{{longitude}}" 
+    latitude="{{latitude}}" 
+    scale="{{scale}}"
+    show-location="{{true}}"
+    markers="{{markers}}"
+    bindregionchange="regionchange" 
+    bindmarkertap="onMarkerTap" 
+    bindcallouttap="onCalloutTap">
+    </map>
+    <cover-image  src="https://static.qiekj.com/alipay/map-location.png" />
+  </view>
+  <!-- 附近店铺 -->
+  <view class="pge-stores-wrap">  
+    <!-- 分类 -->
+    <block wx:if="{{nearAddress}}">
+      <stores-header
+      nearby="{{nearby}}" 
+      shopType="reverse" 
+      currentTab="{{currentTab}}" 
+      bindchoosetab="chooseTab"></stores-header>
+    </block>
+    <view class="pge-title main-color" wx:else bindtap="moreStoresHandle">
+       更多店铺
+    </view>
+    <!-- 附近的店铺 --> 
+    <view class="pge-store-box" wx:if="{{nearAddress}}">
+      <view class="nearbylist-box" wx:if="{{reservelists.length}}">
+        <block wx:for="{{reservelists}}" wx:key="index">
+          <stores-item currentTab="{{currentTab}}" item="{{item}}" shopType="reverse"></stores-item>
+        </block>
+        <!--没加载更多 -->
+        <view class='nomore' wx:if='{{allLoaded}}'>没有更多了</view>
+      </view>
+      <view class="pge-store-null" wx:if="{{!reservelistsLen && apiReserveFlag}}">
+        <image src="https://static.qiekj.com/near-no-shop.png" mode="widthFix" />
+        <view class="null-msg">附近暂无可用店铺</view>
+      </view>
+    </view>
+    <!-- 选中某maker后的店铺 -->
+    <view class="pge-store-box" wx:else>
+      <view class="nearbylist-box" wx:if="{{activeArray && activeArray.length>0}}">
+        <block wx:for="{{activeArray}}" wx:key="index">
+          <stores-item currentTab="{{currentTab}}" item="{{item}}" shopType="reverse"></stores-item>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

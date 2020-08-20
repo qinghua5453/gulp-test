@@ -1,0 +1,45 @@
+.tpl-reserve-machine-item{
+  background: #fff;
+  padding: 26rpx 36rpx 36rpx 42rpx;
+  border-radius: 28rpx;
+  margin-bottom: 28rpx;
+}
+.tpl-reserve-machine-item .machine-function-name{
+  font-size: 34rpx;
+  line-height: 48rpx;
+  font-weight: 500;
+}
+.tpl-reserve-machine-item .machine-detail-box{
+  display: flex;
+  align-items: center;
+  color: #1677FF;
+  font-size: 26rpx;
+  margin-top: 8rpx;
+}
+.machine-detail-box .iconfont{
+  margin-right: 8rpx;
+  font-size: 26rpx;
+}
+.machine-detail-box .detail-desc{
+  color: #666666;
+}
+.tpl-reserve-machine-item .machine-price{
+  font-size: 28rpx;
+  color: #EF5657;
+  line-height: 40rpx;
+  margin-top: 18rpx;
+  font-weight: 500;
+}
+.machine-price .price{
+  font-size: 40rpx;
+  font-weight: 500;
+}
+.machine-price .number{
+  font-size: 40rpx;
+}
+.tpl-reserve-machine-item .machine-use-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}

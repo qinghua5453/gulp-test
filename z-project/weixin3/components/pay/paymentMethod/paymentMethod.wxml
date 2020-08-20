@@ -1,0 +1,32 @@
+<view class="cmp-payment-method-wrapper">
+  <view class="pge-after-pay-item">
+    <text class="title">支付方式</text>
+    <text class="title">还需支付：¥{{price}}</text>
+  </view>
+  <view class="pge-after-pay-item {{payType === 3 ? 'pge-active-item' : ''}}" bindtap="selectPayType" data-item="{{itemWx}}">
+    <view class="pge-after-left">
+      <image src="https://static.qiekj.com/wechat/wechat.png" mode="widthFix" />
+      <text>微信支付</text>
+    </view>
+    <text class="iconfont {{payType === 3 ? 'icon-xuanzhongx':'icon-norx1'}}"></text>
+  </view>
+  <block wx:if="{{isShowBalance&&isSupport}}">
+    <view class="pge-after-pay-item {{payType === 2 ? 'pge-active-item' : ''}}" bindtap="selectPayType" data-item="2">
+      <view class="pge-after-left">
+        <image src="https://static.qiekj.com/h5/miniApp/pay/icon_ye.png" mode="widthFix" />
+        <text>余额</text>
+      </view>
+      <text class="iconfont {{payType === 2 ? 'icon-xuanzhongx':'icon-norx1'}}"></text>
+    </view>
+  </block>
+  <block wx:if="{{isShowBalance&&!isSupport}}">
+    <view class="pge-after-pay-item pge-balance-without">
+      <view class="pge-after-left">
+        <image src="https://static.qiekj.com/h5/miniApp/pay/icon_ye.png" mode="widthFix" />
+        <text>余额</text>
+        <text class="info">余额不足</text>
+      </view>
+      <text class="iconfont icon-_bukexuan"></text>
+    </view>
+  </block>
+</view>

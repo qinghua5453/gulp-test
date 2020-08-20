@@ -1,0 +1,227 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-mode-content {
+    background-color: rgba(245, 245, 245, 1);
+}
+
+.machine-item {
+    width: 680rpx;
+    height: auto;
+    background: #ffffff;
+    padding: 53rpx 30rpx 50rpx;
+    margin: 0 auto 20rpx;
+    border-radius: 28rpx;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.active .machine-item {
+    width: 710rpx;
+    background-size: cover;
+    background-color: #1677FF;
+    box-shadow: 0rpx 8rpx 12rpx 0rpx rgba(100, 146, 252, 0.5);
+}
+
+.warm .active .machine-item {
+    width: 710rpx;
+    background-size: cover;
+    background: rgba(255, 139, 54, 1);
+    box-shadow: 0rpx 8rpx 12rpx 0rpx rgba(255, 139, 54, 0.5);
+}
+
+.machine-item-price {
+    line-height: 40rpx;
+    font-weight: bold;
+    height: 56rpx;
+    color: rgba(239, 86, 87, 1);
+    text-align: right;
+    font-size: 36rpx;
+}
+
+.price-uint {
+    font-size: 24rpx;
+}
+
+.active .machine-item-price {
+    color: #FFFFFF;
+}
+
+.list-item {
+    margin-bottom: 20rpx;
+}
+
+.active .wash-cloth,
+.active .mode-type {
+    color: #ffffff;
+}
+
+.active .price {
+    font-size: 36rpx;
+    color: #ffffff;
+}
+
+.origin-price {
+    font-size: 24rpx;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+    line-height: 33rpx;
+    margin-top: 10rpx;
+    text-align: right;
+}
+
+.active .origin-price {
+    color: #ffffff;
+}
+
+.vip-con-text {
+    font-size: 24rpx;
+    margin-right: 12rpx;
+    color: #333333;
+}
+
+.origin-price-text {
+    margin-right: 12rpx;
+}
+
+.active .vip-con-text {
+    color: #FFFFFF;
+}
+
+.mode-detergent-row {
+    display: none;
+    color: #1677FF;
+    background-color: #ffffff;
+    height: 80rpx;
+    width: 710rpx;
+    margin: 0 auto;
+    padding-bottom: 20rpx;
+}
+
+.mode-detergent-row:last-child {
+    border-radius: 0 0 28rpx 28rpx;
+}
+
+.active .mode-detergent-row {
+    display: flex;
+}
+
+.mode-left {
+    display: fixed;
+    flex-direction: column;
+    width: 430rpx;
+}
+
+.mode-right {
+    display: fixed;
+    flex-direction: column;
+}
+
+.mode-name {
+    font-size: 34rpx;
+    font-weight: bold;
+    height: 48rpx;
+    line-height: 48rpx;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.active .mode-name {
+    color: #ffffff;
+    font-size: 40rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+}
+
+.type-content {
+    font-size: 24rpx;
+    margin-top: 11rpx;
+}
+
+.bigFont {
+    font-size: 44rpx;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.grey {
+    color: #dddddd;
+}
+
+.detergent-price-text {
+    font-size: 30rpx;
+    display: inline-block;
+    font-weight: 400;
+    color: rgba(22, 119, 255, 1);
+    line-height: 30rpx;
+    height: 42rpx;
+    width: 114rpx;
+}
+
+.mode-left-detergent,
+.mode-right-detergent {
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.mode-left-detergent {
+    width: 470rpx;
+    margin-left: 30rpx;
+    margin-right: 10rpx;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.mode-left-detergent .detergent_text {
+    flex:1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.mode-left-detergent .washIcon {
+    /* display: inline-block;
+    vertical-align: middle; */
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 8rpx;
+    background-size: cover;
+}
+
+.mergeIcon {
+    background-image: url(https://static.qiekj.com/alipay/xiyichujun.png);
+}
+
+.washLiquid {
+    background-image: url(https://static.qiekj.com/alipay/washliquid.png);
+}
+
+.cleargerm {
+    background-image: url(https://static.qiekj.com/alipay/cleargerm.png);
+}
+
+.wash-cloth {
+    font-size: 24rpx;
+    color: #2088FF;
+    padding-right: 12rpx;
+}
+
+.wash-cloth .time-icon {
+    display: inline-block;
+    margin-right: 7rpx;
+    font-size: 26rpx;
+}
+
+.mode-type {
+    color: #666666;
+    line-height: 33rpx;
+}
+
+.price-box .icon-gray {
+    border-color: #CCCCCC;
+    color: #999999;
+    background-color: #ffffff;
+}

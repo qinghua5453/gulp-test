@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "解锁失败",
+    "component": true,
+    "usingComponents": {
+        "blue-tooth": "/components/pagePopup/blueTooth/blueTooth"
+    },
+    "enablePullDownRefresh": false
+}

@@ -1,0 +1,65 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.open-bluetooth-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 999;
+}
+
+.open-bluetooth-wrapper .openBluetooth {
+    width: 560rpx;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 10rpx;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    /* padding-bottom: 25rpx; */
+}
+
+.open-bluetooth-wrapper .bluebooth-pic-wrapper {
+    background-color: #C7E1FF;
+    padding: 58rpx 126rpx 0;
+}
+
+.open-bluetooth-wrapper .openBluetooth image {
+    width: 100%;
+    display: block;
+}
+
+.open-bluetooth-wrapper .title {
+    font-size: 35rpx;
+    line-height: 50rpx;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+	padding: 19rpx 0 30rpx;
+	margin-top: 30rpx;
+}
+
+.open-bluetooth-wrapper .info {
+    color: #666;
+    font-weight: 400;
+    line-height: 42rpx;
+    font-size: 30rpx;
+    padding-bottom: 16rpx;
+    text-align: center;
+}
+
+.open-bluetooth-wrapper .openBluetooth-btn {
+	width: 560rpx;
+	height: 98rpx;
+	line-height: 98rpx;
+	margin-top: 10rpx;
+	border-top: solid 1rpx rgba(229,229,229,1);
+    color: #1677FF;
+    text-align: center;
+    font-size: 36rpx;
+    font-weight: 400;
+}

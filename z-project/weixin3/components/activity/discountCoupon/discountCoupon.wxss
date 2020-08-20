@@ -1,0 +1,118 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.novice-meet-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 1002;
+}
+.novice-meet-content{
+  width: 693rpx;
+  height: 100%;
+  position: absolute;
+  padding-top: 128rpx;
+  padding-bottom: 60rpx;
+  left: 48rpx;
+  top: 0;
+  overflow: auto;
+}
+.discount-coupon-bg{
+  position: relative;
+  width: 100%;
+  height: 864rpx;
+  background-image: url(https://static.qiekj.com/h5/discount_bg.png);
+  background-size: cover;
+}
+.content{
+  width: 496rpx;
+  height: 455rpx;
+  position: absolute;
+  top: 280rpx;
+  left: 92rpx;
+  text-align: center;
+}
+.discount-coupon-item{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 145rpx;
+  background-image: url(https://static.qiekj.com/h5/discount_coupon_bg.png);
+  background-size: cover;
+  margin-bottom: 10rpx;
+}
+.discount-coupon-item:last-child{
+  margin-bottom: 0;
+}
+.discount{
+  position: absolute;
+  left: 35rpx;
+  top: 16rpx;
+  color: #FF2A00;
+  font-size: 80rpx;
+  font-weight: 600;
+    
+}
+.discount-text{
+    font-size: 28rpx;
+    margin-left: 8rpx;
+}
+ .discount-content{
+  width: 332rpx;
+  height: 100%;
+  position: absolute;
+  left: 157rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #333333;
+  font-size: 28rpx;
+  font-weight: 400;
+}
+.coupon-type{
+  width: 90rpx;
+  position: absolute;
+  top: 32rpx;
+}
+.date{
+  font-size: 22rpx;
+  color: #333333;
+  margin-top: 10rpx;
+  position: absolute;
+  width: 420rpx;
+  left: 0;
+  top: 70rpx;
+}
+.btn-watch{
+  position: absolute;
+  top: 26rpx;
+  right: 24rpx;
+  width: 100rpx;
+  height: 35.4rpx;
+  line-height: 35.4rpx;
+  border: 1px solid #FF6B4E;
+  border-radius: 18rpx;
+  font-size: 20rpx;
+  color: #FF6B4E;
+  font-weight: 400;
+}
+.discount-footer{
+  position: absolute;
+  bottom: 0;
+  left: 22rpx;
+  width: 613rpx;
+  height: 213rpx;
+  background-image: url(https://static.qiekj.com/h5/discount_footer.png);
+  background-size: cover;
+}
+.btn-delete{
+  width: 64rpx;
+  height: 64rpx;
+  margin: 62rpx 0 0 301rpx;
+  background: url(https://static.qiekj.com/h5/modalDel.png);
+  background-size: cover;
+}

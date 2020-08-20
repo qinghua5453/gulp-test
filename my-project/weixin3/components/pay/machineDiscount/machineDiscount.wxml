@@ -1,0 +1,87 @@
+<wxs src="../../../sjs/orderDetail.wxs" module="filter"></wxs>
+<view class="cmp-machine-discount-wrapper">
+  <view class="pge-after-machine pge-after-item">
+    <view class="pge-after-left">
+      <view class="pge-machine-function-icon">
+        <image mode="widthFix" src="{{'https://static.qiekj.com/h5/machineIcon/machine_'+ filter.MachineType(orderDetail.parentTypeId) + '_icon.png'}}"/>
+      </view>
+      <text class="name">{{parentTypeId === 5 ? '充电桩' : orderDetail.machineFunctionName}}</text>
+      <text wx:if="{{parentTypeId === 5}}" class="charge-time">{{orderDetail.markMinutes}}{{filter.timeUnit(orderDetail.markUnit)}}</text>
+    </view>
+    <view class="pge-after-right">
+      <view class="pge-mark-price">
+        <text class="unit">￥</text>{{orderDetail.markPrice}}
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{skus&&skus.length>0}}">
+    <block wx:for="{{skus}}" wx:key='index'>
+      <view class="cmp-sku-list-item">
+        <view class="pge-after-left">
+          <view class="pge-machine-function-icon">
+            <view class="washIcon {{item.washLiquidIcon}}"></view>
+          </view>
+          <text class="name">{{item.skuName}}</text>
+        </view>
+        <view class="pge-after-right">
+          <view class="pge-mark-price">
+            <text class="unit">￥</text>{{item.payPrice}}
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+  <block wx:if="{{orderDetail.discountPrice != null && orderDetail.discountType === 2}}">
+    <view class="pge-after-discount pge-after-item">
+      <view class="pge-after-left">
+          限时特惠
+      </view>
+      <view class="pge-after-right">
+          <view class="pge-discount-price">
+              <text class="unit">-￥</text>{{orderDetail.discountPrice}} 
+          </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{orderDetail.discountPrice != null && orderDetail.discountType === 1}}">
+    <view class="pge-after-discount pge-after-item">
+      <view class="pge-after-left">
+          VIP会员卡
+      </view>
+      <view class="pge-after-right">
+          <view class="pge-discount-price">
+              <text class="unit">-￥</text>{{orderDetail.discountPrice}}
+          </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{orderDetail.voucherPrice != null}}">
+    <view class="pge-after-discount pge-after-item">
+      <view class="pge-after-left">
+          优惠券
+      </view>
+      <view class="pge-after-right">
+          <view class="pge-discount-price">
+              <text class="unit">-￥</text>{{orderDetail.voucherPrice}}
+          </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{orderDetail.tokenCoinDiscount && orderDetail.tokenCoinDiscount*1 > 0}}">
+    <view class="pge-after-discount pge-after-item">
+      <view class="pge-after-left">
+          通用小票
+      </view>
+      <view class="pge-after-right">
+          <view class="pge-discount-price">
+              <text class="unit">-￥</text>{{orderDetail.tokenCoinDiscount}}
+          </view>
+      </view>
+    </view>
+  </block>
+  <view class="pge-after-total-box">合计：
+    <text class="pge-after-price">
+        <text class="unit">￥</text>{{orderDetail.payPrice}}
+    </text>
+  </view>
+</view>

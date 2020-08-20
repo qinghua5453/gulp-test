@@ -1,0 +1,45 @@
+.tpl-preview-payment-wrapper{
+    position: fixed;
+    bottom: 30rpx;
+    left: 32rpx; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 686rpx;
+    height: 124rpx;
+    margin: 6rpx auto 0;
+    background-color: #fff;
+    box-shadow:0 8rpx 16rpx 0 rgba(235,241,251,1);
+    border-radius:64rpx;
+    border:1px solid rgba(245,245,245,1);
+}
+.tpl-preview-payment-wrapper .tpl-payment-price{
+    margin-left: 48rpx;
+    font-size: 28rpx;
+}
+.tpl-payment-price .price{
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.tpl-preview-payment-wrapper .tpl-payment-btn-pay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 292rpx;
+    height: 100rpx;
+    background-color: #1677FF;
+    border-radius: 64rpx; 
+    margin:12rpx;
+    color: #fff;
+    font-size: 32rpx;
+}
+.tpl-payment-btn-pay .iconfont{
+    font-size: 24rpx;
+}
+.tpl-payment-btn-pay .pay_loading{
+  width: 60rpx;
+  height: 60rpx;
+  background-image: url(https://static.qiekj.com/gif/pay_loading.gif);
+  background-size: cover;
+  margin-left: 30rpx;
+}

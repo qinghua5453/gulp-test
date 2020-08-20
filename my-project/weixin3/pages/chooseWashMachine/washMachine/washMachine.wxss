@@ -1,0 +1,42 @@
+@import './acss/tpl-shop-vip.wxss';
+
+.pge-chose_matchines{
+  width:100vw;
+  height:100vh;
+}
+.pge-chose_matchines.noScroll{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.pge-mode-content-y {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* padding: 200rpx 0 120rpx; */
+  padding-top: 20rpx;
+}
+.machineName {
+  padding-left: 52rpx;
+  font-size: 36rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-weight: bold;
+  color: #333333;
+}
+.pge-content-list{
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 164rpx;
+  -webkit-overflow-scrolling: touch;
+}
+
+.price-box {
+  position: relative;
+}

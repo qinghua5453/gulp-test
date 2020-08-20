@@ -1,0 +1,36 @@
+<template name="tpl-menu">
+  <view class="tpl-menu-content">
+    <view class="tpl-menu-item" bindtap="openGold">
+        <view class="tpl-left">
+            <image mode="widthFix" src="https://static.qiekj.com/h5/alipay/myWallet/icon-gold.png"/>
+            <view class="tpl-info">通用小票</view>
+        </view>
+        <view class="tpl-right">
+            <text class="title">买小票，享优惠</text>
+            <view class="iconfont icon-nextx"></view>
+        </view>
+    </view>
+      <view class="tpl-menu-item" bindtap="openCoupon">
+          <view class="tpl-left">
+              <image mode="widthFix" src="https://static.qiekj.com/h5/alipay/myWallet/icon-coupon.png"/>
+              <view class="tpl-info">优惠券</view>
+          </view>
+          <view class="tpl-right">
+            <block wx:if="{{couponList&&couponList.length>0}}">
+                <text class="title">有 {{couponList.length}} 张优惠券</text>
+            </block>
+            <view class="iconfont icon-nextx"></view>
+          </view>
+      </view>
+      <view class="tpl-menu-item" bindtap="openVip">
+          <view class="tpl-left">
+              <image mode="widthFix" src="https://static.qiekj.com/h5/alipay/myWallet/icon-vip.png"/>
+              <view class="tpl-info">我的VIP</view>
+          </view>
+          <view class="tpl-right">
+              <image class="tpl-vip-date" wx:if="{{hasExpireVip}}" mode="widthFix" src="https://static.qiekj.com/h5/miniApp/user/vip_date.png"/>
+              <view class="iconfont icon-nextx"></view>
+          </view>
+      </view>
+  </view>
+</template>

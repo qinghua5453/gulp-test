@@ -1,0 +1,84 @@
+<wxs src="../../../sjs/orderDetail.wxs" module="filter"></wxs>
+<view>
+  <view class="cmp-order-list">
+      <view class="head" data-id="{{item.id}}" bindtap="goOrderDetail">
+        <view class="time">{{item.orderType === 3 ? item.unlockTime : item.createTime}}</view>
+        <view class="cmp-order-right">
+          <view class="order-status" wx:if='{{item.orderType === 1 || item.orderType === 5}}'>
+            <text wx:if="{{item.orderStatus === 0 && payTime <= 0}}">支付超时</text>
+            <text wx:else>{{filter.orderStatus(item.orderStatus)}}</text>
+          </view>
+          <view class="order-status" wx:if='{{item.orderType === 3}}'>
+            <text>{{filter.orderStatus(item.orderStatus)}}</text>
+          </view>
+          <block wx:if="{{item.orderType === 1}}">
+            <block wx:if="{{item.orderStatus == 2&&charge}}">
+              <block wx:if="{{charge.state*1 != 0 && charge.state*1 != 1}}">
+                <view class="cmp-delete" data-id="{{item.id}}" catchtap="handleDelete">
+                  <text class="iconfont icon-xingzhuang"></text>
+                </view>
+              </block>
+            </block>
+            <block wx:if="{{item.orderStatus == 1 || item.orderStatus == 0 && payTime <= 0 || item.orderStatus == 2 && completeTime <= 0 || item.orderStatus == 5}}">
+              <view class="cmp-delete" data-id="{{item.id}}" catchtap="handleDelete">
+                <text class="iconfont icon-xingzhuang"></text>
+              </view>
+            </block>
+          </block>
+          <block wx:if="{{item.orderType === 3}}">
+            <block wx:if="{{item.orderStatus == 1 || item.orderStatus == 2 && completeTime <= 0 || item.orderStatus == 5}}">
+              <view class="cmp-delete" data-id="{{item.id}}" catchtap="handleDelete">
+                <text class="iconfont icon-xingzhuang"></text>
+              </view>
+            </block>
+          </block>
+        </view>
+      </view>
+      <view class="cmp-reser-wrapper" data-id="{{item.id}}" bindtap="goOrderDetail">
+        <view class="cmp-order-info">
+          <view class="cmp-machine-function-icon">
+            <image mode="widthFix" src="{{'https://static.qiekj.com/h5/machineIcon/machine_'+ filter.MachineType(item.parentTypeId) + '_icon.png'}}"/>
+          </view>
+          <view class="cmp-function-box">
+            <text class="machine-name">{{item.machineName}}</text>
+            <text class="machine-function-name">{{item.machineFunctionName}}</text>
+          </view>
+        </view>
+        <view class="cmp-order-price">￥<text>{{item.payPrice}}</text></view>
+      </view>
+      <view class="footer-btn-box" wx:if="{{item.orderType === 1}}">
+        <block wx:if="{{item.orderStatus === 0 && payTime > 0}}">
+          <button class="btn btn-cancle"  data-id='{{item.id}}' bindtap="cancelOrder">取消订单</button>
+          <button class="btn btn-payment" data-id='{{item.id}}' bindtap="handlePay">立即支付</button>
+        </block>
+        <view class="countdown-hide">
+          <block wx:if='{{payTime > 0}}'>
+            <time type="1" time="{{payTime}}" bindfinish="hanldePayTime" />
+          </block>
+        </view>
+        <view class="btn cmp-order-list-btn {{startTime <= 0 ? 'btn-pay':'btn-pay cancel'}}" bindtap="handleMachineBoot" wx:if="{{item.orderStatus === 2 && item.machineType == 1 && parentTypeId == 1 && overTime > 0 && handStart != 0}}">
+          <block wx:if="{{isLoading}}">
+            <image mode="widthFix" src="https://static.qiekj.com/gif/pay_loading.gif"/>
+          </block>
+          <text>启动设备</text>
+          <text wx:if='{{startTime > 0}}'>
+            <time type="1" time="{{startTime}}" bindfinish="hanldeStart" />s
+          </text>
+        </view>
+      </view>
+      <view class="footer-btn-box" wx:if="{{item.orderType === 3}}">
+        <view wx:if="{{item.orderStatus === 0}}" class="btn btn-pay" data-id="{{item.id}}" bindtap="afterPay">立即支付</view>
+      </view>
+      <view class="countdown-hide">
+        <time type="1" time="{{overTime}}" bindfinish="hanldeOverTime" />
+        <time type="2" time="{{completeTime}}" bindfinish="hanldeComplete" />
+      </view>
+      <blue-tooth wx:if="{{openBluetoothShow}}" bindfinish="openShowBlueTooth"/>
+    </view>
+    <!--继续支付-->
+    <block wx:if="{{item&&showPaymentPopup}}">
+      <view class="cmp-orderlist-payment-popup">
+        <payment-popup orderDetail="{{item}}" showPopup="{{showPaymentPopup}}" bindclosepaypopup="closePayment"></payment-popup>
+      </view>
+    </block>
+  </view>

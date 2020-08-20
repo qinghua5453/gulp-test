@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "通用小票明细",
+    "usingComponents": {
+        "detailitem": "./components/detailItem/detailItem"
+    },
+    "enablePullDownRefresh": false
+}

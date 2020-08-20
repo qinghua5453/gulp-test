@@ -1,0 +1,35 @@
+.pge-gold-detail{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 20rpx;
+}
+.pge-gold-detail-con{
+  height: 100%;
+  padding: 0 20rpx;
+}
+.pge-gold-detail-con .pge-gold-detail-list{
+  padding: 0 32rpx;
+  max-height: 100%;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+}
+.pge-gold-detail .pge-no-more {
+  color: #999999;
+  text-align: center;
+  padding: 50rpx 0 50rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  border-radius: 0 0 20rpx 20rpx;
+}
+.pge-list-none{
+    position: fixed;
+    top: 600rpx;
+    left: 290rpx;
+    color: #C2C6DA;
+}
+.pge-no-more{
+    text-align: center;
+    color: #C2C6DA;
+    padding:40rpx 0;
+}

@@ -1,0 +1,15 @@
+<template name="tpl-pop">
+  <view class="tpl-rule-desc_body">
+      <view class="tpl-rule-desc_content">
+          <view class="tpl-title">规则说明</view>
+          <view class="tpl-text">1、通用小票是企鹅共享用户使用企鹅共享各种增值服务的一种统计代码，并非代币、票、券。不能用于企鹅共享增值服务以外的任何商品或服务。</view>
+          <view class="tpl-text">2、不同的店铺会公布不同数额的购买通用小票服务，通用小票仅可用于抵扣适用店铺扫码支付的消费，不可用于转移或转赠。</view>
+          <view class="tpl-text">3、通用小票有效期自购买之日起至使用完毕为止。</view>
+          <view class="tpl-text">4、1通用小票可抵扣0.01元，以此类推。</view>
+          <view class="tpl-text">5、购买的通用小票中本金部分，可向店铺运营商申请退款。</view>
+      </view>
+      <view class="tpl-close-box" bindtap="closeRule">
+        <image class="tpl-itemPic" src="https://static.qiekj.com/h5/modalDel.png" mode="widthFix"/>
+      </view>
+  </view>
+</template>

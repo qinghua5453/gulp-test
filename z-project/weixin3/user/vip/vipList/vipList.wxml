@@ -1,0 +1,28 @@
+<view class="pge-vipList-wrapper">
+	<view class="pge-tab-common">
+		<view class="{{currentTitleId == 1 ? 'pge-tab-item pge-active':'pge-tab-item'}}" bindtap="titlClickEvent" data-id='1'>
+			<view>使用中<text wx:if="{{usingVipList.length > 0}}">({{usingVipList.length}})</text></view>
+			<view class="pge-border-active"></view>
+		</view>
+		<view class="{{currentTitleId == 2 ? 'pge-tab-item pge-active':'pge-tab-item'}}" bindtap="titlClickEvent" data-id='2'>
+			<view>已过期<text wx:if="{{datedVipList.length > 0}}">({{datedVipList.length}})</text></view>
+			<view class="pge-border-active"></view>
+		</view>
+	</view>
+	<!-- 可用VIP -->
+	<view wx:if="{{currentTitleId == 1}}">
+		<vipitem wx:for="{{usingVipList}}" wx:key="index" type="1" index="{{index}}" vipitem="{{item}}"/>
+		<view class="pge-listNone-info" wx:if="{{usingVipList.length === 0}}">
+			<image src="https://static.qiekj.com/h5/miniApp/no_error.png" mode="widthFix" />
+			<view class="pge-error-msg">您还未开通过VIP卡</view>
+		</view>
+	</view>
+	<!-- 过期VIP -->
+	<view wx:if="{{currentTitleId == 2}}">
+		<vipitem wx:for="{{datedVipList}}" wx:key="index" type="2" index="{{index}}" vipitem="{{item}}"/>
+		<view class="pge-listNone-info" wx:if="{{datedVipList.length === 0}}">
+			<image src="https://static.qiekj.com/h5/miniApp/no_error.png" mode="widthFix" />
+			<view class="pge-error-msg">暂无已过期VIP卡</view>
+		</view>
+	</view>
+</view>

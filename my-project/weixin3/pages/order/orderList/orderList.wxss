@@ -1,0 +1,11 @@
+.orderList-wrapper{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #F5F5F5;
+}
+
+.no-more{
+    text-align: center;
+    color: #C2C6DA;
+    padding:40rpx 0;
+}

@@ -1,0 +1,110 @@
+.pge-wrapper{
+  width: 100%;
+  height: 100vh;
+  background: #FFFFFF;
+}
+.pge-login-wrapper{
+  width: 100%;
+  background: #fff;   
+  padding: 0 45rpx 20rpx;
+}
+.pge-login-smaller {
+  width: 176rpx;
+  height: 182rpx;
+  margin: 108rpx auto 0;
+}
+.pge-login-image{
+  width: 352rpx;
+  height: 362rpx;
+  margin: 68rpx auto 0;
+}
+.pge-login-phone-box{
+  font-size: 32rpx;
+  color: #333333;
+  text-align: center;
+  margin-top: 49rpx;
+}
+.pge-login-phone{
+  font-size: 36rpx;
+  color: #2088FF;
+  margin: 0 10rpx;
+}
+.login-btn{
+    width: 660rpx;
+    height: 96rpx;
+    margin-top: 75rpx;
+    background-color: #2088FF;
+    border-radius: 61rpx;
+    font-size: 36rpx;
+    color: #FFFFFF;
+    line-height: 96rpx;
+}
+.other-phone{
+  text-align: center;
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 50rpx;
+}
+.login-con .input-t{
+    box-sizing: border-box;
+    width: 100%;
+    height: 116rpx;
+    border: 2rpx solid #DFE6FF;
+    border-radius: 10rpx;
+    position: relative;
+    margin-top: 45rpx;
+    overflow: hidden;
+}
+.login-con .active{
+     border-color: #2088FF !important;
+}
+.login-con input{
+    height: 100rpx;
+    line-height: 116rpx;
+    font-size: 32rpx;
+}
+.input-login{
+    width: 80%;  
+}
+.placeholderClass{
+    color: #BAC0D2;
+    font-size: 32rpx;
+}
+.input-key{
+    width: 70%;
+}
+.iconfont{
+    line-height: 1;
+    font-size: 30rpx;
+    color: #dae0f3;
+    position: absolute;
+    right: 30rpx;
+    top: 44rpx;
+}
+.code{
+    position: absolute;
+    height: 100%;    
+    border: none;
+    line-height: 114rpx;
+    font-size: 30rpx;
+    color: #2088FF;
+    width: 300rpx;
+    right: 0;
+    top: 0; 
+    padding-right: 30rpx;
+    text-align: right;
+}
+.gray-code{
+    color: #BAC0D2 !important;
+}
+.login-procol{
+   margin-top:  40rpx;
+   line-height: 33rpx;
+   font-size: 24rpx;
+   color: #8a8fab;
+}
+.login-procol text:last-child{
+    color: #2088FF;
+    text-decoration: underline;
+    margin-left: 10rpx;
+}

@@ -1,0 +1,80 @@
+<wxs src="../../../sjs/orderDetail.wxs" module="filter"></wxs>
+<block wx:if="{{orderDetail}}">
+  <view class="pge-wash-paysuccess-wrapper">
+    <view class="tpl-machineStatus-box">
+      <view class="tpl-machineStatus-bg {{orderDetail.isSTATCharge*1 ===1 ? 'tpl-machineStatus-charge-bg' : ''}}"></view>
+      <view class="tpl-machineStatus-bg-bottom">
+        <block wx:if="{{orderDetail.isSTATCharge*1 ===1}}">
+          <block wx:if="{{charge}}">
+            <block wx:if="{{charge.state*1 === 1 || charge.state*1 === 8}}">
+                <view class="charge-working">
+                    <text class="charge-status" wx:if="{{charge.state*1 === 1}}">充电中</text>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="charge-not-start">
+                    <text>{{filter.chargeState(charge.state)}}</text>
+                    <image mode="widthFix" src="https://static.qiekj.com/h5/charge/not_charge.png"/>
+                </view>
+            </block>
+          </block>
+          <block wx:else>
+            <view class="charge-working"></view>
+          </block>
+        </block>
+      </view>
+      <block wx:if="{{orderDetail.isSTATCharge*1 != 1}}">
+        <view class="pge-success-status-bg {{second > 0 ? 'pge-success-count-down-secode' : 'pge-success-status-text'}}">
+          <text>{{workStatus === 1 ? '启动中' : machineTitle }}</text>
+          <text class="unimark-time" wx:if="{{second > 0}}"><time type="1" time="{{second}}" bindfinish="handleUniMakCountDown" />s</text>
+        </view>
+      </block>
+    </view>
+    <block wx:if="{{orderDetail.isSTATCharge*1 ===1}}">
+      <block wx:if="{{chargeCompleteTime > 0}}">
+        <view class="pge-charge-work-time">
+          预计剩余<time type="4" time="{{chargeCompleteTime}}" bindfinish="hanldeChargeComplete" />
+        </view>
+      </block>
+      <view class="pge-btn-order-operation">
+        <block wx:if="{{charge.state*1 === 1 || charge.state*1 === 3}}">
+          <button class="btn-order" bindtap="goRecharge">续充</button>
+        </block>
+        <button class="btn-order" bindtap="goOrderDetail">查看订单</button>
+      </view>
+    </block>
+    <block wx:else>
+      <block wx:if="{{isShowMore}}">
+        <view wx:if="{{workStatus === 1}}" class="pge-wash-work-time">稍等,正在启动</view>
+        <block wx:else>
+          <block wx:if="{{completeTime > 0}}">
+            <view class="pge-wash-work-time">
+              预计剩余<text class="pge-count-down-number"><time type="5" time="{{completeTime}}" bindfinish="hanldeComplete" /></text>分钟
+            </view>
+          </block>
+        </block>
+        <view class="pge-btn-order-operation">
+          <button class="btn-order" bindtap="goOrderDetail">查看订单</button>
+        </view>
+        <view class="pge-machine-malfunction" bindtap="goMachineError">
+          设备故障<text class="iconfont icon-xiayibu"></text>
+        </view>
+      </block>
+      <view class="pge-machine-malfunction" bindtap="goShowMore" wx:if="{{!isShowMore}}">
+        查看更多<text class="iconfont icon-xiayibu"></text>
+      </view>
+    </block>
+    <!-- 广告 -->
+    <block wx:if="{{orderDetail&&orderDetail.machineId}}">
+      <view class="pge-paysuccess-banner-ad">
+        <actbanner adKey="ad_pay_success_bottom" actType="banner" machineId="{{orderDetail.machineId}}"/>
+      </view>
+      <view class="pge-paysuccess-banner-ad">
+        <actbanner adKey="ad_pay_success_bottom2" actType="banner" machineId="{{orderDetail.machineId}}"/>
+      </view>
+    </block>
+    <block>
+      <actbanner adKey="ad_pay_success_pop" actType="popup"/>
+    </block>
+  </view>
+</block>

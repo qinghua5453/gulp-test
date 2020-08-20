@@ -1,0 +1,58 @@
+var orderStatus = function (val){
+  val = val.toString();
+  var map = {
+    '0':'未支付',
+    '1':'支付超时',
+    '2':'已支付',
+    '3':'已完成',
+    '4':'申请退款',
+    '5':'已退款',
+  }
+  return map[val];
+};
+
+var chargeState = function (val)  {
+  val = val.toString();
+  var map = {
+    '0': '未开始',
+    '1': '正在充电',
+    '2': '充电中断',
+    '3': '充电完成',
+    '4': '已充满',
+  }
+  return map[val]
+};
+
+var timeUnit = function (val)  {
+  val = val?val.toString():'';
+  var map = {
+    's': '秒',
+    'm': '分钟',
+    'h': '小时',
+    'ml': '毫升',
+    'L': '升',
+  }
+  return val?map[val]:''
+};
+
+var MachineType = function (val)  {
+  val = val?val.toString():'';
+  var map = {
+    'c9892cb4-bd78-40f6-83c2-ba73383b090a': 1, // 洗衣机
+    '4a245cde-538b-47d8-aa35-dd4a28c0e901': 2, // 烘干机
+    'ef5b8f13-36ec-44fb-8179-38627abd9be0': 3, // 洗鞋机
+    '4eeb1b0a-d006-49cc-bf17-73c20599057b': 4, // 吹风机
+    '4eeb1b0a-d006-49cc-bf17-73c20599057c': 5, // 充电桩
+    '4eeb1b0a-d006-49cc-bf17-73c20599057e': 6, // 饮水机
+    '493075751319372662': 7, // 淋浴
+    '430009623810933477': 8, //按摩椅
+  }
+  return val?map[val]:''
+};
+
+module.exports = {
+  "orderStatus":orderStatus,
+  "chargeState":chargeState,
+  "timeUnit":timeUnit,
+  "MachineType":MachineType
+};

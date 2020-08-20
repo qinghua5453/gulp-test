@@ -1,0 +1,33 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-error .cmp-error-con{
+  text-align: center;
+  color: #868686;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cmp-error-con image{
+  margin-bottom: 30rpx;
+  width: 100%;
+  height: 100%;
+  transform: scale(2);
+}
+.cmp-error-con .error-msg{
+  font-size: 28rpx;
+  color: #333333;
+  text-align: center;
+}
+.cmp-stop-shop {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.cmp-stop-shop image{
+  width: 100%;
+  height: 100%;
+  transform: scale(2);
+}

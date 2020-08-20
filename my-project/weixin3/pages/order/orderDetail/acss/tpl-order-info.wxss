@@ -1,0 +1,38 @@
+.tpl-order-info{
+  width: 100%;
+  background: #fff;
+  border-radius: 28rpx;
+  margin-top: 16rpx;
+}
+.tpl-order-info .item{
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24rpx;
+}
+.item .tpl-copy-operation{
+  display: flex;
+  align-items: center;
+}
+.tpl-copy-operation .tpl-order-machine-name{
+  max-width: 360rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tpl-copy-operation .copy-text{
+  width: 80rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border:1px solid rgba(0,0,0,0.1);
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  margin-left: 16rpx; 
+}
+.tpl-order-info text{
+  color: #333333;
+  font-size: 28rpx;
+}

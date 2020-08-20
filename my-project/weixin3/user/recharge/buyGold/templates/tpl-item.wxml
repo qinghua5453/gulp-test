@@ -1,0 +1,16 @@
+<template name="tpl-item">
+  <view class="tpl-gold-one" wx:if="{{shopTokenCoinRewards && shopTokenCoinRewards.length === 1}}" >
+    <view class="tpl-headPic-box">
+      <image class="tpl-headerPic" src="https://static.qiekj.com/h5/recharge/gold_pic.png" mode="widthFix"/>
+    </view>
+    <view class="tpl-gold-item {{chooseIndex === index ? 'tpl-active' : ''}}" wx:for="{{shopTokenCoinRewards}}" wx:key="index" bindtap="ckGoidItem" data-index='{{index}}'>
+        <view class="tpl-gold-principal">
+            <image class="tpl-icon-gold" src="https://static.qiekj.com/h5/recharge/buy_gold_icon.png" mode="widthFix"/>
+            <view>{{item.reach}}<text wx:if="{{item.reward}}">+{{item.reward}}</text></view>
+        </view>
+        <view class="tpl-gold-deduction">
+            {{item.cashValue}}元
+        </view>
+    </view>
+  </view>
+</template>

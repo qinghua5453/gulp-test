@@ -1,0 +1,24 @@
+<view class="am-modal-{{show ? 'show' : 'hide'}}" disable-scroll="{{disableScroll}}" style="{{zIndex ? 'z-index: ' + zIndex + ';': ''}}">
+  <view class="am-modal-document">
+    <view class="am-modal-mask" wx:if="{{mask}}" bindtap="_onMaskTap" />
+    <view class="am-modal">
+      <!-- modal content -->
+      <view class="am-modal-content">
+        <view class="am-modal-body">
+           <slot/>
+        </view>
+      </view>
+       <!-- modal button -->
+      <view class="am-modal-buttons am-modal-buttons--horizontal" wx:if="{{showButtonComfirm || showButtonCancel}}">
+        <view class="am-modal-button am-modal-button--horizontal" hover-class="am-modal-button-active" 
+         bindtap="_onButtonClickComfirm" wx:if="{{showButtonComfirm}}">
+          {{buttonComfirmText}}
+        </view>
+        <view class="am-modal-button am-modal-button--horizontal am-modal-botton-cancel" hover-class="am-modal-button-active" 
+         bindtap="_onButtonClickCancel" wx:if="{{showButtonCancel}}">
+          {{buttonCancelText}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

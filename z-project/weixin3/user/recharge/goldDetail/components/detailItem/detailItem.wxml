@@ -1,0 +1,13 @@
+
+<!-- 单个 -->
+<view class="cmp-gold-item {{detailitem.type*1 === 100 ? 'cmp-add' : ''}}">
+    <view class="cmp-shop-info">
+        <view class="cmp-operating">{{detailitem.remark}}</view>
+        <view class="cmp-price" wx:if="{{detailitem.type*1 === 100}}">+<text>{{detailitem.amount}}</text></view>
+        <view class="cmp-price" wx:else>-<text>{{detailitem.amount}}</text></view>
+    </view>
+    <view class="cmp-shop-info cmp-price-info">
+        <view class="cmp-shop-name">{{detailitem.shopName}}</view>
+        <view class="cmp-time">{{detailitem.createdAt}}</view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+<wxs src="../../../../sjs/filter.wxs" module="cash"></wxs>
+<template name="tpl-card">
+  <view class="vip-type">
+  
+    <view class="{{chooseIndex == index?'vip-item active':'vip-item'}}" wx:for="{{saleDescVOList}}" wx:key="index" bindtap="chooseVipType" data-type="{{index}}">
+       <!-- <view class="month">{{item.timeInterval}}个月</view>
+      <view class="price"><text>￥</text>{{item.price.toFixed(2)}}</view>
+      <view class="tag" wx:if="{{item.isRecommend}}">推荐</view> -->
+      <view class="tpl-vip-item-month">{{item.timeInterval}}个月</view>
+      <view class="tpl-vip-item-price"><text>￥</text>{{cash.toFixed(item.price,2)}}</view> 
+    </view>
+  </view>
+</template>

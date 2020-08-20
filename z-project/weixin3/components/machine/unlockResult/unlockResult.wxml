@@ -1,0 +1,33 @@
+<view class="unlock-result-wrapper" wx:if="{{openUnlockResult}}">
+    <view class="status" wx:if="{{!isLockFailed}}">
+      <image src="https://static.qiekj.com/h5/pay/start-success.png" mode="widthFix" />
+      <view class="status-info">解锁成功</view>
+    </view>
+    <view class="status" wx:if="{{isLockFailed}}">
+        <image src="https://static.qiekj.com/h5/pay/start-fall.png" mode="widthFix" />
+        <view class="status-info">解锁异常</view>
+        <view class="unlock-status">{{unlockError}}</view>
+        <view>
+          <button type="primary" class="btn-retry" bindtap="retry">重新解锁</button>
+        </view>
+    </view>
+    <view class="machine">
+      <view class="shopName">{{machine.machineName}}</view>
+      <view class="choose-machine">{{choosedFunctionName}}号出水口</view>
+    </view>
+    <view wx:if="{{isLockFailed}}" class="pay-service">
+      <service operatorPhone="{{machine.phone}}" machineId="{{machine.id}}"/>
+    </view>
+    <view class="prompt" wx:if="{{!isLockFailed}}">
+      <swiper autoplay="false" interval="3000">
+        <swiper-item class="list">
+          <view class="info">通过设备上的<text class="highLight">“出水”</text>按钮接水</view>
+          <image src="https://static.qiekj.com/h5/water/waterSwipe1.png" mode="widthFix" />
+        </swiper-item>
+        <swiper-item class="list">
+          <view class="info"><text class="highLight">“暂停”</text>接水15秒后，则接水结束</view>
+          <image src="https://static.qiekj.com/h5/water/waterSwipe1.png" mode="widthFix" />
+        </swiper-item>
+    </swiper>
+    </view>
+  </view>

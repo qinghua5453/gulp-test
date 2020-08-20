@@ -1,0 +1,46 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.gold-window{
+  position: fixed;
+  right: 24rpx;
+  top: 68rpx;
+}
+.gold-window .buy-gold{
+  width: 136rpx;
+  height: 98rpx;
+}
+.shop-vip{
+  position:absolute;
+  top: -50rpx;
+  right: 21rpx;
+  width:205rpx;
+  height: 159rpx;
+  background-image: url(https://static.qiekj.com/h5/miniApp/machine/open_vip.png);
+  background-size: cover;
+}
+.xf-vip{
+  position:absolute;
+  top: -50rpx;
+  right: 21rpx;
+  width:205rpx;
+  height: 159rpx;
+  background-image: url(https://static.qiekj.com/h5/miniApp/machine/xf_vip.png);
+  background-size: cover;
+}
+.task-vip{
+  position:absolute;
+  top: -6rpx;
+  right: 21rpx;
+}
+.vip-discount{
+  font-size: 24rpx;
+  color: #71430C;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  transform: rotate(-8deg);
+  display: inline-block;
+  margin-top: 53rpx;
+  line-height: 58rpx;
+  margin-left: 20rpx;
+}

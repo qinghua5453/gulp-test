@@ -1,0 +1,12 @@
+<wxs module="DataUtils" src="../../../sjs/dataUtils.wxs"/>
+<view class="gold-window" wx:if="{{(tipList && tipList.length === 1 && DataUtils.toNumber(tipList[0].promotionType) === 4) || (tipList && tipList.length > 1)}}" bindtap="goTokenCoin">
+  <image class="buy-gold" mode="widthFix" src="https://static.qiekj.com/h5/recharge/buy-gold_pop.png"/>
+</view>
+<view wx:if="{{tipList && tipList.length === 1 && DataUtils.toNumber(tipList[0].promotionType) === 1 && !isLockResult}}">
+  <view wx:if="{{tipList[0].promotionInfoOfUserInShop}}" class="xf-vip" data-type='1' bindtap="toCreateVip">
+    <text class="vip-discount">店铺VIP享{{DataUtils.toDiscountFixed(shop.vipDiscount,1)}}折</text>
+  </view>
+  <view wx:else class="shop-vip" data-type='2' bindtap="toCreateVip">
+    <text class="vip-discount">店铺VIP享{{DataUtils.toDiscountFixed(shop.vipDiscount,1)}}折</text>
+  </view>
+</view>

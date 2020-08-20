@@ -1,0 +1,248 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+
+
+.coupon-box{
+  position: relative;
+  width: 711rpx;
+  height: 430rpx;
+  margin: 0 auto;
+  background: #F9F9F9;
+  border-radius: 0 0 20rpx 20rpx;
+}
+.recived_box{
+  position: absolute;
+  right: 51rpx;
+  top: 324rpx;
+  width: 231rpx;
+  height: 160rpx;
+  background:url('https://static.qiekj.com/h5/recived_icon.png');
+  background-size: cover;
+  z-index: 1006;
+}
+.coupon-title{
+  position: absolute;
+  top: 27rpx;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #F04864;
+  font-weight: 400;
+}
+.title-success{
+  position: absolute;
+  top: 27rpx;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-weight: 400;
+  color: #F04864;
+}
+.coupon-result-wrapper{
+  position: absolute;
+  top: 84rpx;
+  left: 50%;
+  transform: translate(-50%);
+  width:446rpx;
+  height:311rpx;
+  background:linear-gradient(180deg,rgba(255,222,134,1) 0%,rgba(255,197,106,1) 100%);
+  box-shadow:0px 2rpx 10rpx 0px rgba(255,31,31,0.5);
+  border-radius:20rpx;
+}
+.coupon-result-box{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.coupon-result{
+  position: absolute;
+  top: 18rpx;
+  left: 18rpx;
+  width: 410rpx;
+  height: 275rpx;
+  background:url('https://static.qiekj.com/h5/result_bg.png');
+  background-size: cover;
+}
+.coupon-type-label{
+  position: absolute;
+  top: 18rpx;
+  left: 18rpx;
+  width: 178rpx;
+  height: 36rpx;
+}
+.coupon-label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 123rpx;
+  height: 36rpx;
+  background: #FF6666;
+  text-align: center;
+  color: #ffffff;
+}
+.result-price-box{
+  text-align: center;
+  margin-top: 45rpx;
+  height: 112rpx;
+  line-height: 112rpx;
+  font-weight: 600;
+}
+.result-price{
+  font-size: 80rpx;
+  color: #212C68;
+}
+.result-price-unit{
+  font-size: 50rpx;
+   color: #212C68;
+}
+.condition{
+  font-size: 18rpx;
+  height: 28rpx;
+  line-height: 25rpx;
+  color: #212C68;
+  text-align: center;
+}
+.date-box{
+  position: absolute;
+  bottom: 56rpx;
+  left: 68rpx;
+  height: 28rpx;
+  line-height: 25rpx;
+}
+.date{
+  font-size: 18rpx;
+  color: #CF6A52;
+}
+.date-time{
+  font-size: 20rpx;
+  color: #CF6A52;
+}
+.useScope{
+  position: absolute;
+  bottom: 15rpx;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  font-size: 18rpx;
+  color: #CF6A52;
+  height: 25rpx;
+  line-height: 25rpx;
+  margin-top: 16rpx;
+}
+.coupon-list{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 45rpx;
+  top: 113rpx;
+  width: 620rpx;
+  height: 273rpx;
+}
+.coupon-item{
+  position: relative;
+  width: 180rpx;
+  height: 273rpx;
+  background: url('https://static.qiekj.com/h5/ActivityCoupon_bg.png');
+  background-size: cover;
+  text-align: center;
+}
+.coupon-item:nth-child(2){
+  margin: 0 40rpx;
+}
+.coupon-price{
+  height: 65rpx;
+  line-height: 65rpx;
+  margin-top: 33rpx;
+  color: #212C68;
+  text-align: center;
+  font-weight: 600;
+}
+.price-big{
+  font-size: 46rpx;
+  text-align: center;
+}
+.price-small{
+  font-size: 36rpx;
+  text-align: center;
+}
+.coupon-price-unit{
+  font-size: 30rpx;
+  text-align: center;
+}
+.coupon-desc{
+  font-size: 18rpx;
+  color: #212C68;
+  text-align: center;
+  margin-top: 2rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+}
+.coupon-img{
+  position: absolute;
+  bottom: 77rpx;
+  left: 50%;
+  transform: translate(-50%);
+  width: 138rpx;
+  height: 26rpx;
+  line-height: 34rpx;
+}
+.btn-delete{
+  width: 64rpx;
+  height: 64rpx;
+  margin: 62rpx auto 0;
+  background: url('https://static.qiekj.com/h5/modalDel.png');
+  background-size: cover;
+}
+.btn-coupon-select{
+  position: absolute;
+  bottom: 20rpx;
+  left: 50%;
+  transform: translate(-50%);
+  width: 145rpx;
+  height: 45rpx;
+}
+.btn-select{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(360deg,rgba(255,106,82,1) 0%,rgba(255,159,117,1) 100%);
+  border-radius:26rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  z-index: 2;
+}
+.btn-shaw{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #D23737;
+  border-radius:26rpx;
+  z-index: 1;
+}
+.coupon-image{
+  width: 66rpx;
+  height: 76rpx;
+  margin: 44rpx auto 0; 
+}
+.free-coupon{
+  width: 66rpx;
+  height: 76rpx;
+}
+.free-middle-coupon{
+  position: absolute;
+  top: 94rpx;
+  left: 50%;
+  transform: translate(-50%);
+  height: 112rpx;
+  line-height: 112rpx;
+  width: 235rpx;
+  height: 56rpx;
+}

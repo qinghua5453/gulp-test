@@ -1,0 +1,10 @@
+<import src="./templates/tpl-list.wxml"/>
+<view class='pge-banlance-detail-wrapper'>
+  <view class="pge-header">
+    <text class="pge-total-price">{{total_balance}}</text>
+    <view class="pge-total-text">总余额(元)</view>
+  </view>
+  <view class="pge-balance-detail-list">
+    <template is="tpl-list" data="{{normal_balance,list}}"/>
+  </view>
+</view>

@@ -1,0 +1,48 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-order-operation-item{
+  background-color: #FFFFFF;
+  padding: 24rpx;
+  border-radius: 28rpx;
+  margin-bottom: 16rpx;
+}
+.cmp-order-operation-wrapper .cmp-btn-order-operation{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 24rpx;
+}
+.cmp-order-operation-wrapper .cmp-order-status-text{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.cmp-btn-order-operation button{
+  margin-right: 32rpx;
+}
+.cmp-btn-order-operation .btn-after-pay{
+  width: 254rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  background: #2088FF;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 36rpx;
+  font-size: 32rpx;
+}
+.cmp-btn-order-operation button:last-child{
+  margin-right: 0;
+}
+.cmp-order-operation-wrapper .cancel{
+  opacity: 0.6;
+}
+.cmp-order-operation-wrapper .cmp-btn-order-pay{
+  height: 72rpx;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  padding: 14rpx 32rpx;
+  border-radius: 36rpx;
+  background: #2088FF;
+  color: #FFFFFF;
+}

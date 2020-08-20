@@ -1,0 +1,97 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.transfer-coin-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 1002;
+}
+.transfer-coin-wrapper .secret-payment-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1004;
+}
+.transfer-coin-wrapper .payment-pop{
+  width: 640rpx;
+  height: auto;
+  margin: 178rpx auto 0;
+  border-radius: 10rpx;
+}
+.transfer-coin-wrapper .payment-pop .payment-title{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 156rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #ffffff;
+  background:rgba(32,136,255,1);
+  border-radius: 10rpx 10rpx 0 0;
+}
+.transfer-coin-wrapper .payment-pop .payment-title .title-bg{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 154rpx;
+  height: 156rpx;
+}
+.transfer-coin-wrapper .payment_body {
+  padding: 48rpx 64rpx 62rpx;
+  background-color: #ffffff;
+  border-radius: 0 0 10rpx 10rpx;
+}
+.transfer-coin-wrapper .payment_body .secret-payment-text{
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #333333;
+  text-align: justify;
+}
+.transfer-coin-wrapper .payment_body .transfer-desc{
+  font-size: 24rpx;
+  margin-top: 48rpx;
+  line-height: 34rpx;
+}
+.transfer-coin-wrapper .payment_body .btn{
+  width: 400rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align:center;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  font-weight: normal;
+}
+.transfer-coin-wrapper .payment_body .payment-open{
+  background-color: #2088FF;
+  color: #ffffff;
+  margin: 32rpx auto 16rpx;
+}
+.transfer-coin-wrapper .payment_body .payment-cancel{
+  border:3rpx solid #2088FF;
+  color: #2088FF;
+  margin: 0 auto;
+}
+.transfer-coin-wrapper .payment_body .remind_body{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999999;
+  font-size: 24rpx;
+}
+.transfer-coin-wrapper .payment_body .remind_body .ck-radius{
+  width: 24rpx;
+  height: 24rpx;
+  border: 2rpx solid #999999;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}

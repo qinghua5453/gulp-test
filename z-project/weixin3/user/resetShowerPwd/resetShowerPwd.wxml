@@ -1,0 +1,16 @@
+<view class="pge-setting-wrapper">
+  <view class="pge-user-con">
+    <view class="pge-content-item">
+      <text class="pge-word-left">新密码</text>
+      <input class="pge-input-password" password   type="number" maxlength="6" bindinput="getPassword" placeholder='请输入1-6位数字密码' placeholder-class='pge-placeholderClass' value='{{password}}'></input>
+    </view>
+    <view class="pge-content-item">
+      <text class="pge-word-left">确认密码</text>
+      <input class="pge-input-password" password   type="number" maxlength="6" bindinput="getconfirmPassword"  placeholder='请输入确认密码' placeholder-class='pge-placeholderClass' value='{{confirmPassword}}'></input>
+    </view>
+  </view>
+  <view class="pge-tip">
+    <text>淋浴密码用于解锁淋浴设备，请妥善保管。</text>
+  </view>
+  <view class="pge-btn" bindtap="changePwd">确认</view>
+</view>

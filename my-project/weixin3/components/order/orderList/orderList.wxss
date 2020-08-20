@@ -1,0 +1,295 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-order-list{
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 0 0 32rpx 30rpx;
+}
+.cmp-order-list .head{
+  height: 92rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F4F4F4;
+}
+.cmp-order-list .head .time{
+    color: #999;
+    font-size: 26rpx;
+}
+.cmp-order-list .head .order-status{
+  color: #999;
+  font-size: 26rpx;
+}
+.cmp-order-list .cmp-order-right{
+    display: flex;
+    align-items: center;
+    padding-right: 30rpx;
+}
+.cmp-order-right .cmp-delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46rpx;
+    height: 46rpx;
+    background: #F1F1F1;
+    border-radius: 50%;
+    margin-left: 16rpx;
+}
+.cmp-delete .iconfont{
+    font-size: 24rpx;
+}
+.cmp-orderlist-payment-popup{
+    position: relative;
+    z-index: 9999;
+}
+.cmp-reser-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30rpx 30rpx 0 0;
+}
+.cmp-reser-wrapper .cmp-order-info{
+    display: flex;
+    align-items: center;
+}
+.cmp-order-info .cmp-function-box{
+    display: flex;
+    flex-direction: column;
+}
+.cmp-function-box .machine-name{
+    font-size: 28rpx;
+    font-weight: 500;
+    line-height: 40rpx;
+}
+.cmp-function-box .machine-function-name{
+    display: inline-block;
+    font-size: 26rpx;
+    color: #666;
+    margin-top: 6rpx;
+}
+.cmp-order-info .cmp-machine-function-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 16rpx;
+    border: 1px solid #F2F2F2;
+    background: #F5FAFF;
+    margin-right: 16rpx;
+}
+.cmp-machine-function-icon image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.cmp-reser-wrapper .cmp-order-price{
+    font-size: 28rpx;
+    color: #F04864;
+}
+.cmp-reser-wrapper .cmp-order-price text{
+    font-size: 36rpx;
+    font-weight: 600;
+}
+.cmp-order-list-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cmp-order-list-btn image{
+    width: 30rpx;
+}
+.reser-wrapper{
+  background-color: #fff;
+  width: 100%;
+}
+.reser-wrapper .machine-name{
+  display: inline-block;
+  width: 100%;
+  padding-right: 100rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.reser-wrapper .address{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20rpx 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 32rpx;
+    position: relative;
+    border-top: 2rpx solid #f9f8ff;
+    line-height: 45rpx;
+}
+.reser-wrapper .address .price{
+    color: #FF5F5F;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+/* .reser-wrapper .reser-content{
+    display: flex;
+    display: -webkit-flex;
+    
+    position: relative;
+} */
+.reser-content image{
+    width: 138rpx;
+    height: 138rpx;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+    background-size: cover;
+}
+.machine-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.function-box{
+  width: 480rpx;
+}
+.function-box .iconfont{
+  display: inline-block;
+  font-size: 26rpx;
+  margin-right: 10rpx;
+  color: #666666;
+}
+.function-box text{
+  font-size: 28rpx;
+  color: #666666;
+}
+.function-box .line{
+  display: inline-block;
+  width: 1px;
+  height: 18rpx;
+  background-color: #979797;
+  margin: 0 20rpx;
+}
+.reser-time-box{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  background: #ECF5FF;
+  margin-top: 20rpx;
+  border-radius:10rpx;
+}
+.reser-time-box .reser-countdown-time{
+  color: #2088FF;
+  font-size: 28rpx;
+}
+.reser-btn{
+  width: 80rpx;
+  height: 34rpx;
+  line-height: 36rpx;
+  text-align: center;
+  background: #DEEEFF;
+  color: #3F9EFF;
+  font-size: 24rpx;
+  border-radius: 4rpx;
+}
+.footer-btn-box{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 32rpx;
+}
+.footer-btn-box .btn{
+  width: 224rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  border-radius: 36rpx;
+  font-size: 32rpx;
+  text-align: center;
+  margin: 32rpx 0 0 32rpx;
+}
+.footer-btn-box .btn-cancle{
+  color: #333333;
+  border: 1px solid #999999;
+  background-color: #fff;
+}
+.footer-btn-box .btn-payment{
+  color: #fff;
+  border: 1px soild #2088FF;
+  background: #2088FF;
+}
+.footer-btn-box .cancel{
+  opacity: 0.6;
+}
+.reser-info .name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 28rpx;
+}
+.mode-desc{
+    font-size: 22rpx;
+    color: #8A8FAB;
+    line-height: 30rpx;
+    margin: 15rpx 0 25rpx;
+}
+.line{
+    margin: 0 10rpx;
+}
+.price-bd{
+    color: #FF5F5F;
+    font-size: 32rpx;
+}
+.time-limit{
+    color: #8A8FAB;
+    font-size: 28rpx;
+}
+.reser-info .tag{
+    position: absolute;
+    right: 0rpx;
+    top: 0rpx;
+    width: 80rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    background-color: #ECF5FF;
+    border-radius: 4rpx;
+    color: #3F9EFF;
+    font-size: 24rpx;
+    text-align: center;
+    border: 1px solid #B3D9FF;
+}
+.cmp-order-list .footer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20rpx 30rpx;
+    border-top: 2rpx solid #f9f8ff;
+}
+.cmp-order-list .footer .btn{
+    width: 180rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    color: #fff;
+    text-align: center;
+    background-color: #2088FF;
+    border:2rpx solid #2088FF;
+    border-radius: 8rpx;
+    font-size: 26rpx;
+}
+.footer .btn.btn-cancel{
+    border-color: #DCE2FF;
+    color: #8a8fab;
+    background-color: #fff;
+    margin-right: 20rpx;
+}
+.listNone-info{
+    text-align: center;
+    position: absolute;
+    top: 300rpx;
+    left: 50%;
+    transform: translate(-50%);
+}

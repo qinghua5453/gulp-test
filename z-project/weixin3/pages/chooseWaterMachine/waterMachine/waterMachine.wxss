@@ -1,0 +1,176 @@
+.pge-water-wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+.pge-water-bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 119, 255, 1);
+}
+
+.pge-water {
+    width: 100vw;
+    height: 608rpx;
+    position: relative;
+}
+
+.machineName {
+    position: absolute;
+    top: 80rpx;
+    padding-left: 52rpx;
+    font-size: 48rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-weight: bold;
+    color: #FFFF;
+}
+
+.multiple-select {
+    width: 670rpx;
+    height: 140rpx;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.02);
+    border-radius: 70rpx;
+    position: absolute;
+    top: 540rpx;
+    left: 40rpx;
+    display: flex;
+}
+
+.textDesc {
+    width: 56rpx;
+    margin: 30rpx 22rpx 30rpx 54rpx;
+    height: 80rpx;
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    color: rgba(153, 153, 153, 1);
+    font-weight: 400;
+}
+
+.multiple-select .splitLine {
+    width: 2rpx;
+    height: 122rpx;
+    background-color: #EEEEEE;
+    margin-top: 9rpx;
+}
+
+.multiple-select .waterList {
+    display: flex;
+    width: 536rpx;
+    justify-content: space-between;
+
+}
+
+.multiple-select .waterList:before,
+.multiple-select .waterList:after {
+    content: '';
+    display: block;
+}
+
+.waterList .waterPort {
+    height: 92rpx;
+    margin-top: 24rpx;
+    color: #333333;
+    font-size: 36rpx;
+    line-height: 92rpx;
+    text-align: center;
+
+}
+
+.waterList .active {
+    background-color: #F17C2F;
+    color: #FFFFFF;
+    background: rgba(241, 124, 47, 1);
+    box-shadow: 0px 4px 8px 0px rgba(241, 124, 47, 0.36);
+    border-radius: 46rpx;
+}
+
+.waterLen2 .waterPort {
+    width: 212rpx;
+}
+
+.waterLen3 .waterPort {
+    width: 128rpx;
+}
+
+.waterLen4 .waterPort {
+    width: 92rpx;
+}
+
+.logo-label,
+.corporation-logo {
+    height: 44rpx;
+    margin: 0 auto;
+    margin-top: 60rpx;
+}
+
+.logo-label {
+    width: 260rpx;
+}
+
+.corporation-logo {
+    width: 290rpx;
+}
+
+.choosePortMargin {
+    margin-top: 112rpx;
+}
+
+.corporation-logo image,
+.logo-label image {
+    width: 100%;
+    height: 100%;
+}
+
+
+.pge-useBtn {
+    width: 360rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 36rpx;
+    color: #FFFFFF;
+    background-color: rgba(22, 119, 255, 1);
+    box-shadow: 0px 4px 18px 0px rgba(100, 146, 252, 0.5);
+    border-radius: 62rpx;
+    margin: 0 auto;
+    margin-top: 88rpx;
+}
+
+.pge-call {
+    margin-left: 8rpx;
+}
+
+.pge-useBluetooth-text {
+    margin-top: 24rpx;
+    height: 40rpx;
+    font-size: 28rpx;
+    text-align: center;
+    font-weight: 400;
+    color: rgba(22, 119, 255, 0.6);
+    line-height: 40rpx;
+}
+
+.pge-footer-desc-text {
+    position: fixed;
+    width: 550rpx;
+    bottom: 30rpx;
+    left: 100rpx;
+    height: 34rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    font-size: 24rpx;
+    text-align: center;
+    color: rgba(204, 204, 204, 1);
+    line-height: 34rpx;
+}
+
+.pge-help {
+    margin-left: 24rpx;
+    font-size: 28rpx;
+}
+.pge-water-banner{
+    margin-top: 74rpx;
+}

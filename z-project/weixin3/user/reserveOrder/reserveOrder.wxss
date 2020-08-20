@@ -1,0 +1,17 @@
+@import './acss/tpl-order.wxss';
+.pge-reserve-order-wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+.pge-reserve-order-wrapper .listNone-info{
+    text-align: center;
+    position: absolute;
+    top: 300rpx;
+    left: 50%;
+    transform: translate(-50%);
+}
+.pge-reserve-order-wrapper .no-more{
+    text-align: center;
+    color: #C2C6DA;
+    padding:40rpx 0;
+}

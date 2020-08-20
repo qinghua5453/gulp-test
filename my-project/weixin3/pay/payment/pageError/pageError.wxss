@@ -1,0 +1,33 @@
+.pge-error-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+}
+.pge-error-wrapper .pge-error-pic{
+  width: 388rpx;
+  height: 388rpx;
+  margin: 104rpx auto 0;
+}
+.pge-error-wrapper .pge-error-text{
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  line-height: 44rpx;
+  color: #999999;
+  text-align: center;
+}
+.pge-footer-desc-text {
+    position: fixed;
+    width: 550rpx;
+    bottom: 30rpx;
+    left: 100rpx;
+    height: 34rpx;
+    font-size: 24rpx;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(204, 204, 204, 1);
+    line-height: 34rpx;
+}
+.pge-call{
+    margin-left: 10rpx;
+}

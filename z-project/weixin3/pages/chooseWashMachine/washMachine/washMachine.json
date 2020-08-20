@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "企鹅共享",
+    "usingComponents": {
+        "machinemode-content": "./components/machineModeContent/machineModeContent",
+        "marketing-activity": "/components/marketingActivity/marketingActivity",
+        "machinestatus": "/components/pagePopup/machineStatus/machineStatus",
+        "act-banner": "/components/adPage/actBanner/actBanner"
+    },
+    "enablePullDownRefresh": false
+}

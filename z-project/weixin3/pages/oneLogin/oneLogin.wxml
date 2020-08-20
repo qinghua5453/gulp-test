@@ -1,0 +1,19 @@
+<view class="pge-wrapper">
+  <view class="pge-login-wrapper" >
+    <view class="pge-login-image">
+      <image src="https://static.qiekj.com/h5/alipay/user/login-logo.png" mode="aspectFit"></image>
+    </view>
+    <block wx:if="{{showPhone}}">
+      <button  type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="login-btn" hover-class="none" >授权获得手机号码</button>
+    </block>
+    <block wx:else>
+       <navigator url="/user/UserAgreement/UserAgreement" navitate class="login-procol">
+        <text>注册代表同意</text>
+        <text>用户协议</text>
+      </navigator>
+      <button class="login-btn" hover-class="none" type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+          授权登录
+      </button>
+    </block>
+  </view>
+</view>

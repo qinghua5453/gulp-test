@@ -1,0 +1,15 @@
+<template name="tpl-after-pay">
+    <view class="tpl-preview-payment-wrapper">
+        <view class="tpl-payment-price">
+            <text>待支付：</text>
+            <text class="price">¥ {{orderDetail.payPrice}}</text>
+        </view>
+        <button class="tpl-payment-btn-pay" bindtap="handleAfterPay">
+            <view>
+                <text>去支付</text>
+                <text class="iconfont icon-nextx"></text>
+            </view>
+            <view class="pay_loading" wx:if="{{isLoading}}"></view>
+        </button>
+    </view>
+</template>

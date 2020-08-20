@@ -1,0 +1,83 @@
+<view class="cmp-mode-content">
+    <view wx:for="{{list}}" wx:key="index" class="list-item {{item.id === idx ? 'active' : ''}}" bindtap="handleSelect"
+     data-index = '{{index}}' data-item="{{item}}">
+        <view class="machine-item">
+            <view class="mode-left">
+                <view class="mode-name">{{item.functionName}}</view>
+                <!--<collected id="{{machineId}}" type="2" isCollected="{{false}}"/> --> 
+                <view class="type-content">
+                    <view class="wash-cloth"  wx:if="{{machineType === 6 ||  machineType === 5}}">
+                        <text class="mode-type">{{item.functionDescribe}}</text>
+                    </view>
+                </view>
+                <view class="wash-cloth" wx:if="{{machineType === 1 ||  machineType === 2 || machineType === 3 || machineType === 4 || machineType === 8}}">
+                    <view class="time-icon iconfont icon-moshishijianx"></view>
+                    <text>{{item.deedMinutes + '分钟·'}}</text><text class="mode-type">{{item.functionDescribe}}</text>
+                </view>
+            </view>
+            <view class="mode-right">
+                <!--  店铺未开通会员 -->
+                <view class="price-box" wx:if="{{!shop.vipCard}}">
+                    <!--  店铺有限时特惠 -->
+                    <block wx:if="{{shop.timeMarket}}">
+                        <view class="machine-item-price">
+                            <text class="vip-con-text">限时</text>
+                            <text class="price-uint">¥</text>{{item.discountPrice}}
+                        </view>
+                        <view class="origin-price">
+                            <text class="origin-price-text">原价</text>￥{{item.price}}
+                        </view>
+                    </block>
+                    <!--  店铺没有限时特惠 -->
+                    <view wx:else class="machine-item-price">
+                        <text class="price-uint">¥</text>{{item.price}}
+                    </view>
+                </view>
+                <!--  店铺开通会员 -->
+                <block wx:else>
+                    <!--  店铺没有限时特惠 -->
+                    <view class="price-box" wx:if="{{!shop.timeMarket}}">
+                        <view class="machine-item-price">
+                            <text class="vip-con-text">会员</text>
+                            <text class="price-uint">¥ </text>{{item.vipDiscountPrice}}
+                        </view>
+                        <view class="origin-price">
+                            <text class="origin-price-text">原价</text>￥{{item.price}}
+                        </view>
+                    </view>
+                    <!-- 店铺限时特惠和VIP都有 -->
+                    <view class="price-box" wx:else>
+                        <!-- 限时特惠<=VIP价格显示显示特惠-->
+                        <view class="machine-item-price" wx:if="{{timeMarketDiscount <= vipDiscount}}">
+                            <text class="vip-con-text">限时</text>
+                            <text class="price-uint">¥</text>{{item.discountPrice}}
+                        </view>
+                        <!-- 限时特惠 > VIP折扣 则价格显示VIP价-->
+                        <view class="machine-item-price" wx:else>
+                            <text class="vip-con-text">会员</text>
+                            <text class="price-uint">¥</text>
+                            {{item.vipDiscountPrice}}
+                        </view>
+                        <view class="origin-price">
+                            <text class="origin-price-text">原价</text>￥{{item.price}}
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <!-- 洗衣液选择 -->
+        <view wx:if="{{skus}}" class="mode-detergent">
+            <view class="mode-detergent-row"  wx:for="{{skus}}" wx:key="detergentIndex"  wx:for-item="detergentItem" wx:for-index="detergentIndex">
+                <view class="mode-left-detergent">
+                    <view class="washIcon {{detergentItem.washLiquidIcon}}"></view>
+                    <text class="detergent_text">{{detergentItem.skuName}}</text>
+                </view>
+                <view class="mode-right-detergent">
+                    <view class="detergent-price-text">¥ {{detergentItem.price}}</view>
+                    <view class="iconfont  bigFont {{(detergentItem.skuId===currentSkuId && detergentItem.isSel) ? 'icon-hebingxingzhuangx':'icon-norx1 grey' }}" 
+                        catchtap="selectDetergent" data-index = '{{detergentIndex}}'></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

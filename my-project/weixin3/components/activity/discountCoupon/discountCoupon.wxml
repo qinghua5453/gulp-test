@@ -1,0 +1,23 @@
+  
+<!-- 注册7天内未消费 -->
+<view class="novice-meet-box" wx:if="{{isShowNoviceMeet}}">
+  <view class="novice-meet-content">
+    <view class="discount-coupon-bg">
+      <view class="content">
+        <view class="discount-coupon-item" bindtap="goWallet" wx:for="{{discouponList}}" wx:key="index">
+          <text class="discount">{{item.sweepstakes.faceValue}}
+            <text class="discount-text">折</text>
+          </text>
+          <view class="discount-content">
+            <text class="coupon-type">{{item.type === 5 ? '折扣券' : ''}}</text>
+            <text class="date" wx:if="{{item.sweepstakes.startDate != item.sweepstakes.endDate}}">有效期：{{item.sweepstakes.startDate +'-'+item.sweepstakes.endDate}}</text>
+            <text class="date" wx:if="{{item.sweepstakes.startDate === item.sweepstakes.endDate}}">有效期：当天有效</text>
+          </view>
+          <view class="btn-watch">去查看</view>
+        </view>
+      </view>
+      <view class="discount-footer"></view>
+    </view>
+    <view class="btn-delete" wx:if="{{isShowNoviceMeet}}" bindtap="closeCouponDialog"></view>
+  </view>
+</view>

@@ -1,0 +1,92 @@
+<view class="cmp-order-operation-wrapper">
+  <block wx:if='{{orderDetail.orderType === 1}}'>
+    <block wx:if="{{orderDetail.orderStatus == 2&&charge}}">
+        <view class="cmp-order-operation-item">
+          <view class="cmp-order-status-text">感谢您使用企鹅共享，祝您生活愉快</view>
+          <view class="cmp-btn-order-operation">
+            <block wx:if="{{charge.state*1 === 1 || charge.state*1 === 3}}">
+              <button class="btn-order" bindtap="goRecharge">续充</button>
+            </block>
+            <block wx:if="{{charge.state*1 != 0 && charge.state*1 != 1}}">
+              <button class="btn-order-cancel" bindtap="handleDelete">删除订单</button>
+            </block>
+          </view>
+        </view>
+    </block>
+    <block wx:else>
+      <block wx:if="{{orderDetail.orderStatus === 0 && payTime > 0}}">
+        <view class="cmp-order-operation-item">
+          <view class="cmp-order-status-text">逾期未支付订单将自动取消</view>
+          <view class="cmp-btn-order-operation">
+            <button class="btn-order-cancel" bindtap="handleCancelOrder">取消订单</button>
+            <button class="cmp-btn-order-pay" bindtap="handlePay">
+              <text>去支付</text>
+              <text><time type="2" time="{{payTime}}" bindfinish="hanldeCountDown" /></text>
+            </button>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{orderDetail.orderStatus == 1 || orderDetail.orderStatus == 0 && payTime <= 0 || orderDetail.orderStatus == 2 && completeTime <= 0 || orderDetail.orderStatus == 5}}">
+        <view class="cmp-order-operation-item">
+          <block wx:if="{{orderDetail.orderStatus == 2 && completeTime <= 0}}">
+            <view class="cmp-order-status-text">感谢您的信任，祝您生活🐟块～</view>
+          </block>
+          <block wx:if="{{orderDetail.orderStatus == 5}}">
+            <view class="cmp-order-status-text">订单已退款，已自动取消</view>
+          </block>
+          <block wx:if="{{orderDetail.orderStatus == 0 && payTime <= 0 || orderDetail.orderStatus == 1}}">
+            <view class="cmp-order-status-text">订单未支付，已自动取消</view>
+          </block>
+          <view class="cmp-btn-order-operation">
+            <button class="btn-order-cancel" bindtap="handleDelete">删除订单</button>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{startTime <= 0&&orderDetail.orderStatus == 2 && orderDetail.machineType == 1 && overTime > 0 && parentTypeId == 1 && handStart != 0}}">
+        <view class="cmp-order-operation-item">
+          <view class="cmp-order-status-text">若设备未启动，请点击重新启动</view>
+          <view class="cmp-btn-order-operation">
+            <button class="cmp-order-detail-btn btn-order" bindtap="handleMachineBoot">
+              <block wx:if="{{isLoading}}">
+                <image mode="widthFix" src="https://static.qiekj.com/alipay/loading/start-loading.gif"/>
+              </block>
+              <text>重新启动</text>
+            </button>
+          </view>
+        </view>
+      </block>
+    </block>
+  </block>
+  <block wx:if='{{orderDetail.orderType === 3}}'>
+      <block wx:if='{{orderDetail.orderStatus === 0}}'>
+        <view class="cmp-order-operation-item">
+          <view class="cmp-order-status-text">您有一笔订单还未支付哦</view>
+          <view class="cmp-btn-order-operation">
+            <button class="btn-after-pay" bindtap="handleAfterPay">去支付</button>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{orderDetail.orderStatus == 1 || orderDetail.orderStatus == 2 && completeTime <= 0 || orderDetail.orderStatus == 5}}">
+        <view class="cmp-order-operation-item">
+          <block wx:if="{{orderDetail.orderStatus == 2 && completeTime <= 0}}">
+            <view class="cmp-order-status-text">感谢您的信任，祝您生活🐟块～</view>
+          </block>
+          <block wx:if="{{orderDetail.orderStatus == 5}}">
+            <view class="cmp-order-status-text">订单已退款，已自动取消</view>
+          </block>
+          <block wx:if="{{orderDetail.orderStatus == 1}}">
+            <view class="cmp-order-status-text">订单未支付，已自动取消</view>
+          </block>
+          <view class="cmp-btn-order-operation">
+            <button class="btn-order-cancel" bindtap="handleDelete">删除订单</button>
+          </view>
+        </view>
+      </block>
+  </block>
+  <view class="countdown-hide">
+    <time type="1" time="{{overTime}}" bindfinish="hanldeOverTime" />
+    <time type="2" time="{{completeTime}}" bindfinish="hanldeComplete" />
+    <time type="1" time="{{startTime}}" bindfinish="hanldeStart" />
+  </view>
+  <blue-tooth wx:if="{{openBluetoothShow}}" bindfinish="openShowBlueTooth"/>
+</view>

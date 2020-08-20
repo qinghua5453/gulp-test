@@ -1,0 +1,10 @@
+<view class="cmp-coupon-wrapper">
+  <view class="cmp-coupon-list">
+    <coupon-item wx:for="{{couponList}}" wx:key="index" couponitem="{{item}}" bindchangecoupon="changeCouponId" ischoose="true" couponId="{{couponId}}"/>
+  </view>
+  <view class="cmp-close" bindtap="closeCoupon">不使用优惠券</view>
+  <view class="cmp-no-list" wx:if="{{couponList.length <= 0}}">
+    <image src="https://static.qiekj.com/h5/coupon.png" mode="widthFix" />
+    <text>您还没有获得优惠券哦~</text>
+  </view>
+</view>

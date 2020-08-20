@@ -1,0 +1,17 @@
+
+<!-- 单个 -->
+<block wx:for="{{list}}" wx:key="index">
+    <view class="cmp-gold-item" catchtap="openGoldDetail" data-id="{{item.shopId}}">
+        <view class="cmp-gold-content">
+            <view class="cmp-left">
+                <view class="cmp-total_gold">{{item.totalAmount}}</view>
+                <view class="cmp-gold-info">
+                    <text class="cmp-principal">{{item.principalAmount}}</text><text class="desc">本金</text>
+                    <text class="cmp-gift">{{item.presentAmount}}</text><text class="desc">赠送</text>
+                </view>
+                <view class="cmp-shop-name">适用店铺：{{item.shopName}}</view> 
+            </view>
+            <view class="cmp-btn-buy" catchtap="openBuyGold" data-id="{{item.shopId}}">去充值</view>
+        </view>
+    </view>
+</block>

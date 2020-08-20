@@ -1,0 +1,27 @@
+<import src="./templates/tpl-after-pay.wxml"/>
+<view class="pge-after-payment-wrapper">
+  <block wx:if="{{!pathType}}">
+    <view class="pge-not-paid-tips">
+      <text class="iconfont icon-laba"></text>您有尚未支付的订单，请先完成本次支付
+    </view>
+  </block>
+  <view class="pge-after-body-y">
+    <!-- 机器折扣 -->
+    <block wx:if="{{orderDetail}}">
+      <machine-discount orderDetail="{{orderDetail}}"></machine-discount>
+    </block>
+    <!-- 支付方式 -->
+    <block wx:if="{{orderDetail.id&&balanceData}}">
+      <view class="pge-after-payment-method">
+        <payment-method payPrice="{{orderDetail.payPrice}}" balanceData="{{balanceData}}" bindsetpaytype="selectPayType"></payment-method>
+      </view>
+    </block>
+  </view>
+  <template is="tpl-after-pay" data="{{isDisable,orderDetail,isLoading}}" />
+  <!-- 余额支付弹窗 -->
+  <block wx:if="{{orderDetail.id&&balancePayShow}}">
+    <balance-pay balanceType="{{balanceType}}" orderId="{{orderDetail.id}}" payPrice="{{orderDetail.payPrice}}" totalBalance="{{totalBalance}}" bindbalancepaysuccess="balanceSuccessPay" bindbalancepayerror="balanceErrorPay" bindbalancepayclose="balanceErrorPay"></balance-pay>
+  </block>
+  <!-- banner活动 -->
+  <actbanner adKey="ad_pre_pay_bottom" actPage="other"/>
+</view>

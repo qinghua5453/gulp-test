@@ -1,0 +1,14 @@
+<template name="tpl-machine">
+   <view class="tpl-machine-box" wx:if="{{list.length}}">
+     <view class="tpl-machine-ul">
+       <view class="tpl-machine-li" wx:for="{{list}}" wx:key="index" bindtap="handleReser" data-index="{{index}}">
+          <!-- 标题最多显示两行 -->
+          <view class="machine-tit">{{item.machineTypeName}}</view>
+          <view class="machine-reserve-content">
+            <!-- <text class="machine-number {{type == 1 ? 'dry' : ''}}">{{item.idleCount}}台可用</text> -->
+            <button class="reserve-btn {{type == 1 ? 'btn-dry' : ''}}">预约</button>
+          </view>
+       </view>
+     </view>
+   </view>
+</template>

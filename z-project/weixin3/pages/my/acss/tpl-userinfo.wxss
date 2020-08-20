@@ -1,0 +1,57 @@
+.tpl-header-box{
+  position: relative;
+  width: 100vw;
+  height: 308rpx;
+  background-image: url(https://static.qiekj.com/alipay/user/user-bg.png);
+  background-size: cover;
+  margin-left: -1px;
+}
+.tpl-user-info-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 54rpx 46rpx 0;
+  margin-top: -1px;
+}
+.tpl-user-header-box{
+  position: relative;
+  width: 128rpx;
+  height: 128rpx;
+  border: 4rpx solid #FFFFFF;
+  border-radius: 50%;
+}
+.tpl-user-header-box image{
+  display: block !important;
+}
+.tpl-user-header-box .tpl-user-vip-icon{
+  position: absolute;
+  right: -10rpx;
+  bottom: -8rpx;
+  width: 52rpx;
+  height: 52rpx;
+  background: url(https://static.qiekj.com/h5/alipay/user/icon-vip.png) no-repeat;
+  background-size: 100%;
+}
+.tpl-user-picture{
+  width: 120rpx;
+  height: 120rpx !important;
+  border-radius: 50%;
+}
+.tpl-user-info-content{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-left: 37rpx;
+}
+.tpl-user-info-content .tpl-user-name{
+  font-size: 44rpx;
+  font-weight:600;
+  line-height: 60rpx;
+}
+.tpl-user-info-content .tpl-user-phone{
+  font-size: 28rpx;
+  font-weight:500;
+  margin-top: 10rpx;
+  line-height: 40rpx;
+  opacity: .5;
+}

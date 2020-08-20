@@ -1,0 +1,33 @@
+<view class="pge-wallet-list-wrapper {{allLoaded && walletList.length >= 0 ? 'pge-add-margin' : ''}}">
+	<view class="pge-tab-common">
+		<view class="pge-tab-item {{currentTab == 0 ? 'pge-active' : ''}}" bindtap="chooseBalanceType" data-index='0'>
+			<text>余额</text>
+			<view class="pge-border-active"></view>
+		</view>
+		<view class="pge-tab-item {{currentTab == 1 ? 'pge-active' : ''}}" bindtap="chooseBalanceType" data-index='1'>
+			<text>受限余额</text>
+			<view class="pge-border-active"></view>
+		</view>
+	</view>
+  <view class="pge-list-wrap" wx:if="{{currentTab == 0}}">
+    <scroll-view  scroll-y="{{true}}" bindscrolltolower="getWalletList">
+      <view class="pge-wallet-list">
+        <block wx:for='{{walletList}}' wx:key='index'>
+          <walletitem walletitem="{{item}}" currentTab="{{currentTab}}" type="1"/>
+        </block>
+        <view class="pge-no-more" wx:if='{{allLoaded && walletList.length > 0}}'>最多显示近三个月流水~</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="list-wrap" wx:if="{{currentTab == 1}}">
+    <scroll-view  scroll-y="{{true}}" bindscrolltolower="getRestrictBalanceList">
+      <view class="pge-wallet-list">
+        <block wx:for='{{walletList}}' wx:key='index'>
+          <walletitem walletitem="{{item}}" currentTab="{{currentTab}}" type="2"/>
+        </block>
+        <view class="pge-no-more" wx:if='{{allLoaded && walletList.length > 0}}'>最多显示近三个月流水~</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="pge-list-none" wx:if='{{listNoneShow}}'>暂无消费记录</view>
+</view>

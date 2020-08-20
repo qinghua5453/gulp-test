@@ -1,0 +1,309 @@
+.water-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f9f9f9;
+  padding: 156rpx 0 0;
+}
+.water-content {
+  width: 100%;
+  height: 100%;
+}
+.water-wrapper .logo-label{
+  position: fixed;
+  left: 50rpx;
+  top: 46rpx;
+  width: 260rpx;
+  height: 90rpx;
+}
+.water-wrapper .logo-label image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 解锁过渡页 */
+
+.water-con {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  padding-top: 74rpx;
+  border-radius: 40rpx 40rpx 0 0;
+}
+.schematic_pic-box {
+  width: 590rpx;
+  height: 154rpx;
+  margin: 108rpx auto 0;
+}
+.water-con .schematic_pic {
+  width: 590rpx;
+  height: 154rpx;
+}
+.water-icon {
+  width: 362rpx;
+  height: 270rpx;
+  margin: 0 auto;
+}
+.water-con image{
+  width: 100%;
+  height: 100%;
+}
+.water-con .shop-address {
+  color: #666666;
+  font-size: 28rpx;
+  margin-top: 18rpx;
+  text-align: center;
+  margin-bottom: 58rpx;
+}
+.water-con .machine-infomation{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.water-con .machine-infomation .collection-label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16rpx;
+  color: #2088FF;
+  height: 48rpx;
+  padding: 0 18rpx;
+  border: 2rpx solid #2088FF;
+  border-radius: 28rpx;
+}
+.water-con .machine-infomation .collection-label text{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  margin-left: 4rpx;
+}
+.water-con .machine-infomation .collection-label .iconfont{
+  font-size: 22rpx;
+}
+.vip-wrapper .machine-infomation .collection-label{
+  color: #795420 !important;
+  border-color: #795420 !important;
+}
+.water-con .shop-name {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 44rpx;
+  line-height: 62rpx;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+.water-con .water-price {
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  height: 90rpx;
+  margin-bottom: 30rpx;
+}
+.water-price .title {
+  color: #333;
+  line-height: 50rpx;
+}
+.price-wrap {
+  text-align: left;
+}
+.price-wrap .discount-price {
+  position: relative;
+  color: #f04864;
+  font-size: 0.36rem;
+  line-height: 0.48rem;
+}
+.discount-price .small {
+  font-size: 0.32rem;
+}
+.price-wrap .price {
+  position: relative;
+  font-size: 0.24rem;
+  line-height: 0.48rem;
+  margin-left: 4rpx;
+}
+.price-wrap .price .small {
+  font-size: 0.24rem;
+}
+.discount-tag {
+  position: absolute;
+  top: 6rpx;
+  left: -90rpx;
+  width: 72rpx;
+  height: 0.3rem;
+  text-align: center;
+  border: 2rpx solid #ff6f6f;
+  border-radius: 20rpx;
+  color: #ff6f6f;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  font-weight: normal;
+}
+.discount-tag.vip-tag {
+  border-color: #e29000;
+  color: #e29000;
+}
+.discount-tag.gray {
+  border-color: #ccc;
+  color: #999;
+}
+/* .water-price  .price{
+  color: #f04864;
+  font-size: 36rpx;
+  line-height: 50rpx;
+}
+.price .small{
+  font-size: 32rpx;
+} */
+.list-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15rpx;
+}
+.list-wrap .item {
+  width: 100%;
+  height: 200rpx;
+  position: relative;
+}
+.item .list-con {
+  padding: 5rpx 20rpx;
+}
+.item .list-one {
+  padding: 5rpx 100rpx !important;
+}
+.item .number {
+  width: 100%;
+  text-align: center;
+  padding: 32rpx 0;
+  color: #333;
+  font-size: 38rpx;
+  line-height: 66rpx;
+  font-weight: bold;
+  box-shadow: 0 6rpx 16rpx 0 rgba(39, 140, 255, 0.2);
+  border-radius: 20rpx;
+}
+.item .status {
+  font-size: 20rpx;
+  color: #ccc;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: 5rpx;
+  transform: translate(-50%);
+}
+.item .using {
+  position: absolute;
+  left: 50%;
+  bottom: 5rpx;
+  transform: translate(-50%);
+  width: 112rpx;
+  height: 37rpx;
+  background-image: url('https://static.qiekj.com/h5/water/water_using.png');
+  background-size: cover;
+}
+.item.active .list-con {
+  padding: 0 15rpx;
+}
+.item.active .number {
+  padding: 38rpx 0;
+  font-size: 48rpx;
+  background: linear-gradient(
+    228deg,
+    rgba(84, 167, 255, 1) 0%,
+    rgba(43, 142, 255, 1) 100%
+  );
+  box-shadow: 0 6rpx 16rpx 0 rgba(39, 140, 255, 0.6);
+  color: #fff;
+}
+.item.gray .number {
+  background-color: #f9f9f9;
+  box-shadow: none;
+  color: #ccc;
+}
+.footer-btn-wrapper {
+  position: fixed;
+  left: 20rpx;
+  bottom: 20rpx;
+}
+.footer-btn-wrapper .status-desc {
+  font-size: 24rpx;
+  color: #666666;
+  margin-bottom: 0.16rem;
+  text-align: center;
+}
+.btn-wrapper {
+  width: 710rpx;
+}
+.no-border {
+  border: none !important;
+  border-radius: 0% !important;
+  background-color: transparent !important;
+}
+.btn-wrapper .ble-btn {
+  text-align: center;
+  font-size: 32rpx;
+  color: #333;
+  padding: 19rpx 0 12rpx;
+}
+.btn-wrapper .ble-btn .iconfont {
+  color: #ccc;
+  margin-right: 20rpx;
+}
+.choose-btn {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 50rpx;
+  box-shadow: 0 0 20rpx 0 rgba(229, 229, 229, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn-wrapper .choose-water {
+  font-size: 32rpx;
+  color: #333;
+  padding-left: 65rpx;
+}
+.btn-wrapper .use-btn {
+  width: 356rpx;
+  background-color: #2088ff;
+  text-align: center;
+  line-height: 88rpx;
+  border-radius: 44rpx;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.btn-wrapper .use-btn.btn-gray {
+  background-color: #ccc !important;
+  color: #fff !important;
+}
+.water-wrapper.vip-wrapper .vip-card {
+  background-image: url(https://static.qiekj.com/h5/miniApp/machine/xf_vip.png);
+}
+.water-wrapper.vip-wrapper .water-icon {
+  background-image: url('https://static.qiekj.com/h5/water/waterMachine_vip.png');
+}
+.water-wrapper.vip-wrapper .item .number {
+  box-shadow: 0 6rpx 16rpx 0 rgba(255, 191, 0, 0.2);
+  color: #795420;
+}
+.water-wrapper.vip-wrapper .item.active .number {
+  background: rgba(255, 227, 142, 1);
+  box-shadow: 0 6rpx 16rpx 0 rgba(255, 191, 0, 0.6);
+  color: #795420;
+  border: 2rpx solid rgba(255, 212, 82, 1);
+}
+.water-wrapper.vip-wrapper .item.gray .number {
+  box-shadow: none;
+}
+.water-wrapper.vip-wrapper .btn-wrapper .use-btn {
+  background-color: #ffdf7f;
+  color: #663f09;
+}
+.water-wrapper.vip-wrapper .btn-wrapper {
+  background-color: #fff8e4;
+  border: 1rpx solid #ffdf7f;
+}

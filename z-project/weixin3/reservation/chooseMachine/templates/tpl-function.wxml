@@ -1,0 +1,56 @@
+<template name="tpl-function">
+    <view class="tpl-machine-item {{(item.id == functionId) && type !=1 ? 'tpl-active' : ''}} {{(item.id == functionId) && type == 1 ? 'tpl-active-dry' : ''}}" bindtap="handleSelect" data-index = '{{index}}' data-item="{{item}}">
+        <view class="tpl-mode-left">
+            <view class="mode-name">{{item.functionName}}</view>
+            <view class="tpl-type-content">
+                <view class="tpl-wash-cloth {{type == 1 ? 'dry' : ''}}">
+                    <view class="time-icon iconfont icon-moshishijianx"></view>
+                    <text class="tpl-desc">{{item.needMinutes + '分钟·'}}</text><text class="mode-type">{{item.functionDescribe}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="tpl-mode-right">
+            <!-- 店铺没有限时特惠和VIP仅显示原价 -->
+            <view class="tpl-price-box" wx:if="{{!shop.vipCard && !shop.timeMarket && shop.vipCreate}}">
+                <view class="tpl-price">
+                    <text class="price-uint">¥</text>{{item.price}}
+                </view>
+            </view>
+            <!-- 店铺只有限时特惠 -->
+            <view class="tpl-price-box" wx:if="{{!shop.vipCard && shop.timeMarket && shop.vipCreate}}">
+                <view class="time-market-icon vip-top">限时</view>
+                <view class="tpl-price">
+                    <text class="price-uint">¥</text>{{item.discountPrice}}
+                </view>
+                <view class="origin-price">￥{{item.price}}</view>
+            </view>
+            <view wx:if="{{shop.vipCard || !shop.vipCreate}}">
+                <!-- 店铺只有Vip -->
+                <view class="tpl-price-box" wx:if="{{!shop.timeMarket}}">
+                    <view class="vip-icon vip-top">会员</view>
+                    <view class="tpl-price">
+                        <text class="price-uint">¥</text>{{item.vipDiscountPrice}}
+                    </view>
+                    <view class="origin-price">￥{{item.price}}</view>
+                </view>
+                <!-- 店铺限时特惠和VIP都有,限时特惠<=VIP价格显示显示特惠-->
+                <view class="tpl-price-box" wx:if="{{shop.timeMarket && timeMarketDiscount <= vipDiscount}}">
+                    <view class="time-market-icon vip-top">限时</view>
+                    <view class="tpl-price">
+                        <text class="price-uint">¥</text>{{item.discountPrice}}
+                    </view>
+                    <view class="origin-price">￥{{item.price}}</view>
+                </view>
+                <!-- 如果开通了VIP和限时特惠 限时特惠 > VIP折扣 则价格显示VIP价+限时特惠价-->
+                <view class="tpl-price-box" wx:if="{{shop.timeMarket && timeMarketDiscount > vipDiscount}}">
+                    <view class="vip-icon vip-top">会员</view>
+                    <view class="time-market-icon vip-bottom icon-gray">限时</view>
+                    <view class="tpl-price">
+                        <text class="price-uint">¥</text>{{item.vipDiscountPrice}}
+                    </view>
+                    <view class="origin-price">￥{{item.discountPrice}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

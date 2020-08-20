@@ -1,0 +1,7 @@
+<template name="tpl-username">
+  <!-- 个人信息 -->
+  <view class="tpl-header">
+    <text class="tpl-phone">{{userInfo.phone}}</text>
+    <image src="{{headImageId}}" binderror="imageError" mode="widthFix" />
+  </view>
+</template>

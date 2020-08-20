@@ -1,0 +1,209 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-item-view{
+	width: 100%;
+    margin-top: 30rpx;
+    box-shadow:0 6rpx 10rpx 0 rgba(231,233,241,1);
+    border-radius:10rpx;
+    position: relative;
+}
+.pge-abate-coupon .cmp-item-view{
+    overflow: hidden;
+    opacity: .6;
+}
+.cmp-coupon-detail{
+    display: flex;
+    align-items: center;
+    padding: 33rpx 0 14rpx;
+    background: #ffffff;
+    
+}
+.cmp-coupon-price{
+    width: 220rpx;
+    padding-left: 65rpx;
+    border-right: 2rpx dotted #e8e8e8;  
+    position: relative; 
+    height: 110rpx; 
+}
+.cmp-price-wrapper{
+    position: absolute;
+    text-align: left;
+    top: 0;
+}
+.cmp-price-wrapper .cmp-price{
+    font-size: 60rpx;
+    color: #F04864;
+    line-height: 80rpx;
+    height: 80rpx;
+    text-align: center;
+    margin-left: -20rpx;
+}
+.cmp-price-wrapper .cmp-price .cmp-small{
+    font-size: 32rpx;
+}
+.cmp-price-wrapper .cmp-priceDecimal{
+		font-size:46rpx;
+}
+.cmp-price-wrapper .cmp-price-limit{
+    font-size: 20rpx; 
+}  
+.pge-abate-coupon .cmp-price-wrapper .cmp-price-limit{
+    color: #CCCCCC;
+}
+.cmp-coupon-price .cmp-free image{
+    width: 61rpx;
+    margin-top: 10rpx;
+}
+.cmp-coupon-content{
+    width: 450rpx;
+	padding-left: 35rpx;
+}
+.cmp-coupon-content .cmp-name{
+    font-size: 32rpx;
+    line-height: 45rpx;
+    font-weight: bold;   
+}
+.pge-abate-coupon .cmp-coupon-content .cmp-name{
+    color: #CCCCCC;
+}
+.cmp-coupon-content .cmp-mode-limit,.cmp-coupon-content .cmp-time{
+    font-size: 22rpx;
+    line-height: 30rpx;
+    color: #999999;
+    margin: 6rpx 0 4rpx;
+    padding-right: 30rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pge-abate-coupon .cmp-coupon-content .cmp-mode-limit,
+.pge-abate-coupon .cmp-coupon-content .cmp-time{
+    color: #CCCCCC;
+}
+.cmp-item-view .cmp-limit{
+	width: 100%;
+    background-color: #fbfbfb;
+	padding: 20rpx 30rpx 20rpx 65rpx;
+    line-height: 30rpx;
+    color: #999999;
+    font-size: 22rpx;
+	position: relative;
+}
+.pge-abate-coupon .cmp-item-view .cmp-limit{
+    color: #CCCCCC;
+}
+
+.cmp-limit .cmp-hide{
+	width: 100%;
+	padding-right: .6rem;	
+}
+.cmp-limit .cmp-hide view{
+	width: 100%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.cmp-limit .icon-nextx{
+	font-size: 19rpx;
+	position: absolute;
+	top: 20rpx;
+	right: 65rpx;
+	color: #D1D1D6;
+}
+.cmp-limit .icon-nextx.cmp-active{
+	transform: rotate(90deg);
+}
+.cmp-radius-bg{
+    position: absolute;
+    width: 26rpx;
+    height: 26rpx;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    top: 155rpx;
+    left: 0;
+    transform: translate(-50%);
+    box-shadow: -20rpx -10rpx 40rpx -26rpx #eee inset;
+}
+.rcmp-adius-bg.cmp-right{
+    left: auto;
+    right: 0;
+    transform: translate(50%);
+    box-shadow: 20rpx -10rpx 40rpx -26rpx #eee inset;
+}
+.cmp-coupon-limit{
+	padding: 20rpx 0 20rpx 65rpx;	
+	background-color: #FBFBFB;
+	position: relative;
+}
+.cmp-coupon-limit .cmp-reason{
+	color: #F04864;
+	font-size: 22rpx;	
+	line-height: 30rpx;
+}
+.cmp-coupon-limit .iconfont{
+	font-size: 20rpx;
+	margin-right: 7rpx;
+}
+.cmp-coupon-limit .icon-nextx{
+	position: absolute;
+	top: 20rpx;
+	right: 65rpx;
+	color: #D1D1D6;
+}
+.icon-nextx.cmp-active{
+	transform: rotate(90deg);
+}
+.cmp-reason-item{
+	color: #8A8FAB;
+	font-size: 22rpx;
+	margin-top: 6rpx;
+	line-height: 30rpx;
+}
+
+.cmp-coupon-status{
+    position: absolute;
+    top: 24rpx;
+    right: 40rpx;
+}
+.cmp-coupon-status .iconfont{
+    font-size: 115rpx;
+    color: #CCCCCC;
+    line-height: 1;
+}
+.cmp-overdue .cmp-price-wrapper .cmp-price{
+    color: #CCCCCC;
+}
+.cmp-overdue .cmp-price-wrapper .cmp-price-limit{
+    color: #CCCCCC;
+}  
+.cmp-overdue .cmp-coupon-content .cmp-name{
+    color: #CCCCCC;
+}
+.cmp-overdue .cmp-coupon-content .cmp-mode-limit,.cmp-overdue .cmp-coupon-content .cmp-time{
+    color: #CCCCCC;
+}
+.cmp-overdue .cmp-limit{
+    color: #CCCCCC;
+}
+.cmp-overdue .cmp-limit .icon-nextx{
+	color: #D1D1D6;
+}
+
+.cmp-choose-coupon.iconfont{
+	position: absolute;
+	font-size: 44rpx;
+	color: #CCCED7;
+	right: 60rpx;
+	top: 62rpx;
+}
+.cmp-choose-coupon.icon-xuanzhongx{
+	color: #FF4C6A;
+}
+.cmp-choose-coupon.icon-norx1{
+  color: #CCCCCC;
+}
+
+.cmp-coupon-cannot{
+	opacity: .6;
+}

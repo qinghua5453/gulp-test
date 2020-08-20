@@ -1,0 +1,14 @@
+<view class="pge-after-paysuccess-wrapper">
+  <view class="pge-after-paysuccess-header">
+		<text class="pay-price">￥{{orderDetail.payPrice}}</text>
+		<view>本次消费</view>
+	</view>
+	<view class="pge-after-paysuccess-y">
+		<view class="paysuccess-pic">
+			<text class="iconfont icon-xuanzhongx"></text>
+		</view>
+		<view class="paysuccess-title">支付成功</view>
+		<view class="paysuccess-tip">感谢您的使用，欢迎下次光临</view>
+	</view>
+	<button class="btn-stop" bindtap="goHome">完成</button>
+</view>

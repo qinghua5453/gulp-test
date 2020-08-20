@@ -1,0 +1,9 @@
+<view class="cmp-classify-box">
+  <scroll-view  scroll-x="{{true}}" style="width: 100%">
+   <view class="scroll-view_H">
+      <view class="scroll-view-item_H" wx:for="{{nearby}}" wx:key="index" bindtap="chooseTab" data-index="{{index}}" bindtap='chooseTab' data-type='{{item.type}}'>
+        <view class="text {{currentTab == item.type ? 'active' : ''}}">{{item.name}}</view>
+      </view>
+   </view>
+  </scroll-view>
+</view>

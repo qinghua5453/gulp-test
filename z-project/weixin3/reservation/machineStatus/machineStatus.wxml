@@ -1,0 +1,46 @@
+<wxs src="../../sjs/orderDetail.wxs" module="filter"></wxs>
+<view class="pge-machine-reserve-status">
+  <view class="pge-machine-status-box">
+    <view class="pge-status-bg"></view>
+    <image src="https://static.qiekj.com/alipay/curved.png" mode="widthFix"/>
+    <view class="cmp-machinestatus-groupOut">
+        <view class="cmp-machinestatus-groupInner">
+            <view class="cmp-machinestatus-btn">{{status*1 === 7 ? '预约中' : '使用中'}}</view>
+        </view>
+    </view>
+  </view>
+  <block wx:if="{{status*1 === 7}}">
+    <view class="pge-machine-reserve-time">当前设备已被预约<text>{{time}}后</text>可用</view>
+  </block>
+  <block wx:else>
+    <view class="pge-machine-reserve-time">该设备正在工作中，<text>{{time}}后</text>可用</view>
+  </block>
+  <block wx:if="{{machineData}}">
+    <view class="pge-recommend-machine-box">
+      <text class="recommend-title">为您推荐</text>
+      <view class="pge-recommend-machine" bindtap="goMachineDetail">
+          <image mode="widthFix" src="{{'https://static.qiekj.com/h5/machineIcon/machine_'+ filter.MachineType(machineData.parentTypeId) + '_icon.png'}}"/>
+          <view class="pge-machine-text">
+            <text class="name">{{machineData.machineName}}</text>
+            <text class="tips">此设备当前可用，请及时前往</text>
+          </view>
+          <view class="machine-status-bg"></view>
+      </view>
+      <view class="pge-machine-operation">
+        <button bindtap="goBack">返回首页</button>
+        <button bindtap="goContact">联系客服</button>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="pge-machine-operation">
+      <button bindtap="goBack">返回首页</button>
+      <button bindtap="goContact">联系客服</button>
+    </view>
+  </block>
+  <block wx:if="{{machineId}}">
+    <view class="pge-machine-status-ad">
+      <actbanner adKey="ad_pay_success_bottom" machineId="{{machineId}}"/>
+    </view>
+  </block>
+</view>

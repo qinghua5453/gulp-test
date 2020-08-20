@@ -1,0 +1,5 @@
+<view class="pge-about-wrapper">
+  <image src="https://static.qiekj.com/h5/about_bg2x.png" mode="widthFix" />  
+  <view class="pge-info">专业·便捷·贴心·便利</view>
+  <view class="pge-about-detail">企鹅共享基于LBS定位及物联网技术，是以自助共享洗衣为主的生活设备共享服务平台。用户可直接到店扫码使用，我们致力于实现生活服务智能化、便捷化，给用户最佳的共享服务体验。</view>  
+</view>

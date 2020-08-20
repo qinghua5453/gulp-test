@@ -1,0 +1,30 @@
+<!-- 活动 -->
+<block wx:if="{{eventCodes && machine.shopId}}">
+    <newcoupon shopId="{{machine.shopId}}" machineId="{{machineId}}" eventCodes='{{eventCodes}}'  bindfinish="onScrollShow"/>
+    <block wx:if="{{meetCouponStatus === 1 && actResult}}">
+        <meetcoupon actResult="{{actResult}}" bindfinish="onScrollShow"/>
+    </block>
+    <block wx:if="{{discountCouponStatus === 1 && actResult}}">
+        <discountcoupon actResult="{{actResult}}" bindfinish="onScrollShow"/>
+    </block>
+</block>
+<block wx:if="{{isShowUserVip && machine.shopId&&isShowPop}}">
+    <newvip shopId="{{machine.shopId}}" chooseType="{{chooseType}}" bindfinish="onScrollShow"/>
+</block>
+<block wx:if="{{userCouponStatus === 1 && actResult}}">
+    <usercoupon actResult="{{actResult}}" bindfinish="onScrollShow"/>
+</block>
+<block wx:if="{{!isShowUserVip && isShowPop}}">
+    <actbanner adKey="ad_machine_pop" actType="popup"/>
+</block>
+<!-- 公告 -->
+<block wx:if="{{noticeType === 1}}">
+    <notice />
+</block>
+<!-- 强制金币/免密 -->
+<view wx:for="{{activityList}}" wx:key="index">
+    <!-- 强制金币 -->
+    <goldpop wx:if="{{item.popupType === 2 && item.isForceUse === 1 && machine.shopId}}" shopId="{{machine.shopId}}" shopName="{{machine.shopName}}" />
+    <!-- 强制免密 -->
+    <payment wx:if="{{item.popupType === 1 && item.isForceUse === 1}}"/>
+</view>

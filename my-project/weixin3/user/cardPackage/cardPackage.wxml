@@ -1,0 +1,13 @@
+<import src="./templates/tpl-addcard.wxml"/>
+<import src="./templates/tpl-cards.wxml"/>
+<import src="./templates/tpl-editcard.wxml"/>
+<view class="pge-card-package-wrapper">
+  <!-- 卡片列表 -->
+  <template is="tpl-cards" data="{{cardList}}"/> 
+  <!-- 新增卡片 -->
+  <template is="tpl-addcard" data="{{cardList,isFreeSecret}}"/>
+  <!-- 修改卡片名称 -->
+  <template is="tpl-editcard" data="{{isEditCardName,editCardName}}"/>
+  <!-- 免密支付 -->
+  <secret-payment wx:if="{{!isOpenFree}}"></secret-payment>
+</view>

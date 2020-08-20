@@ -1,0 +1,46 @@
+.tpl-card-list{
+  width: 100%;
+  height: auto;
+}
+.tpl-card-list .tpl-card-item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 186rpx;
+  padding: 0 32rpx;
+  margin-bottom: 20rpx;
+  box-shadow:0 6rpx 16rpx 0 rgba(229,229,229,0.6);
+  border-radius: 20rpx;
+  background-color: #ffffff;
+}
+.tpl-card-item .tpl-card-head-img{
+  width: 80rpx;
+  height: 80rpx !important;
+  border-radius: 50%;
+  background-color: #2088FF;
+  margin-right: 20rpx;
+}
+.tpl-card-item .tpl-card-info .tpl-card-text{
+  color: #333333;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  margin-top: 2rpx;
+}
+.tpl-card-item .tpl-card-info .tpl-card-number{
+  color: #666666;
+  font-size: 40rpx;
+  line-height: 48rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 366rpx;
+}
+.tpl-card-item .tpl-card-unbind{
+  position: absolute;
+  right: 32rpx;
+  bottom: 52rpx;
+  color: #999999;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}

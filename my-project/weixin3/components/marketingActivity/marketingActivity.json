@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "meetcoupon": "/components/activity/meetCoupon/meetCoupon",
+    "newcoupon": "/components/activity/newUserCoupon/newUserCoupon",
+    "newvip": "/components/activity/newUserVip/newUserVip",
+    "discountcoupon": "/components/activity/discountCoupon/discountCoupon",
+    "notice": "/components/notice/notice",
+    "actbanner": "/components/adPage/actBanner/actBanner",
+    "usercoupon": "/components/activity/userCoupon/userCoupon",
+    "payment": "/components/pagePopup/secretPayment/secretPayment",
+    "goldpop": "/components/recharge/goldPop/goldPop"
+  }
+}

@@ -1,0 +1,14 @@
+<import src="./templates/tpl-userinfo.wxml"/>
+<import src="./templates/tpl-usermenu.wxml"/>
+<view class="pge-user-wrapper">
+  <view class="scroll-H">
+  <template is="tpl-userinfo" data="{{userInfo,headImageId,phone,hasVip}}"/> 
+  <view class="pge-menu-wrapper">
+    <template is="tpl-usermenu" data="{{menus}}"/> 
+    <view class="pge-user-list">
+      <usermenu menuitem="{{item}}" wx:for="{{billlist}}" wx:key="index"/>
+    </view>
+    <actbanner adKey="ad_user_bottom" isReloadAd="{{isReloadAd}}" actPage="other"/>
+  </view>
+  </view>
+</view>

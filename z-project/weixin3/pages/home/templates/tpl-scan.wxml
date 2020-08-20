@@ -1,0 +1,26 @@
+<wxs src="../../../sjs/filter.wxs" module="shopsjs"></wxs>
+<template name="tpl-scan">
+  <!-- 扫一扫 -->
+  <view class="tpl-scan-box">
+    <view class="tpl-scan-l {{washMachineLists.length ? '' : 'center'}}">
+      <image mode="scaleToFill" class="icon-dingwei" src="{{iconDingwei}}"/>
+      <view>
+        <view class="shop-box" wx:if="{{washMachineLists.length}}">
+          <text class="shop-name">{{washMachineLists[0].name}}</text>
+          ·
+          <text class="shop-distance">{{shopsjs.formatDistance(washMachineLists[0].distance)}}</text>
+        </view>
+        <view class="shop-box" wx:else>
+          <text class="shop-name">附近没能为您找到企鹅店铺</text>
+        </view>
+        <view class="shop-more" wx:if="{{washMachineLists.length}}" bindtap="goToMap">
+          更多店铺
+        </view>
+      </view>
+    </view>
+    <button class="tpl-scan-r" bindtap="scan">
+      <image mode="scaleToFill" class="icon-saoyisao" src="{{iconSaoyisao}}"/>
+      <text>扫一扫</text>
+    </button>
+  </view>
+</template>

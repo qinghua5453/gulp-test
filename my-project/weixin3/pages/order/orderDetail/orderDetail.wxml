@@ -1,0 +1,43 @@
+<wxs src="../../../sjs/filter.wxs" module="phone"></wxs>
+<import src="./templates/tpl-order-info.wxml"/>
+<view class="pge-orderDetail-wrapper">
+  <!-- 订单状态 -->
+  <block wx:if="{{orderDetail}}">
+    <order-header orderDetail="{{orderDetail}}"></order-header>
+  </block>
+  <view class="pge-order-detail-y">
+      <!-- 订单操作 -->
+      <block wx:if="{{orderDetail&&orderDetail.id}}">
+        <order-operation orderDetail="{{orderDetail}}" parentTypeId="{{parentTypeId}}" bindpayment="handelPayment"></order-operation>
+      </block>
+      <!-- 机器折扣 -->
+      <block wx:if="{{orderDetail}}">
+        <view class="pge-order-machine-discount">
+          <machine-discount orderDetail="{{orderDetail}}"></machine-discount>
+          <view class="pge-order-show-more" bindtap="showMore" wx:if="{{!isShowMore}}">
+            查看更多详情<text class="iconfont icon-backx transf90"></text>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{isShowMore}}">
+        <!-- 订单信息 -->
+        <template is="tpl-order-info" data="{{orderDetail,parentTypeId}}"></template>
+        <!-- 联系客服 -->
+        <block wx:if="{{orderDetail}}">
+          <view class="pge-order-service">
+            <service machineId="{{orderDetail.machineId}}"/>
+          </view>
+        </block>
+      </block>
+      <!-- banner广告 -->
+      <actbanner adKey="ad_order_bottom" actPage="other" machineId="{{orderDetail.machineId}}"/>
+  </view>
+  <!-- 猜你喜欢 -->
+  <view>
+    
+  </view>
+  <!--继续支付-->
+  <block wx:if="{{orderDetail&&showPaymentPopup}}">
+    <payment-popup orderDetail="{{orderDetail}}" showPopup="{{showPaymentPopup}}" bindclosepaypopup="closePayment"></payment-popup>
+  </block>
+</view>

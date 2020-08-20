@@ -1,0 +1,15 @@
+<template name="tpl-cards">
+	<!-- form表单 -->
+	<view class="tpl-card-list" wx:if="{{cardList && cardList.length > 0}}">
+		<block wx:for="{{cardList}}" wx:key="index">
+			<view class="tpl-card-item" bindtap="handleEditCardName" data-index="{{index}}">
+				<image mode="widthFix" src="https://static.qiekj.com/h5/miniApp/user/card_img.png" class="tpl-card-head-img"/>
+				<view class="tpl-card-info">
+					<view class="tpl-card-text">{{item.name}}</view>
+					<view class="tpl-card-number">{{item.cardNo}}</view>
+				</view>
+				<view class="tpl-card-unbind" catchtap="handleUnbind" data-index="{{index}}">解除绑定</view>
+			</view>
+		</block>
+	</view>
+</template>

@@ -1,0 +1,46 @@
+<wxs module="filter" src="../../sjs/reserveOrder.wxs"/>
+<view class="pge-reserve-success-wrapper" wx:if="{{orderDetail}}">
+  <view class="pge-success-head">
+    <view class="pge-reserve-success-bg"></view>
+    <image src="https://static.qiekj.com/alipay/curved.png" mode="widthFix"/>
+    <view class="reser-status-groupOut">
+      <view class="reser-status-groupInner">
+          <view class="reser-status-btn">
+						<block wx:if="{{status == 201}}">
+							<text class="position-name">{{orderDetail.appointmentOrder.goodsName}}号</text>
+							<text>浴位</text>
+						</block>
+						<block wx:else>
+            {{filter.getMsg(status)}}
+						</block>
+					</view>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{status == 201}}">
+    <view class="pge-reserve-time">请在<text>{{startTime}}前</text>到店使用</view>
+		<view class="pge-reserve-operation">
+    	<view class="operation-btn cancel-appointment" bindtap="handleCancelOrder">取消预约</view>
+      <view class="operation-btn cancel-appointment" bindtap="goOrderDetail">查看订单</view>
+    </view>
+		<view class="countdown-hide">
+			<time type="1" time="{{time}}" bindfinish="handleCountDown" />
+		</view>
+  </block>
+  <block wx:else>
+    <block wx:if="{{status == 302}}">
+      <view class="pge-reserve-time">已成功取消订单请重新预约</view>
+    </block>
+    <view class="pge-reserve-operation">
+      <view class="operation-btn cancel-appointment" bindtap="handleRenewMachine">重新预约</view>
+      <view class="operation-btn cancel-appointment" bindtap="goOrderDetail">查看订单</view>
+    </view>
+  </block>
+  <!--banner广告-->
+  <view class="pge-reserve-success-adbanner">
+    <actbanner adKey="ad_pay_success_bottom"/>
+  </view>
+  <block>
+    <actbanner adKey="ad_pay_success_pop" actType="popup"/>
+  </block>
+</view>

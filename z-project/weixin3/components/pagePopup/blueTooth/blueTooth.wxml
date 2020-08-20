@@ -1,0 +1,12 @@
+<view class="open-bluetooth-wrapper">
+  <view class="openBluetooth">
+			<view class="bluebooth-pic-wrapper">
+				<image wx:if="{{platform === 'android'}}" src="https://static.qiekj.com/h5/pay/android.gif" mode="widthFix" />
+				<image wx:if="{{platform === 'ios'}}" src="https://static.qiekj.com/h5/pay/ios.gif" mode="widthFix" />
+			</view>
+			<view class="title">{{titlePhone}}</view>			
+			<view class="info">手机屏幕顶部下拉，展开状态栏</view>
+			<view class="info">点击蓝牙图标打开蓝牙</view>
+			<view class="openBluetooth-btn" bindtap="closeBluetoothMode">知道了</view>
+	</view>
+</view>

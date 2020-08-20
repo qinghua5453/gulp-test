@@ -1,0 +1,10 @@
+<wxs src="../../../sjs/filter.wxs" module="phone"></wxs>
+<view class="pge-error-wrapper">
+  <view class="pge-error-pic">
+    <image mode="widthFix" src="https://static.qiekj.com/alipay/payError/error.png"/>
+  </view>
+  <view class="pge-error-text">
+    <text>{{code === 4055 ? '没有洗衣液了，请联系商家及时补充吧' : '出现了点小问题，请及时联系商家处理'}}</text>
+    <text>错误码【{{code}}】</text>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "machine-time": "./components/machineTime/machineTime",
+        "popup": "/components/popup/index"
+    },
+    "enablePullDownRefresh": false
+}

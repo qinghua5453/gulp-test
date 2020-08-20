@@ -1,0 +1,21 @@
+<template name="tpl-coupon">
+  <view class="tpl-coupon-box">
+    <view class="header">
+       <view class="main-title">
+         {{salePrice}}元购{{costPrice}}元组合大礼包
+       </view>
+       <view class="sub-title">
+         共 {{couponLists.length}} 个组合优惠券
+       </view>
+    </view>
+    <view class="scroll-view-box">
+       <scroll-view  scroll-x="{{true}}" style="width: 100%" >
+         <view class="scroll-view_H">
+            <view  class="scroll-view-item_H" wx:for="{{couponLists}}"  wx:key='index'>
+              <image mode="scaleToFill" src="{{item.imageUrl}}" class="image"/>
+            </view>
+          </view>
+      </scroll-view>
+    </view>
+  </view>
+</template>

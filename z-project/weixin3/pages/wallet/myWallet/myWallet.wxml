@@ -1,0 +1,10 @@
+<import src="./templates/tpl-menu.wxml"/>
+
+<import src="./templates/tpl-header.wxml"/>
+<view class="pge-my-wallet_content">
+    <template is="tpl-header" data="{{total_balance}}"/>
+    <view class="pge-my-wallet_wrapper">
+        
+        <template is="tpl-menu" data="{{couponList}}" />
+    </view>
+</view>

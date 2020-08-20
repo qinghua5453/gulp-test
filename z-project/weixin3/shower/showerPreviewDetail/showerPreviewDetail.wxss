@@ -1,0 +1,120 @@
+.pge-payPreview-wrapper{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #F5F5F5;
+}
+.pge-payPreview-header-box{
+  width:100%;
+  background:#2088FF;
+  padding: 40rpx 50rpx 140rpx;
+}
+.pge-reser-shop-con .iconfont{
+  display: inline-block;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+.pge-reser-shop-con .reser-shop-name{
+  font-size: 36rpx;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-family:PingFangSC-Medium;
+  line-height: 50rpx;
+}
+.pge-reser-shop-con .reser-shop-address{
+  font-size: 28rpx;
+  color: #FFFFFF;
+  line-height: 40rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  margin-top: 20rpx;
+}
+.pge-payPreview-wrapper-y{
+  width: 100%;
+  margin-top: -100rpx;
+  padding: 0 20rpx 130rpx;
+}
+.pge-payPreview-wrapper-y .reser-wrapper{
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 20rpx;
+}
+.pge-reser-machine-con{
+  padding: 50rpx 30rpx 30rpx;
+}
+.pge-machine-con-wrapper{
+  position: relative;
+}
+.pge-machine-con-wrapper .pge-machine-name{
+  background-color: transparent;
+  width: 514rpx;
+  margin: -26rpx auto 0;
+  text-align: center;
+}
+.pge-machine-name .name{
+  font-size: 32rpx;
+  color: #333333;
+  background: #FFFFFF;
+  padding: 0 16rpx;
+  display: inline-block;
+}
+.pge-machine-name-box .line{
+  width: 100%;
+  height: 5rpx;
+  background: #EFEFEF;
+}
+.pge-machine-name-box .line:last-child{
+  margin-top: 5rpx;
+}
+.pge-machine-function-box{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 38rpx;
+}
+.pge-machine-function-box .function-name{
+  font-size:32rpx;
+  line-height: 45rpx;
+  color: #333333;
+  font-weight: bold;
+}
+.pge-reserve-tip {
+  padding-top: 32rpx;
+  padding-left: 54rpx;
+  color: #999999;
+  font-size: 24rpx;
+  line-height: 34rpx;
+}
+.pge-reserve-tip .reserve-explain {
+  padding-bottom:16rpx;
+}
+.pge-footer-bg-box{
+  width: 92%;
+  position: fixed;
+  left: 4%;
+  bottom: 30rpx;
+  background: #FFF5DF;
+  border-radius:20rpx;
+  overflow: hidden;
+}
+.pge-footer-bg-box .btn{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #2088FF;
+  color: #FFFFFF;
+  font-size: 36rpx;
+  letter-spacing: 2rpx;
+  text-align: center;
+  border-radius: 20rpx;
+}
+.pge-footer-bg-box .loading-btn {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+.loading-btn image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 15rpx;
+}

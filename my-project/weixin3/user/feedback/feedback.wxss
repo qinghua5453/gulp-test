@@ -1,0 +1,26 @@
+@import './acss/tpl-feedtype.wxss';
+@import './acss/tpl-form.wxss';
+.pge-feedback-wrapper{
+	width: 100vw;
+    height: 100vh;
+}
+.pge-feedback-detail{
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+.pge-feedback-detail .pge-feedback-title{
+    font-size: 34rpx;
+    color: #333;
+    border-bottom: 1px solid #EEEEEE;
+    padding: 24rpx 0;
+    margin-left: 24rpx;
+}
+.tpl-input-wrapper.active{
+	min-height: 280rpx;
+}
+.feedback-content{
+    width: 100%;
+    min-height: 280rpx !important;
+}
+

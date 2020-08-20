@@ -1,0 +1,44 @@
+
+<!-- 单个优惠券 -->
+<view class="cmp-item-view">
+  <view class="cmp-coupon-detail" bindtap="chooseCoupon">
+    <view class="cmp-coupon-price">
+      <view class="cmp-price-wrapper" wx:if="{{couponitem.type === 1}}">
+        <view class="cmp-price"><text class="cmp-small">￥</text><text>{{couponitem.priceInteger}}.</text><text class="cmp-priceDecimal">{{couponitem.priceDecimal}}</text></view>
+        <text class="cmp-price-limit">满{{couponitem.minGcoins}}元可用</text>
+      </view>
+      <view class="cmp-free" wx:if="{{couponitem.type === 2}}">
+        <image src="https://static.qiekj.com/h5/miniApp/coupon/coupon_free.png" mode="widthFix" />
+      </view>
+      <view class="cmp-price-wrapper" wx:if="{{couponitem.type === 3}}"> 
+        <view class="cmp-price"><text>{{couponitem.priceInteger}}</text><text wx:if="{{couponitem.priceDecimal != 0}}" class="cmp-priceDecimal">.{{couponitem.priceDecimal}}</text><text class="cmp-small">折</text></view>
+        <text class="cmp-price-limit">最高抵扣{{couponitem.minGcoins}}元</text>
+      </view>
+    </view>
+    <view class="cmp-coupon-content">
+      <view class="cmp-name" wx:if="{{couponitem.type === 1}}">满减券</view>
+      <view class="cmp-name" wx:if="{{couponitem.type === 2}}">免费体验券</view>
+      <view class="cmp-name" wx:if="{{couponitem.type === 3}}">折扣券</view>
+      <view class="cmp-mode-limit">{{couponitem.usePositionList}}</view>
+      <view class="cmp-time">{{couponitem.startDate}}~{{couponitem.endDate}}</view>
+    </view>
+  </view>		
+  
+  <view class="cmp-limit">
+    <text bindtap="letShowMore" data-id='{{index}}' class="{{showMore ?'iconfont icon-nextx cmp-active':'iconfont icon-nextx'}}"></text>
+    <view class="cmp-hide" wx:if="{{!showMore}}">
+      <view wx:if="{{couponitem.useScope === 1}}">1.可用时段：{{couponitem.startTime}}-{{couponitem.endTime}}, 2.可用于{{couponitem.shopName}}店铺</view>
+      <view wx:if="{{couponitem.useScope === 0}}">1.可用时段：{{couponitem.startTime}}-{{couponitem.endTime}}, 2.可用于全部店铺</view>
+    </view>
+    <view class="cmp-show-more" wx:if="{{showMore}}">
+      <view>1.可用时段：{{couponitem.startTime}}-{{couponitem.endTime}}</view>
+      <view wx:if="{{couponitem.useScope === 1}}">2.可用于{{couponitem.shopName}}店铺</view>
+      <view wx:if="{{couponitem.useScope === 0}}">2.可用于全部店铺</view>
+      <view wx:if="{{couponitem.usePositionList != '不限设备'}}">3.可用于{{couponitem.usePositionList}}</view>
+    </view>
+  </view>
+  <view wx:if="{{ischoose}}" bindtap="chooseCoupon" class="cmp-choose-coupon {{couponId == couponitem.id?'iconfont icon-xuanzhongx cmp-active':'iconfont icon-norx1'}}"></view>
+  <view class="cmp-coupon-status" wx:if="{{isAbate}}"><text class="iconfont icon-_yiguoqi"></text></view>
+  <view class="cmp-radius-bg"></view>
+  <view class="cmp-radius-bg cmp-right"></view>
+</view>

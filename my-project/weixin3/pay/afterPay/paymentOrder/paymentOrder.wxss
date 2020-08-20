@@ -1,0 +1,24 @@
+@import './acss/tpl-after-pay.wxss';
+.pge-after-payment-wrapper{
+  width: 100vw;
+  height: 100vh;
+}
+.pge-after-payment-wrapper .pge-not-paid-tips{
+  display: flex;
+  align-items: center;
+  height: 76rpx;
+  background: #F5E4E7;
+  color: #F04864;
+  font-size: 30rpx;
+  padding-left: 24rpx;
+}
+.pge-not-paid-tips .iconfont{
+  margin-right: 16rpx;
+}
+.pge-after-payment-wrapper .pge-after-body-y{
+  width: 100%;
+  padding: 22rpx 24rpx 200rpx;
+}
+.pge-after-body-y .pge-after-payment-method{
+  margin-top: 24rpx;
+}

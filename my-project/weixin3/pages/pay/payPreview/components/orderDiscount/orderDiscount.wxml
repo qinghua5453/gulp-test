@@ -1,0 +1,117 @@
+<view class="tpl-preview-discount-box"> 
+  <block wx:if="{{timeMarket != null}}"> 
+      <view class="tpl-preview-disocunt-item">
+          <view class="preview-left">
+              <text class="discount-title">限时特惠</text>
+          </view>
+          <view class="preview-right" bindtap="ckTimeMarket">
+              <view class="tpl-preview-price">
+                  <text class="unit">-￥</text>{{timeMarket.discountPrice}}
+              </view>
+              <view class="iconfont {{isTimeMarket? 'icon-xuanzhongx' : 'icon-norx1'}}"></view>
+          </view>
+      </view>
+  </block>
+  <block wx:if="{{orderDetail.shopVipCard == true && vipCard == null}}">
+      <view class="tpl-preview-disocunt-item" bindtap="toCreateVip">
+          <view class="preview-left">
+              <text class="discount-title">vip会员卡</text>
+          </view>
+          <view class="preview-right">
+              <view class="user-discount-tips">店铺VIP每单享 {{discount}} 折优惠</view>
+              <view class="iconfont icon-backx"></view>
+          </view>
+      </view>
+  </block>
+  <block wx:if="{{vipCard != null && vipCard.remainTime == 0}}">
+      <view class="tpl-preview-disocunt-item">
+          <view class="preview-left">
+              <text class="discount-title">vip会员卡</text>
+          </view>
+          <view class="preview-right">
+              <text>{{vipCard.limitType === 1 ? '每日' : '每周'}}仅限使用{{vipCard.limitTime}}次</text>
+          </view>
+      </view>
+  </block>
+  <block wx:if="{{vipCard != null && vipCard.remainTime > 0}}">
+      <view class="tpl-preview-disocunt-item">
+          <view class="preview-left">
+              <text class="discount-title">vip会员卡
+                  <text class="info" wx:if="{{0 < expireDate && expireDate <= 15}}">(剩余{{expireDate}}天)</text>
+                  <text class="info" wx:if="{{expireDate == 0}}">(今天到期)</text>
+              </text>
+          </view>
+          <view class="preview-right" bindtap="ckVipCard">
+              <view class="vip-icon"></view>
+              <view class="tpl-preview-price">
+                  <text class="unit">-￥</text>{{vipCard.discountPrice}}
+              </view>
+              <view class="iconfont {{isVipCard? 'icon-xuanzhongx' : 'icon-norx1'}}"></view>
+          </view>
+      </view>
+  </block>
+  <block wx:if="{{newCheckedCoupon&&newCheckedCoupon.isUsed}}">
+      <view class="tpl-preview-disocunt-item" bindtap="toNewChooseCoupon">
+          <view class="preview-left">
+              <text class="discount-title">{{newCheckedCoupon.participatedActivationAssetDiscount.couponType*1 === 4 ? '体验券' : '优惠券'}}</text>
+          </view>
+          <view class="preview-right">
+              <block wx:if="{{newCheckedCoupon && newCheckedCoupon.isUsed}}">
+                  <view class="tpl-preview-price">
+                      <text class="unit">-￥</text>{{newCheckedCoupon.discountPrice}}
+                  </view>
+              </block>
+              <block wx:else>
+                  <view wx:if="{{newCheckedCoupon.allActivationAssetDiscounts && newCheckedCoupon.allActivationAssetDiscounts.length > 0}}">{{newCheckedCoupon.allActivationAssetDiscounts.length}}张可用</view>
+                  <view wx:else>暂无可用</view>
+              </block>
+              <view class="iconfont icon-backx"></view>
+          </view>
+      </view>
+  </block>
+  <block wx:if="{{checkedCoupon}}">
+      <view class="tpl-preview-disocunt-item" bindtap="toChooseCoupon">
+          <view class="preview-left">
+              <text class="discount-title">{{checkedCoupon.type*1 === 2 ? '免费体验券' : '优惠券'}}</text>
+          </view>
+          <view class="preview-right">
+              <block wx:if="{{checkedCoupon && checkedCoupon.isUsed}}">
+                  <view class="tpl-preview-price">
+                      <text class="unit">-￥</text>{{checkedCoupon.discountPrice}}
+                  </view>
+              </block>
+              <block wx:else>
+                  <view wx:if="{{canUserCoupon && canUserCoupon.length > 0}}">{{canUserCoupon.length}}张可用</view>
+                  <view wx:else>暂无可用</view>
+              </block>
+              <view class="iconfont icon-backx"></view>
+          </view>
+      </view>
+  </block>
+  <block wx:if="{{orderDetail.hasShopTokenCoin || tokenCoin}}">
+      <block wx:if="{{tokenCoin && tokenCoin.discountPrice*1 > 0}}">
+          <view class="tpl-preview-disocunt-item">
+              <view class="preview-left">
+                  <text class="discount-title">通用小票可抵扣{{tokenCoin.discountPrice}}元</text>
+              </view>
+              <view class="preview-right" bindtap="ckTokenCoin">
+                  <view class="tpl-preview-price">
+                      <text class="unit">-￥</text>{{tokenCoin.discountPrice}}
+                  </view>
+                  <view class="iconfont {{isCoin ? 'icon-xuanzhongx' : 'icon-norx1'}}"></view>
+              </view>
+          </view>
+      </block>
+      <block wx:if="{{!tokenCoin}}">
+          <view class="tpl-preview-disocunt-item" bindtap="toBuyCoin">
+              <view class="preview-left">
+                  <text class="discount-title">暂无通用小票抵扣</text>
+              </view>
+              <view class="preview-right">
+                  <view class="btn-buy">点击购买</view>
+                  <view class="iconfont icon-backx"></view>
+              </view>
+          </view>
+      </block>
+  </block>
+</view>

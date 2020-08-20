@@ -1,0 +1,34 @@
+<view class="cmp-order-discount">
+  <view class="cmp-discount-item" wx:if="{{orderDetail.discountPrice != null && orderDetail.discountType === 2}}">
+      <view class="cmp-left">
+          <image class="icon" mode="widthFix" src="https://static.qiekj.com/h5/miniApp/order/limit_offer_icon.png"/>
+          <text>限时特惠</text>
+      </view>
+      <view class="right">-￥{{orderDetail.discountPrice}}</view>
+  </view>
+  <view class="cmp-discount-item" wx:if="{{orderDetail.discountPrice != null && orderDetail.discountType === 1}}">
+      <view class="cmp-left">
+          <image class="icon" mode="widthFix" src="https://static.qiekj.com/h5/miniApp/order/vip_icon.png"/>
+          <text>vip会员卡</text>
+      </view>
+      <view class="right">-￥{{orderDetail.discountPrice}}</view>
+  </view>
+  <view class="cmp-discount-item" wx:if="{{orderDetail.voucherPrice != null}}">
+      <view class="cmp-left">
+          <image class="icon" mode="widthFix" src="https://static.qiekj.com/h5/miniApp/order/coupon_icon.png"/>
+          <text>{{orderDetail.voucherType === 2 ? '免费体验券' : '优惠券'}}</text>
+      </view>
+      <view class="right">-￥{{orderDetail.voucherPrice}}</view>
+  </view>
+  <view class="cmp-discount-item" wx:if="{{orderDetail.tokenCoinDiscount && orderDetail.tokenCoinDiscount*1 > 0}}">
+      <view class="cmp-left">
+          <image class="icon" mode="widthFix" src="https://static.qiekj.com/h5/recharge/buy_gold_icon.png"/>
+          <text>通用小票抵扣</text>
+      </view>
+      <view class="right"><text class="cmp-gold-coin">({{tokenCoinNumber}}通用小票)</text>-￥{{orderDetail.tokenCoinDiscount}}</view>
+  </view>
+  <view class="cmp-total-price-box">
+      <text>合计：</text>
+      <text class="price"><text class="small">￥</text>{{orderDetail.payPrice}}</text>
+  </view>
+</view>

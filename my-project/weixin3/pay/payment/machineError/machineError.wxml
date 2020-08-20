@@ -1,0 +1,33 @@
+<wxs src="../../../sjs/filter.wxs" module="phone"></wxs>
+<view class="pge-machine-error">
+  <view class="pge-machine-error-img">
+    <image mode="widthFix" src="https://static.qiekj.com/h5/payError/machine_error.png"/>
+  </view>
+  <block wx:if="{{parentType == 1 && orderDetail.machineType == 1 && overTime > 0 && handStart != 0 && orderDetail.isSTATCharge != 1}}">
+    <button class="btn-machine-boot" bindtap="goMachineBoot">
+      <block wx:if="{{isLoading}}">
+        <image mode="widthFix" src="https://static.qiekj.com/alipay/loading/start-loading.gif"/>
+      </block>
+      重新启动
+    </button>
+    <text class="machine-error-text">若设备未启动，请点击重新启动</text>
+    <view class="countdown-hide"><time type="1" time="{{overTime}}" bindfinish="hanldeOutTime"/></view>
+  </block>
+  <block wx:else>
+    <view class="pge-error-code">
+      <text>设备无法使用</text>
+      <block wx:if="{{errCode}}">
+        <text>，故障码【{{errCode}}】</text>
+      </block>
+    </view>
+  </block>
+  <view class="pge-footer">
+    <block wx:if="{{orderDetail&&orderDetail.machineId}}">
+      <view class="service">
+        <service machineId="{{orderDetail.machineId}}"></service>
+      </view>
+    </block>
+  </view>
+  <!-- 提醒用户开蓝牙 -->
+  <blue-tooth wx:if="{{openBluetoothShow}}" bindfinish="openShowBlueTooth"/>
+</view>

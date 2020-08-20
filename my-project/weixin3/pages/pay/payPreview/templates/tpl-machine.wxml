@@ -1,0 +1,37 @@
+<wxs src="../../../../sjs/orderDetail.wxs" module="filter"></wxs>
+<template name="tpl-machine">
+  <view class="tpl-preview-machine-box">
+    <view class="tpl-preview-machine-item">
+      <view class="preview-left">
+        <view class="tpl-machine-icon-bg">
+          <image mode="widthFix" src="{{'https://static.qiekj.com/h5/machineIcon/machine_'+ machine.machineType + '_icon.png'}}"/>
+        </view>
+        <text class="tpl-machine-functionname">{{machine.isSATACharge === 1 ? '充电桩' :machine.machineFunctionName}}</text>
+        <block wx:if="{{machine.isSATACharge === 1}}">
+          <text class="charge-time">{{machine.markMinutes}}{{filter.timeUnit(machine.markUnit)}}</text>
+        </block>
+      </view>
+      <view class="preview-right">
+        <text class="unit">￥</text>{{machine.markPrice}}
+      </view>
+    </view>
+    <block wx:if="{{skus&&skus.length>0}}">
+      <block wx:for="{{skus}}" wx:key="detergentIndex"  wx:for-item="detergentItem" wx:for-index="detergentIndex">
+        <view class="tpl-preview-machine-item" catchtap="selectDetergent" data-index = '{{detergentIndex}}'>
+          <view class="preview-left">
+            <view class="tpl-machine-icon-bg">
+              <view class="washIcon {{detergentItem.washLiquidIcon}}"></view>
+            </view>
+            <text class="tpl-machine-functionname">{{detergentItem.skuName}}</text>
+          </view>
+          <view class="preview-right">
+            <view class="tpl-preview-price">
+              <text class="unit">￥</text>{{detergentItem.price}}
+            </view>
+            <view class="iconfont {{isSkuId ? 'icon-xuanzhongx' : 'icon-norx1'}}"></view>
+          </view>
+        </view>
+      </block>
+    </block>
+  </view>
+</template>

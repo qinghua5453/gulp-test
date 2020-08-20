@@ -1,0 +1,23 @@
+.tpl-my-wallet_header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 188rpx;
+  background: #fff;
+}
+.tpl-my-wallet_header .tpl-user-balance{
+  font-size: 56rpx;
+  font-weight: 600;
+  line-height: 80rpx;
+}
+.tpl-my-wallet_header .tpl-price-info{
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  margin-top: 4rpx;
+}
+.tpl-my-wallet_header .tpl-price-info .iconfont{
+  font-size: 24rpx;
+  margin-left: 5rpx;
+}

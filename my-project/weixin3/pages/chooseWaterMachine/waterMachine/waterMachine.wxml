@@ -1,0 +1,61 @@
+<wxs src="../../../sjs/filter.wxs" module="phone"></wxs>
+<view class="pge-water-wrapper" wx:if="{{mainShow}}">
+    <view class="pge-water">
+        <view class="machineName">{{machineName}}</view>
+        <view wx:if="{{machineType === 7}}" class="pge-water-bg">
+            <image src="https://static.qiekj.com/gif/shower_new_bg.png" mode="widthFix"/>
+        </view>
+        <view wx:if="{{machineType === 6}}" class="pge-water-bg">
+            <image src="https://static.qiekj.com/gif/water_new_bg.png" mode="widthFix"/>
+        </view>
+        <block wx:if="{{machineType === 6}}">
+            <view class="multiple-select waterLen{{waterList.length}}" wx:if="{{waterList && waterList.length > 1}}">
+                <view class="textDesc">选择 水口</view>
+                <view class="splitLine"></view>
+                <view class="waterList">
+                    <view wx:for="{{waterList}}" bindtap="onClickItem"  data-index="{{index}}" 
+                    wx:key="index" class="waterPort {{choosedIndex == index?'active':''}}">{{item.functionName}}号</view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="logo-label {{waterList && waterList.length > 1 ? 'choosePortMargin' : ''}}" 
+        wx:if="{{machine && machine.brandLogo}}">
+        <image src="{{machine.brandLogo}}" mode="widthFix"/>
+    </view> 
+    <view class="corporation-logo {{waterList && waterList.length > 1 ? 'choosePortMargin' : ''}}" wx:else>
+        <image src="https://static.qiekj.com/gif/corporation.png" mode="widthFix"/>
+    </view>
+    <view class="pge-useBtn" bindtap="useOk">立即使用 <text class="iconfont icon-nextx"></text></view>
+    <view class="pge-useBluetooth-text" wx:if="{{!isBle}}" bindtap="popupBlueToothTip">
+        <text class="iconfont icon-xingzhuangx"></text> 开启蓝牙效率更高
+    </view>
+    <view class="pge-water-banner" wx:if="{{showSwipper}}">
+      <act-banner adKey="ad_water_machine_top"></act-banner>
+    </view>
+    <!-- <collected id="{{machineId}}" type="2" isCollected="{{false}}"/> -->
+    <!-- <view class="pge-footer-desc-text">
+        如有疑问请联系{{ !hasPhone ? '企鹅' : ""}}客服
+        <text class="pge-call" bindtap="makeCall">{{phone.formatPhonenumber(phoneText)}}</text>
+        <text class="pge-help" bindtap="makeHelp">帮助?</text>
+    </view> -->
+    <!-- 机器故障弹窗 -->
+    <machineerror wx:if="{{isMachineStatus}}"  errorCode="{{statusCode}}"/>
+    <marketing-activity
+        wx:if="{{machine}}"
+        chooseType="2"
+        machine="{{machine}}" 
+        machineId="{{machineId}}"
+        noticeType="{{noticeType}}"/>
+</view>
+
+<connect-status wx:if="{{showLoading}}" statusText="{{statusText}}" marginTop="280"/>
+
+<unlocked wx:if="{{unlockedShow}}"
+    id="saveUnlocked"
+    machineId="{{machineId}}"
+    choosedFunctionName="{{choosedFunctionName}}" 
+    unlockedId="{{unlockedId}}"/>
+<blue-tooth wx:if="{{openBluetoothShow}}" bindfinish="openShowBlueTooth"/>
+
+

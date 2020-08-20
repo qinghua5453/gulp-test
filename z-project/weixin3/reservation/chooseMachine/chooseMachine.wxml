@@ -1,0 +1,58 @@
+<import src="./templates/tpl-function.wxml"/>
+<view class="pge-reser-choosemachine">
+    <view class="pge-mode-content-y">
+      <view class="pge-mode-content">
+          <!-- 预约机器功能列表 -->
+          <block wx:for="{{list}}" wx:key="index">
+            <template is="tpl-function" data="{{item,functionId,shop,timeMarketDiscount,vipDiscount,type}}"/>
+          </block>
+      </view>
+    </view>
+    <view class="pge-btn-footer">
+      <view class="btn-shop-time {{type == 1 ? 'btn-dry' : ''}}" wx:if="{{!appointStartTime}}" bindtap="openReserTimePopup">
+        立即预约
+        <text class="iconfont icon-nextx"></text>
+      </view>
+      <view class="pge-choose-time" wx:else >
+        <!-- <view class="pge-time" bindtap="selectDate">
+          <view class="specific-time">{{appointmentData.chooseWeek}}   {{appointmentData.chooseHourMinute}}</view>
+          <view class="iconfont icon-nextx"></view>
+        </view>
+        <button disabled="{{isDisable}}" class="right-confirm" bindtap="handleOrder">提交</button> -->
+         <view class="pge-time {{type == 1 ? 'btn-dry' : ''}}" bindtap="selectDate">
+           <text class="choose-txt">已选：</text>
+           <view class="choose-time">
+              <text class="choose-day">{{appointmentData.chooseDay}}</text>
+              <text class="choose-date">{{appointmentData.chooseDate}} {{appointmentData.chooseHourMinute}}</text>
+           </view>
+          <view class="iconfont icon-nextx icon-rotate"></view>
+        </view>
+        <view class="right-confirm {{type == 1 ? 'btn-dry' : ''}}" disabled="{{isDisable}}" bindtap="handleOrder">
+           <text class="done-txt">选好了</text>
+           <text class="iconfont icon-nextx"></text>
+        </view>
+      </view>
+    </view>
+    <!-- 预约时间 -->
+    <!-- <block wx:if="{{isShowReserTime}}">
+      <machine-time isShowReserTime="{{isShowReserTime}}" appointmentData="{{appointmentData}}" bindhandleconfirmtime="handleConfirmTime"></machine-time>
+    </block> -->
+    <!-- 滑动预约时间组件 -->
+    <block wx:if="{{isShowReserTime}}">
+      <machine-time isShowReserTime="{{isShowReserTime}}" appointmentData="{{appointmentData}}" bindhandleconfirmtime="handleConfirmTime" bindcloseresertime="closeReserTime"></machine-time>
+    </block>
+    <!-- 推荐预约时间 -->
+    <block wx:if="{{recommendTimes && recommendTimes.length > 0}}">
+    <popup show="{{recommendTimePopup}}" position="bottom" >
+        <view class="pge-recommend-times">
+            <view class="recommend-title underline">我们为您推荐了最近可用时间</view>
+            <view class="recommend-time underline" wx:for="{{recommendTimes}}" wx:key="index" bindtap="selectRecommendTime" data-index="{{index}}">
+                <text>为您推荐</text>
+                <text class="pge-recommend-week">{{item.name}}</text>
+            </view>
+            <view class="gray-box"></view>
+            <view class="pge-choose-your-own underline" bindtap="renewOpenReserTimePopp">不了，自己选</view>
+        </view>
+    </popup>
+    </block>
+</view>

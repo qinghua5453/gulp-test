@@ -1,0 +1,26 @@
+<template name="tpl-balance">
+    <view class="tpl-balance-wrapper" wx:if='{{balanceShow}}'>
+        <view class="tpl-pay-pop">
+            <view class="tpl-pay-header">
+                <view class="iconfont icon-yuezhifu_quxiaox" bindtap="balancePayClose"></view>
+                <view class="title">
+                    <image src="https://static.qiekj.com/h5/miniApp/pay/icon_ye.png" mode="widthFix" />
+                    <text>确认支付</text>
+                </view>
+            </view>
+            <view class="tpl-pay-wrap">
+                <view class="price">¥{{orderDetail.payPrice}}</view>
+                <view class="pay-item">
+                    <view class="pay-t">付款方式</view>
+                    <view class="pay-desc">余额支付</view>
+                </view>
+                <view class="pay-item">
+                    <view class="pay-t">钱包余额</view>
+                    <view class="pay-desc">￥{{totalBalance}}</view>
+                </view>
+            </view>
+            <button class="btn-balance-pay" bindtap="balancePay">立即支付</button>
+        </view>
+    </view>
+</template>
+

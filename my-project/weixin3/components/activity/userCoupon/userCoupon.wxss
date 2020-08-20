@@ -1,0 +1,107 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.cmp-novice-meet-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 1002;
+}
+.cmp-user-coupon-box{
+  width: 689rpx;
+  height: 100%;
+  padding-top: 174rpx;
+  padding-bottom: 60rpx;
+  overflow: auto;
+  margin: 0 auto;
+}
+.cmp-user-coupon-box .cmp-discount-coupon-bg{
+  position: relative;
+  width: 100%;
+  height: 864rpx;
+  background-image: url(https://static.qiekj.com/h5/activity0409/activity_bg.png);
+  background-size: cover;
+}
+.cmp-discount-coupon-bg .content{
+  width: 557rpx;
+  height: auto;
+  position: absolute;
+  top: 293rpx;
+  left: 70rpx;
+  overflow-y: auto;
+  overflow-x: hidden;
+  bottom: 56rpx;
+  -webkit-overflow-scrolling : touch;
+}
+.cmp-user-coupon-box .cmp-coupon{
+  width: 100%;
+  height: 165rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  position: relative;
+  background-image:  url(https://static.qiekj.com/h5/activity0409/coupon_bg.png);
+  background-size: cover;
+}
+.cmp-coupon .cmp-user-coupon-price{
+  width: 180rpx;
+  height: 100%;
+  position: relative; 
+}
+.cmp-user-coupon-price .price-wrapper{
+  text-align: center;
+  padding-top: 40rpx;
+  color: #F23F10; 
+}
+.cmp-user-coupon-price .user-coupon-price{
+  font-size: 48rpx; 
+  margin-bottom: 8rpx;
+  font-weight: bold;
+}
+.cmp-user-coupon-price .symbol{
+  font-size: 32rpx;
+}
+.cmp-user-coupon-price .price-limit{
+  font-size:24rpx;   
+  color: #333333;              
+}  
+.cmp-user-coupon-price .user-coupon-symbol{
+  font-size: 24rpx;
+  font-weight: normal;
+}
+.cmp-user-coupon-price .free{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+} 
+.cmp-user-coupon-price .free-img{
+  width: 67rpx;
+  height: 68rpx;
+}
+.cmp-coupon .cmp-coupon-content{
+  width: 377rpx;
+  padding: .35rem .20rem .35rem .34rem;  
+  text-align: left;  
+}
+.cmp-coupon-content .user-coupon-name{
+  font-size: 35rpx;
+  font-weight: bold;
+  line-height: 49rpx;
+  margin-bottom: 14rpx;
+  color: #333;
+}
+.cmp-coupon-content .user-coupon-time{
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #999999;
+}
+.cmp-user-coupon-box .btn-delete{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 46rpx auto 0;
+  background: url(https://static.qiekj.com/h5/modalDel.png);
+  background-size: cover;
+}

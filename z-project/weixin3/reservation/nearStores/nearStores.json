@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "附近店铺",
+    "usingComponents": {
+        "stores-item": "/components/stores/storesItem/storesItem",
+        "stores-header": "./components/storesHeader/storesHeader"
+    },
+    "enablePullDownRefresh": false
+}

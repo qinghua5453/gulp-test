@@ -1,0 +1,12 @@
+<view>
+  <view class="notice-wrapper" wx:if="{{noticeShow}}">
+    <view class="notice-body">
+      <view class="notice">
+        <image class="image" src="https://static.qiekj.com/images/notify/user-notify.png" mode="widthFix" />
+      </view>
+      <view class="icon-wrapper" bindtap="closeNotice">
+        <image src="https://static.qiekj.com/h5/modalDel.png" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "企鹅共享",
+    "usingComponents": {
+        "machinestatus": "/components//pagePopup/machineStatus/machineStatus",
+        "goldwindow": "/components/recharge/goldWindow/goldWindow",
+        "transfer-coin": "/components/pagePopup/transferCoin/transferCoin",
+        "blue-tooth": "/components/pagePopup/blueTooth/blueTooth",
+        "unlock-result": "/components/machine/unlockResult/unlockResult"
+    },
+    "enablePullDownRefresh": false
+}

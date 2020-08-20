@@ -1,0 +1,40 @@
+<template name="tpl-pickers">
+	<view>
+		<view class="tpl-user-list">
+			<view class="tpl-item">
+				<text>{{userPhone}}</text>
+				<view class="tpl-item-extra">
+					<image src="{{headImageId}}" binderror="imageError" mode="widthFix" />
+				</view>
+			</view>
+			<view class="tpl-item">
+				<text>性别</text>
+				<view class="tpl-item-extra">       	
+					<picker bindchange="editSex" value="{{index}}" range="{{sex}}">
+						<view class="tpl-picker">
+							<text>{{sex[index]}}</text>
+							<text class="iconfont icon-nextx"></text>
+						</view>
+					</picker>
+				</view>
+			</view>
+			<view class="tpl-item">
+				<text>生日</text>
+				<view class="tpl-item-extra">
+					<picker mode="date" value="{{date}}" start="1950-01-01" end="{{endDate}}" bindchange="editDate">
+						<view class="tpl-picker">{{date}}<text class="iconfont icon-nextx"></text></view>
+					</picker>
+				</view>
+			</view>
+		</view>
+		<view class="tpl-user-list">
+			<view class="tpl-item">
+				<text>昵称</text>
+				<view class="tpl-item-extra" bindtap="editUserName">
+					<text>{{userName}}</text>
+					<text class="iconfont icon-nextx"></text>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>

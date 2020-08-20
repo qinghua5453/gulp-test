@@ -1,0 +1,79 @@
+.tpl-vip-card-content{
+  width: 690rpx;
+  margin: 0 auto;
+  padding-bottom: 64rpx;
+}
+.tpl-vip-card-detail-box .tpl-title{
+  width: 296rpx;
+  height: 44rpx;
+  margin: 32rpx auto 0;
+  background-image: url(https://static.qiekj.com/h5/userVip/vip_titlt_bg.png);
+	background-size: cover;
+}
+.tpl-vip-pic-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32rpx;
+}
+.tpl-vip-pic-box .vip-ivon-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 108rpx;
+  height: 108rpx;
+  background: #FFF6E3;
+  border-radius: 50%;
+  margin-right: 120rpx;
+}
+.vip-ivon-item:last-child{
+  margin-right: 0;
+}
+.vip-ivon-item image{
+  width: 38rpx;
+  height: 36rpx;
+}
+.tpl-vip-card-detail-box .tpl-vip-card-detail{
+  color: #AFA483;
+  font-size: 24rpx;
+  padding: 0 44rpx;
+  margin-top: 38rpx;
+  line-height: 36rpx;
+}
+.tpl-vip-card-detail .active{
+  overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.tpl-vip-card-detail-box .tpl-show-more{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  z-index: 9999;
+  color: #AFA483;
+  font-size: 24rpx;
+  text-align: center;
+  background:linear-gradient(360deg,rgba(255,255,255,1) 20%,rgba(255,255,255,0) 100%);
+  padding-top: 180rpx;
+  margin-top: -180rpx;
+}
+.tpl-vip-card-detail-box .not-more-shop{
+  background: none;
+  margin-top: 20rpx;
+  padding-top: 0;
+}
+.tpl-vip-card-shop{
+	width: 595rpx;
+	margin-bottom: 0;
+}
+.tpl-show-more .iconfont{
+  width: 24rpx;
+  height: 24rpx;
+	font-size: 24rpx;
+	display: inline-block;
+	transform: rotate(270deg);
+}
+.tpl-show-more .icon-to-top{
+  transform: rotate(90deg);
+}

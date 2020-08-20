@@ -1,0 +1,38 @@
+<template name="tpl-equity">
+  <view class="tpl-vip-card-content">
+    <view class="tpl-vip-card-detail-box">
+      <view class="tpl-title"></view>
+      <view class="tpl-vip-pic-box">
+        <view class="vip-ivon-item">
+          <image src="https://static.qiekj.com/h5/userVip/vip_crown_icon.png" mode="widthFix" />
+        </view>
+        <view class="vip-ivon-item">
+          <image src="https://static.qiekj.com/h5/userVip/vip_shop_icon.png" mode="widthFix" />
+        </view>
+        <view class="vip-ivon-item">
+          <image src="https://static.qiekj.com/h5/userVip/vip_discount_icon.png" mode="widthFix" />
+        </view>
+      </view>
+      <view class="tpl-vip-card-detail">
+        <view>1. VIP卡为店铺折扣卡，购卡后在适用店铺内消费享受对应折扣，卡内无余额，不可储值，不可退换。</view>
+        <view wx:if="{{shopVipDetail.limitCount == 0}}">
+          2.
+          <text wx:if="{{shopVipDetail.limitType == 1}}">每日</text>
+          <text wx:if="{{shopVipDetail.limitType == 2}}">每周</text>
+          使用次数无限制。
+        </view>
+        <view wx:else>
+          2.
+          <text wx:if="{{shopVipDetail.limitType == 1}}">每日</text>
+          <text wx:if="{{shopVipDetail.limitType == 2}}">每周</text>
+          仅限使用{{shopVipDetail.limitCount}}次。
+        </view>
+        <view class="{{isMoreShopShow ? 'tpl-vip-card-shop active':'tpl-vip-card-shop'}}">3.适用店铺：{{shopNameList}}。</view>
+      </view> 
+      <view wx:if="{{shopNameList.length > 21}}" bindtap="letMoreShopShow" class="tpl-show-more {{!isMoreShopShow ? 'not-more-shop' : ''}}"> 
+        <view>查看更多</view>          
+        <view class="{{isMoreShopShow? 'iconfont icon-backx' : 'iconfont icon-backx icon-to-top'}}"></view>
+      </view>
+    </view>
+  </view>
+</template>

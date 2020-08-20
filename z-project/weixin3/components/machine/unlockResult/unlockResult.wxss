@@ -1,0 +1,123 @@
+@import '/common/iconfont/iconfont.wxss'; 
+@import '/common/reset.wxss'; 
+@import '/common/btn-common.wxss';
+.unlock-result-wrapper{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #fff;
+}
+.unlock-result-wrapper .status {
+  padding: 120rpx 40rpx 0;
+  text-align: center;
+}
+.unlock-result-wrapper .status .unlock-status{
+  font-size: 32rpx;
+  color: #666666;
+  margin-top: 16rpx;
+  text-align: center;
+}
+.unlock-result-wrapper .status image {
+  width: 170rpx;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 35rpx;
+}
+.unlock-result-wrapper .status .status-info {
+  font-size: 44rpx;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  line-height: 62rpx;
+}
+.unlock-result-wrapper .status-ble .status-info {
+  font-size: 32rpx;
+}
+.unlock-result-wrapper .status-ble image {
+  margin-bottom: 22rpx;
+}
+.unlock-result-wrapper .machine {
+  width: 670rpx;
+  height: 128rpx;
+  margin-left: 40rpx;
+  padding: 0 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 6rpx 16rpx 0 rgba(244, 245, 255, 1);
+  border-radius: 20rpx;
+  margin-top: 64rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.unlock-result-wrapper .status .choose-machine {
+  background-color: #f7f7f7;
+  border-radius: 21rpx;
+  line-height: 40rpx;
+  padding: 0 16rpx;
+}
+.unlock-result-wrapper .pay-service {
+  padding: 0 100rpx 0;
+  margin-top: 35rpx;
+}
+.unlock-result-wrapper .prompt {
+  margin-top: 24rpx;
+  width: 679rpx;
+  height: 583rpx;
+  margin-left: 40rpx;
+  border-radius: 24rpx;
+  box-shadow: 0 10rpx 20rpx 0 rgba(199, 225, 255, 1);
+}
+.unlock-result-wrapper .prompt swiper {
+  width: 100% !important;
+  height: 100% !important;
+}
+.unlock-result-wrapper .prompt .list {
+  padding: 60rpx 0;
+}
+.unlock-result-wrapper .prompt .info {
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 45rpx;
+  color: #666;
+}
+.unlock-result-wrapper .prompt .highLight {
+  color: #2088ff;
+}
+.unlock-result-wrapper .prompt image {
+  width: 428rpx;
+  height: auto;
+  margin-top: 30rpx;
+  margin-left: 122rpx;
+}
+
+.unlock-result-wrapper .btn-retry {
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+  width: 220rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: #2088ff;
+  margin: 32rpx auto 0;
+}
+
+.unlock-result-wrapper .btn-blue {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  line-height: 120rpx;
+  text-align: center;
+  color: #333;
+  font-size: 32rpx;
+  width: 100%;
+  height: 120rpx;
+  box-shadow: 0rpx -3rpx 14rpx 0rpx rgba(0, 0, 0, 0.04);
+}
+.unlock-result-wrapper .btn-blue .iconfont {
+  color: #ccc;
+  margin-right: 20rpx;
+}
