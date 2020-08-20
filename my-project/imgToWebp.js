@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-08-13 18:26:08
- * @LastEditTime: 2020-08-14 15:45:46
+ * @LastEditTime: 2020-08-17 16:11:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /mini_tool/Users/zhangjian/gulp-test/my-project/test2.js
@@ -24,13 +24,12 @@ const fs = require('fs');
 
 function imgToWebp (cb) {
   return gulp.src('./images/*.+(jpg|png)')
-        // .pipe(eventStream2())
-        // dest代码无效？？？？
-        // .pipe(gulp.dest('dist-webp'))
-        // .on('end', () => {
-        //   console.log('img convert done!');
-        //   cb && cb()
-        // })
+        .pipe(gulp.dest('dist-webp'))
+        .on('end', () => {
+          eventStream2()
+          console.log('img convert done!');
+          cb && cb()
+        })
 }
 
 imgToWebp();
@@ -66,12 +65,45 @@ function eventStream () {
 }
 
 function eventStream2 () {
-  fs.readdir('./images', 'utf8', (err, data) => {
+  const result = webp.dwebp('/Users/zhangjian/gulp-test/my-project/images/7601wh12000.jpg', '/Users/zhangjian/gulp-test/my-project/images/7601wh12000.webp', '-q 80')
+  result.then((response) => {
+  console.log(response);
+  }).catch(err => {
+    console.log('----------------err-------------------', err)
+  })
+  return
+  fs.readdir('./images', 'utf8', (err, files) => {
     if (err) {
       console.log('err', err);
       return
     }
-    console.log('data', data)
+    // console.log('__dirname', __dirname)
+    // let filePath = path.join(__dirname, 'images')
+    // let filePath2 = path.resolve(__dirname, 'images')
+    // console.log('filePath', filePath)
+    // console.log('filePath2', filePath2)
+    // console.log('__filename', __filename)
+
+    // console.log('files', files)
+    files.forEach((item) => {
+      if (/\.(jpeg|jpg|png)/ig.test(item)) {
+        let fileName = item.replace(/\.(jpeg|jpg|png)/ig, '');
+        console.log('fileName', fileName)
+        // const result = webp.dwebp(`${__dirname}/images/${item}`, `${__dirname}/images/${fileName}.webp`, '-q 80')
+        const result = webp.dwebp('/Users/zhangjian/gulp-test/my-project/images/免费恰饭@3x.png', '/Users/zhangjian/gulp-test/my-project/images/免费恰饭@3x.webp', '-q 80')
+        result.then((response) => {
+         console.log(response);
+        }).catch(err => {
+          console.log('----------------err-------------------', err)
+        })
+      }
+    })
+    // let fileDir = path.dirname('./images/7601.jpg_wh12000.jpg')
+    // console.log('fileDir', fileDir)
+    // const result = webp.gwebp("./images/7601.jpg_wh12000.jpg", "./images/7601.jpg_wh12000.webp", "-q 80");
+    // result.then((response) => {
+    //   console.log(response);
+    // });
   })
 }
 
