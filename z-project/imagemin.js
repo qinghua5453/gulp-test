@@ -6,7 +6,6 @@
  * @Description: In User Settings Edit
  * @FilePath: /mini_tool/Users/zhangjian/gulp-test/my-project/test.js
  */
-console.log(1)
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
