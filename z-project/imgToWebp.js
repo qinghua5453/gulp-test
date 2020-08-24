@@ -6,6 +6,7 @@
  * @Description: In User Settings Edit
  * @FilePath: /mini_tool/Users/zhangjian/gulp-test/my-project/test2.js
  */
+console.log(2)
 var { exec } = require('child_process');
 const webp = require('webp-converter');
 const es = require('event-stream');
